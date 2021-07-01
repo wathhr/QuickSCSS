@@ -1,0 +1,29 @@
+//? Not discrims
+.channel-2QD9_O,
+.nowPlayingColumn-2sl4cE, .nowPlayingSidebar-2OFn0o {
+  transition: filter 0.25s;
+
+  &:not(.selected-aXhQR6):not([href="/channels/@me"]):not([href="/discovery"]):not([href="/store"]) {
+    filter: blur($blur-amount);
+
+    &:hover {
+      filter: blur(0);
+    }
+  }
+}
+
+//? Discrims
+.discriminator-byOsvi,
+.discriminator-xUhQkU,
+.discriminator-1swucG,
+.listDiscriminator-2AP_Kz,
+.discrim-oGb-FO,
+.discrimBase-24vY8o,
+[aria-label="User area"] .usernameContainer-1fp4nu + .subtext-3CDbHg {
+  filter: blur($blur-amount / 1.5);
+  transition: filter 0.25s;
+
+  &:hover {
+    filter: blur(0);
+  }
+}

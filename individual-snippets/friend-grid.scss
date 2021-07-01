@@ -1,0 +1,26 @@
+.peopleColumn-29fq28[role="tabpanel"][id] > .peopleList-3c4jOR {
+  margin-top: 0;
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .title-30qZAO.container-2ax-kl {
+      width: 100%;
+    }
+    .bfl-headerTitle {
+      padding-bottom: 4px;
+      border-bottom:  1px solid var(--background-modifier-accent);
+    }
+    .peopleListItem-2nzedh {
+      width: clamp(250px, 19%, 350px);
+      padding: 0 14px;
+      margin: 2px;
+      border-radius: 12px;
+      background-color: var(--background-secondary-alt);
+      height: 62px !important;
+      .avatar-3W3CeO {
+        margin-top: 2px;
+      }
+    }
+  }
+}

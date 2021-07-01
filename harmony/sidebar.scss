@@ -1,0 +1,40 @@
+// i have no idea what to name this, harmony didn't really add a comment for this
+.titleBar-AC4pGV,
+[aria-label="Servers sidebar"] .scroller-1Bvpku {
+  background-color: var(--background-secondary);
+}
+
+[aria-label="Servers"] {
+  // Server folders
+  .expandedFolderBackground-1cujaW,
+  .folder-1hbNCn {
+    background-color: var(--background-tertiary) !important;
+    transition: all 0.3s;
+    &.hover-qTxTR_ {
+      background-color: var(--background-secondary-alt);
+    }
+  }
+  .expandedFolderIconWrapper-Huv7rA,
+  .folderIconWrapper-1_bOZe {
+    &[style] {
+      background-color: transparent !important;
+    }
+    > svg {
+      color: var(--brand-experiment) !important;
+    }
+  }
+  // Explanded folder background width
+  .expanded {
+    display: grid;
+    place-items: center;
+    .expandedFolderBackground-1cujaW {
+      width: 42px;
+      left: unset
+    }
+  } 
+}
+
+// Panel border colors
+[aria-label="User area"] > div {
+  border-color: var(--background-secondary);
+}

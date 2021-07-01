@@ -1,0 +1,53 @@
+// this is extremely janky and bad, i have no idea how grid works
+#stage-discovery-tab {
+  + .nowPlayingSidebar-2OFn0o {
+    display: none;
+  }
+  .headerContainer-1Wluzl {
+    grid-column: span $stage-discovery-rows;
+    max-width: unset;
+    width: 100%;
+    margin: 0;
+    .pageHeader-3nuK1W {
+      padding: 1.9rem;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+  }
+  .container-24CyRY {
+    display: grid;
+    grid-template-columns: repeat($stage-discovery-rows, 1fr);
+    grid-template-rows: repeat(100, 0fr);
+    $gap: 8px;
+    gap: $gap;
+    padding: $gap;
+    padding-right: $gap !important;
+    position: static;
+    .container-S9SaVf {
+      max-width: unset;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    .container-1WCE6w {
+      grid-column: span $stage-discovery-rows;
+      height: 0;
+      margin: 0;
+      padding-top: $gap / 10;
+      > div,
+      > h3 {
+        font-size: 0;
+      }
+      .button-38aScr {
+        position: absolute;
+        height: 24px;
+        min-height: 24px;
+        min-width: 52px;
+        top: -4px;
+        left: 540px;
+        z-index: 2;
+      }
+    }
+  }
+}

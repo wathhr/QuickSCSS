@@ -1,0 +1,13 @@
+{
+  "name": "QuickSCSS",
+  "description": "Pretty much a highly customisable theme with a lot of random \"cool\" snippets.",
+  "version": "2.0",
+  "author": "Mostly wathhr",
+  "discord": "pFJKaAYnfS",
+
+  "theme": "index.scss",
+  "splashTheme": "splash.scss",
+
+  "license": "GNU GPLv3",
+  "consent": "true"
+}

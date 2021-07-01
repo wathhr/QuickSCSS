@@ -1,0 +1,62 @@
+//* User modal
+[aria-label="User Profile Modal"] {
+  .profileBanner-33-uE1 {
+    height: $av-size * 1.25;
+  }
+  .avatar-AvHqJA {
+    width: $av-size * 1.25 !important;
+    height: $av-size * 1.25 !important;
+    top: $av-size * -0.7084;
+    left: $av-size / 9.6;
+    border-width: $av-size / 15;
+  }
+}
+
+//* Settings tab user "modal"
+.accountProfileCard-1XCH88 {
+  .settingsBanner-15-pZk {
+    height: $av-size * 1.25;
+  }
+  .avatar-1uQSZT {
+    width: $av-size * 1.25 !important;
+    height: $av-size * 1.25 !important;
+    top: $av-size / 1.6;
+    left: $av-size / 9.6;
+    border-width: $av-size / 15;
+  }
+  .userInfo-iCloHO {
+    height: unset;
+    padding-bottom: $av-size / 2.4;
+    padding-left: $av-size * 1.55;
+  }
+}
+
+//* User popout
+.userPopout-xaxa6l {
+  .popoutBanner-19WKGg {
+    height: $av-size / 1.4;
+  }
+  .avatarWrapperNormal-26WQIb {
+    left: 8px;
+  }
+  .avatar-37jOim,
+  .avatarHint-2A3RNb {
+    width: $av-size !important;
+    height: $av-size !important;
+  }
+  [aria-label="User Badges"] {
+    max-width: 168px;
+  }
+}
+
+//* Settings tab user popout
+.profileBannerPreview-3_l0Wd {
+  .banner-hcPdsd {
+    height: $av-size / 1.4;
+  }
+  .avatarUploaderInner-Oiob_P {
+    width: $av-size;
+    height: $av-size;
+    left: -8px;
+  }
+}

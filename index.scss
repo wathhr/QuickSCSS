@@ -1,0 +1,168 @@
+//* To disable something add a "//" at the start of the thing you want to disable.
+//* Like this:
+//@import './fake/snippet';
+
+//? Vars
+@use './vars.scss' as *; //! Do not disable this
+
+//? Main
+@import './general/enhancements';
+@import './general/other';
+@import './general/removements';
+@import './general/fixes';
+@import './general/blur';
+
+//? Snippets
+@import './individual-snippets/embeds';
+@import './individual-snippets/friend-grid';
+@import './individual-snippets/better-stage-discovery-tab';
+@import './individual-snippets/better-nitro-tab';
+
+//? User popouts/modals
+@import './user-popouts/main'; // The snippets in this category are made with this in mind, things might break if you disable this
+@import './user-popouts/bigger-avatar';
+@import './user-popouts/spotify-buttons';
+@import './user-popouts/better-connections';
+
+//? Harmony
+@import './harmony'; // this just has random "nice" changes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⣤⣤⣤⣤⣤⣤⣄⣀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠛⠛⠛⠛⠿⠿⣿⣿⣷⣄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠈⠻⣿⣿⣄
+⠀⠀⠀⠀⠀⠀⣠⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿
+⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣤⣤⣤⣤⣤⣤⣴⣿⣿⣿⡇
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
+⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⡿⣟⣯⣿⠟⡉⠉⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⢿⣽⣿⣿⣿⠿⠿⠟⠒⠉⠉⠉⠉⠉⠉⠉⠙⠋
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠿⠋⠉⢀⣠⣤⣤⡔⣄⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠾⠛⠋⠉⠀⢀⣀⠐⣤⣶⣶⡤⢤⣤
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣰⣶⣾⣿⣿⣿⣆⠀⣀⣀⡀⣀⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⢀⢀⣀⠀⣀⣈⡿⠿⠿⠽⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠛⠿⠿⠿⠿⠾⠟⢁⣀⡴⣦⠆
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢦⣤⣀⣀⠀⠀⠀⠀⢘⣿⣍⡷⠆
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢶⣄⠈⠉⠛⠛⠿⠓⠀⠉⠋⠉⣀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣧⡀⠙⠻⢶⣶⡤⠀⠀⠛⠶⠾⠼⠋
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣆⠈⠻⣶⣤⡀⠀⠀⢸⠿⣶⣦⣤⣠⣾
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠙⢷⣤⣀⠈ ⠀⠀ ⣤⣀⠈⠉⠈⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡌⢧⣀⠉⠛⠃⠀⠀⠀⠀⠉⠛⠿⠿⠻⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⢳⣄⠙⠛⠖ ⠀⠀⠀⠘⠿⣴⣤⣄⣤
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣄⡙⠛⠋⠀⠀⠀⠀⠀⠰⣤⣀⠉⠉⠉
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢠⡈⠉⠉⠀⠀⠀⠀⠀⠀ ⡈⠙⠛⠛⠛
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⡉⠛⡁⠀⠀⠀⠀⠀⠀ ⠻⠷⣶⣦⡆
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡈⢷⣌⠙⠛ ⠀⠀⠀⠀⠀⠀⠰⣦⣄⣀⣀⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⣄⡉⠛⠛⠀⠀⠀⠀⠀⠀⠀ ⠈⠙⠛⠛
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢦⣀⠉⠛⠷⠖⠀⠀⠀⠀⠀⠀⠀⠘⠿⣶⣦⡄
+⠀⠀⠀⠀⠀⠀⠀⠀⣠⣀⠙⠳⠶⠶⠀⠀⠀⠀⠀⠀⠀⠀⢠⣀⣀⣀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⢿⣶⣤⣤⠀⠀⠀⠀⠀⠀⠀⢠⠛⠛⠻⠿
+⠀⠀⠀⠀⠀⠀⠀⠀⠰⣦⣄⠈⠉⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣶⡆⠀⠀⠀⠀⠀⠀⠀⠺⠿⠿⠿⠁
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⠟⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣤⡄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣀⣀⣀⣀⠁
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠛⠻⠿⠿⠧
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣞⣻⣿⣿⣔⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠋⠉⠉⠉
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Lexend:wght@300&family=Source+Code+Pro&display=swap');
+:root {
+  --theme: 'QuickSCSS';
+}
+.socialLinks-3jqNFy + .info-1VyQPT::after {
+  content: var(--theme);
+  line-height: 16px;
+  font-size: 12px;
+  color:var(--text-muted);
+}
+@if $checked-settings == 0 {
+  #app-mount {
+    > div:not(.layerContainer-yqaFcK):not(.titleBar-AC4pGV) {
+      display: none;
+    }
+    text-align: center;
+    -webkit-app-region: drag;
+    user-select: none;
+    background-color: var(--background-secondary-alt) !important;
+    $top: 150px;
+    &::after {
+      content: 'Hey, thanks for using my theme ('var(--theme)'),\AI hope you like it, I\'ve worked really hard on it. \A\A To continue using this theme please go to\A this theme\'s theme folder, should be located at\A\A and open the "vars.scss" file, \A in the "vars.scss" file edit the 2nd line\A to have a "1" instead of a "0".\A\AIf there is anything you don\'t like about the theme,\Ayou can remove/edit it either in the\A"vars.scss" file or the "index.scss" file!\A\AI hope you like the theme, bye!';
+      white-space: pre-wrap;
+      position: absolute;
+      top: $top;
+      left: 50%;
+      transform: translateX(-50%);
+      width: clamp(550px, 800px, 75%);
+      padding: 16px;
+      border: 4px dashed var(--interactive-hover, white);
+      border-radius: 12px;
+      line-height: 2.4rem;
+      font-size: 2rem;
+      font-family: 'Lexend', Whitney;
+      color: var(--text-normal);
+      background-color: var(--background-primary);
+    }
+    &::before {
+      content: '%userprofile%\\powercord\\src\\Powercord\\themes\\QuickSCSS';
+      user-select: text;
+      position: absolute;
+      z-index: 1;
+      top: calc(#{$top} + 13.75rem);
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 4px;
+      font-size: 1.5rem;
+      font-family: 'Fira Code', Consolas;
+      border-radius: 4px;
+      color: var(--text-normal);
+      background-color: var(--background-tertiary);
+    }
+    .layerContainer-yqaFcK {
+      &::before {
+        content: 'sorry for the text not being selectable!';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: var(--interactive-normal);
+      }
+    }
+    .titleBar-AC4pGV {
+      background-color: transparent;
+      > div:not([aria-label]) {
+        display: none;
+      }
+    }
+  }
+}

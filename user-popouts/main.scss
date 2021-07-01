@@ -1,0 +1,212 @@
+//* User popout
+.userPopout-xaxa6l { // settings page popout
+  //? Main color changes
+  &,
+  > div,
+  .bodyInnerWrapper-26fQXj {
+    background-color: var(--background-secondary);
+  }
+  .headerTop-3vNv-a,
+  .customStatus-oN4ZZY {
+    background-color: var(--background-tertiary);
+  }
+  .avatar-37jOim {
+    background-color: var(--background-tertiary);
+    border-color: var(--background-tertiary);
+  }
+  //? Positioning and stuff
+  .body-3HBlXn { // Main
+    padding: 0 0 14px !important;
+    overflow: visible !important;
+    > div {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  .headerTop-3vNv-a { // Header
+    padding-bottom: 4px;
+    &:not(.headerTopWithCustomStatus-1DHAjX) {
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+    }
+    .headerTagWithNickname-3l_x6x {
+      padding-bottom: 4px;
+    }
+  }
+  .customStatus-oN4ZZY { // Custom status
+    padding-bottom: 8px;
+  }
+  .activity-2INFPu:first-child { // Status
+    margin-top: 8px;
+  }
+  .rolesList-1geHY1 { // Roles
+    margin-top: 4px;
+  }
+  //? Remove the Dumb devider
+  .divider-ewBQKj {
+    display: none;
+  }
+  //? Make the about me section not get limited
+  .aboutMeBody-3GuvKk.clamped-IwJfxR {
+    display: block;
+  }
+  //? Activity
+  .activity-2INFPu {
+    margin: 0 0 12px;
+    padding: 8px;
+    width: auto;
+    border-radius: 4px;
+    box-shadow: var(--elevation-high);
+    background-color: var(--background-primary);
+    .assetsLargeImage-eYwpTX {
+      border-radius: 4px;
+    }
+  }
+}
+
+//* Settings tab user popout
+.profileBannerPreview-3_l0Wd {
+  .avatarUploaderInner-Oiob_P {
+    border-color: var(--background-tertiary);
+    background-color: var(--background-tertiary);
+  }
+  .popoutInfo-pKbpvG {
+    &,
+    > div {
+      background-color: var(--background-secondary);
+    }
+    .headerTop-3vNv-a {
+      background-color: var(--background-tertiary);
+    }
+    .fakeActivityWrapper-2i1oU- {
+      margin: 0 12px;
+      margin-top: 8px;
+      padding: 8px;
+      width: auto;
+      border-radius: 8px;
+      box-shadow: var(--elevation-high);
+      background-color: var(--background-primary);
+      transition: .3s ease;
+
+    }
+  }
+}
+
+//* User Modal
+[aria-label="User Profile Modal"] {
+  //? Main color changes
+  > div[style],
+  .body-r6_QPy {
+    background-color: var(--background-secondary);
+  }
+  .topSection-y3p-_D {
+    background-color: var(--background-tertiary);
+  }
+  .avatar-AvHqJA {
+    background-color: var(--background-tertiary);
+    border-color: var(--background-tertiary);
+  }
+  //? Positioning and stuff
+  .nameTagWithCustomStatus-2kkfrQ {
+    padding-bottom: 6px;
+  }
+  .customStatusActivity-nmH3DF {
+    padding: 0 16px 4px;
+  }
+  //? Activity
+  .activityProfile-2bJRaP { // Activity posiitioning
+    margin: 6px 8px 0;
+    padding: 0 8px;
+    + .activityProfile-2bJRaP { // Activity seperator
+      padding-top: 16px;
+      border-top: 1px solid hsla(0, 0%, 90%, 0.1);
+    }
+    &:nth-last-child(2) { // More scroll space at the bottom
+      padding-bottom: 10px;
+    }
+    .assets-VMAukC + .content-3JfFJh { // Text positioning
+      margin-left: 10px;
+    }
+    //? Buttons
+    .body-ZAhrcj { // Make buttons able to go bellow the activity
+      flex-wrap: wrap;
+      .buttonSize-AQY2mE:only-of-type { // 1 button
+        flex: 1 0 100%;
+        width: 100%;
+        margin: 0;
+        margin-top: 2px;
+        margin-bottom: 4px;
+      }
+      .buttonsWrapper-2spIeK { // Multiple buttons
+        width: 100%;
+        margin: 0;
+        margin-top: 4px;
+        .buttonSize-AQY2mE {
+          width: 100%;
+          max-width: unset;
+          &:nth-last-child(2):not(.horizontal-3fI3M- button) {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+  //? Fix padding when looking on your own profile
+  header:last-child {
+    padding-bottom: 16px;
+  }
+}
+
+//* Settings tab user "modal"
+.accountProfileCard-1XCH88 {
+  background-color: var(--background-secondary);
+  .userInfo-iCloHO {
+    height: unset;
+    padding-bottom: 40px;
+    background-color: var(--background-tertiary);
+  }
+  .avatar-1uQSZT {
+    border-color: var(--background-tertiary);
+    background-color: var(--background-tertiary);
+  }
+}
+
+//* Yeah
+.userPopout-xaxa6l, .profileBannerPreview-3_l0Wd,
+[aria-label="User Profile Modal"], .accountProfileCard-1XCH88 {
+  //? Buttons
+  .button-38aScr:not([class*="colorLink"]),
+  .button-38aScr:disabled { // Show all activities buttons
+    border: none;
+    color: #fff;
+    background-color: #4f545c;
+    &:hover {
+      background-color: #474c53;
+    }
+  }
+  //? Badges
+  [aria-label="User Badges"] {
+    top: 8px;
+    gap: 3px;
+    > div {
+      margin: unset;
+    }
+    div,
+    img:not([alt="Custom badge"]) {
+      height: 28px;
+      width: 28px;
+    }
+  }
+  //? Smaller discrim
+  .discrimBase-24vY8o, // popout
+  .discriminator-1swucG { // modal
+    font-size: 14px;
+    color: var(--header-secondary);
+    vertical-align: bottom;
+  }
+  //? Fix the spotify icon
+  .spotifyIcon-2J9kSv { // imagine if i weren't able to use #app-mount to overwrite discord's styling here because this selector is nested and had to use !important instead, that would be funy i think
+    top: 12px !important;
+    right: 12px !important;
+  }
+}

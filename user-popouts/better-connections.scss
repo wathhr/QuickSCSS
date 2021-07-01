@@ -1,0 +1,169 @@
+//! clickable
+.connectedAccounts-QlRa4m {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 0;
+  .connectedAccount-2Jb-Z0 {
+    justify-content: center;
+    margin: 0;
+    width: unset;
+    height: 100px;
+    padding: 0;
+    border-radius: 20px;
+    background-color: transparent;
+
+    position: relative;
+    overflow: hidden;
+    a {
+      svg {
+        display: none;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        filter: grayscale(.5) opacity(.4);
+      }
+    }
+    .connectedAccountNameInner-2q3MVf {
+      flex-grow: 0;
+      z-index: 2;
+      overflow: visible;
+      .connectedAccountName-E1KzaT {
+        font-size: 1.4rem;
+        margin: 0;
+        overflow: visible;
+      }
+    }
+    [aria-label='Verified'] {
+      display: none;
+    }
+    img {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+$clickable: (
+  'https://github.com': (
+    url('https://images2.imgbox.com/bf/7a/qZdstz5m_o.gif'),
+    cover,
+    unset
+  ),
+  'https://open.spotify.com': (
+    url('https://images2.imgbox.com/cc/40/UbAuNtkq_o.gif'),
+    75%,
+    center 45%
+  ),
+  'https://steamcommunity.com': (
+    url('https://images2.imgbox.com/ee/89/30OZ8D4K_o.jpg'),
+    85%,
+    center -25%
+  ),
+  'https://www.twitch.tv': (
+    url('https://images2.imgbox.com/d8/c2/QZT0mqhx_o.gif'),
+    80%,
+    center 15%
+  ),
+  'https://twitter.com': (
+    url('https://images2.imgbox.com/8a/7b/Bqe3ZQFZ_o.jpg'),
+    cover,
+    top
+  ),
+  'https://www.facebook.com': (
+    url('http://townsquare.media/site/712/files/2017/09/Elderly-Thumbs-Up.jpg'),
+    cover,
+    center
+  ),
+  'https://www.youtube.com': (
+    url('https://images2.imgbox.com/ec/3e/RDjWsB0I_o.png') no-repeat #FF0000,
+    52%,
+    center
+  ),
+  'https://www.reddit.com': (
+    url('https://images2.imgbox.com/d7/f0/25bBk3Gn_o.jpg'),
+    130%,
+    20% 65%
+  ),
+  'skype:': ( // skype made me add https:// to the start of every other platform thing
+    url('https://images2.imgbox.com/cf/a0/mWNmnU4x_o.png'),
+    97.5%,
+    center
+  ),
+  'https://osu.ppy.sh': (
+    url('https://images2.imgbox.com/a0/93/mArEI08V_o.png'),
+    cover,
+    center
+  ),
+  'https://gitlab.com': (
+    url('https://images2.imgbox.com/37/a7/TCbF9QJ0_o.png') no-repeat white,
+    33%,
+    10% center
+  )
+);
+
+@each $platform, $bg in $clickable {
+  $bgasset: nth($bg, 1);
+  $bgsize: nth($bg, 2);
+  $bgpos: nth($bg, 3);
+  .connectedAccount-2Jb-Z0 > a[href^='#{$platform}'] {
+    &::after {
+      background: $bgasset;
+      background-size: $bgsize;
+      background-position: $bgpos;
+    }
+  }
+}
+
+//! unclickable
+$unclickable: (
+  'Minecraft': (
+    url('https://images2.imgbox.com/ec/61/IzkVjY08_o.jpg'),
+    cover,
+    unset
+  ),
+  'Battle.net': (
+    url('https://images2.imgbox.com/73/1f/FpwjXicM_o.jpg'),
+    140%,
+    center
+  ),
+  'League of Legends': (
+    url('https://images2.imgbox.com/d7/ec/bNKeMMtE_o.jpg'),
+    150%,
+    50% center
+  ),
+  'Xbox Live': (
+    url('https://images2.imgbox.com/ed/7d/BSsjEvcb_o.jpg'),
+    115%,
+    center
+  )
+);
+
+@each $uplatform, $bg in $unclickable {
+  $bgasset: nth($bg, 1);
+  $bgsize: nth($bg, 2);
+  $bgpos: nth($bg, 3);
+  .connectedAccountIcon-3_EQqg[alt="#{$uplatform} Logo"] + .connectedAccountNameInner-2q3MVf{
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      
+      cursor: not-allowed;
+      background: $bgasset;
+      background-size: $bgsize;
+      background-position: $bgpos;
+      filter: grayscale(.5) opacity(.4);
+    }
+  }
+}
