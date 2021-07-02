@@ -1,5 +1,5 @@
 # QuickSCSS
-cool customizable theme or something idk just look at the [screenshots](https://github.com/wathhr/QuickSCSS#screenshots) i don't have to write a 5000 word essay to make you want to use my theme
+cool customizable theme or something idk just look at the screenshots below; i don't have to write a 5000 word essay to make you want to use my theme
 
 <details><summary>Screenshots</summary>
 
