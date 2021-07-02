@@ -11,7 +11,10 @@ $blur-amount: 6px; // How much to blur discrims and the DM list
 $use-custom-wordmark: 1; // Whether or not to use a custom wordmark (top left)
 $custom-wordmark-text: dicksword; // Defaults to "discord"
 
-//* Splash
+//* Splash (pretty much windows only because im lazy)
+//? To "enable" the splash screen you need to go into "splash.scss"
+//? and replace "Username"(on the 1st line) with your computer's username.
+
 //? To disable the splash screen background and custom loading icon
 //? you need to go into "powercord_manifest.json" and remove line 9.
 
