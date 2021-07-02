@@ -40,9 +40,11 @@ Nitro tab
 ## Credits
  - Powercord's terrible Quick CSS.
    - Pretty much the only reason i made this is because of how bad Powercord's Quick CSS "editor" is.
- - Alfred ( Epic !! ))))
-   - He told me to start using SCSS.
+ - [Alfred](https://www.youtube.com/watch?v=NWD7iqtOJSE) ( Epic !! ))))
+   - They told me to start using SCSS.
  - [KraXen72](https://github.com/KraXen72)
-   - I implemented an old and customized version of his [Harmony](https://github.com/KraXen72/harmony-discord/) theme into this theme.
+   - I implemented an old and customized version of their [Harmony](https://github.com/KraXen72/harmony-discord/) theme into this theme.
+ - [Ducko](https://github.com/CanadaHonk)
+   - I stole the vars he used on his [GT-RevertRebrand](https://github.com/Goose-Nest/GT-RevertRebrand) theme.
  - All the snippets I stole from random people lol
    - Some snippets on this theme were "stolen" from the [#css-snippets](https://canary.discord.com/channels/538759280057122817/755005803303403570/) channel on the Powercord server; I sadly do not remember which snippets are stolen and which aren't so I can give full credit.
