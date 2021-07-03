@@ -1,6 +1,6 @@
-$username: username;
+$username: [USERNAME];
 
-@if $username != username {
+@if $username != [USERNAME] {
   #splash {
     // Background
     &::before {

@@ -1,9 +1,8 @@
 # QuickSCSS
 cool customizable theme or something idk just look at the screenshots below; i don't have to write a 5000 word essay to make you want to use my theme
 
-<details><summary>Screenshots</summary>
+<details><summary>Screenshots</summary>﻿<!-- ZWS here -->
 
-###### screenshots
 Titlebar  
 ![Titlebar](https://i.imgur.com/uJ61iCu.png)  
 
@@ -33,17 +32,17 @@ Nitro tab
  - [Sublime text](https://packagecontrol.io/packages/Colored%20Comments)
  - [Atom](https://github.com/AndrewKralovec/atom-better-comments)
 
-###### If your text editor is not listed, it is likely that the extension does not exist on it
+###### If your text editor is not listed, the extension probably has not been ported over to it
 
 </details>
 
 ## Credits
  - Powercord's terrible Quick CSS.
    - Pretty much the only reason i made this is because of how bad Powercord's Quick CSS "editor" is.
- - [Alfred](https://www.youtube.com/watch?v=NWD7iqtOJSE) ( Epic !! ))))
-   - They told me to start using SCSS.
  - [KraXen72](https://github.com/KraXen72)
    - I implemented an old and customized version of their [Harmony](https://github.com/KraXen72/harmony-discord/) theme into this theme.
+ - [Alfred](https://www.youtube.com/watch?v=NWD7iqtOJSE) ( Epic !! ))))
+   - They told me to start using SCSS or something idk he's cool.
  - [Ducko](https://github.com/CanadaHonk)
    - I stole the vars he used on his [GT-RevertRebrand](https://github.com/Goose-Nest/GT-RevertRebrand) theme.
  - All the snippets I stole from random people lol

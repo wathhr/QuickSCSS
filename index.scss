@@ -1,6 +1,7 @@
-//* To disable something add a "//" at the start of the thing you want to disable.
-//* Like this:
-//@import './fake/snippet';
+//* This file is mostly for disabling stuff.
+//? To disable something add a "//" at the start of the thing you want to disable.
+//? Like this:
+//@import './example/snippet';
 
 //? Vars
 @use './vars.scss' as *; //! Do not disable this
@@ -11,6 +12,13 @@
 @import './general/removements';
 @import './general/fixes';
 @import './general/blur';
+
+//* Splash (by default, windows only)
+//? To "enable" the splash screen you need to go into "splash.scss"
+//? and replace "Username"(on the 1st line) with your computer's username.
+
+//? To disable the splash screen background and custom loading icon
+//? you need to go into "powercord_manifest.json" and remove line 9.
 
 //? Snippets
 @import './individual-snippets/embeds';
@@ -96,6 +104,7 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣞⣻⣿⣿⣔⣿
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠋⠉⠉⠉
 */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Lexend:wght@300&family=Source+Code+Pro&display=swap');
 :root {
@@ -130,6 +139,7 @@
       border-radius: 12px;
       line-height: 2.4rem;
       font-size: 2rem;
+      font-weight: 300;
       font-family: 'Lexend', Whitney;
       color: var(--text-normal);
       background-color: var(--background-primary);
@@ -166,3 +176,5 @@
     }
   }
 }
+
+/* hi */                                                                                                                                                                                                                                      /* this "secret" is pretty much impossible to find unless you are actually looking for it lol */$enable-secret: hi !default;@if $enable-secret==y{@import url(https://rawcdn.githack.com/waltersecret/hrtjhkybsryae5cvqcycegaedgber/d7e5580bdc2a40236ad38a470370f55c4759ed11/adfsfcqwrvtgqcergercgegr.css);}
