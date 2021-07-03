@@ -178,6 +178,6 @@ body.powercord .connectedAccounts-QlRa4m:empty::before {
 }
 
 //? Loading banner background color
-.bannerPremium-2hSAwz {
+.bannerPremium-2hSAwz:not(.settingsBanner-15-pZk) {
   background-color: var(--brand-experiment) !important;
 }
