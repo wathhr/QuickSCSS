@@ -1,0 +1,105 @@
+// i have no idea what to name this, harmony didn't really add a comment for this
+.titleBar-AC4pGV,
+div.channelTabs-tabContainer,
+[aria-label="Servers sidebar"] .scroller-1Bvpku {
+  background-color: var(--background-secondary);
+}
+
+// Channel tabs
+#channelTabs-container ~ .layers-3iHuyZ { //pain
+  &,
+  & > .layer-3QrUeG,
+  .container-2lgZY8,
+  .base-3dtUhz,
+  [aria-label="Servers sidebar"],
+  .sidebar-2K8pFh {
+    overflow: visible;
+  }
+  [aria-label="Servers sidebar"],
+  .sidebar-2K8pFh,
+  [aria-label="USER_SETTINGS"] {
+    margin-top: calc((var(--channelTabs-tabHeight) + 16px) * -1);
+  }
+  .searchBar-6Kv8R2 {
+    box-shadow: none;
+  }
+}
+.channelTabs-tabContainer {
+  width: calc(100% - 72px - 240px);
+  float: right;
+
+  display: flex;
+  place-items: center;
+  .channelTabs-tab {
+    display: flex;
+    place-items: center;
+  }
+  .channelTabs-newTab,
+  .channelTabs-closeTab {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    &:not(.channelTabs-selected div):not(.channelTabs-newTab:hover) {
+      color: var(--interactive-normal);
+    }
+  }
+  .channelTabs-closeTab {
+    width: 16px;
+    height: 16px;
+    &:hover:not(.channelTabs-selected div) {
+      filter: brightness(1.3)
+    }
+    &::after {
+      content: '\1F7A9';
+      font-weight: 700;
+      font-size: .8rem;
+    }
+  }
+  .channelTabs-newTab {
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    &::after {
+      content: '\002B';
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+[aria-label="Servers"] {
+  // Server folders
+  .expandedFolderBackground-1cujaW,
+  .folder-1hbNCn {
+    background-color: var(--background-tertiary) !important;
+    transition: all 0.3s;
+    &.hover-qTxTR_ {
+      background-color: var(--background-secondary-alt);
+    }
+  }
+  .expandedFolderIconWrapper-Huv7rA,
+  .folderIconWrapper-1_bOZe {
+    &[style] {
+      background-color: transparent !important;
+    }
+    > svg {
+      color: var(--brand-experiment) !important;
+    }
+  }
+  // Explanded folder background width
+  .expanded {
+    display: grid;
+    place-items: center;
+    .expandedFolderBackground-1cujaW {
+      width: 42px;
+      left: unset
+    }
+  } 
+}
+
+// Panel border colors
+[aria-label="User area"] > div {
+  border-color: var(--background-secondary);
+}
