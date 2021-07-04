@@ -1,4 +1,4 @@
-# QuickSCSS
+# QuickSCSS [![CodeFactor](https://www.codefactor.io/repository/github/wathhr/quickscss/badge?s=5f2850cfa164e62ecf2eaa497b0a075cf28b67cf)](https://www.codefactor.io/repository/github/wathhr/quickscss)
 cool customizable theme or something idk just look at the screenshots below; i don't have to write a 5000 word essay to make you want to use my theme
 
 <details><summary>Screenshots</summary>﻿<!-- ZWS here -->
