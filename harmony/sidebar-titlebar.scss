@@ -6,28 +6,27 @@ div.channelTabs-tabContainer,
 }
 
 // Channel tabs
-#channelTabs-container ~ .layers-3iHuyZ { //pain
-  &,
-  & > .layer-3QrUeG,
-  .container-2lgZY8,
-  .base-3dtUhz,
-  [aria-label="Servers sidebar"],
-  .sidebar-2K8pFh {
-    overflow: visible;
-  }
-  [aria-label="Servers sidebar"],
-  .sidebar-2K8pFh,
-  [aria-label="USER_SETTINGS"] {
-    margin-top: calc((var(--channelTabs-tabHeight) + 16px) * -1);
-  }
-  .searchBar-6Kv8R2 {
-    box-shadow: none;
+#channelTabs-container {
+  width: calc(100% - 72px - 240px);
+  margin-left: 72px + 240px;
+  ~ .layers-3iHuyZ { //pain
+    &,
+    > .layer-3QrUeG,
+    .container-2lgZY8,
+    .base-3dtUhz {
+      overflow: visible;
+    }
+    [aria-label="Servers sidebar"],
+    .sidebar-2K8pFh,
+    [aria-label="USER_SETTINGS"] {
+      margin-top: calc((var(--channelTabs-tabHeight) + 16px) * -1);
+    }
+    .searchBar-6Kv8R2 {
+      box-shadow: none;
+    }
   }
 }
 .channelTabs-tabContainer {
-  width: calc(100% - 72px - 240px);
-  float: right;
-
   display: flex;
   place-items: center;
   .channelTabs-tab {
