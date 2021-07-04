@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     justify-content: center;
     .title-30qZAO.container-2ax-kl {
+      margin: 8px 0;
       width: 100%;
       text-align: center;
     }
@@ -21,6 +22,9 @@
       height: 62px !important;
       .avatar-3W3CeO {
         margin-top: 2px;
+      }
+      .userInfo-3bsjnc {
+        flex-shrink: 1;
       }
     }
   }

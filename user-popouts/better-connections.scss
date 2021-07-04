@@ -66,6 +66,11 @@ $clickable: (
     85%,
     center -25%
   ),
+  'steam://': ( // i have no idea if you can combine both this and the thing above into 1
+    url('https://images2.imgbox.com/ee/89/30OZ8D4K_o.jpg'),
+    85%,
+    center -25%
+  ),
   'https://www.twitch.tv': (
     url('https://images2.imgbox.com/d8/c2/QZT0mqhx_o.gif'),
     80%,
@@ -91,7 +96,7 @@ $clickable: (
     130%,
     20% 65%
   ),
-  'skype:': ( // skype made me add https:// to the start of every other platform thing
+  'skype:': (
     url('https://images2.imgbox.com/cf/a0/mWNmnU4x_o.png'),
     97.5%,
     center

@@ -17,7 +17,9 @@
   //? Positioning and stuff
   .body-3HBlXn { // Main
     padding: 0 0 14px !important;
-    overflow: visible !important;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     > div {
       padding-left: 16px;
       padding-right: 16px;
@@ -42,13 +44,26 @@
   .rolesList-1geHY1 { // Roles
     margin-top: 4px;
   }
+  .bodyInnerWrapper-26fQXj { // BD version of User Details made by Strencher
+    display: grid;
+    .UserDetails-connections-connectionsBody {
+      order: 1;
+    }
+    .UserDetails-connections-header,
+    .UserDetails-connections-connections {
+      margin-bottom: 0;
+    }
+    .UserDetails-connections-header {
+      margin-top: 12px;
+    }
+  }
   //? Remove the Dumb devider
   .divider-ewBQKj {
     display: none;
   }
-  //? Make the about me section not get limited
-  .aboutMeBody-3GuvKk.clamped-IwJfxR {
-    display: block;
+  //? Remove the Dumb checkmark on the BD version of User Details made by Strencher
+  #app-mount & .UserDetails-badge-verifiedBadge {
+    display: none;
   }
   //? Activity
   .activity-2INFPu {
@@ -66,28 +81,57 @@
 
 //* Settings tab user popout
 .profileBannerPreview-3_l0Wd {
-  .avatarUploaderInner-Oiob_P {
-    border-color: var(--background-tertiary);
+  //? Main color changes
+  &,
+  .popoutInfo-pKbpvG {
+    background-color: var(--background-secondary)
+  }
+  .headerTop-3vNv-a,
+  .customStatus-oN4ZZY {
     background-color: var(--background-tertiary);
   }
-  .popoutInfo-pKbpvG {
-    &,
+  .avatarUploaderInner-Oiob_P {
+    background-color: var(--background-tertiary);
+    border-color: var(--background-tertiary);
+  }
+  //? Positioning and stuff
+  .popoutInfo-pKbpvG { // Main
+    padding: 0 0 14px !important;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     > div {
-      background-color: var(--background-secondary);
+      padding-left: 16px;
+      padding-right: 16px;
     }
-    .headerTop-3vNv-a {
-      background-color: var(--background-tertiary);
+  }
+  .headerTop-3vNv-a { // Header
+    padding-bottom: 4px;
+    &:not(.headerTopWithCustomStatus-1DHAjX) {
+      padding-bottom: 8px;
+      margin-bottom: 8px;
     }
-    .fakeActivityWrapper-2i1oU- {
-      margin: 0 12px;
-      margin-top: 8px;
-      padding: 8px;
-      width: auto;
-      border-radius: 8px;
-      box-shadow: var(--elevation-high);
-      background-color: var(--background-primary);
-      transition: .3s ease;
-
+    .headerTagUsernameBase-1NqrY5 {
+      padding-bottom: 4px;
+    }
+  }
+  .customStatus-oN4ZZY { // Custom status
+    padding-bottom: 8px;
+  }
+  //? Remove the Dumb divider
+  .divider-ewBQKj {
+    display: none;
+  }
+  //? Activity
+  div[aria-hidden="true"]:last-child {
+    margin: 0 16px 4px;
+    padding: 8px;
+    width: auto;
+    border-radius: 4px;
+    box-shadow: var(--elevation-high);
+    background-color: var(--background-primary);
+    .assetsLargeImage-eYwpTX {
+      border-radius: 4px;
     }
   }
 }
@@ -116,7 +160,7 @@
   //? Activity
   .activityProfile-2bJRaP { // Activity posiitioning
     margin: 6px 8px 0;
-    padding: 0 8px;
+    padding: 0 8px 4px;
     + .activityProfile-2bJRaP { // Activity seperator
       padding-top: 16px;
       border-top: 1px solid hsla(0, 0%, 90%, 0.1);
@@ -125,7 +169,7 @@
       padding-bottom: 10px;
     }
     .assets-VMAukC + .content-3JfFJh { // Text positioning
-      margin-left: 10px;
+      margin-left: 6px;
     }
     //? Buttons
     .body-ZAhrcj { // Make buttons able to go bellow the activity
@@ -141,6 +185,9 @@
         width: 100%;
         margin: 0;
         margin-top: 4px;
+        &.horizontal-3fI3M- {
+          margin-top: 8px;
+        }
         .buttonSize-AQY2mE {
           width: 100%;
           max-width: unset;
@@ -208,5 +255,12 @@
   .spotifyIcon-2J9kSv { // imagine if i weren't able to use #app-mount to overwrite discord's styling here because this selector is nested and had to use !important instead, that would be funy i think
     top: 12px !important;
     right: 12px !important;
+  }
+  //? Make the about me section not get limited less
+  .aboutMeBody-3GuvKk,
+  .userBio-3tlrzS {
+    &.clamped-IwJfxR {
+      -webkit-line-clamp: 8;
+    }
   }
 }
