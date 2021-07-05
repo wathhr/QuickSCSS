@@ -1,6 +1,19 @@
 # QuickSCSS [![CodeFactor](https://www.codefactor.io/repository/github/wathhr/quickscss/badge?s=5f2850cfa164e62ecf2eaa497b0a075cf28b67cf)](https://www.codefactor.io/repository/github/wathhr/quickscss)
 cool customizable theme or something idk just look at the screenshots below; i don't have to write a 5000 word essay to make you want to use my theme
 
+I suggest using the extension named "Better comments"/"Colored comments":
+###### (**especially** if you are going to edit the actual code)
+
+<details><summary>URLs</summary>﻿<!-- ZWS here -->
+
+ - [VSCode](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+ - [Sublime text](https://packagecontrol.io/packages/Colored%20Comments)
+ - [Atom](https://github.com/AndrewKralovec/atom-better-comments)
+
+###### If your text editor is not listed, the extension probably has not been ported over to it
+
+</details>
+
 <details><summary>Screenshots</summary>﻿<!-- ZWS here -->
 
 Titlebar  
@@ -20,19 +33,6 @@ Stage Discovery tab
 
 Nitro tab
 ![Nitro-Tab](https://i.imgur.com/7DxaPXg.png)  
-
-</details>
-
-#### I suggest using the extension named "Better comments"/"Colored comments":
-###### (**especially** if you are going to edit the actual code)
-
-<details><summary>URLs</summary>﻿<!-- ZWS here -->
-
- - [VSCode](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
- - [Sublime text](https://packagecontrol.io/packages/Colored%20Comments)
- - [Atom](https://github.com/AndrewKralovec/atom-better-comments)
-
-###### If your text editor is not listed, the extension probably has not been ported over to it
 
 </details>
 
