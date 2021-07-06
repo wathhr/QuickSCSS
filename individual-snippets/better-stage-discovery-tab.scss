@@ -19,10 +19,9 @@
     display: grid;
     grid-template-columns: repeat($stage-discovery-rows, 1fr);
     grid-template-rows: repeat(100, 0fr);
-    $gap: 8px;
+    $gap: 4px;
     gap: $gap;
-    padding: $gap;
-    padding-right: $gap !important;
+    padding: $gap !important;
     position: static;
     .container-S9SaVf {
       max-width: unset;

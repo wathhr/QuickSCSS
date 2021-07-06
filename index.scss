@@ -15,13 +15,13 @@
 
 //? Splash (by default, windows only)
 //* To "enable" the splash screen you need to go into "splash.scss"
-//* and replace "Username"(on the 1st line) with your computer's username.
+//* and replace "[USERNAME]"(on the 1st line) with your user's username.
 
-//* To disable the splash screen background and custom loading icon
-//* you need to go into "powercord_manifest.json" and remove line 9.
+//* To completely disable the splash screen you need to go into
+//* "powercord_manifest.json" and remove line 9.
 
 //? Snippets
-@import './individual-snippets/embeds';
+@import './individual-snippets/embeds'; // Make images/embeds wrap instead of stacking on messages
 @import './individual-snippets/friend-grid';
 //@import './individual-snippets/friend-grid2'; // (Likely) less buggy and more ugly version of the snippet above, use this only if you are experiencing problems with the snippet above
 @import './individual-snippets/better-stage-discovery-tab';

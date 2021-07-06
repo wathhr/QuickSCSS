@@ -52,7 +52,7 @@ $connections: (
   $new-asset: nth($asset, 1);
   $profile-connection: nth($asset, 2);
 
-  [src="#{$profile-connection}"],
+  [src="#{$profile-connection}"]:not(.UserDetails-activity-container img),
   button[aria-label="#{$platform}"],
   img[aria-label="#{$platform}"] {
     background-image: $new-asset !important;
