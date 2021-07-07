@@ -76,9 +76,7 @@
     box-shadow: var(--elevation-high);
     background-color: var(--background-primary);
     .content-3JfFJh {
-      div, h3, span {
-        white-space: pre-wrap;
-      }
+      width: 0; // this is actually such a retarded fix, but it works
     }
     .assetsLargeImage-eYwpTX {
       border-radius: 4px;
