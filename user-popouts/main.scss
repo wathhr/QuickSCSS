@@ -175,9 +175,6 @@
     &:nth-last-child(2) { // More scroll space at the bottom
       padding-bottom: 10px;
     }
-    .assets-VMAukC + .content-3JfFJh { // Text positioning
-      margin-left: 6px;
-    }
     //? Buttons
     .body-ZAhrcj { // Make buttons able to go bellow the activity
       flex-wrap: wrap;
@@ -229,8 +226,8 @@
 .userPopout-xaxa6l, .profileBannerPreview-3_l0Wd,
 [aria-label="User Profile Modal"], .accountProfileCard-1XCH88 {
   //? Buttons
-  .button-38aScr:not([class*="colorLink"]),
-  .button-38aScr:disabled { // Show all activities buttons
+  .button-38aScr:not(.lookLink-9FtZy-),
+  .button-38aScr:disabled {
     border: none;
     color: #fff;
     background-color: #4f545c;
@@ -258,16 +255,26 @@
     color: var(--header-secondary);
     vertical-align: bottom;
   }
-  //? Fix the spotify icon
-  .spotifyIcon-2J9kSv { // imagine if i weren't able to use #app-mount to overwrite discord's styling here because this selector is nested and had to use !important instead, that would be funy i think
-    top: 12px !important;
-    right: 12px !important;
+  //? Imrpove the spotify icon positioning
+  #app-mount & .spotifyIcon-2J9kSv {
+    top: 12px;
+    right: 12px;
   }
   //? Make the about me section not get limited less
   .aboutMeBody-3GuvKk,
   .userBio-3tlrzS {
     &.clamped-IwJfxR {
-      -webkit-line-clamp: 8;
+      -webkit-line-clamp: 10;
     }
+  }
+  //? Activity text positioning
+  .assets-VMAukC {
+    margin-right: 8px
+  }
+  .gameIcon-_0rmMm {
+    margin-right: 6px;
+  }
+  .content-3JfFJh { 
+    margin-left: 0;
   }
 }
