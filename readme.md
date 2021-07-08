@@ -16,22 +16,22 @@ I suggest using the extension named "Better comments"/"Colored comments":
 
 <details><summary>Screenshots</summary>﻿<!-- ZWS here -->
 
-Titlebar  
+Titlebar﻿<!-- ZWS here -->
 ![Titlebar](./screenshots/titlebar.png)
 
-Friend list
+Friend list﻿<!-- ZWS here -->
 ![Friend-list](./screenshots/friend-list.png)
 
-Stage Discovery tab
+Stage Discovery tab﻿<!-- ZWS here -->
 ![Stage-Discovery-tab](./screenshots/stage-discovery.png)
 
-Nitro tab
+Nitro tab﻿<!-- ZWS here -->
 ![Nitro-Tab](./screenshots/nitro-tab.png)
 
-User popout  
+User popout﻿<!-- ZWS here -->
 ![User-Popout](./screenshots/user-popout.png)
 
-Connection backgrounds
+Connection backgrounds﻿<!-- ZWS here -->
 ![Connection-backgrounds](./screenshots/connections-backgrounds.gif)
 
 </details>
