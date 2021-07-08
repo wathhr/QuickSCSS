@@ -181,3 +181,8 @@ body.powercord .connectedAccounts-QlRa4m:empty::before {
 .bannerPremium-2hSAwz:not(.settingsBanner-15-pZk) {
   background-color: var(--brand-experiment) !important;
 }
+
+//? Top of titlebar getting darker when discord applies backdrop
+.backdrop-1wrmKB {
+  top: 4px;
+}
