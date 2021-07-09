@@ -67,7 +67,7 @@ $connections: (
     margin: 0;
     padding: 0;
   }
-  
+
   .connectedAccounts-QlRa4m {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -81,7 +81,7 @@ $connections: (
       padding: 0;
       border-radius: 20px;
       background-color: transparent;
-  
+
       position: relative;
       overflow: hidden;
       a {
@@ -89,14 +89,14 @@ $connections: (
           display: none;
         }
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           z-index: 1;
           top: 0;
           right: 0;
           width: 100%;
           height: 100%;
-          filter: grayscale(.5) opacity(.4);
+          filter: grayscale(0.5) opacity(0.4);
         }
       }
       .connectedAccountNameInner-2q3MVf {
@@ -109,7 +109,7 @@ $connections: (
           overflow: visible;
         }
       }
-      [aria-label='Verified'] {
+      [aria-label="Verified"] {
         display: none;
       }
       img {
@@ -118,70 +118,70 @@ $connections: (
       }
     }
   }
-  
+
   $clickable: (
-    'https://github.com': (
-      url('https://images2.imgbox.com/bf/7a/qZdstz5m_o.gif'),
+    "https://github.com": (
+      url("https://images2.imgbox.com/bf/7a/qZdstz5m_o.gif"),
       cover,
-      unset
+      unset,
     ),
-    'https://open.spotify.com': (
-      url('https://images2.imgbox.com/cc/40/UbAuNtkq_o.gif'),
+    "https://open.spotify.com": (
+      url("https://images2.imgbox.com/cc/40/UbAuNtkq_o.gif"),
       75%,
-      center 45%
+      center 45%,
     ),
-    'https://steamcommunity.com': (
-      url('https://images2.imgbox.com/ee/89/30OZ8D4K_o.jpg'),
+    "https://steamcommunity.com": (
+      url("https://images2.imgbox.com/ee/89/30OZ8D4K_o.jpg"),
       85%,
-      center -25%
+      center -25%,
     ),
-    'https://www.twitch.tv': (
-      url('https://images2.imgbox.com/d8/c2/QZT0mqhx_o.gif'),
+    "https://www.twitch.tv": (
+      url("https://images2.imgbox.com/d8/c2/QZT0mqhx_o.gif"),
       80%,
-      center 15%
+      center 15%,
     ),
-    'https://twitter.com': (
-      url('https://images2.imgbox.com/8a/7b/Bqe3ZQFZ_o.jpg'),
+    "https://twitter.com": (
+      url("https://images2.imgbox.com/8a/7b/Bqe3ZQFZ_o.jpg"),
       cover,
-      top
+      top,
     ),
-    'https://www.facebook.com': (
-      url('http://townsquare.media/site/712/files/2017/09/Elderly-Thumbs-Up.jpg'),
+    "https://www.facebook.com": (
+      url("http://townsquare.media/site/712/files/2017/09/Elderly-Thumbs-Up.jpg"),
       cover,
-      center
+      center,
     ),
-    'https://www.youtube.com': (
-      url('https://images2.imgbox.com/ec/3e/RDjWsB0I_o.png') no-repeat #FF0000,
+    "https://www.youtube.com": (
+      url("https://images2.imgbox.com/ec/3e/RDjWsB0I_o.png") no-repeat #ff0000,
       52%,
-      center
+      center,
     ),
-    'https://www.reddit.com': (
-      url('https://images2.imgbox.com/d7/f0/25bBk3Gn_o.jpg'),
+    "https://www.reddit.com": (
+      url("https://images2.imgbox.com/d7/f0/25bBk3Gn_o.jpg"),
       130%,
-      20% 65%
+      20% 65%,
     ),
-    'skype:': (
-      url('https://images2.imgbox.com/cf/a0/mWNmnU4x_o.png'),
+    "skype:": (
+      url("https://images2.imgbox.com/cf/a0/mWNmnU4x_o.png"),
       97.5%,
-      center
+      center,
     ),
-    'https://osu.ppy.sh': (
-      url('https://images2.imgbox.com/a0/93/mArEI08V_o.png'),
+    "https://osu.ppy.sh": (
+      url("https://images2.imgbox.com/a0/93/mArEI08V_o.png"),
       cover,
-      center
+      center,
     ),
-    'https://gitlab.com': (
-      url('https://images2.imgbox.com/37/a7/TCbF9QJ0_o.png') no-repeat white,
+    "https://gitlab.com": (
+      url("https://images2.imgbox.com/37/a7/TCbF9QJ0_o.png") no-repeat white,
       33%,
-      10% center
-    )
+      10% center,
+    ),
   );
-  
+
   @each $platform, $bg in $clickable {
     $bgasset: nth($bg, 1);
     $bgsize: nth($bg, 2);
     $bgpos: nth($bg, 3);
-    .connectedAccount-2Jb-Z0 > a[href*='#{$platform}'] {
+    .connectedAccount-2Jb-Z0 > a[href*="#{$platform}"] {
       &::after {
         background: $bgasset;
         background-size: $bgsize;
@@ -189,49 +189,49 @@ $connections: (
       }
     }
   }
-  
+
   $unclickable: (
-    'Minecraft': (
-      url('https://images2.imgbox.com/ec/61/IzkVjY08_o.jpg'),
+    "Minecraft": (
+      url("https://images2.imgbox.com/ec/61/IzkVjY08_o.jpg"),
       cover,
-      unset
+      unset,
     ),
-    'Battle.net': (
-      url('https://images2.imgbox.com/73/1f/FpwjXicM_o.jpg'),
+    "Battle.net": (
+      url("https://images2.imgbox.com/73/1f/FpwjXicM_o.jpg"),
       140%,
-      center
+      center,
     ),
-    'League of Legends': (
-      url('https://images2.imgbox.com/d7/ec/bNKeMMtE_o.jpg'),
+    "League of Legends": (
+      url("https://images2.imgbox.com/d7/ec/bNKeMMtE_o.jpg"),
       150%,
-      50% center
+      50% center,
     ),
-    'Xbox Live': (
-      url('https://images2.imgbox.com/ed/7d/BSsjEvcb_o.jpg'),
+    "Xbox Live": (
+      url("https://images2.imgbox.com/ed/7d/BSsjEvcb_o.jpg"),
       115%,
-      center
-    )
+      center,
+    ),
   );
-  
+
   @each $platform, $bg in $unclickable {
     $bgasset: nth($bg, 1);
     $bgsize: nth($bg, 2);
     $bgpos: nth($bg, 3);
-    .connectedAccountIcon-3_EQqg[alt="#{$platform} Logo"] + .connectedAccountNameInner-2q3MVf{
+    .connectedAccountIcon-3_EQqg[alt="#{$platform} Logo"] + .connectedAccountNameInner-2q3MVf {
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         z-index: -1;
         top: 0;
         right: 0;
         width: 100%;
         height: 100%;
-        
+
         cursor: not-allowed;
         background: $bgasset;
         background-size: $bgsize;
         background-position: $bgpos;
-        filter: grayscale(.5) opacity(.4);
+        filter: grayscale(0.5) opacity(0.4);
       }
     }
   }

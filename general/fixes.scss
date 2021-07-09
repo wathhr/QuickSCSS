@@ -37,12 +37,12 @@ section.container-1r6BKw.themed-ANHk51:not(.callContainer-36WRfH section) {
 }
 .activityUserPopout-2yItg2 {
   .buttonSize-AQY2mE:first-of-type {
-    width: 100%
+    width: 100%;
   }
 }
 
 //? Show all activities buttons
-div[class*='allactivities'] {
+div[class*="allactivities"] {
   margin-top: 0;
   > button {
     padding: 0;
@@ -67,7 +67,7 @@ div[class*='allactivities'] {
 
 //? Spotify attachment button
 .attachWrapper-2TRKBi path.attachButtonPlay-3iJ0mf {
-  fill: var(--old-green, hsl(139,calc(var(--saturation-factor, 1)*47.3%),43.9%));
+  fill: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%));
 }
 
 //? Chat area background height & thread suggestions
@@ -81,7 +81,7 @@ div[class*='allactivities'] {
   .form-2fGMdU {
     z-index: 0;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       z-index: -1;
       bottom: 0;
@@ -105,24 +105,27 @@ div[class*='allactivities'] {
       .threadSuggestionBar-2ufK2Z {
         display: flex;
         position: absolute;
-        pointer-events: none; .createThreadButton-oQpjNC {pointer-events: auto}
+        pointer-events: none;
+        .createThreadButton-oQpjNC {
+          pointer-events: auto;
+        }
         right: 28px;
         top: 4px;
         box-shadow: none;
         border: none;
         background-color: transparent;
         opacity: 0;
-        @keyframes s {to {opacity: 1;}}
+        @keyframes s {to{opacity: 1;}}
         animation: s 1.5s forwards;
         animation-delay: 1.5s;
       }
       .replyBar-1YLQ2F {
         grid-template-columns: auto 1fr;
         cursor: default;
-        > [role='button'] {
+        > [role="button"] {
           cursor: default;
           span::after {
-            content: '';
+            content: "";
             position: absolute;
             margin: 0 6px;
             height: 20px;
@@ -149,7 +152,7 @@ div[class*='allactivities'] {
     + .body-ZAhrcj {
       > .content-3JfFJh:not(:empty),
       .assets-VMAukC, .gameIcon-_0rmMm,
-      div[class*='allactivities'] {
+      div[class*="allactivities"] {
         margin-top: 8px;
       }
     }
@@ -167,7 +170,7 @@ body.powercord .connectedAccounts-QlRa4m:empty::before {
   background-color: unset;
 }
 
-//? Remove the no roles margin 
+//? Remove the no roles margin
 [aria-label="No Roles"] {
   margin-bottom: 4px;
 }

@@ -36,7 +36,7 @@
   font-size: 0;
   &:not(.disabledButtonWrapper-3wH6-b):hover {
     &::before { // Tooltip content
-      content: 'Play on Spotify';
+      content: "Play on Spotify";
       position: absolute;
       min-width: max-content; // this actually looks extremely dumb but it works lol
       padding: 8px 12px;
@@ -46,12 +46,12 @@
       color: var(--text-normal);
       box-shadow: var(--elevation-high);
       background-color: var(--background-floating);
-      
+
       animation: TooltipPop 60ms forwards;
-      @keyframes TooltipPop {from{opacity:0.5; transform:scale(0.9);} to{opacity:1; transform:scale(1);}}
+      @keyframes TooltipPop {from{opacity:0.5;transform:scale(0.9);}to{opacity:1;transform:scale(1);}}
     }
     &::after { // Tooltip pointer
-      content: '';
+      content: "";
       position: absolute;
       top: -25%;
       border: 5px solid transparent;

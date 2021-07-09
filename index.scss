@@ -7,11 +7,11 @@
 @use './vars.scss' as *; //! Do not disable this
 
 //? Main
-@import './general/enhancements';
-@import './general/other';
-@import './general/removements';
-@import './general/fixes';
-@import './general/blur';
+@import "./general/enhancements";
+@import "./general/other";
+@import "./general/removements";
+@import "./general/fixes";
+@import "./general/blur";
 
 //? Splash (by default, windows only)
 //* To "enable" the splash screen you need to go into "splash.scss"
@@ -21,37 +21,20 @@
 //* "powercord_manifest.json" and remove line 9.
 
 //? Snippets
-@import './individual-snippets/embeds'; // Make images/embeds wrap instead of stacking on messages
-@import './individual-snippets/friend-grid';
+@import "./individual-snippets/embeds"; // Make images/embeds wrap instead of stacking on messages
+@import "./individual-snippets/friend-grid";
 //@import './individual-snippets/friend-grid2'; // (Likely) less buggy and more ugly version of the snippet above, use this only if you are experiencing problems with the snippet above
-@import './individual-snippets/better-stage-discovery-tab';
-@import './individual-snippets/better-nitro-tab';
+@import "./individual-snippets/better-stage-discovery-tab";
+@import "./individual-snippets/better-nitro-tab";
 
 //? User popouts/modals
-@import './user-popouts/main'; // The snippets in this category are made with this in mind, things might break if you disable this
-@import './user-popouts/bigger-avatar';
-@import './user-popouts/spotify-buttons';
-@import './user-popouts/better-connections';
+@import "./user-popouts/main"; // The snippets in this category are made with this in mind, things might break if you disable this
+@import "./user-popouts/bigger-avatar";
+@import "./user-popouts/spotify-buttons";
+@import "./user-popouts/better-connections";
 
 //? Harmony
-@import './harmony'; // this just has random "nice" changes
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@import "./harmony"; // this just has random "nice" changes
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⣤⣤⣤⣤⣤⣤⣄⣀
@@ -105,17 +88,17 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣞⣻⣿⣿⣔⣿
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠋⠉⠉⠉
 */
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Lexend:wght@300&family=Source+Code+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Lexend:wght@300&family=Source+Code+Pro&display=swap");
 :root {
-  --theme: 'QuickSCSS';
+  --theme: "QuickSCSS";
 }
 .socialLinks-3jqNFy + .info-1VyQPT::after {
   content: var(--theme);
   line-height: 16px;
   font-size: 12px;
-  color:var(--text-muted);
+  color: var(--text-muted);
 }
 @if $checked-settings == 0 {
   #app-mount {
@@ -141,12 +124,12 @@
       line-height: 2.4rem;
       font-size: 2rem;
       font-weight: 300;
-      font-family: 'Lexend', Whitney;
+      font-family: "Lexend", Whitney;
       color: var(--text-normal);
       background-color: var(--background-primary);
     }
     &::before {
-      content: '%userprofile%\\powercord\\src\\Powercord\\themes\\QuickSCSS';
+      content: "%userprofile%\\powercord\\src\\Powercord\\themes\\QuickSCSS";
       user-select: text;
       position: absolute;
       z-index: 1;
@@ -155,14 +138,14 @@
       transform: translateX(-50%);
       padding: 4px;
       font-size: 1.5rem;
-      font-family: 'Fira Code', Consolas;
+      font-family: "Fira Code", Consolas;
       border-radius: 4px;
       color: var(--text-normal);
       background-color: var(--background-tertiary);
     }
     .layerContainer-yqaFcK {
       &::before {
-        content: 'sorry for the text not being selectable!';
+        content: "Sorry for the text not being selectable!";
         position: absolute;
         bottom: 0;
         left: 0;

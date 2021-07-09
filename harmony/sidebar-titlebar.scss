@@ -48,12 +48,12 @@ div.channelTabs-tabContainer,
     width: 16px;
     height: 16px;
     &:hover:not(.channelTabs-selected div) {
-      filter: brightness(1.3)
+      filter: brightness(1.3);
     }
     &::after {
-      content: '\1F7A9';
+      content: "\1F7A9";
       font-weight: 700;
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
   }
   .channelTabs-newTab {
@@ -61,7 +61,7 @@ div.channelTabs-tabContainer,
     height: 22px;
     font-size: 0;
     &::after {
-      content: '\002B';
+      content: "\002B";
       font-weight: 400;
       font-size: 1.5rem;
     }
@@ -93,9 +93,9 @@ div.channelTabs-tabContainer,
     place-items: center;
     .expandedFolderBackground-1cujaW {
       width: 42px;
-      left: unset
+      left: unset;
     }
-  } 
+  }
 }
 
 // Panel border colors

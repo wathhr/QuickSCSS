@@ -64,9 +64,13 @@
   .divider-ewBQKj {
     display: none;
   }
-  //? Remove the Dumb checkmark on the BD version of User Details made by Strencher
-  #app-mount & .UserDetails-badge-verifiedBadge {
-    display: none;
+  //? Make the cursor change when hovering over the connections on the BD version of UserDetails made by Strencher™️
+  .UserDetails-connections-connections {
+    cursor: pointer;
+    //? Remove the Dumb checkmark on the BD version of UserDetails made by Strencher™️
+    #app-mount & .UserDetails-badge-verifiedBadge {
+      display: none;
+    }
   }
   //? Activity
   .activity-2INFPu {

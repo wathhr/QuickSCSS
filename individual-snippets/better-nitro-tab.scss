@@ -2,7 +2,7 @@
   .premiumContainer-2Iux5m {
     // background image
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       z-index: -1;
       top: 0;
@@ -50,7 +50,7 @@
         width: 33rem;
         height: unset;
       }
-      .heroHeader-IulZgg  {
+      .heroHeader-IulZgg {
         font-size: 3rem;
         line-height: unset;
       }
@@ -73,12 +73,12 @@
 
         // make the cards bigger on hover
         z-index: 1;
-        transition: .25s cubic-bezier(0.215, 0.610, 0.355, 1);
+        transition: 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
         box-shadow: 0 0 8px 2px hsla(0, 0%, 0%, 0.165);
         &:hover {
           z-index: 2;
           // margin: 0 80px; pretty janky if the window is small and stuff
-          transition-delay: .25s;
+          transition-delay: 0.25s;
           transform: scale(1.75);
           box-shadow: 0 0 16px 4px hsla(0, 0%, 0%, 0.33);
         }
@@ -105,8 +105,8 @@
       margin-top: 130px; // i know i put margin-top twice, it's to make it easier to disable the gradient thing
       position: relative;
       border: none;
-      &::before { // box shadows are janky
-        content: '';
+      &::before { // box shadows are janky, so instead i'm doing this
+        content: "";
         position: absolute;
         z-index: -1;
         width: 100%;
@@ -115,7 +115,6 @@
         right: 0;
         background: linear-gradient(0deg, var(--background-primary) 70%, transparent 90%);
       }
-     
       // fix the positioning and color in the nitro classic image
       .marketingRefreshTier1Graphic-9B12wx {
         content: url("https://nyri4.github.io/Discolored/assets/nitro.svg");
@@ -155,7 +154,7 @@
       background-color: var(--interactive-muted);
       &.shinyButton-3uFlM- {
         color: #fff;
-        background-color: var(--old-green, hsl(139,calc(var(--saturation-factor, 1)*47.3%),43.9%));
+        background-color: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%));
       }
     }
   }
