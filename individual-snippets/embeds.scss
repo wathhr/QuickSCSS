@@ -19,14 +19,28 @@
     .embedSpotify-tvxDCr {
       order: 1;
     }
+
     .reactions-12N0jA,
     .container-2nXavw {
       flex: 1 0 100%;
       order: 500;
     }
-    .systemMessageContainer-2ddkN3:not(:nth-child(2)) {
-      margin-top: -0.75em;
-      order: 550;
+
+    .systemMessageContainer-2ddkN3 {
+      margin-left: 0.25em;
+      &:not(:nth-child(2)) {
+        margin-top: -0.75em;
+        order: 550;
+      }
     }
+    .systemMessageSpine-3ZKfiO {
+      width: 32px;
+      bottom: 30px;
+      margin: 0;
+      display: block;
+    }
+  }
+  &.hasThread-2k82W0::after {
+    display: none;
   }
 }
