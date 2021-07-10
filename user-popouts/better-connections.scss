@@ -121,32 +121,32 @@ $connections: (
 
   $clickable: (
     "https://github.com": (
-      url("https://images2.imgbox.com/bf/7a/qZdstz5m_o.gif"),
+      url("https://images2.imgbox.com/bf/7a/qZdstz5m_o.gif") #04020B,
       cover,
       unset,
     ),
     "https://open.spotify.com": (
-      url("https://images2.imgbox.com/cc/40/UbAuNtkq_o.gif"),
+      url("https://images2.imgbox.com/cc/40/UbAuNtkq_o.gif") #1CD765,
       75%,
       center 45%,
     ),
     "https://steamcommunity.com": (
-      url("https://images2.imgbox.com/ee/89/30OZ8D4K_o.jpg"),
+      url("https://images2.imgbox.com/ee/89/30OZ8D4K_o.jpg") #17263D,
       85%,
       center -25%,
     ),
     "https://www.twitch.tv": (
-      url("https://images2.imgbox.com/d8/c2/QZT0mqhx_o.gif"),
+      url("https://images2.imgbox.com/d8/c2/QZT0mqhx_o.gif") #0A0E14,
       80%,
       center 15%,
     ),
     "https://twitter.com": (
-      url("https://images2.imgbox.com/8a/7b/Bqe3ZQFZ_o.jpg"),
+      url("https://images2.imgbox.com/8a/7b/Bqe3ZQFZ_o.jpg") #49412A, // https://11points.com/11-ugliest-colors-world/
       cover,
       top,
     ),
     "https://www.facebook.com": (
-      url("http://townsquare.media/site/712/files/2017/09/Elderly-Thumbs-Up.jpg"),
+      url("http://townsquare.media/site/712/files/2017/09/Elderly-Thumbs-Up.jpg") #D4B895, // https://11points.com/11-ugliest-colors-world/
       cover,
       center,
     ),
@@ -156,24 +156,24 @@ $connections: (
       center,
     ),
     "https://www.reddit.com": (
-      url("https://images2.imgbox.com/d7/f0/25bBk3Gn_o.jpg"),
+      url("https://images2.imgbox.com/d7/f0/25bBk3Gn_o.jpg") #1FC0B8,
       130%,
       20% 65%,
     ),
     "skype:": (
-      url("https://images2.imgbox.com/cf/a0/mWNmnU4x_o.png"),
+      url("https://images2.imgbox.com/cf/a0/mWNmnU4x_o.png") #2CA2DA,
       97.5%,
       center,
     ),
     "https://osu.ppy.sh": (
       url("https://images2.imgbox.com/a0/93/mArEI08V_o.png"),
-      cover,
-      center,
+      210%,
+      center left,
     ),
     "https://gitlab.com": (
       url("https://images2.imgbox.com/37/a7/TCbF9QJ0_o.png") no-repeat white,
       33%,
-      10% center,
+      center,
     ),
   );
 
@@ -192,22 +192,22 @@ $connections: (
 
   $unclickable: (
     "Minecraft": (
-      url("https://images2.imgbox.com/ec/61/IzkVjY08_o.jpg"),
+      url("https://images2.imgbox.com/ec/61/IzkVjY08_o.jpg") #8FD149,
       cover,
-      unset,
+      center,
     ),
     "Battle.net": (
-      url("https://images2.imgbox.com/73/1f/FpwjXicM_o.jpg"),
+      url("https://images2.imgbox.com/73/1f/FpwjXicM_o.jpg") #1A4158,
       140%,
       center,
     ),
     "League of Legends": (
-      url("https://images2.imgbox.com/d7/ec/bNKeMMtE_o.jpg"),
+      url("https://images2.imgbox.com/d7/ec/bNKeMMtE_o.jpg") #000,
       150%,
       50% center,
     ),
     "Xbox Live": (
-      url("https://images2.imgbox.com/ed/7d/BSsjEvcb_o.jpg"),
+      url("https://images2.imgbox.com/ed/7d/BSsjEvcb_o.jpg") #37A714,
       115%,
       center,
     ),
