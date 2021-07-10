@@ -2,7 +2,6 @@
 .channel-2QD9_O,
 .nowPlayingColumn-2sl4cE, .nowPlayingSidebar-2OFn0o {
   transition: filter 0.25s;
-
   &:not(.selected-aXhQR6):not([href="/channels/@me"]):not([href="/discovery"]):not([href="/store"]) {
     filter: blur($blur-amount);
 
