@@ -1,8 +1,7 @@
 $username: [USERNAME];
 
 @if $username != [USERNAME] {
-  #splash {
-    // Background
+  #splash { // Background
     &::before {
       content: "";
       position: absolute;
@@ -19,13 +18,11 @@ $username: [USERNAME];
       background-repeat: no-repeat;
     }
 
-    .splash-inner {
-      // Text
+    .splash-inner { // Text
       span {
         margin-top: 300px;
       }
-      // Loading
-      video {
+      video { // Loading
         display: none;
       }
     }

@@ -88,18 +88,12 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣞⣻⣿⣿⣔⣿
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠋⠉⠉⠉
 */
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Lexend:wght@300&family=Source+Code+Pro&display=swap");
 :root {
   --theme: "QuickSCSS";
 }
-.socialLinks-3jqNFy + .info-1VyQPT::after {
-  content: var(--theme);
-  line-height: 16px;
-  font-size: 12px;
-  color: var(--text-muted);
-}
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Lexend:wght@300&family=Source+Code+Pro&display=swap");
 @if $checked-settings == 0 {
   #app-mount {
     > div:not(.layerContainer-yqaFcK):not(.titleBar-AC4pGV) {
@@ -111,7 +105,7 @@
     background-color: var(--background-secondary-alt) !important;
     $top: 150px;
     &::after {
-      content: 'Hey, thanks for using my theme ('var(--theme)'),\AI hope you like it, I\'ve worked really hard on it. \A\A To continue using this theme please go to\A this theme\'s theme folder, should be located at\A\A and open the "vars.scss" file, \A in the "vars.scss" file edit the 2nd line\A to have a "1" instead of a "0".\A\AIf there is anything you don\'t like about the theme,\Ayou can remove/edit it either in the\A"vars.scss" file or the "index.scss" file!\A\AI hope you like the theme, bye!';
+      content: "Hey, thanks for using my theme ("var(--theme)"),\AI hope you like it, I've worked really hard on it. \A\A To continue using this theme please go to\A this theme's theme folder, should be located at\A\A and open the \"vars.scss\" file, \A in the \"vars.scss\" file edit the 2nd line\A to have a \"1\" instead of a \"0\".\A\AIf there is anything you don't like about the theme,\Ayou can remove/edit it either in the\A\"vars.scss\" file or the \"index.scss\" file!\A\AI hope you like the theme, bye!";
       white-space: pre-wrap;
       position: absolute;
       top: $top;
@@ -129,7 +123,7 @@
       background-color: var(--background-primary);
     }
     &::before {
-      content: "%userprofile%\\powercord\\src\\Powercord\\themes\\QuickSCSS";
+      content: "%userprofile%\\powercord\\src\\Powercord\\themes\\" var(--theme);
       user-select: text;
       position: absolute;
       z-index: 1;
