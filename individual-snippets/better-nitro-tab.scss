@@ -149,12 +149,26 @@
     }
 
     // make the colors of the "Subscribe" and "Gift" buttons more consistent
+    .buttons-2-EdE8 {
+      place-items: center;
+    }
     .button-38aScr {
       color: #f6f6f7;
-      background-color: var(--interactive-muted);
       &.shinyButton-3uFlM- {
         color: #fff;
         background-color: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%));
+      }
+      &:not(.shinyButton-3uFlM-) {
+        margin: 2px 10px 0;
+        padding: 0 0 2px;
+        min-height: 0;
+        height: 100%;
+        min-width: unset;
+        border-radius: 0;
+        background-color: transparent;
+        &:hover {
+          box-shadow: inset 0 -0.1em 0 0 currentColor;
+        }
       }
     }
   }
