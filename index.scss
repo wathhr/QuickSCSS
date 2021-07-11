@@ -6,6 +6,9 @@
 //? Vars
 @use './vars.scss' as *; //! Do not disable this
 
+//? Fonts
+@use './assets/fonts/fonts.scss'; //! Do not disable this
+
 //? Main
 @import "./general/enhancements";
 @import "./general/other";
@@ -91,9 +94,6 @@
 :root {
   --theme: "QuickSCSS";
 }
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Lexend:wght@300&family=Source+Code+Pro&display=swap");
 @if $checked-settings == 0 {
   #app-mount {
     > div:not(.layerContainer-yqaFcK):not(.titleBar-AC4pGV) {

@@ -11,6 +11,7 @@ $blur-amount: 6px; // How much to blur discrims and the DM list
 $use-osx-buttons: 1; // Whether or not to have the OSX-styled maximize/minimize/close buttons
 $use-custom-wordmark: 1; // Whether or not to use a custom wordmark (top left)
 $custom-wordmark-text: dicksword; // Defaults to "discord"
+$no-dashes: 1; // Whether or not channel names have spaces instead of dashes
 
 //* Harmony
 $top-left-corner-roundedness: 15px; // How round the top-left part next to the sidebar is
