@@ -1,1 +1,1 @@
-## Stolen from [Official-Hawks/DiscordX](https://github.com/Official-Hawks/DiscordX)
+## Font stolen from [Official-Hawks/DiscordX](https://github.com/Official-Hawks/DiscordX)
