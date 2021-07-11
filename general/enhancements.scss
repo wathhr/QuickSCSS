@@ -60,7 +60,7 @@
       position: absolute;
       top: 4px;
       font-family: "Discord";
-      font-size: 1rem;
+      font-size: 15px;
     }
   }
 }
@@ -202,7 +202,7 @@ $mentioned-hover: rgba(250, 168, 25, 0.08);
 //? No dash in channel names (font changes a bit, can't get it to be any better)
 @if $no-dashes >= 1 {
   [aria-label$=" (text channel)"] .channelName-2YrOjO {
-    font-family: "Whitney-nd", var(--font-primary);
+    font-family: "no_dash", var(--font-primary);
   }
 }
 
