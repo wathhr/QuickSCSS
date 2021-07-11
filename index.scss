@@ -7,7 +7,7 @@
 @use './vars.scss' as *; //! Do not disable this
 
 //? Fonts
-@use './assets/fonts/fonts.scss'; //! Do not disable this
+@use './fonts/fonts.scss'; //! Do not disable this
 
 //? Main
 @import "./general/enhancements";
