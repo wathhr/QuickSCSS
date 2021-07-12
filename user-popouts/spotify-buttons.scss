@@ -1,61 +1,50 @@
-//* User modal
-[aria-label="User Profile Modal"] {
-  .activityProfile-2bJRaP {
-    .fullWidth-1orjjo:not(:only-child) {
-      padding: 0;
-      .spotifyButtonLogo-3uT57D {
-        margin: 0;
-        height: 20px;
-        width: 20px;
-      }
+.horizontal-3fI3M- {
+  //* User popout
+  @at-root .timeBarUserPopout-AWPFf2 + .buttonsWrapper-2spIeK#{&} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .buttonSize-AQY2mE {
+      max-width: unset;
     }
+  }
+  //* User modal
+  .activityProfile-2bJRaP & {
     .contentImagesProfile-1Mz07W.content-3JfFJh { // fix or something idk
       width: 0;
     }
   }
-}
-
-//* User popout
-.timeBarUserPopout-AWPFf2 + .buttonsWrapper-2spIeK {
-  .buttonSize-AQY2mE {
-    width: 100%;
-    max-width: unset;
+  .fullWidth-1orjjo:not(:only-child) {
+    font-size: 0;
     padding: 0;
-  }
-  .fullWidth-1orjjo {
     .spotifyButtonLogo-3uT57D {
       margin: 0;
       width: 20px;
       height: 20px;
     }
-  }
-}
-
-//* Tooltip
-.horizontal-3fI3M- .fullWidth-1orjjo:not(:only-child) {
-  font-size: 0;
-  &:not(.disabledButtonWrapper-3wH6-b):hover {
-    &::before { // Tooltip content
-      content: "Play on Spotify";
-      position: absolute;
-      min-width: max-content; // this actually looks extremely dumb but it works lol
-      padding: 8px 12px;
-      top: -125%;
-      border-radius: 5px;
-      font-size: 14px;
-      color: var(--text-normal);
-      box-shadow: var(--elevation-high);
-      background-color: var(--background-floating);
-
-      animation: TooltipPop 60ms forwards;
-      @keyframes TooltipPop {from{opacity:0.5;transform:scale(0.9);}to{opacity:1;transform:scale(1);}}
-    }
-    &::after { // Tooltip pointer
-      content: "";
-      position: absolute;
-      top: -25%;
-      border: 5px solid transparent;
-      border-top-color: var(--background-floating);
+    &:not(.disabledButtonWrapper-3wH6-b):hover {
+      //* Tooltip
+      &::before { // Tooltip content
+        content: "Play on Spotify";
+        position: absolute;
+        min-width: max-content; // this actually looks extremely dumb but it works lol
+        padding: 8px 12px;
+        top: -125%;
+        border-radius: 5px;
+        font-size: 14px;
+        color: var(--text-normal);
+        box-shadow: var(--elevation-high);
+        background-color: var(--background-floating);
+  
+        animation: TooltipPop 60ms forwards;
+        @keyframes TooltipPop {from{opacity:0.5;transform:scale(0.9);}to{opacity:1;transform:scale(1);}}
+      }
+      &::after { // Tooltip pointer
+        content: "";
+        position: absolute;
+        top: -25%;
+        border: 5px solid transparent;
+        border-top-color: var(--background-floating);
+      }
     }
   }
 }
