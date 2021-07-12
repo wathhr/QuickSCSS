@@ -6,7 +6,6 @@
   "version": "2.0",
 
   "theme": "index.scss",
-  "splashTheme": "splash.scss",
 
   "license": "GNU GPLv3",
   "consent": "true"

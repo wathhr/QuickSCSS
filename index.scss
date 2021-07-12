@@ -16,13 +16,6 @@
 @import "./general/fixes";
 @import "./general/blur";
 
-//? Splash (by default, windows only)
-//* To "enable" the splash screen you need to go into "splash.scss"
-//* and replace "[USERNAME]"(on the 1st line) with your user's username.
-
-//* To completely disable the splash screen you need to go into
-//* "powercord_manifest.json" and remove line 9.
-
 //? Snippets
 @import "./individual-snippets/embeds"; // Make images/embeds wrap instead of stacking on messages
 @import "./individual-snippets/friend-grid";
