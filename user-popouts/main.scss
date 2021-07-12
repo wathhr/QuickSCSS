@@ -168,6 +168,9 @@
   .customStatusActivity-nmH3DF {
     padding: 0 16px 4px;
   }
+  .userInfoSection-q_35fn {
+    padding-bottom: 0;
+  }
   //? Activity
   .activityProfile-2bJRaP { // Activity posiitioning
     margin: 6px 8px 0;
@@ -254,7 +257,8 @@
   }
   //? Smaller discrim
   .discrimBase-24vY8o, // popout
-  .discriminator-1swucG { // modal
+  .discriminator-1swucG, // modal
+  .discriminator-2C3qJO { // settings modal
     font-size: 14px;
     color: var(--header-secondary);
     vertical-align: bottom;
