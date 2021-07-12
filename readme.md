@@ -2,14 +2,14 @@
 
 cool customizable theme or something idk just look at the screenshots below; i don't have to write a 5000 word essay to make you want to use my theme
 
-I suggest using the extension named "Better comments"/"Colored comments":
+<details><summary>I suggest using the extension named "Better comments"/"Colored comments"</summary>
+
 ###### (**especially** if you are going to edit the actual code)
 
-<details><summary>URLs</summary>﻿<!-- ZWS here -->
-
-- [VSCode](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
-- [Sublime text](https://packagecontrol.io/packages/Colored%20Comments)
-- [Atom](https://github.com/AndrewKralovec/atom-better-comments)
+URLs
+  - [VSCode](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+  - [Sublime text](https://packagecontrol.io/packages/Colored%20Comments)
+  - [Atom](https://github.com/AndrewKralovec/atom-better-comments)
 
 ###### If your text editor is not listed, the extension probably has not been ported over to it
 
@@ -46,12 +46,12 @@ Connection backgrounds
 
 - Powercord's terrible Quick CSS.
   - Pretty much the only reason i made this is because of how bad Powercord's Quick CSS "editor" is.
+- [Hyblocker](https://github.com/hyblocker)
+  - Stole their [better connection icons "snippet"](https://github.com/hyblocker/pixelcord/blob/8bd986b36742e578b1a627b098f2e9202b9ae2a6/src/app/app/misc_pages/_avatarpage.scss#L48-L111)
+  - Stole their [no dashes "snippet"](https://github.com/hyblocker/pixelcord/blob/main/src/app/qol/_space_channels.scss)
 - [KraXen72](https://github.com/KraXen72)
   - I implemented an old and customized version of their [Harmony](https://github.com/KraXen72/harmony-discord/) theme into this theme.
 - [Alfred](https://www.youtube.com/watch?v=NWD7iqtOJSE) ( Epic !! ))))
-  - They told me to start using SCSS or something idk he's cool.
-- [Ducko](https://github.com/CanadaHonk)
-  - I stole the vars he used on his [GT-RevertRebrand](https://github.com/Goose-Nest/GT-RevertRebrand) theme.
 - All the snippets I stole from random people lol
   - Some snippets on this theme were "stolen" from the [#css-snippets](https://canary.discord.com/channels/538759280057122817/755005803303403570/) channel on the Powercord server; I sadly do not remember which snippets are stolen and which aren't so I can give full credit.
 
