@@ -54,5 +54,6 @@ Connection backgrounds
   - I stole the vars he used on his [GT-RevertRebrand](https://github.com/Goose-Nest/GT-RevertRebrand) theme.
 - All the snippets I stole from random people lol
   - Some snippets on this theme were "stolen" from the [#css-snippets](https://canary.discord.com/channels/538759280057122817/755005803303403570/) channel on the Powercord server; I sadly do not remember which snippets are stolen and which aren't so I can give full credit.
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 ![funy image hahahaahaahaha](https://svg-banners.vercel.app/api?type=origin&text1=amognsu&text2=haha%20funy&width=1337&height=420)
