@@ -206,8 +206,12 @@ $mentioned-hover: rgba(250, 168, 25, 0.08);
   .content-3YMskv .emptyChannelIcon-cc932w ~ .size32-o_H79z, // header at the start of channels
   .channelTextArea-rNsIhG .placeholder-37qJjk, // text area placeholder
   .wrapper-3WhCwL.mention:not(.iconMention-1t7gB7):not(.iconMention-O5BG9X):not([aria-label]), // mentions
-  .quickswitcher-3JagVE .match-38WbBN, // quick switcher
-  #search-results .resultChannel-3BYgHX { // search
+  #search-results .resultChannel-3BYgHX, // search
+  .iconSizeLarge-161qtT + .channelContainer-1x3D6I .channelName-2HcGlq, // following an announcement channel
+  .inviteSettingsInviteRow-3p2O-N .user-3x-NP9 + .size12-3cLvbJ, // invite settings
+  .welcomeChannel-1rFrIO .size12-3cLvbJ, // welcome screen settings 
+  [data-list-item-id^="audit-log__"] strong, // audit log items
+  .quickswitcher-3JagVE .match-38WbBN { // quick switcher
     font-family: "no dash", var(--font-primary);
   }
 }
