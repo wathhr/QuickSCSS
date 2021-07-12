@@ -52,7 +52,12 @@
   display: none;
 }
 
-//? Hide member list button
+//? Member list button
 [aria-label="Member List"].selected-1GqIat {
+  display: none;
+}
+
+//? Help button
+a[href="https://support.discord.com"] {
   display: none;
 }

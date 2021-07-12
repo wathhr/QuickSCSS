@@ -136,12 +136,12 @@ svg.slider-TkfMQL svg {
   .iconWrapper-2OrFZ1 {
     margin: 0 $topbar-button-spacing * 0.75;
   }
-  [aria-label="Notebook"] > div {
-    margin: 0 $topbar-button-spacing * -0.334 0 $topbar-button-spacing * 0.25;
-  }
   [aria-label="Inbox"],
   [aria-label="Update Ready!"] {
-    margin: 0 $topbar-button-spacing 0 0;
+    margin: 0 $topbar-button-spacing / 10 0 0;
+  }
+  [aria-label="Notebook"] > div {
+    margin: 0 $topbar-button-spacing * -0.5 0 $topbar-button-spacing * 0.25;
   }
   [aria-label="Toggle Channel Lock"] {
     margin: 0 $topbar-button-spacing * 0.025 0 $topbar-button-spacing * -0.334;
