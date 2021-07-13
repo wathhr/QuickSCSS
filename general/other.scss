@@ -39,9 +39,9 @@
 //? User area buttons bounce
 .button-14-BFJ {
   color: white;
+  transition: 0.2s;
   &:hover {
     padding-bottom: 5px;
-    transition: 0.2s;
   }
 }
 
@@ -75,6 +75,7 @@ svg.slider-TkfMQL svg {
 }
 .container-3auIfb:not([style*="hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%)"]) {
   background-color: var(--brand-experiment) !important;
+  transition: 0.6s;
 }
 
 //? Revert autocomplete
@@ -138,16 +139,16 @@ svg.slider-TkfMQL svg {
   }
   [aria-label="Inbox"],
   [aria-label="Update Ready!"] {
-    margin: 0 $topbar-button-spacing / 10 0 0;
+    margin: 0 $topbar-button-spacing / 10 0 $topbar-button-spacing / 4;
   }
   [aria-label="Notebook"] > div {
-    margin: 0 $topbar-button-spacing * -0.5 0 $topbar-button-spacing * 0.25;
+    margin: 0 $topbar-button-spacing * -0.5 0 $topbar-button-spacing * 0.5;
   }
   [aria-label="Toggle Channel Lock"] {
     margin: 0 $topbar-button-spacing * 0.025 0 $topbar-button-spacing * -0.334;
   }
   .search-36MZv- {
-    margin: 0 $topbar-button-spacing 0 $topbar-button-spacing - $topbar-button-spacing * 0.25;
+    margin: 0 $topbar-button-spacing / 3 0 $topbar-button-spacing - $topbar-button-spacing * 0.25;
   }
 }
 
@@ -302,4 +303,11 @@ svg.icon-3cZ1F_ > path {
     backdrop-filter: blur(5px);
     background-color: hsla(0, 0%, 10%, 0.7);
   }
+}
+
+//? Make some text "unselectable"
+.timestamp-3ZCmNB,
+.botTag-1un5a6,
+.vpc-shiki-lang {
+  user-select: none;
 }

@@ -201,7 +201,7 @@ $mentioned-hover: rgba(250, 168, 25, 0.08);
 
 //? No dash in channel names (font changes a bit, can't get it to be any better)
 @if $no-dashes >= 1 {
-  [aria-label$=" (text channel)"] .channelName-2YrOjO, [aria-label$=" (announcement channel)"] .channelName-2YrOjO, // channel list
+  .containerDefault--pIXnN > .wrapper-2jXpOf .channelName-2YrOjO, // channel list
   [aria-label="Channel header"] .title-29uC1r, // channel headers
   .content-3YMskv .emptyChannelIcon-cc932w ~ .size32-o_H79z, // header at the start of channels
   .channelTextArea-rNsIhG .placeholder-37qJjk, // text area placeholder

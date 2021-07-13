@@ -30,6 +30,10 @@
   }
 }
 
+//? "Set a server nickname" thing
+.setIdentityLink-1t8Ahd {
+  display: none;
+}
 //? Invite to server context menu button
 #user-context-invite-to-server {
   display: none;
@@ -37,18 +41,8 @@
 
 //? GIF, sticker and gift icons
 [aria-label="Send a gift"],
-[aria-label="Open GIF picker"],
+//[aria-label="Open GIF picker"],
 [aria-label="Open sticker picker"] {
-  display: none;
-}
-
-//? Selection of certain text
-.timestamp-3ZCmNB, .bot-tag-tooltip, .botTagCozy-1fFsZk, .vpc-shiki-lang, .powercord-spotify .nameTag-3uD-yy > div { // this is pain and im not bothered to "rewrite" it, it works fine
-  user-select: none;
-}
-
-//? "Set a server nickname" thing
-.setIdentityLink-1t8Ahd {
   display: none;
 }
 
