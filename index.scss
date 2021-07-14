@@ -1,37 +1,39 @@
 //? This file is mostly for disabling stuff.
 //* To disable something add a "//" at the start of the thing you want to disable.
 //* Like this:
-//@import './example/snippet';
+//@import './src/example/snippet';
 
 //? Vars
-@use './vars.scss' as *; //! Do not disable this
+@use "./vars.scss" as *; //! Do not disable this
 
 //? Fonts
-@use './fonts/fonts.scss'; //! Do not disable this
+@use "./src/fonts/fonts.scss"; //! Do not disable this
 
 //? Main
-@import "./general/enhancements";
-@import "./general/other";
-@import "./general/removements";
-@import "./general/fixes";
-@import "./general/blur";
+@import "./src/general/enhancements";
+@import "./src/general/other";
+@import "./src/general/removements";
+@import "./src/general/fixes";
+@import "./src/general/blur";
 
 //? Snippets
-@import "./individual-snippets/embeds"; // Make images/embeds wrap instead of stacking on messages
-@import "./individual-snippets/friend-grid";
-//@import './individual-snippets/friend-grid2'; // (Likely) less buggy and more ugly version of the snippet above, use this only if you are experiencing problems with the snippet above
-@import "./individual-snippets/better-stage-discovery-tab";
-@import "./individual-snippets/better-nitro-tab";
+@import "./src/individual-snippets/embeds"; // Make images/embeds wrap instead of stacking on messages
+@import "./src/individual-snippets/friend-grid";
+//@import "./individual-snippets/friend-grid2"; // (Likely) less buggy and more ugly version of the snippet above, use this only if you are experiencing problems with the snippet above
+@import "./src/individual-snippets/better-stage-discovery-tab";
+@import "./src/individual-snippets/better-nitro-tab";
 
 //? User popouts/modals
-@import "./user-popouts/main"; // The snippets in this category are made with this in mind, things might break if you disable this
-@import "./user-popouts/bigger-avatar";
-@import "./user-popouts/spotify-buttons";
-@import "./user-popouts/better-connections";
+@import "./src/user-popouts/main"; // The snippets in this category are made with this in mind, things might break if you disable this
+@import "./src/user-popouts/bigger-avatar";
+@import "./src/user-popouts/spotify-buttons";
+@import "./src/user-popouts/better-connections";
 
 //? Harmony
-@import "./harmony"; // This just has random "nice" changes, makes a lot of stuff be burple
+@import "./src/harmony"; // This just has random "nice" changes, makes a lot of stuff be burple
 
+//? Discolored
+@import "./src/discolored"; // By https://github.com/NYRI4 & https://github.com/Snapperito
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⣤⣤⣤⣤⣤⣤⣄⣀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⡀

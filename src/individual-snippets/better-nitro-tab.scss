@@ -1,0 +1,175 @@
+.applicationStore-1pNvnv .scroller-9moviB {
+  .premiumContainer-2Iux5m {
+    // background image
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      background-attachment: fixed;
+
+      background-image: url("/assets/c7c0a638f8e8e45dc18c686359defbb7.svg");
+      background-position: 310px 0;
+      background-size: cover;
+      filter: grayscale($background-color / 33.3334) opacity($background-opacity / 30);
+      //? likely broken different variations
+      /*
+      background-image: url("/assets/c7c0a638f8e8e45dc18c686359defbb7.svg");
+      background-position: 10% 90%;
+      background-size: cover;
+      opacity: $background-opacity / 66.6667;
+      filter: grayscale($background-color / 16.6667);
+      */
+
+      /*
+      background: linear-gradient(115deg,hsl(221,calc(var(--saturation-factor, 1)*70%),55.5%),hsl(269,calc(var(--saturation-factor, 1)*83.8%),71%)) no-repeat;
+      opacity: $background-opacity / 15;
+      */
+    }
+    // fix width
+    padding: 0;
+    max-width: unset;
+
+    // center the top part
+    .content-2c3hgM > div {
+      margin: 0 auto;
+    }
+    // remove the background from the original element
+    .hero-EvfTTA {
+      width: 100%;
+      max-width: unset;
+      height: 100%;
+      background-image: none;
+
+      // make the logo bigger
+      .heroIcon-3QgOM5 {
+        margin-top: 20px;
+        width: 33rem;
+        height: unset;
+      }
+      .heroHeader-IulZgg {
+        font-size: 3rem;
+        line-height: unset;
+      }
+    }
+
+    // center and inprove the positioning of the "also includes" text
+    .featuresHeader-4YwLcc {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    // center the cards and make them more responsive
+    .featureGrid-3-fNl- {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 17%;
+      gap: 8px;
+      > li {
+        width: 206px;
+
+        // make the cards bigger on hover
+        z-index: 1;
+        transition: 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+        box-shadow: 0 0 8px 2px hsla(0, 0%, 0%, 0.165);
+        &:hover {
+          z-index: 2;
+          // margin: 0 80px; pretty janky if the window is small and stuff
+          transition-delay: 0.25s;
+          transform: scale(1.75);
+          box-shadow: 0 0 16px 4px hsla(0, 0%, 0%, 0.33);
+        }
+      }
+    }
+    div.marketingRefreshTier2Cta-bw9Vyc {
+      // imrpove the positioning of the "ready to upgrade to nitro" text
+      margin-top: 24px;
+    }
+    .marketingRefreshSectionTier1-dRwS-6 {
+      // put the nitro classic image on top of the text
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+
+      // improve the positioning
+      margin-top: 28px;
+      padding: 28px;
+
+      // make the background image not
+      background-color: var(--background-primary);
+
+      // smooth out the transition from the background image to the solic background
+      margin-top: 130px; // i know i put margin-top twice, it's to make it easier to disable the gradient thing
+      position: relative;
+      border: none;
+      &::before { // box shadows are janky, so instead i'm doing this
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: -32%;
+        right: 0;
+        background: linear-gradient(0deg, var(--background-primary) 70%, transparent 90%);
+      }
+      // fix the positioning and color in the nitro classic image
+      .marketingRefreshTier1Graphic-9B12wx {
+        content: url("https://nyri4.github.io/Discolored/assets/nitro.svg");
+        margin-right: 0;
+        margin-bottom: 4px;
+      }
+
+      // center and enlarge the "nitro classic" text
+      .marketingRefreshTier1Logo-sY6Lgd {
+        margin: 12px auto;
+        width: 340px;
+        height: unset;
+      }
+
+      // make the nitro classic line width smaller
+      .marketingRefreshDescription-UL0ZTA {
+        width: 60ch;
+        text-align: center;
+      }
+
+      // center the nitro classic perks
+      .classicPerkGrid-2izruP {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    // center all buttons
+    .buttons-2-EdE8 {
+      justify-content: center;
+      margin-top: 12px;
+    }
+
+    // make the colors of the "Subscribe" and "Gift" buttons more consistent
+    .buttons-2-EdE8 {
+      place-items: center;
+    }
+    .button-38aScr {
+      color: white;
+      &.shinyButton-3uFlM- {
+        background-color: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%));
+      }
+      &:not(.shinyButton-3uFlM-) {
+        margin: 2px 10px 0;
+        padding: 0 0 2px;
+        min-height: 0;
+        height: 100%;
+        min-width: unset;
+        border-radius: 0;
+        opacity: 0.85;
+        background-color: transparent;
+        &:hover {
+          box-shadow: inset 0 -0.1em 0 0 currentColor;
+        }
+      }
+    }
+  }
+}

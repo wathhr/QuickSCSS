@@ -1,0 +1,281 @@
+$background-images: (
+  "airplane": (
+    "/assets/712a0fd4d14a1caadd31cb0745e91238.svg",
+    "/assets/857c505aafbe092e4f6efecebcad0bc8.svg"
+  ),
+  "arcades": (
+    "/assets/d01c53acda73318e5b39676ef8242eb7.svg",
+    "/assets/bb8e02d970950bdadb649d765f3b8488.svg"
+  ),
+  "ban_hammer": (
+    "/assets/789de85a973b1d974a21aa03c1e14323.svg",
+    "/assets/e3fb8fe698a871db1d0e34ededf8a954.svg"
+  ),
+  "computer": (
+    "/assets/b47564b3086d0d8d941aae95a4b7b78c.svg",
+    none
+  ),
+  "dev_options": (
+    "/assets/59c726954bd8424f376ca3a7eedc4c54.svg",
+    "/assets/fe5ef0f14b8d025d73465e2d76913e20.svg"
+  ),
+  "emojis": (
+    "/assets/a7371de3223292c6f31f8aeed62f17c1.svg",
+    "/assets/3236694e0c095adfbbd5334fc8dc7aa0.svg"
+  ),
+  "no_channel": (
+    "/assets/94b5558353f1d01035a874f6eddf6d70.svg",
+    none
+  ),
+  "no_keybinds": (
+    "/assets/f3bb89a27e9d102f748da035cd7e5df7.svg",
+    "/assets/21b610d45d1f2175431413ad53258aa6.svg"
+  ),
+  "pictures": (
+    "/assets/65c84ff0161c0f951f99b035170afb1e.svg",
+    "/assets/caefee6eec712590e489b96139423f9f.svg"
+  ),
+  "pinned": (
+    "/assets/6793e022dc1b065b21f12d6df02f91bd.svg",
+    "/assets/03c7541028afafafd1a9f6a81cb7f149.svg"
+  ),
+  "scroll": (
+    "/assets/99253cefda98913b1e9f7d155ad81ed3.svg",
+    "/assets/0049cd2d5d8dad87fac3811fa651988e.svg"
+  ),
+  "wumpus_mining": (
+    "/assets/8c998f8fb62016fcfb4901e424ff378b.svg",
+    "/assets/645df33d735507f39c78ce0cac7437f0.svg"
+  ),
+  "wumpus_mountain": (
+    "/assets/b669713872b43ca42333264abf9c858e.svg",
+    "/assets/c84361b810ca7c10d6e8ddb6ea722ebe.svg"
+  ),
+  "wumpus_sleeping": (
+    "/assets/a12ff54c4c5c03b41006fd96a4709c29.svg",
+    "/assets/d834d700306f3838c0facef39e7d8a38.svg"
+  ),
+  "wumpus_tea_party": (
+    "/assets/b5eb2f7d6b3f8cc9b60be4a5dcf28015.svg",
+    "/assets/6b7098de4cc16f7e431ad8f9aae7f6db.svg"
+  )
+);
+
+$srcs: (
+  "channel_settings": (
+    "/assets/bfffd518c76d3f6bc5e96eb52e4ae2cf.svg",
+    "/assets/9ad4d437577c5569dc231a787a5377f6.svg"
+  ),
+  "category_settings": (
+    "/assets/58957d928db6fb9d4658eb882f33d7bc.svg",
+    "/assets/c2c982c416a67d43d72d182f079a8d22.svg"
+  ),
+  "nitro": (
+    "/assets/5a4ac7879fb43bc2509169b8fac68a4a.svg",
+    none
+  ),
+  "test_video": (
+    "/assets/aba3ec7874f7f01fe9a8275a3e5c21a0.svg",
+    "/assets/baf6cccc846651d5ca897296163227f5.svg"
+  ),
+  "tresure_chest": (
+    "/assets/cdea41ede63f61153e4a3c0531fa3873.svg",
+    "/assets/f8696a3854655998a24c219403420867.svg"
+  )
+);
+
+$classes: (
+  "boost": (
+    "background-image",
+    ".channelNotice-3DDmsB"
+  ),
+  "broken": ( // Broken magnifying glass, nyria what actually is the svg name
+    "background-image",
+    ".errorImage-12Q43V"
+  ),
+  "castle": (
+    "background-image",
+    ".verification-3RfWYC .image-2LVZ_j"
+  ),
+  "community_banner": (
+    "content",
+    ".previewCard-DOrO3c .splashImage-352DQ1"
+  ),
+  "crash": (
+    "background-image",
+    ".image-3zK3Wt"
+  ),
+  "empty": (
+    "background-image",
+    ".image-3rvd0n, .emptyImage-1ABqhB"
+  ),
+  "friend": (
+    "background-image",
+    ".channelNotice-1-XFjC.invite-OjTXrW"
+  ),
+  "gif_not_found": (
+    "background-image",
+    ".sadImage-2ph8SI"
+  ),
+  "gif_picker_end": (
+    "background-image",
+    ".endContainer-1ZDW8j::after"
+  ),
+  "groups": (
+    "background-image",
+    ".noFriends-1fVUuM .errorStateIcon-3fNXE5"
+  ),
+  "gift_inventory": (
+    "background-image",
+    ".emptyStateImage-2MrSNs"
+  ),
+  "houses": (
+    "background-image",
+    ".emptyIconGuilds-zT7p-8"
+  ),
+  "integrations": (
+    "background-image",
+    ".footerImage-4UrEF0"
+  ),
+  "key": (
+    "background-image",
+    ".channelNotice-1-XFjC.guildMFAWarning-3GEzs8"
+  ),
+  "no_mutuals": (
+    "background-image",
+    ".emptyIconFriends-2l7flK"
+  ),
+  "no_results": (
+    "background-image",
+    ".noResultsImage-3Y0eCI"
+  ),
+  "no_results_conv": (
+    "background-image",
+    ".emptyState-2gL-9T"
+  ),
+  "phones": (
+    "background-image",
+    ".verificationBlock-1Chfpc .image-2LVZ_j.phone-27MBJz"
+  ),
+  "poop": (
+    "background-image",
+    ".imageError-2OefUi, .invalidPoop-pnUbq7, .guildIconExpired-2Qcq05"
+  ),
+  "searching": (
+    "background-image",
+    ".searchIndexBackground-HQa_J9"
+  ),
+  "server_outage": (
+    "background-image",
+    ".art-clkMXs"
+  ),
+  "spotify_error": (
+    "background-image",
+    '.artworkSpotifySessionEnded-11d_If'
+  ),
+  "streamer_mode": (
+    "background-image",
+    ".streamerModeEnabledImage-3vynUz"
+  ),
+  "switch": (
+    "background-image",
+    ".channelNotice-1-XFjC.quickswitcher-35bYg4"
+  ),
+  "unclaimed": (
+    "background-image",
+    ".imageUnclaimed-5nJyYs"
+  ),
+  "vocal_full": (
+    "background-image",
+    ".fullArt-2zAZvG"
+  ),
+  "wumpus_tea_party": (
+    "background-image",
+    ".errorStateIcon-3fNXE5"
+  )
+);
+
+// @everyone
+@mixin thing($nth1, $nth2, $fill) {
+  & :nth-child(#{$nth1}) > :nth-child(#{$nth2}) path {
+    fill: $fill
+  }
+}
+.everyonePopout-nEbJY3 g > {
+  @include thing(2, 1, #0000003d);
+  @include thing(3, 1, #99abd8);
+  @include thing(3, 2, #7a8ec7);
+  @include thing(4, 1, #b3cafb);
+  @include thing(4, 2, #c2d2f1);
+  @include thing(4, 3, #a0b2dc);
+  @include thing(4, 4, #a0b2dc);
+  @include thing(4, 5, #7a8ec7);
+  @include thing(4, 6, #7a8ec7);
+  @include thing(4, 7, #8ba0d2);
+  @include thing(4, 8, #c2d2f1);
+  @include thing(6, 2, #99abd8);
+  @include thing(10, 1, #e0c310);
+  @include thing(11, 1, #fbd907);
+}
+
+@each $name, $asset in $background-images {
+  $asset1: nth($asset, 1);
+  $asset2: nth($asset, 2);
+  [style*="background-image: url(\"#{$asset1}\");"],
+  [style*="background-image: url(\"#{$asset2}\");"] {
+    background-image: url("https://nyri4.github.io/Discolored/assets/#{$name}.svg") !important;
+    filter: grayscale($discolored-grayscale) opacity($discolored-opacity);
+  }
+}
+@each $name, $asset in $srcs {
+  $asset1: nth($asset, 1);
+  $asset2: nth($asset, 2);
+  [src="#{$asset1}"],
+  [src="#{$asset2}"] {
+    content: url("https://nyri4.github.io/Discolored/assets/#{$name}.svg") !important;
+    filter: grayscale($discolored-grayscale) opacity($discolored-opacity);
+  }
+}
+@each $name, $stuff in $classes {
+  $type: nth($stuff, 1);
+  $class: nth($stuff, 2);
+  #{$class} {
+    #{$type}: url("https://nyri4.github.io/Discolored/assets/#{$name}.svg") !important;
+    filter: grayscale($discolored-grayscale) opacity($discolored-opacity);
+  }
+}
+
+//? manual overrides
+//* friend
+.channelNotice-1-XFjC.invite-OjTXrW {
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  background-size: 40%;
+  filter: none;
+}
+
+//* key
+.channelNotice-1-XFjC.guildMFAWarning-3GEzs8 {
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  background-size: 40%;
+  filter: none;
+}
+
+//* no mutuals
+.emptyIconFriends-2l7flK {
+  background-size: 100%
+}
+
+//* no results conversation
+.emptyState-2gL-9T {
+  background-size: 20%;
+}
+
+//* switch
+.channelNotice-1-XFjC.quickswitcher-35bYg4 {
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  background-size: 40%;
+  filter: none;
+}

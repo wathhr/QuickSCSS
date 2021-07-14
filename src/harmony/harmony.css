@@ -1,0 +1,696 @@
+:root {
+  /*some color codes used by the disord app originaly - these varibles have no effect on how the theme looks*/
+  /*from website*/
+  --Col-dcweb-1: #7289da;
+  /*blue*/
+  --Col-dcweb-2: #99aab5;
+  /*grey*/
+  --Col-dcweb-3: #2c2f33;
+  /*more grey*/
+  --Col-dcweb-4: #23272a;
+  /*not quite black*/
+  /*from app*/
+  --Col-dcapp-1: var(--background-primary); /*main chat window*/
+  --COl-dcapp-2: var(--background-secondary); /*channel list*/
+  --Col-dcapp-3: var(--background-tertiary); /*server selector bg*/
+
+  /*form last time*/
+  --Colr: #1d1e1f; /*messenger grey bg*/
+
+  /*my color variables*/
+  --Col1: var(--Col-dcweb-4);
+  --Col2: var(--background-secondary);
+  --Col3: var(--Colr);
+  --Col4: var(--Col-dcweb-1);
+  --Col5: #121212;
+
+  /*changes to variables - here you can actually change the theme*/
+  --ColServerSelBG: var(--Col-dcapp-1);
+  --ColChannelList: var(--background-primary);
+
+  /*important colors to change*/
+  --Colleft: var(--background-secondary);
+  /*--background-primary: var(--Colr);*/
+  /*accent color*/
+  --ColAccent: #738adb;
+  /*default - #738adb*/
+  --ColAccentAlpha: rgba(115, 138, 219, 0.2);
+  /*default - rgba(115, 138, 219, 0.2) */
+  --ColTransparent1: rgba(0, 0, 0, 0);
+
+  /*text muted is #72767d */
+  /* used for slowmode and somebody typing texts*/
+  --col-mute: #abadb4;
+
+  /*set respecitve colors to Colleft - ignore*/
+  --ColServerSelBG: var(--Colleft);
+  --ColChannelList: var(--Colleft);
+  --ColTitleBar: var(--Colleft);
+  --ColMemberList: var(--background-primary);
+  --ColLink: var(--ColAccent);
+  --text-link: var(--ColLink);
+}
+
+/*misc changes*/
+/*scrollbars form Customa - big thanks to emma*/
+::-webkit-scrollbar {
+  width: 5px !important;
+  height: 3px !important;
+  display: block;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: none !important;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
+  border: none !important;
+}
+/*show scrollbar only on hover*/
+.messages-3amgkR::-webkit-scrollbar-thumb {
+  visibility: hidden !important;
+}
+.messages-3amgkR:hover::-webkit-scrollbar-thumb {
+  visibility: visible !important;
+}
+/*change some text from all caps to only fist letter cap*/
+.bodyTitle-Y0qMQz {
+  text-transform: capitalize;
+  font-size: 15px;
+}
+/* hide protips bc im a pro*/
+[class^="protip"] {
+  display: none !important;
+}
+
+/*ctrl + K quick switcher made the input a bit darker*/
+.input-2VB9rf {
+  background-color: var(--Col3);
+}
+
+/*mute, deafen and settings button hover to circle - Also inspired from Customa*/
+.container-3baos1
+  button:not([aria-label='Unmute']):not([aria-label='Undeafen']):hover {
+  border-radius: 50%;
+}
+/*emoji picker color*/
+#emoji-picker-tab-panel > .wrapper-2Gsate,
+.inspector-S2gM3e {
+  background-color: var(--background-secondary) !important;
+}
+.inspector-S2gM3e {
+  box-shadow: 0 -15px 15px 0 var(--background-secondary);
+  z-index: 500;
+}
+/*applying respecive color variables*/
+.wrapper-3NnKdC,
+.scroller-1Bvpku,
+.titleBar-AC4pGV {
+  /*server selector*/
+  background-color: var(--ColTitleBar) !important;
+}
+.categoryWrapper-UZ5YNj,
+.header-8ilj5e,
+.nav-2KnmHb,
+.header-1TOWci,
+.container-2lgZY8,
+.privateChannels-1nO12o {
+  background-color: var(--Colleft);
+}
+/*bot tag fix*/
+.botTagVerified-1klIIt {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.titleBar-AC4pGV {
+  /*title bar*/
+  background-color: var(--background-tertiary);
+}
+#app-mount,
+body,
+.bg-h5JY_x {
+  /*app bg idk*/
+  background-color: var(--ColTitleBar);
+}
+
+/*server title bar, banner, channel header*/
+.title-3qD0b- {
+  /*channel title bar hosting search etc.*/
+  border-top-left-radius: 15px !important;
+}
+.animatedContainer-1pJv5C {
+  /*add rounded corner to banner*/
+  border-top-right-radius: 10px;
+}
+.chat-3bRxxu,
+.container-1D34oG,
+.libraryHeader-3g95kE,
+.container-1r6BKw,
+.homeWrapper-3-Wh5T .title-3qD0b-,
+.applicationStore-1pNvnv,
+.scroller-1d5FgU,
+.pageHeaderDrag-OPlmbm {
+  /* add a small rounded corner thing? to message titlebar*/
+  border-top-left-radius: 10px !important;
+}
+.pageWrapper-1PgVDX {
+  border-top-left-radius: 10px !important;
+}
+.scroller-2FKFPG.scroller-2TZvBN {
+  border-top-left-radius: 0px !important;
+}
+
+.channelTextArea-rNsIhG {
+  background: transparent;
+}
+.attachButton-2WznTc,
+.attachWrapper-2TRKBi {
+  /*remove divider from attachbutton*/
+  border-right: none;
+}
+.buttons-3JBrkn {
+  /*add back margin to emoji button*/
+  margin-right: 5px !important;
+}
+
+.jumpToPresentBar-9P20AM {
+  padding-bottom: 0px;
+}
+.form-2fGMdU:before {
+  display: none;
+}
+.jumpToPresentBar-9P20AM,
+/*.searchBar-3dMhjb, */
+/* .searchBarComponent-32dTOx, */
+.newMessagesBar-mujexs,
+/*.searchBar-6Kv8R2, */
+.barButtonMain-1giYuj {
+  background-color: var(--Colleft) !important;
+  opacity: 1;
+}
+.innerDisabled-1YTFPN,
+.scrollableContainer-2NUZem {
+  opacity: 1 !important;
+}
+.barButtonAlt-3gIkIj {
+  background: transparent;
+}
+.newMessagesBar-mujexs {
+  border-bottom-left-radius: 13px !important;
+}
+.barButtonMain-1giYuj {
+  border-bottom-left-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+  background-color: var(--Colleft);
+}
+.barButtonAlt-3gIkIj {
+  color: var(--ColAccent);
+}
+/*hide gift send*/
+.channelTextArea-rNsIhG
+  .buttons-3JBrkn
+  .buttonWrapper-1ZmCpA[aria-label='Send a gift' i]:first-child {
+  display: none;
+}
+.attachButtonInner-PQjIyk {
+  margin-left: -4px !important;
+}
+
+/*call related changes*/
+.container-1giJp5,
+.activityPanel-28dQGo {
+  border-bottom: transparent;
+}
+.overlayTitle-8IcS01.idle-U-LIlZ {
+  opacity: 1 !important;
+}
+/* Move Call UI buttons a little away from the rest -  thanks to emma form Customa */
+.wrapper-2qzCYF.minimum-28Z35l {
+  height: 310px;
+}
+.videoGridWrapper-2BDlMX.minLayout-tDGzv- {
+  margin-bottom: 10px;
+}
+
+/* new server discovery */
+.sidebar-2K8pFh {
+  background-color: var(--Colleft);
+}
+
+/*inbox*/
+.recentMentionsPopout-3rCiI6,
+.messagesPopoutWrap-1MQ1bW {
+  max-height: 93vh !important;
+}
+
+/* remove help button bc i don't like it anyway*/
+a[href="https://support.discord.com"]
+{
+  display: none;
+}
+
+/*---------------------accent color system -again thanks to Customa--------------------*/
+/*---------------------i have very little clue what  all this means--------------------*/
+/*-------------------basically adds a lot of ColAccent around the app------------------*/
+/*alpha*/
+.buffer-26XPkd,
+.buffer-26XPkd::after,
+.buffer-26XPkd::before,
+.content-3dzVd8.isMentioned-N-h9aa,
+.mediaBarPreview-1jfyFs,
+.mediaBarPreview-1jfyFs::after,
+.mediaBarPreview-1jfyFs::before,
+.reaction-1hd86g.reactionMe-wv5HKu,
+.wrapper-3WhCwL {
+  background-color: var(--ColAccentAlpha);
+}
+.checkbox-1ix_J3[style*='rgba(67, 181, 129, 0.15)'],
+.expandedFolderBackground-1cujaW,
+.folderIconWrapper-1_bOZe {
+  background: rgba(0, 0, 0, 0.25) !important;
+}
+.expandedFolderIconWrapper-Huv7rA svg {
+  color: var(--Col-dcweb-1) !important;
+}
+.folder-1hbNCn.hover-qTxTR_ {
+  background-color: var(--background-secondary);
+}
+.expandedFolderBackground-1cujaW {
+  width: 42px;
+  left: 15px;
+}
+.highlight {
+  background-color: var(--ColAccentAlpha);
+  filter: brightness(3);
+}
+/*normal*/
+.barFill-23-gu-,
+.checkbox-3kaeSU .checkboxInner-3yjcPe .checkboxElement-1qV33p:checked + span,
+.children-rWhLdy .nowPlaying-284llR,
+.circleIconButton-jET_ig.selected-ugP_am,
+.container-3ayLPN .datePicker--XZbmJ .datePickerHint-3Q1Udw .hintValue-29ny8Z,
+.container-3ayLPN
+  .datePicker--XZbmJ
+  .datePickerHint-3Q1Udw
+  .hintValue-29ny8Z:hover,
+.containerDragAfter-1F4fgZ::after,
+.containerDragAfter-3TEhpe::before,
+.containerDragBefore-31UGCO::before,
+.containerDragBefore-3Dzc5x::before,
+.datePicker--XZbmJ
+  .calendarPicker-2yf6Ci
+  .react-datepicker__day.react-datepicker__day--selected::after,
+.datePicker--XZbmJ
+  .calendarPicker-2yf6Ci
+  .react-datepicker__day.react-datepicker__day--selected:hover,
+.datePicker--XZbmJ .calendarPicker-2yf6Ci .react-datepicker__day:hover,
+.headerPlaying-j0WQBV,
+.headerSpotify-zpWxgT,
+.headerStreaming-2FjmGz,
+.headerXbox-3G-4PF,
+.iconBadge-3qSJIw.participating-1NvRVd,
+.iconBadge-2NuvG9,
+.isUnread-3Ef-o9 .content-1o0f9g,
+.item-2hkk8m,
+.item-3eFBNF.selected-2DeaDa,
+.mediaBarGrabber-1FqnbN,
+.mediaBarInteraction-37i2O4:hover .mediaBarGrabber-1FqnbN,
+.mediaBarInteractionDragging-2QurIZ .mediaBarGrabber-1FqnbN,
+.mediaBarProgress-1xaPtl,
+.mediaBarProgress-1xaPtl::after,
+.mediaBarProgress-1xaPtl::before,
+.newMessagesBar-mujexs,
+.progressBar-2Hd4f8 .barForeground-3KglC8,
+.questionMark-CWEQZn.flexCenter-3_1bcw,
+.questionMark-CWEQZn.flexCenter-3_1bcw:hover,
+.result-3w1ZcL .result-3w1ZcL .selectorButtonSelected-1j4DmC,
+.selectorButtonSelected-336oUc,
+.side-8zPYf6 .role-3wi9Tf.selected-3s45Ha.item-PXvHYJ,
+.sidebar-CFHs9e .side-8zPYf6 .selected-3s45Ha.item-PXvHYJ,
+.switch-3wwwcV.valueChecked-m-4IJZ,
+.tooltip-2QfLtc.tooltipBrand-g03Nz8,
+.topSectionPlaying-1J5E4n,
+.topSectionSpotify-1lI0-P,
+.topSectionStreaming-1Tpf5X,
+.topSectionXbox-3fWLjS,
+.unread-3zKkbm,
+.unreadPill-2HyYtt,
+.userSettingsVoice-iwdUCU .sliderBar-3DezvM.speaking-2bFhO4,
+.wanderingCubesItem-WPXqao,
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9,
+.wrapper-1BJsBx:hover .childWrapper-anI2G9,
+.wrapper-232cHJ,
+.wrapper-3WhCwL:hover {
+  background-color: var(--ColAccent);
+}
+/* ping indicators with numbers*/
+.item-26Dhrx[style*='rgb(114, 137, 218)'],
+.languageCheckbox .checkbox-1ix_J3.checked-3_4uQ9,
+.pageControl-1aUwvK .activeButton-1BJAiN,
+.progress-3Rbvu0 .progressBar-3u8FBM,
+.result-3w1ZcL[style*='background-color'],
+.selectableItem-1MP3MQ.selected-31soGA,
+.switch-3wwwcV.valueChecked-m-4IJZ[style*='rgb(67, 181, 129)'],
+.tabBar-ZmDY9v .item-3HknzM[style*='background-color: rgb(67, 181, 129);'],
+.botTag-3W9SuW,
+.listContent-2_qb-y .botText-1526X_,
+.listContent-2_qb-y .botTagVerified-1klIIt {
+  background-color: var(--ColAccent) !important;
+}
+.attachButtonPlay-3iJ0mf,
+/*server plus and search button is the only thing i can notice*/
+.circleIconButton-jET_ig,
+.hasMore-3e72_v,
+.hasMoreButton-1MELpI,
+.progress-LWvunf .foreground-2EIns2,
+.reaction-1hd86g.reactionMe-wv5HKu .reactionCount-2mvXRV,
+/* .searchBar-3dMhjb .searchAnswer-3Dz2-q, */
+.selectorNitroIcon-3FDeDE,
+.statusGreen-168O6Q,
+.tier-12tKuZ .tierUnlocked-25K6Kv,
+.tierHeaderContent-2-YfvN .tierUnlocked-27DwHo,
+.unreadPill-2HyYtt .unreadPillCapStroke-7rkHbg,
+.wrapper-3WhCwL {
+  color: var(--ColAccent);
+}
+.expandedFolderIconWrapper-1xLaU- svg[style='color: rgb(114, 137, 218);'] {
+  color: var(--ColAccent) !important;
+}
+.checkbox-3kaeSU,
+.checkboxInner-3yjcPe,
+.checkboxElement-1qV33p:checked + span,
+.dropdown-2fxkrS .lookFilled-1h1y05.select-1Pkeg4:focus,
+.dropdown-2fxkrS .lookFilled-1h1y05.select-1Pkeg4:hover.selectOpen-hQuR6b,
+.dropdown-2fxkrS .lookFilled-1h1y05.selectOpen-hQuR6b,
+.emojiPicker-3m1S-j .categories-1feg4n .selected-39BZ4S,
+.footer-1fjuF6 .quickMessage-1yeL4E:focus,
+.horizontalAutocomplete-L5KnTN .selector-2IcQBU.selectorSelected-1_M1WV,
+.imageSelected-4Kl81J,
+.input-cIJ7To.focused-1mmYsC,
+.input-cIJ7To:focus,
+.isUnread-3Ef-o9,
+.regionSelectModal-12e-57 .regionSelectModalOption-2DSIZ3:hover,
+.select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b,
+.select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b:hover,
+.select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV:focus {
+  border-color: var(--ColAccent);
+}
+.lookLink-9FtZy-.colorBrand-3pXr91:hover {
+  border-bottom: 1px solid var(--ColAccent);
+}
+
+/*something to do with calling?*/
+.border-Jn5IOt.video-3SrWSI.speaking-B2MXPi,
+.border-Jn5IOt.voice-3bPYC-.speaking-B2MXPi,
+.content-ySCtCx .focused-1En8bG::after,
+.content-ySCtCx .result-3w1ZcL:hover::after,
+.tile-2silOL:hover .sourceThumbnail-14Iubx {
+  box-shadow: inset 0 0 0 3px var(--ColAccent);
+}
+.tabBar-ZmDY9v
+  .item-3HknzM[style*='background-color: rgba(67, 181, 129, 0.2);'] {
+  background-color: var(--ColAccentAlpha) !important;
+  color: var(--ColAccent) !important;
+}
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.image-2yrs5j {
+  /*upload 2nd screen border around preview*/
+  border: 2px solid var(--ColAccent);
+}
+.uploadModal-2ifh8j .inner-3nWsbo,
+.uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .inner-3nWsbo {
+  border: 2px dashed var(--ColAccent);
+  border-radius: 10px;
+}
+.powercord-spotify-playlist:hover {
+  background-color: var(--ColTransparent1) !important;
+  border-color: var(--ColAccent) !important;
+}
+.regionSelect-3lf4eE button,
+/* what is .wrapper-2ZbzR9 and .downloadApps-wbBFdZ ?*/
+.wrapper-2ZbzR9 .header-3ZP1MY,
+.wrapper-2ZbzR9 .sampleLink-KPFu3I,
+.wrapper-2ZbzR9 .slide-2pHaq5 h5 {
+  color: var(--ColAccent);
+}
+.regionSelectWrapper-1favwk
+  .regionSelect-3lf4eE:hover
+  .regionSelectInner-24f4Ce,
+.regionSelectWrapper-1favwk .regionSelect-3lf4eE:hover button {
+  border-color: var(--ColAccent);
+}
+.powercord .check-2by_h9::after {
+  content: '\f00c';
+  color: var(--ColAccent);
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Pro', sans-serif !important;
+}
+.container svg path .unreadPillCapStroke-7rkHbg,
+.unreadPillCap-3_K2q2 {
+  color: var(--ColAccent);
+  stroke: var(--ColAccent) !important;
+}
+.flowerStar-1GeTsn path,
+.selectorNitroIcon-3FDeDE g path,
+.unreadPill-2HyYtt .unreadPillCapStroke-7rkHbg {
+  fill: currentColor;
+}
+.content-1o0f9g,
+.mention:hover {
+  /*fix the -----date----new bar .mention:hover*/
+  color: white !important;
+}
+/*--------------------End of accent color stuff from customa--------------------*/
+/*------------------------------------------------------------------------------*/
+/*quickcss codeblock design*/
+.powercord-quickcss {
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid var(--background-tertiary);
+  background: var(--background-secondary);
+}
+
+:root .powercord-quickcss-header,
+:root .powercord-quickcss-footer,
+.powercord-quickcss .CodeMirror,
+.powercord-quickcss .CodeMirror-gutters {
+  background: transparent !important;
+}
+/**
+ * Snippet from #css-snippets applied the Apr 30, 2020 at 5:31:56 PM
+ * Created by A user#0001 (264062457448759296)
+ * Snippet ID: 705440006960840799
+ * blur email until hover
+ */
+.userInfoViewing-16kqK3
+  .flex-1xMQg5
+  .flexChild-faoVW3
+  .marginBottom20-32qID7
+  + div
+  .selectable-2GY4I1 {
+  filter: blur(5px);
+  transition: filter 0.5s;
+}
+/*scroll if code modal too long*/
+.userInfoViewing-16kqK3
+  .flex-1xMQg5
+  .flexChild-faoVW3
+  .marginBottom20-32qID7
+  + div
+  .selectable-2GY4I1:hover {
+  filter: blur(0);
+}
+.markup-2BOw-j.tfmodal {
+  overflow-y: auto !important;
+  max-height: 800px !important;
+}
+.colorDefault-2K3EoJ:hover,
+.colorDefault-2K3EoJ.focused-3afm-j,
+.colorDefault-2K3EoJ:hover:not(.hideInteraction-1iHO1O),
+.item-1tOPte:hover {
+  background-color: var(--background-modifier-hover) !important;
+}
+.mask-1qbNWk.icon-1IxfJ2 {
+  filter: none !important;
+}
+
+/*status and server icon colors fix ree*/
+
+/*boost*/
+path[d='M4 0L0 4V8L4 12L8 8V4L4 0ZM7 7.59L4 10.59L1 7.59V4.41L4 1.41L7 4.41V7.59Z'],
+path[d='M2 4.83V7.17L4 9.17L6 7.17V4.83L4 2.83L2 4.83Z'] {
+  fill: #ff73fa !important;
+}
+
+/*leave server*/
+path[d='M10.418 13L12.708 15.294L11.292 16.706L6.586 11.991L11.294 7.292L12.707 8.708L10.41 11H21.949C21.446 5.955 17.177 2 12 2C6.486 2 2 6.487 2 12C2 17.513 6.486 22 12 22C17.177 22 21.446 18.046 21.949 13H10.418Z'] {
+  fill: #f04747;
+}
+
+/* invite people */
+div#guild-header-popout-invite-people {
+  color: #677bc4 !important;
+}
+
+/* status picker */
+foreignObject[mask='url(#svg-mask-status-offline)'] {
+  color: rgb(116, 127, 141) !important;
+}
+foreignObject[mask='url(#svg-mask-status-idle)'] {
+  color: rgb(250, 166, 26) !important;
+}
+foreignObject[mask='url(#svg-mask-status-dnd)'] {
+  color: rgb(240, 71, 71) !important;
+}
+foreignObject[mask='url(#svg-mask-status-online)'] {
+  color: rgb(67, 181, 129) !important;
+}
+
+/*hide the thingers  that explain status*/
+.separator-2I32lJ,
+.description-2L932D {
+  display: none;
+}
+.statusItem-33LqPf[aria-label='Hide Game Activity'] svg {
+  margin-left: -2px;
+}
+/*scale the circular calling state*/
+.participant-1lOCsd {
+  transform: scale(1.3, 1.3) !important;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.note-3kmerW textarea:focus {
+  /* fix edit note profile idk*/
+  background-color: transparent;
+}
+
+/*css snippet fix loading emojis by emma*/
+.emojiItem-14v6tW .emojiItemImageLoading-1yEIxx /* Fix Loading Emojis */ {
+  background-image: none;
+  background-color: var(--background-primary) !important;
+  border-radius: 30%;
+}
+
+.toolbar-1t6TWx [aria-label='Member List'] {
+  /*member list toggle hide*/
+  display: none;
+}
+
+/*make typing and slowmode a bit more subtle*/
+.typing-2GQL18,
+.typing-2GQL18 svg g circle,
+.cooldownWrapper-3joyFc,
+.cooldownWrapper-3joyFc * {
+  color: var(--col-mute) !important;
+  fill: var(--col-mute) !important;
+}
+
+/*maybe make attach button the same color? jk, jk... unless? */
+/*you probably won't even notice*/
+.attachButtonInner-PQjIyk svg path {
+  fill: var(--col-mute);
+}
+
+.wrapper-3D2qGf {
+  box-shadow: unset;
+  border: none;
+  transition: all 0.3s;
+  border-top: none;
+}
+
+.peopleListItem-2nzedh {
+  border-top-color: transparent;
+}
+
+/* user popout - credit to : https://github.com/A-User-s-Discord-Themes/Couve*/
+/*role pills*/
+.role-2irmRk,
+.role-3paDXR,
+.role-1P70N6,
+.role-78i2xt,
+.role-3UN8jj {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  border-radius: 25px;
+  padding: 5px;
+}
+.roleCircle-3xAZ1j::before,
+.roleCircle-3DE8xJ::before,
+.roleColor-fHISxl::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none;
+}
+.roleColor-fHISxl {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.role-1P70N6 {
+  padding-right: 7.5px;
+}
+
+.roleName-1JcOmP {
+  color: hsla(0, 0%, 100%, 0.8);
+}
+/*Bottom*/
+.footer-1fjuF6 {
+  border-top: none;
+}
+
+/*server folder*/
+.expandedFolderBackground-2sPsd-,
+.folder-21wGz3 {
+  background-color: var(--background-primary);
+  transition: all 0.3s;
+}
+
+/* Fix fade thingy for good looking titlebar snippet */
+.children-19S4PO:after {
+  background: transparent !important;
+}
+.searchResultMessage-1fxgXh.hit-1fVM9e > div > .contents-2mQqc9 img,
+div[id^='pinned-messages-'] .contents-2mQqc9 img {
+  top: 15px;
+}
+
+/*ok wtf fix quote container*/
+.quoteContainer {
+  background: transparent !important;
+}
+.modifiedQuote {
+  background-color: var(--background-secondary);
+  padding: 5px;
+  margin-right: 2.5%;
+  margin-left: 1.5%;
+  width: 96%;
+  border-radius: 10px 10px 0px 0px;
+  margin-bottom: 0px;
+}
+.removeQuotes {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/*scroller quick fix*/
+.scrollerBase-289Jih::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+
+/*few adjustments*/
+/* Bring Back Blurple Verified Badge */
+.verified-1eC5dy:not(.disableColor-MwOAZf) > svg path {
+  fill: var(--Col-dcweb-1);
+}

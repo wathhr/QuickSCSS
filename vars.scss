@@ -4,7 +4,7 @@ $checked-settings: 0;
 //* Main
 $use-revert-rebrand: 0; // Enable this if you're using the "GT-RevertRebrand" theme by Ducko
 
-//* General
+//* main
 //? Other / Enhancements
 $topbar-button-spacing: 6px; // How much space to be between the buttons on the top right
 $blur-amount: 6px; // How much to blur discrims and the DM list
@@ -12,16 +12,6 @@ $use-osx-buttons: 1; // Whether or not to have the OSX-styled maximize/minimize/
 $use-custom-wordmark: 1; // Whether or not to use a custom wordmark (top left)
 $custom-wordmark-text: dicksword; // Defaults to "discord"
 $no-dashes: 1; // Whether or not channel names have spaces instead of dashes
-
-//* Harmony
-$top-left-corner-roundedness: 15px; // How round the top-left part next to the sidebar is
-
-//* User popouts/modals
-//? Bigger avatar
-$av-size: 96px; // How big avatars are pretty much everywhere, except chat
-
-//? Better connections
-$connection-backgrounds: 1; // Whether or not connections have a background image in user modals
 
 //* Individual snippets
 //? Better nitro tab
@@ -31,6 +21,19 @@ $background-color: 10; // How much to reduce color
 //? Better stage discovery tab
 $stage-discovery-rows: 2; // How many rows the stage discovery tab has
 
+//* User popouts/modals
+//? Bigger avatar
+$av-size: 96px; // How big avatars are pretty much everywhere, except chat
+
+//? Better connections
+$connection-backgrounds: 1; // Whether or not connections have a background image in user modals
+
+//* Harmony
+$top-left-corner-roundedness: 15px; // How round the top-left part next to the sidebar is
+
+//* Discolored
+$discolored-grayscale: 0.5;
+$discolored-opacity: 0.85;
 
 
 
