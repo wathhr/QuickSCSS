@@ -32,8 +32,8 @@ $connection-backgrounds: 1; // Whether or not connections have a background imag
 $top-left-corner-roundedness: 15px; // How round the top-left part next to the sidebar is
 
 //* Discolored
-$discolored-grayscale: 0.5;
-$discolored-opacity: 0.85;
+$discolored-grayscale: 0.35;
+$discolored-opacity: 0.95;
 
 
 
@@ -106,5 +106,3 @@ $discolored-opacity: 0.85;
     --brand-experiment-95a: rgba(114, 137, 218, 0.95);
   }
 }
-$use-custom-wordmark: 0 !default;
-$custom-wordmark-text: discord !default;

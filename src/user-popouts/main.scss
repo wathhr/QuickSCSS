@@ -41,6 +41,9 @@
       line-height: 20px;
     }
   }
+  .aboutMeSection-1Fw5Ia { // About me
+    margin-bottom: 4px;
+  }
   .activity-2INFPu:first-child { // Status
     margin-top: 8px;
     .buttonsWrapper-2spIeK:not(:empty) {
@@ -50,32 +53,9 @@
   .rolesList-1geHY1 { // Roles
     margin-top: -2px;
   }
-  .bodyInnerWrapper-26fQXj { // BD version of User Details made by Strencher
-    display: grid;
-    .UserDetails-connections-connectionsBody {
-      order: 1;
-    }
-    .UserDetails-connections-header,
-    .UserDetails-connections-connections {
-      margin-bottom: 0;
-    }
-    .UserDetails-connections-header {
-      margin-top: 12px;
-    }
-  }
   //? Remove the Dumb devider
   .divider-ewBQKj {
     display: none;
-  }
-  //? Make the cursor change when hovering over the connections on the BD version of UserDetails made by Strencher™️
-  .UserDetails-connections-connections {
-    > div {
-      cursor: pointer;
-    }
-    //? Remove the Dumb checkmark on the BD version of UserDetails made by Strencher™️
-    #app-mount & .UserDetails-badge-verifiedBadge {
-      display: none;
-    }
   }
   //? Activity
   .activity-2INFPu {
@@ -89,6 +69,30 @@
     }
     .assetsLargeImage-eYwpTX {
       border-radius: 4px;
+      $size: 4.4em;
+      width: $size;
+      height: $size;
+      mask-size: $size;
+      -webkit-mask-size: $size;
+    }
+  }
+  //? UserDetails connections
+  .bodyInnerWrapper-26fQXj {
+    display: grid;
+    .UserDetails-connections-connectionsBody {
+      order: 1;
+    }
+    .UserDetails-connections-header {
+      margin: 12px 0 0 0;
+    }
+    .UserDetails-connections-connections {
+      margin-bottom: 0;
+      > div {
+        cursor: pointer;
+      }
+      #app-mount & .UserDetails-badge-verifiedBadge {
+        display: none;
+      }
     }
   }
 }
