@@ -203,6 +203,7 @@ $mentioned-hover: rgba(250, 168, 25, 0.08);
 @if $no-dashes >= 1 {
   .containerDefault--pIXnN > .wrapper-2jXpOf .channelName-2YrOjO, // channel list
   [aria-label="Channel header"] .title-29uC1r, // channel headers
+  [id^="ian"].powercord-toast .lookOutlined-3sRXeN.colorBrand-3pXr91 .flexChild-faoVW3, // In App Notifications button
   .content-3YMskv .emptyChannelIcon-cc932w ~ .size32-o_H79z, // header at the start of channels
   .channelTextArea-rNsIhG .placeholder-37qJjk, // text area placeholder
   .wrapper-3WhCwL.mention:not(.iconMention-1t7gB7):not(.iconMention-O5BG9X):not([aria-label]), // mentions
@@ -215,4 +216,3 @@ $mentioned-hover: rgba(250, 168, 25, 0.08);
     font-family: "no dash", var(--font-primary);
   }
 }
-
