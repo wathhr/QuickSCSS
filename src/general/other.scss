@@ -277,7 +277,7 @@ svg.icon-3cZ1F_ > path {
     filter: hue-rotate(360deg);
   }
 }
-.wrapper-3WhCwL,
+.wrapper-3WhCwL:not(.roleMention-2Bj0ju[style]),
 .message-15tBk4 strong {
   color: #1aecff !important;
   background-color: transparent !important;
@@ -288,7 +288,10 @@ svg.icon-3cZ1F_ > path {
   }
 }
 .roleMention-2Bj0ju {
-  background-color: transparent !important;
+  background: transparent !important;
+  #app-mount &:not([style]) {
+    text-decoration: none;
+  }
 }
 
 //? Translucent context menu

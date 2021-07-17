@@ -85,16 +85,14 @@
   }
 }
 
-//? Better poped out QuickCSS
+//? Better popped out QuickCSS
 .powercord-quickcss {
   border-radius: 5px;
   border: 1px solid var(--background-tertiary);
   &.popped-out {
     overflow: hidden;
     border: 1px solid var(--background-tertiary);
-    background: var(--background-secondary)
-      url("/assets/5ac53bbce4bc51dd14d5413bd7d1c77d.svg") no-repeat 50% 35% /
-      30%;
+    background: var(--background-secondary) url("/assets/5ac53bbce4bc51dd14d5413bd7d1c77d.svg") no-repeat 50% 35% / 30%;
   }
 }
 .powercord-entities-manage-tabs {
@@ -104,12 +102,10 @@
   position: absolute;
   top: 75%;
   left: 60%;
-  transform: translate(-50%, -50%);
-  font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 30px;
-}
-.powercord-quickcss-popped {
   width: 360px;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-primary);
+  font-size: 30px;
   &::after {
     content: ".";
   }
@@ -157,57 +153,52 @@
 }
 
 //? Different color for different messages events
-$replying-side: rgba(2, 183, 87, 0.9);
-$replying-default: rgba(2, 183, 87, 0.05);
-$replying-hover: rgba(2, 183, 87, 0.08);
-$local-bot-side: rgba(114, 137, 218, 0.9);
-$local-bot-default: rgba(114, 137, 218, 0.05);
-$local-bot-hover: rgba(114, 137, 218, 0.08);
-$mentioned-side: rgba(250, 168, 25, 0.9);
-$mentioned-default: rgba(250, 168, 25, 0.05);
-$mentioned-hover: rgba(250, 168, 25, 0.08);
-#app-mount .message-2qnXI6 {
-  &.mentioned-xhSam7 {
-    background-color: $mentioned-default;
-    &::before {
-      background-color: $mentioned-side;
+$colored-message-events: (
+  ".mentioned-xhSam7": (
+    rgba(250, 168, 25, 0.9),
+    rgba(250, 168, 25, 0.05),
+    rgba(250, 168, 25, 0.08)
+  ),
+  ".replying-1x3H0T": (
+    rgba(2, 183, 87, 0.9),
+    rgba(2, 183, 87, 0.05),
+    rgba(2, 183, 87, 0.08)
+  ),
+  ".wrapper-2a6GCs.ephemeral-1PsL1r:not(.replying-1x3H0T)": ( // local bot message
+    rgba(114, 137, 218, 0.9),
+    rgba(114, 137, 218, 0.05),
+    rgba(114, 137, 218, 0.08)
+  )
+);
+@each $type, $colors in $colored-message-events {
+  $side: nth($colors, 1);
+  $default: nth($colors, 2);
+  $hover: nth($colors, 3);
+  #app-mount .message-2qnXI6 {
+    &#{$type} {
+      background-color: $default;
+      &::before {
+        background-color: $side;
+      }
+      &:hover {
+        background-color: $hover;
+      }
     }
-    &:hover {
-      background-color: $mentioned-hover;
-    }
-  }
-  &.replying-1x3H0T {
-    background-color: $replying-default;
-    &::before {
-      background-color: $replying-side;
-    }
-    &:hover {
-      background-color: $replying-hover;
-    }
-  }
-  &.wrapper-2a6GCs.ephemeral-1PsL1r:not(.replying-1x3H0T) {
-    background-color: $local-bot-default;
-    &::before {
-      background-color: $local-bot-side;
-    }
-    &:hover {
-      background-color: $local-bot-hover;
-    }
-  }
-  &:hover {
-    transition: 0.75s;
   }
 }
+#app-mount .message-2qnXI6:hover {
+  transition: 0.75s;
+}
 
-//? No dash in channel names (font changes a bit, can't get it to be any better)
+//? No dash in channel names
 @if $no-dashes >= 1 {
-  .containerDefault--pIXnN > .wrapper-2jXpOf .channelName-2YrOjO, // channel list
+  .containerDefault--pIXnN > .wrapper-2jXpOf:not(.typeThread-3ESTm-) .channelName-2YrOjO, // channel list
   [aria-label="Channel header"] .title-29uC1r, // channel headers
-  [id^="ian"].powercord-toast .lookOutlined-3sRXeN.colorBrand-3pXr91 .flexChild-faoVW3, // In App Notifications button
   .content-3YMskv .emptyChannelIcon-cc932w ~ .size32-o_H79z, // header at the start of channels
+  .wrapper-3WhCwL.mention:not(.iconMention-1t7gB7):not(.iconMention-O5BG9X):not([aria-label]):not(.roleMention-2Bj0ju), // mentions
   .channelTextArea-rNsIhG .placeholder-37qJjk, // text area placeholder
-  .wrapper-3WhCwL.mention:not(.iconMention-1t7gB7):not(.iconMention-O5BG9X):not([aria-label]), // mentions
   #search-results .resultChannel-3BYgHX, // search
+  [id^="ian"].powercord-toast .lookOutlined-3sRXeN.colorBrand-3pXr91 .flexChild-faoVW3, // In App Notifications button
   .iconSizeLarge-161qtT + .channelContainer-1x3D6I .channelName-2HcGlq, // following an announcement channel
   .inviteSettingsInviteRow-3p2O-N .user-3x-NP9 + .size12-3cLvbJ, // invite settings
   .welcomeChannel-1rFrIO .size12-3cLvbJ, // welcome screen settings 

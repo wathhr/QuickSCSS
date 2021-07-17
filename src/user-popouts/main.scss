@@ -42,7 +42,13 @@
     }
   }
   .aboutMeSection-1Fw5Ia { // About me
-    margin-bottom: 4px;
+    margin-bottom: 12px;
+    h3 {
+      margin-bottom: 4px;
+    }
+    + .bodyInnerWrapper-26fQXj .activity-2INFPu {
+      margin-top: 0;
+    }
   }
   .activity-2INFPu:first-child { // Status
     margin-top: 8px;
@@ -67,13 +73,15 @@
     .content-3JfFJh {
       width: 0; // this is actually such a retarded fix, but it works
     }
-    .assetsLargeImage-eYwpTX {
-      border-radius: 4px;
-      $size: 4.4em;
-      width: $size;
-      height: $size;
-      mask-size: $size;
-      -webkit-mask-size: $size;
+    .assets-VMAukC {
+      .assetsLargeImage-eYwpTX {
+        border-radius: 4px;
+        $size: 4.4em;
+        width: $size;
+        height: $size;
+        mask-size: cover;
+        -webkit-mask-size: cover;
+      }
     }
   }
   //? UserDetails connections
