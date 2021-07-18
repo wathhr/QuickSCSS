@@ -39,7 +39,7 @@
 //? User area buttons bounce
 .button-14-BFJ {
   color: white;
-  transition: 0.2s;
+  transition: padding-bottom 0.2s;
   &:hover {
     padding-bottom: 5px;
   }
@@ -58,24 +58,23 @@
   color: hsl(360, calc(var(--saturation-factor, 1) * 54.5%), 41.5%); // #a33030
 }
 
-//? Better bot tag
-.px-10SIf7.botTag-2WPJ74,
-.rem-2m9HGf.botTag-2WPJ74 {
-  transition: 0.5s;
-  background-color: rgba(114, 137, 218, 0.1) !important;
-  color: var(--brand-experiment) !important;
+//? Nicer bot tag
+.botTagRegular-2HEhHi {
+  transition: color 0.5s;
+  background-color: rgba(114, 137, 218, 0.1);
+  color: var(--brand-experiment);
   &:hover {
-    color: white !important;
+    color: white;
   }
 }
 
-//? Revert switches
+//? Revert switches badly
 svg.slider-TkfMQL svg {
   display: none;
 }
 .container-3auIfb:not([style*="hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%)"]) {
   background-color: var(--brand-experiment) !important;
-  transition: 0.6s;
+  transition: background-color 0.6s;
 }
 
 //? Revert autocomplete
@@ -110,25 +109,13 @@ svg.slider-TkfMQL svg {
   }
 }
 
-//? Better notifications
-.powercord-toast {
-  .header {
-    box-shadow: 0 20px 15px 2.5px var(--toast-header) !important;
-  }
-  .lookFilled-1Gx00P.colorBrand-3pXr91 {
-    color: var(--brand-experiment);
-    background-color: var(--brand-experiment-05a);
-    &:hover {
-      background-color: var(--brand-experiment-10a);
-    }
-  }
-  div.ian-toast,
-  .ian-toast div {
-    text-align: center;
-    justify-content: center;
-    .ian-simple-embed-color {
-      display: none;
-    }
+//? Center text on "In App Notifications"
+div.ian-toast,
+.ian-toast div {
+  text-align: center;
+  justify-content: center;
+  .ian-simple-embed-color {
+    display: none;
   }
 }
 
@@ -191,22 +178,6 @@ svg.icon-3cZ1F_ > path {
   width: 240px;
 }
 
-//? Shiki codeblocks improvements or something
-#a11y-hack {
-  code {
-    max-width: 356px;
-    max-height: unset !important;
-  }
-  .vpc-shiki {
-    border: 1.5px solid var(--background-tertiary);
-    max-width: 356px;
-    max-height: unset !important;
-  }
-}
-.markup-2BOw-j code {
-  border: none;
-}
-
 //? Blurple sidebar buttons
 .circleIconButton-1QV--U.circleButtonBase-2DCxIZ {
   color: var(--brand-experiment);
@@ -248,23 +219,22 @@ svg.icon-3cZ1F_ > path {
 }
 
 //? Always colored status
-#now-playing-menu,
-#status-picker {
-  [mask="url(#svg-mask-status-online)"] {
-    fill: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%) !important;
-    color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%) !important;
+$colored-status: (
+  "online": hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%),
+  "idle": hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%),
+  "dnd": hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%),
+  "offline": hsl(214, calc(var(--saturation-factor, 1) * 9.9%), 50.4%)
+);
+@each $status, $color in $colored-status {
+  #now-playing-menu {
+    [mask="url(#svg-mask-status-#{$status})"] {
+      fill: $color !important;
+    }
   }
-  [mask="url(#svg-mask-status-idle)"] {
-    fill: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%) !important;
-    color: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%) !important;
-  }
-  [mask="url(#svg-mask-status-dnd)"] {
-    fill: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%) !important;
-    color: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%) !important;
-  }
-  [mask="url(#svg-mask-status-offline)"] {
-    fill: hsl(214, calc(var(--saturation-factor, 1) * 9.9%), 50.4%);
-    color: hsl(214, calc(var(--saturation-factor, 1) * 9.9%), 50.4%);
+  #status-picker {
+    [mask="url(#svg-mask-status-#{$status})"] {
+      color: $color;
+    }
   }
 }
 
@@ -282,18 +252,15 @@ svg.icon-3cZ1F_ > path {
   color: #1aecff !important;
   background-color: transparent !important;
   animation: rainbowmention 10s infinite linear;
-  transition: 150ms;
-  &:hover {
+  transition: color 0.15s;
+  #app-mount &:hover {
     color: white !important;
+    text-decoration: none !important;
   }
 }
 .roleMention-2Bj0ju {
   background: transparent !important;
-  #app-mount &:not([style]) {
-    text-decoration: none;
-  }
 }
-
 //? Translucent context menu
 .menu-3sdvDG {
   overflow: hidden;
@@ -303,8 +270,9 @@ svg.icon-3cZ1F_ > path {
     position: absolute;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(5px);
-    background-color: hsla(0, 0%, 10%, 0.7);
+    backdrop-filter: blur(24px);
+    filter: opacity(0.7);
+    background-color: var(--background-tertiary);
   }
 }
 

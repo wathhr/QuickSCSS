@@ -4,7 +4,7 @@
     height: 14px;
     padding-top: 4px;
     > div:not(.wordmark-2iDDfm) {
-      top: -8px;
+      top: -6px;
     }
     .winButton-iRh8-Z {
       pointer-events: none;
@@ -52,15 +52,14 @@
 //? Replace Discord watermark text
 @if $use-custom-wordmark >= 1 {
   .wordmark-2iDDfm {
+    padding: 8px 6px 0;
     svg {
       display: none;
     }
     &::after {
       content: "#{$custom-wordmark-text}";
-      position: absolute;
-      top: 4px;
       font-family: "Discord";
-      font-size: 15px;
+      font-size: 14px;
     }
   }
 }
@@ -187,7 +186,7 @@ $colored-message-events: (
   }
 }
 #app-mount .message-2qnXI6:hover {
-  transition: 0.75s;
+  transition: background-color 0.75s;
 }
 
 //? No dash in channel names

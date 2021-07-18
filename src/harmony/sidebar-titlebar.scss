@@ -73,7 +73,7 @@ div.channelTabs-tabContainer,
   .expandedFolderBackground-1cujaW,
   .folder-1hbNCn {
     background-color: var(--background-tertiary) !important;
-    transition: all 0.3s;
+    transition: background-color 0.3s;
     &.hover-qTxTR_ {
       background-color: var(--background-secondary-alt);
     }

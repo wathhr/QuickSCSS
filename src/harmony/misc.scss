@@ -105,14 +105,12 @@
 
 // Bigger user avatars on calls
 .participant-1lOCsd {
-  transform: scale(1.3, 1.3) !important;
-  margin-left: 20px;
-  margin-right: 20px;
+  transform: scale(1.25);
+  margin: 0 20px;
 }
 
 // Higher contrast invite buttons for context menus
-#guild-header-popout-invite-people,
-#guild-context-invite-people {
+[id$="-invite-people"] {
   color: var(--brand-experiment);
   &:hover {
     color: var(--interactive-active);
@@ -136,10 +134,10 @@
     }
     .itemCard-v9viV7 {
       border: none;
-      transition: 0.3s;
+      transition: background-color 0.3s;
       background-color: var(--background-secondary-alt);
       section {
-        transition: 0.3s;
+        transition: background-color 0.3s;
         background-color: var(--background-secondary);
       }
       &:hover,
