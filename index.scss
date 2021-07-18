@@ -10,30 +10,30 @@
 @use "./src/fonts/fonts.scss"; //! Do not disable this
 
 //? Main
-@import "./src/general/enhancements";
-@import "./src/general/other";
-@import "./src/general/removements";
-@import "./src/general/fixes";
-@import "./src/general/blur";
+@import "./src/general/enhancements"; // Random stuff
+@import "./src/general/other"; // Even more random stuff
+@import "./src/general/removements"; // Remove certain things from Discord, because just why
+@import "./src/general/fixes"; // Fixes some random stuff
+@import "./src/general/blur"; // Blurs certain parts of Discord, such as your recent DMs and the "Active Now" panel
 
 //? Snippets
 @import "./src/individual-snippets/embeds"; // Make images/embeds wrap instead of stacking on messages
-@import "./src/individual-snippets/friend-grid";
-//@import "./individual-snippets/friend-grid2"; // (Likely) less buggy and more ugly version of the snippet above, use this only if you are experiencing problems with the snippet above
-@import "./src/individual-snippets/better-stage-discovery-tab";
-@import "./src/individual-snippets/better-nitro-tab";
+@import "./src/individual-snippets/friend-grid"; // Makes your friend list be more grid-like
+//@import "./src/individual-snippets/friend-grid2"; // (Likely) less buggy and more ugly version of the snippet above, use this only if you are experiencing problems with the snippet above
+@import "./src/individual-snippets/better-stage-discovery-tab"; // Makes the stage discovery tab able to have multiple columns
+@import "./src/individual-snippets/better-nitro-tab"; // Adds a background and "improves" the UI of the Nitro tab
 
 //? User popouts/modals
 @import "./src/user-popouts/main"; // The snippets in this category are made with this in mind, things might break if you disable this
-@import "./src/user-popouts/bigger-avatar";
-@import "./src/user-popouts/spotify-buttons";
-@import "./src/user-popouts/better-connections";
+@import "./src/user-popouts/bigger-avatar"; // self explanatory
+@import "./src/user-popouts/spotify-buttons"; // Make the spotify activity buttons the same width
+@import "./src/user-popouts/better-connections"; // Improves the icons for connections and/or adds background images to connections
 
 //? Harmony
-@import "./src/harmony"; // This just has random "nice" changes, makes a lot of stuff be burple
+@import "./src/harmony"; // Just random "nice" changes, makes a lot of stuff be blurple. Mostly by https://github.com/KraXen72
 
 //? Discolored
-@import "./src/discolored"; // By https://github.com/NYRI4 & https://github.com/Snapperito
+@import "./src/discolored"; // Makes Discord's "boring" SVGs colored By https://github.com/NYRI4 & https://github.com/Snapperito
 
 
 
@@ -126,26 +126,26 @@
     > div:not(.layerContainer-yqaFcK):not(.titleBar-AC4pGV) {
       display: none;
     }
-    text-align: center;
     -webkit-app-region: drag;
+    text-align: center;
     user-select: none;
     background-color: var(--background-secondary-alt) !important;
     $top: 150px;
     &::after {
-      content: "Hey, thanks for using my theme ("var(--theme)"),\AI hope you like it, I've worked really hard on it. \A\A To continue using this theme please go to\A this theme's theme folder, should be located at\A\A and open the \"vars.scss\" file, \A in the \"vars.scss\" file edit the 2nd line\A to have a \"1\" instead of a \"0\".\A\AIf there is anything you don't like about the theme,\Ayou can remove/edit it either in the\A\"vars.scss\" file or the \"index.scss\" file!\A\AI hope you like the theme, bye!";
+      content: "Hey, thanks for using my theme (" var(--theme) "),\AI hope you like it, I've worked really hard on it.\A\ATo continue using this theme please go to\Athis theme's theme folder, should be located at\A\A and open the \"vars.scss\" file, in there\A edit the 2nd lineto have a\A\"1\" instead of a \"0\".\A\AIf there is anything you don't like about the theme,\Ayou can remove/edit it either in the\A\"vars.scss\" file or the \"index.scss\" file!\A\AI hope you like my theme, bye!";
       white-space: pre-wrap;
       position: absolute;
       top: $top;
       left: 50%;
       transform: translateX(-50%);
       width: clamp(550px, 800px, 75%);
-      padding: 16px;
-      border: 4px dashed var(--interactive-hover, white);
+      padding: 16px 32px;
+      border: 4px dashed currentColor;
       border-radius: 12px;
       line-height: 2.4rem;
       font-size: 2rem;
       font-weight: 300;
-      font-family: "Lexend", Whitney;
+      font-family: var(--font-primary);
       color: var(--text-normal);
       background-color: var(--background-primary);
     }
@@ -158,9 +158,9 @@
       left: 50%;
       transform: translateX(-50%);
       padding: 4px;
-      font-size: 1.5rem;
-      font-family: "Fira Code", Consolas;
-      border-radius: 4px;
+      font-size: 1.55rem;
+      font-family: Consolas, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace; // discord why don't you already have a var for this
+      border-radius: 6px;
       color: var(--text-normal);
       background-color: var(--background-tertiary);
     }
@@ -168,8 +168,8 @@
       &::before {
         content: "Sorry for the text not being selectable!";
         position: absolute;
-        bottom: 0;
-        left: 0;
+        bottom: 4px;
+        left: 6px;
         color: var(--interactive-normal);
       }
     }
@@ -177,6 +177,11 @@
       background-color: transparent;
       > div:not([aria-label]) {
         display: none;
+      }
+    }
+    html:not(.platform-win) & {
+      &::before {
+        content: "~/powercord/src/Powercord/themes/" var(--theme);
       }
     }
   }
