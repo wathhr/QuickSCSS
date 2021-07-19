@@ -218,7 +218,7 @@ $connections: (
     $bgasset: nth($bg, 1);
     $bgsize: nth($bg, 2);
     $bgpos: nth($bg, 3);
-    .connectedAccountIcon-3_EQqg[alt="#{$platform} Logo"] + .connectedAccountNameInner-2q3MVf {
+    .connectedAccountIcon-3_EQqg[alt="#{$platform} logo"] ~ .connectedAccountNameInner-2q3MVf {
       &::after {
         content: "";
         position: absolute;
