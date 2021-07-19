@@ -3,11 +3,10 @@
 //* Like this:
 //@import './src/example/snippet';
 
-//? Vars
-@use "./vars.scss" as *; //! Do not disable this
-
-//? Fonts
-@use "./src/fonts/fonts.scss"; //! Do not disable this
+//! Do not disable
+@use "./vars.scss" as *;
+@use "./src/fonts/fonts.scss";
+@import "./src/main/";
 
 //? Main
 @import "./src/general/enhancements"; // Random stuff
@@ -30,10 +29,10 @@
 @import "./src/user-popouts/better-connections"; // Improves the icons for connections and/or adds background images to connections
 
 //? Harmony
-@import "./src/harmony"; // Just random "nice" changes, makes a lot of stuff be blurple. Mostly by https://github.com/KraXen72
+@import "./src/integrations/harmony"; // Just random "nice" changes, makes a lot of stuff be blurple. Mostly by https://github.com/KraXen72
 
 //? Discolored
-@import "./src/discolored"; // Makes Discord's "boring" SVGs colored By https://github.com/NYRI4 & https://github.com/Snapperito
+@import "./src/integrations/discolored"; // Makes Discord's "boring" SVGs colored By https://github.com/NYRI4 & https://github.com/Snapperito
 
 
 
@@ -118,77 +117,3 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣞⣻⣿⣿⣔⣿
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠋⠉⠉⠉
 */
-$theme: "QuickSCSS";
-@if $checked-settings == 0 {
-  #app-mount {
-    background-color: var(--background-secondary-alt);
-    text-align: center;
-    > div:not(.layerContainer-yqaFcK):not(.titleBar-AC4pGV) {
-      display: none;
-    }
-    $top: 120px;
-    &::before {
-      content: "Hey, thanks for using my theme (#{$theme}),\AI hope you like it, I've worked really hard on it.\A\ATo continue using this theme please go to\Athis theme's theme folder, should be located at\A\A and open the \"vars.scss\" file, in there\A edit the 2nd lineto have a\A\"1\" instead of a \"0\".\A\AIf there is anything you don't like about the theme,\Ayou can remove/edit it either in the\A\"vars.scss\" file or the \"index.scss\" file!\A\AI hope you like my theme, bye!";
-      position: absolute;
-      white-space: pre-wrap;
-      z-index: 1003;
-      top: $top;
-      left: 50%;
-      transform: translateX(-50%);
-      width: clamp(37ch, 800px, 75%);
-      padding: 8px 28px;
-      outline: 4px dashed currentColor;
-      line-height: 36px;
-      font-size: 32px;
-      font-weight: 300;
-      font-family: var(--font-primary);
-      color: var(--text-normal);
-      background-color: var(--background-primary);
-    }
-    &::after {
-      content: "%userprofile%\\powercord\\src\\Powercord\\themes\\#{$theme}";
-      position: absolute;
-      z-index: 1003;
-      top: calc(#{$top} * 2.6);
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 0.125em;
-      font-size: 24px;
-      font-family: Consolas, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace; // discord why don't you have a var for this
-      border-radius: 6px;
-      color: var(--text-normal);
-      background-color: var(--background-tertiary);
-    }
-    .layerContainer-yqaFcK {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 20px;
-        bottom: 6px;
-        left: 6px;
-        right: 6px;
-        -webkit-app-region: drag;
-      }
-      &::after {
-        content: "Sorry for the text not being selectable!";
-        position: absolute;
-        bottom: 4px;
-        left: 6px;
-        font-size: 14px;
-        color: var(--interactive-normal);
-      }
-    }
-    .titleBar-AC4pGV {
-      background-color: transparent;
-      .wordmark-2iDDfm {
-        display: none;
-      }
-    }
-    .platform-osx &,
-    .platform-linux & {
-      &::before {
-        content: "~/powercord/src/Powercord/themes/#{$theme}";
-      }
-    }
-  }
-}
