@@ -1,6 +1,7 @@
 .horizontal-3fI3M- {
-  //* User popout
-  @at-root .timeBarUserPopout-AWPFf2 + .buttonsWrapper-2spIeK#{&} {
+  //* User popout & voice chat popout
+  .timeBarUserPopout-AWPFf2 + &,
+  .activityVoiceChannel-OPU-Fm + & {
     display: grid;
     grid-template-columns: 1fr 1fr;
     .buttonSize-AQY2mE {
@@ -13,20 +14,21 @@
       width: 0;
     }
   }
+  //* Main
   .fullWidth-1orjjo:not(:only-child) {
     font-size: 0;
     padding: 0;
     .spotifyButtonLogo-3uT57D {
       margin: 0;
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
     }
     &:not(.disabledButtonWrapper-3wH6-b):hover {
       //* Tooltip
       &::before { // Tooltip content
         content: "Play on Spotify";
         position: absolute;
-        min-width: max-content; // this actually looks extremely dumb but it works lol
+        min-width: max-content; // this is actually extremely dumb but it works lol
         padding: 8px 12px;
         top: -125%;
         border-radius: 5px;
