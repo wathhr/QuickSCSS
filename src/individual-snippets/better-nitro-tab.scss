@@ -98,14 +98,13 @@ $background-color: 10;
       place-items: center;
 
       // improve the positioning
-      margin-top: 28px;
+      margin-top: 130px;
       padding: 28px;
 
       // make the background image not
       background-color: var(--background-primary);
 
       // smooth out the transition from the background image to the solic background
-      margin-top: 130px; // i know i put margin-top twice, it's to make it easier to disable the gradient thing
       position: relative;
       border: none;
       &::before { // box shadows are janky, so instead i'm doing this
@@ -149,13 +148,11 @@ $background-color: 10;
     // center all buttons
     .buttons-2-EdE8 {
       justify-content: center;
+      place-items: center;
       margin-top: 12px;
     }
 
     // make the colors of the "Subscribe" and "Gift" buttons more consistent
-    .buttons-2-EdE8 {
-      place-items: center;
-    }
     .button-38aScr {
       color: white;
       &.shinyButton-3uFlM- {
