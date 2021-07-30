@@ -1,15 +1,28 @@
+$columns: 2;
 .horizontal-3fI3M- {
   //* User popout & voice chat popout
   .timeBarUserPopout-AWPFf2 + &,
   .activityVoiceChannel-OPU-Fm + & {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: 8px;
     .buttonSize-AQY2mE {
+      margin: 0;
       max-width: unset;
+      min-width: 32px;
     }
   }
   //* User modal
-  .activityProfile-2bJRaP & {
+  [aria-label="User profile modal"] .activityProfile-2bJRaP & {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: 8px;
+    .buttonSize-AQY2mE {
+      margin: 0;
+      width: 100%;
+      max-width: unset;
+      min-width: 32px;
+    }
     .contentImagesProfile-1Mz07W.content-3JfFJh { // fix or something idk
       width: 0;
     }

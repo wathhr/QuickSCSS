@@ -21,30 +21,30 @@
       }
     }
   }
-  .winButtonClose-1HsbF- {
-    &::after {
-      background-color: #ff605c;
-    }
-    &:hover::after {
-      background-color: #ff605c80;
-    }
-  }
-  .winButtonMinMax-PBQ2gm[aria-label="Maximize"],
-  .winButtonMinMax-PBQ2gm[aria-label="Maximise"] {
-    &::after {
-      background-color: #ffbd44;
-    }
-    &:hover::after {
-      background-color: #ffbd4480;
-    }
-  }
-  .winButtonMinMax-PBQ2gm[aria-label="Minimize"],
-  .winButtonMinMax-PBQ2gm[aria-label="Minimise"] {
-    &::after {
-      background-color: #00ca4e;
-    }
-    &:hover::after {
-      background-color: #00ca4e80;
+  $osx-buttons: (
+    ".winButtonClose-1HsbF-": (
+      #ff605c,
+      #ff605c80
+    ),
+    ".winButtonMinMax-PBQ2gm:nth-last-child(2)": (
+      #ffbd44,
+      #ffbd4480
+    ),
+    ".winButtonMinMax-PBQ2gm:nth-last-child(1)": (
+      #00ca4e,
+      #00ca4e80
+    ),
+  );
+  @each $class, $colors in $osx-buttons {
+    $neutral: nth($colors, 1);
+    $hover: nth($colors, 2);
+    #{$class} {
+      &::after {
+        background-color: $neutral;
+      }
+      &:hover::after {
+        background-color: $hover;
+      }
     }
   }
 }
@@ -58,6 +58,9 @@
     }
     &::after {
       content: "#{$custom-wordmark-text}";
+      position: absolute;
+      top: 5px;
+      left: 6px;
       font-family: "Discord";
       font-size: 14px;
     }
@@ -111,42 +114,31 @@
 }
 
 //? Colored permissions in settings
-.deny-3nAuT6 {
-  color: #f04747;
-  &:hover {
-    background: #f04747 !important;
-    color: white;
-  }
-  &.selected-2YhbGh {
-    background: #f04747 !important;
-    &:hover {
-      background: #ff6660 !important;
-    }
-  }
-}
-.passthrough-1c2ewQ {
-  color: #faa61a;
-  &:hover {
-    background: #faa61a !important;
-    color: white;
-  }
-  &.selected-2YhbGh {
-    background: #faa61a !important;
-    &:hover {
-      background: #ffc23d !important;
-    }
-  }
-}
-.allow-1PzSY3 {
-  color: #43b581;
-  &:hover {
-    background: #43b581 !important;
-    color: white;
-  }
-  .selected-2YhbGh {
-    background: #43b581 !important;
-    &:hover {
-      background: #61d09a !important;
+$colored-permissions: (
+  ".deny-3nAuT6": (
+    #f04747,
+    #ff6660
+  ),
+  ".passthrough-1c2ewQ": (
+    #faa61a,
+    #ffc23d
+  ),
+  ".allow-1PzSY3": (
+    #43b581,
+    #61d09a
+  )
+);
+@each $class, $colors in $colored-permissions {
+  $neutral: nth($colors, 1);
+  $hover-active: nth($colors, 2);
+  #app-mount {
+    #{$class} {
+      color: $neutral;
+      &:hover,
+      &.selected-2YhbGh {
+        color: white;
+        background-color: $hover-active !important;
+      }
     }
   }
 }
@@ -185,7 +177,7 @@ $colored-message-events: (
     }
   }
 }
-#app-mount .message-2qnXI6:hover {
+#app-mount .messagesWrapper-1sRNjr .groupStart-23k01U:hover {
   transition: background-color 0.75s;
 }
 

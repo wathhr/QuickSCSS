@@ -119,8 +119,17 @@ div.ian-toast,
   }
 }
 
-//? Topbar button spacing
 .toolbar-1t6TWx {
+  //? Topbar pill
+  &:not(.transparent-2ZlE3R > #{&}) {
+    background-color: var(--background-secondary-alt);
+    border-radius: 20px 0 0 20px;
+    padding: 18px 4px;
+    height: 0;
+    padding-right: 8px;
+    transform: translateX(8px);
+  }
+  //? Topbar button spacing
   .iconWrapper-2OrFZ1 {
     margin: 0 $topbar-button-spacing * 0.75;
   }
@@ -137,16 +146,6 @@ div.ian-toast,
   .search-36MZv- {
     margin: 0 $topbar-button-spacing / 3 0 $topbar-button-spacing - $topbar-button-spacing * 0.25;
   }
-}
-
-//? Topbar pill
-.toolbar-1t6TWx {
-  background-color: var(--background-secondary-alt);
-  border-radius: 20px 0 0 20px;
-  padding: 18px 4px;
-  height: 0;
-  padding-right: 2px;
-  transform: translateX(8px);
 }
 
 //? Topbar improvements

@@ -1,18 +1,15 @@
 // Thinner scrollbar
 ::-webkit-scrollbar {
   width: 5px !important;
-  height: 3px !important;
-  display: block;
 }
 ::-webkit-scrollbar-track-piece {
-  background-color: rgba(0, 0, 0, 0) !important;
+  background-color: transparent !important;
   border: none !important;
 }
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-track {
   border: none !important;
 }
-
 
 // "hide protips bc im a pro"
 [class^="protip"] {
@@ -92,10 +89,10 @@
 }
 
 // "make typing and slowmode a bit more subtle"
-.typing-2GQL18 *,
-.cooldownWrapper-3joyFc * {
-  color: #abadb4 !important;
-  fill: #abadb4 !important;
+.cooldownWrapper-3joyFc,
+.typing-2GQL18 {
+  color: var(--text-normal) !important;
+  opacity: 0.7;
 }
 
 // No lines on the friend list
