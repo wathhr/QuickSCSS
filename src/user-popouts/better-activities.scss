@@ -7,6 +7,10 @@ $colors: (
     ".timeBarUserPopout-AWPFf2",
     #1DB954
   ),
+  "xbox": (
+    ".xboxAssets-aGhVw8",
+    #107C10
+  ),
   "live": (
     ".detailsWrap-22pigg.textRow-19NEd_[title]",
     #593695
@@ -17,15 +21,15 @@ $colors: (
   $col: nth($stuff, 2);
   .newPopoutActivityStyles {
     #{$class} {
-      z-index: 1;
       &::after {
         content: '';
         position: absolute;
         z-index: -1;
         inset: -12px;
+        top: -8px;
         border-radius: 4px;
         background-color: $col;
-        box-shadow: 4px 4px 0 desaturate(darken($col, 15%), 30%);
+        box-shadow: 4px 4px 0 desaturate(darken($col, 17.5%), 25%);
       }
     }
   }
@@ -48,15 +52,19 @@ $colors: (
     border: 1px solid currentColor;
     color: #fff;
     background-color: transparent;
-    transition: background-color .17s ease,;
-    &:hover {
-      background-color:hsla(0, 0%, 100%, .1)
-    }
+    transition: background-color .17s ease;
     &:active {
-      background-color:hsla(0, 0%, 100%, .15)
+      background-color: hsla(0, 0%, 100%, .1);
+    }
+    &:hover,
+    &:disabled {
+      background-color: transparent;
     }
   }
   .spotifyIcon-2J9kSv {
     display: none !important;
+  }
+  .xboxAssets-aGhVw8 {
+    position: static;
   }
 }
