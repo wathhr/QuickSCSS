@@ -1,8 +1,9 @@
 //? OSX buttons
-@if $use-osx-buttons >= 1 {
+@if $use-osx-buttons {
   .typeWindows-1za-n7.titleBar-AC4pGV {
     height: 14px;
-    padding-top: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     > div:not(.wordmark-2iDDfm) {
       top: -6px;
     }
@@ -50,17 +51,14 @@
 }
 
 //? Replace Discord watermark text
-@if $use-custom-wordmark >= 1 {
+@if $use-custom-wordmark {
   .wordmark-2iDDfm {
-    padding: 5px 6px 0;
+    padding: 6px 6px 0;
     svg {
       display: none;
     }
     &::after {
       content: "#{$custom-wordmark-text}";
-      position: absolute;
-      top: 5px;
-      left: 6px;
       font-family: "Discord";
       font-size: 14px;
     }
@@ -70,46 +68,20 @@
 //? Settings devider
 .item-PXvHYJ[data-item-id="pc-updater"] {
   align-items: unset !important;
-  margin-bottom: 3.65em;
   overflow: visible;
+  margin-bottom: 2.85em;
   &::after {
     content: "Plugin Settings";
     position: absolute;
     pointer-events: none;
     width: 89.5%;
-    margin-top: 3.19em;
-    line-height: 3em;
+    margin-top: 32px;
+    line-height: 44px;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     border-top: 1px solid var(--background-modifier-accent);
     color: rgb(159, 159, 159);
-  }
-}
-
-//? Better popped out QuickCSS
-.powercord-quickcss {
-  border-radius: 5px;
-  border: 1px solid var(--background-tertiary);
-  &.popped-out {
-    overflow: hidden;
-    border: 1px solid var(--background-tertiary);
-    background: var(--background-secondary) url("/assets/5ac53bbce4bc51dd14d5413bd7d1c77d.svg") no-repeat 50% 35% / 30%;
-  }
-}
-.powercord-entities-manage-tabs {
-  border: 1px solid var(--background-tertiary);
-}
-.powercord-quickcss-popped {
-  position: absolute;
-  top: 75%;
-  left: 60%;
-  width: 360px;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-primary);
-  font-size: 30px;
-  &::after {
-    content: ".";
   }
 }
 
@@ -134,7 +106,10 @@ $colored-permissions: (
   #app-mount {
     #{$class} {
       color: $neutral;
-      &:hover,
+      &:hover {
+        color: white;
+        background-color: $neutral !important;
+      }
       &.selected-2YhbGh {
         color: white;
         background-color: $hover-active !important;
@@ -182,7 +157,7 @@ $colored-message-events: (
 }
 
 //? No dash in channel names
-@if $no-dashes >= 1 {
+@if $use_no_dashes {
   .containerDefault--pIXnN > .wrapper-2jXpOf:not(.typeThread-3ESTm-) .channelName-2YrOjO, // channel list
   [aria-label="Channel header"] .title-29uC1r, // channel headers
   .content-3YMskv .emptyChannelIcon-cc932w ~ .size32-o_H79z, // header at the start of channels

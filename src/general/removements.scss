@@ -19,24 +19,15 @@
   }
 }
 
-//? Stickers & "Get X more matching emojis with Nitro" in suggestions
-.autocompleteRowVertical-q1K4ky .upsell-1vK3zR {
-  display: none;
-}
-.emojiStickersDivider-3Q5Opa {
-  ~ .autocompleteRowVertical-q1K4ky,
-  & {
-    display: none;
-  }
-}
-
 //? Misc
 .setIdentityLink-1t8Ahd, //* "Set a server nickname" on user popouts
 #user-context-invite-to-server, //* Invite to server context menu button when right clicking on users
 .wumpusWrapper-2H_Ezt, //* New user wumpus
+
 //? Topbar
 [aria-label="Member list"].selected-1GqIat, //* "Hide member list" button
 a[href="https://support.discord.com"], //* Help button
+
 //? Chat area
 [aria-label="Send a gift"], //* Gift button
 //[aria-label="Open GIF picker"], //* GIF button

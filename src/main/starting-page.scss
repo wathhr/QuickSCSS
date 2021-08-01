@@ -1,4 +1,4 @@
-@if $checked-settings == 0 {
+@if not $checked-settings {
   #app-mount {
     background-color: var(--background-secondary-alt);
     text-align: center;
@@ -7,7 +7,7 @@
     }
     $top: 120px;
     &::before {
-      content: "Hey, thanks for using my theme (#{$theme}),\AI hope you like it, I've worked really hard on it.\A\ATo continue using this theme please go to\Athis theme's theme folder, should be located at\A\A and open the \"vars.scss\" file, in there\A edit the 2nd lineto have a\A\"1\" instead of a \"0\".\A\AIf there is anything you don't like about the theme,\Ayou can remove/edit it either in the\A\"vars.scss\" file or the \"index.scss\" file!\A\AI hope you like my theme, bye!";
+      content: "Hey, thanks for using my theme (#{$theme}),\AI hope you like it, I've worked really hard on it.\A\ATo continue using this theme please go to\Athis theme's theme folder, should be located at\A\A and open the \"vars.scss\" file, in there\A edit the 1st line to say you\A\"true\" instead of \"false\".\A\AIf there is anything you don't like about the theme,\Ayou can remove/edit it either in the\A\"vars.scss\" file or the \"index.scss\" file!\A\AI hope you like my theme, bye!";
       position: absolute;
       white-space: pre-wrap;
       z-index: 1003;
@@ -38,7 +38,7 @@
       color: var(--text-normal);
       background-color: var(--background-tertiary);
     }
-    .layerContainer-yqaFcK {
+    .layerContainer-yqaFcK:not(.layerContainer-yqaFcK ~ .layerContainer-yqaFcK) {
       &::before {
         content: "";
         position: absolute;

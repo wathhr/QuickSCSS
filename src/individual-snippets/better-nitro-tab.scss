@@ -157,7 +157,7 @@ $background-color: 10;
     .button-38aScr {
       color: white;
       &.shinyButton-3uFlM- {
-        background-color: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%));
+        background-color: var(--qs-green);
       }
       &:not(.shinyButton-3uFlM-) {
         margin: 2px 10px 0;

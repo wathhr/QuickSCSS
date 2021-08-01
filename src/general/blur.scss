@@ -1,13 +1,11 @@
 //? Not discrims
-.channel-2QD9_O,
+.channel-2QD9_O[href^="/channels/"]:not([href="/channels/@me"]):not(.selected-aXhQR6),
 .nowPlayingColumn-2sl4cE, .nowPlayingSidebar-2OFn0o {
+  filter: blur($blur-amount);
   transition: filter 0.25s;
-  &:not(.selected-aXhQR6):not([href="/channels/@me"]):not([href="/discovery"]):not([href="/store"]) {
-    filter: blur($blur-amount);
-
-    &:hover {
-      filter: blur(0);
-    }
+  
+  &:hover {
+    filter: blur(0);
   }
 }
 

@@ -189,6 +189,21 @@ div[class*="allactivities"] {
   overflow: hidden;
 }
 
+//? Make the titlebar actually draggable when on fullscreen
+.titleBar-AC4pGV {
+  .maximized & {
+    @if not $use-osx-buttons {
+      margin-top: 0;
+      padding-top: 4px;    
+    }
+    @if $use-osx-buttons {
+      margin-top: 0;
+      padding-top: 6px;
+      padding-bottom: 2px;
+    }
+  }
+}
+
 //? MLV2 edited message reply (great fix i know)
 .repliedTextContent-1R3vnK [aria-label^="Edited: "] {
   display: none;
