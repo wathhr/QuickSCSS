@@ -1,3 +1,95 @@
+//? Settings devider
+.item-PXvHYJ[data-item-id="pc-updater"] {
+  align-items: unset !important;
+  overflow: visible;
+  margin-bottom: 2.85em;
+  &::after {
+    content: "Plugin Settings";
+    position: absolute;
+    pointer-events: none;
+    width: 89.5%;
+    margin-top: 32px;
+    line-height: 44px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-top: 1px solid var(--background-modifier-accent);
+    color: rgb(159, 159, 159);
+  }
+}
+
+//? Colored permissions in settings
+$colored-permissions: (
+  ".deny-3nAuT6": (
+    #f04747,
+    #ff6660
+  ),
+  ".passthrough-1c2ewQ": (
+    #faa61a,
+    #ffc23d
+  ),
+  ".allow-1PzSY3": (
+    #43b581,
+    #61d09a
+  )
+);
+@each $class, $colors in $colored-permissions {
+  $neutral: nth($colors, 1);
+  $hover-active: nth($colors, 2);
+  #app-mount {
+    #{$class} {
+      color: $neutral;
+      &:hover {
+        color: white;
+        background-color: $neutral !important;
+      }
+      &.selected-2YhbGh {
+        color: white;
+        background-color: $hover-active !important;
+      }
+    }
+  }
+}
+
+//? Different color for different messages events
+$colored-message-events: (
+  ".mentioned-xhSam7": (
+    rgba(250, 168, 25, 0.9),
+    rgba(250, 168, 25, 0.05),
+    rgba(250, 168, 25, 0.08)
+  ),
+  ".replying-1x3H0T": (
+    rgba(2, 183, 87, 0.9),
+    rgba(2, 183, 87, 0.05),
+    rgba(2, 183, 87, 0.08)
+  ),
+  ".wrapper-2a6GCs.ephemeral-1PsL1r:not(.replying-1x3H0T)": ( // local bot message
+    rgba(114, 137, 218, 0.9),
+    rgba(114, 137, 218, 0.05),
+    rgba(114, 137, 218, 0.08)
+  )
+);
+@each $type, $colors in $colored-message-events {
+  $side: nth($colors, 1);
+  $default: nth($colors, 2);
+  $hover: nth($colors, 3);
+  #app-mount .message-2qnXI6 {
+    &#{$type} {
+      background-color: $default;
+      &::before {
+        background-color: $side;
+      }
+      &:hover {
+        background-color: $hover;
+      }
+    }
+  }
+}
+#app-mount .messagesWrapper-1sRNjr .groupStart-23k01U:hover {
+  transition: background-color 0.75s;
+}
+
+
 //? Improved spotify modal
 .powercord-spotify {
   border-top: 1px solid var(--background-secondary);

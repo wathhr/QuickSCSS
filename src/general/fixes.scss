@@ -192,15 +192,8 @@ div[class*="allactivities"] {
 //? Make the titlebar actually draggable when on fullscreen
 .titleBar-AC4pGV {
   .maximized & {
-    @if not $use-osx-buttons {
-      margin-top: 0;
-      padding-top: 4px;    
-    }
-    @if $use-osx-buttons {
-      margin-top: 0;
-      padding-top: 6px;
-      padding-bottom: 2px;
-    }
+    margin-top: 0;
+    padding-top: 4px;
   }
 }
 

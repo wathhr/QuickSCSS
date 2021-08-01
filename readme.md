@@ -1,41 +1,23 @@
-QuickSCSS [![CodeFactor](https://www.codefactor.io/repository/github/wathhr/quickscss/badge?s=5f2850cfa164e62ecf2eaa497b0a075cf28b67cf)](https://www.codefactor.io/repository/github/wathhr/quickscss)
+QuickSCSS [![CodeFactor](https://www.codefactor.io/repository/github/wathhr/quickscss/badge?s=5f2850cfa164e62ecf2eaa497b0a075cf28b67cf)](https://www.codefactor.io/repository/github/wathhr/quickSCSS)
 ===
-
 yeah
 
 <br>
 
-<details><summary>Screenshots</summary>﻿<!-- ZWS here -->
+<details><summary>Screenshots</summary><br>
 
-Titlebar
-![Titlebar](./screenshots/titlebar.png)
+![yeah](https://i.imgur.com/PshHqMz.gif)
 
-Friend list
+![user popout](https://i.imgur.com/ZkG2kbI.gif)
 
-![Friend-list](./screenshots/friend-list.png)
-
-Stage Discovery tab
-
-![Stage-Discovery-tab](./screenshots/stage-discovery.png)
-
-Nitro tab
-
-![Nitro-Tab](./screenshots/nitro-tab.png)
-
-User popout
-
-![User-Popout](./screenshots/user-popout.png)
-
-Connection backgrounds
-
-![Connection-backgrounds](./screenshots/connections-backgrounds.gif)
+![channel list](https://i.imgur.com/z8Z0nBs.png)
 
 </details>
 
 <br>
 
 I suggest using the extension named "Better comments"/"Colored comments"
-<details><summary>URLS</summary>﻿<!-- ZWS here -->
+<details><summary>URLS</summary><br>
 
   - [VSCode](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
   - [Sublime text](https://packagecontrol.io/packages/Colored%20Comments)

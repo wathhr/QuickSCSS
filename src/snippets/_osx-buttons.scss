@@ -1,0 +1,53 @@
+.typeWindows-1za-n7.titleBar-AC4pGV {
+  height: 14px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  .maximized & {
+    margin-top: 0;
+    padding-top: 6px;
+    padding-bottom: 2px;
+  }
+  > div:not(.wordmark-2iDDfm) {
+    top: -6px;
+  }
+  .winButton-iRh8-Z {
+    pointer-events: none;
+    margin-left: -2px;
+    background-color: transparent;
+    > svg {
+      display: none;
+    }
+    &::after {
+      content: "";
+      padding: 7px;
+      border-radius: 50%;
+      pointer-events: auto;
+    }
+  }
+}
+$osx-buttons: (
+  ".winButtonClose-1HsbF-": (
+    #ff605c,
+    #ff605c80
+  ),
+  ".winButtonMinMax-PBQ2gm:nth-last-child(2)": (
+    #ffbd44,
+    #ffbd4480
+  ),
+  ".winButtonMinMax-PBQ2gm:nth-last-child(1)": (
+    #00ca4e,
+    #00ca4e80
+  ),
+);
+@each $class, $colors in $osx-buttons {
+  $neutral: nth($colors, 1);
+  $hover: nth($colors, 2);
+  #{$class} {
+    &::after {
+      background-color: $neutral;
+    }
+    &:hover::after {
+      background-color: $hover;
+    }
+  }
+}
