@@ -68,9 +68,9 @@ div[class*="allactivities"] {
 //? Chat area background height & thread suggestions
 .chat-3bRxxu {
   .messagesWrapper-1sRNjr > .scroller-2LSbBU {
-    margin-bottom: -27.5px;
+    margin-bottom: -40px;
     .scrollerContent-WzeG7R {
-      padding-bottom: 27.5px;
+      padding-bottom: 40px;
     }
   }
   .form-2fGMdU {
@@ -86,56 +86,7 @@ div[class*="allactivities"] {
       background-color: var(--background-primary);
     }
     &::before {
-      display: none;
-    }
-  }
-  .chatContent-a9vAAp {
-    .threadSuggestionBar-2ufK2Z {
-      display: none;
-    }
-    .container-2fRDfG[style] {
-      transform: none !important;
-    }
-    &:not([aria-label=" (channel)"]) {
-      .threadSuggestionBar-2ufK2Z {
-        display: flex;
-        position: absolute;
-        pointer-events: none;
-        .createThreadButton-oQpjNC {
-          pointer-events: auto;
-        }
-        right: 28px;
-        top: 4px;
-        box-shadow: none;
-        border: none;
-        background-color: transparent;
-        opacity: 0;
-        @keyframes s {to{opacity:1;}}
-        animation: s 1.5s forwards;
-        animation-delay: 1.5s;
-      }
-      .replyBar-1YLQ2F {
-        grid-template-columns: auto 1fr;
-        cursor: default;
-        > [role="button"] {
-          cursor: default;
-          span::after {
-            content: "";
-            position: absolute;
-            margin: 0 6px;
-            height: 20px;
-            width: 1px;
-            background-color: var(--background-modifier-accent);
-          }
-        }
-        .actions-NlfMQc {
-          display: grid;
-          grid-template-columns: auto 1fr auto;
-          .separator-ju-9xl {
-            width: 0;
-          }
-        }
-      }
+      content: unset;
     }
   }
 }
@@ -164,11 +115,6 @@ div[class*="allactivities"] {
 .quickSelectPopoutOption-opKBx9:focus {
   color: unset;
   background-color: unset;
-}
-
-//? Remove the no roles margin
-[aria-label="No roles"] {
-  margin-bottom: 4px;
 }
 
 //? "Send Friend Request" / "Send Message" buttons shifting
@@ -206,5 +152,14 @@ div[class*="allactivities"] {
 .blockquoteContainer-U5TVEi {
   blockquote {
     width: 100%;
+  }
+}
+
+//? Bot tag on replies
+.repliedMessage-VokQwo {
+  > div:not(.toprole-wrapper),
+  > span:not(.username-1A8OIy),
+  > svg {
+    order: 1;
   }
 }

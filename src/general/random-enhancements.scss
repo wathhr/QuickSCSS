@@ -367,3 +367,67 @@ $colored-status: (
 .vpc-shiki-lang {
   user-select: none;
 }
+
+//? Better threads suggestions
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+.chatContent-a9vAAp {
+  .threadSuggestionBar-2ufK2Z {
+    display: none;
+  }
+  .container-2fRDfG[style] {
+    transform: none !important;
+  }
+  &:not([aria-label=" (channel)"]) {
+    .threadSuggestionBar-2ufK2Z {
+      display: flex;
+      position: absolute;
+      pointer-events: none;
+      .createThreadButton-oQpjNC {
+        pointer-events: auto;
+      }
+      right: 28px;
+      top: 4px;
+      box-shadow: none;
+      border: none;
+      background-color: transparent;
+      opacity: 0;
+      animation: appear 1.5s forwards;
+      animation-delay: 1.5s;
+    }
+    .replyBar-1YLQ2F {
+      grid-template-columns: auto 1fr;
+      cursor: default;
+      > [role="button"] {
+        cursor: default;
+      }
+      .actions-NlfMQc {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        .separator-ju-9xl {
+          display: none;
+        }
+        > [role="switch"] {
+          width: fit-content;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            cursor: pointer;
+            left: 0.325em;
+            top: 7px;
+            bottom: 7px;
+            width: 1px;
+            background-color: var(--background-modifier-accent);
+          }
+        }
+        .closeButton-37O8QC {
+          place-self: end;
+        }
+      }
+    }
+  }
+}
