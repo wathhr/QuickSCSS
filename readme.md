@@ -6,11 +6,11 @@ yeah
 
 <details><summary>Screenshots</summary><br>
 
-![yeah](https://i.imgur.com/PshHqMz.gif)
+![yeah](./screenshots/yeah.gif)
 
-![user popout](https://i.imgur.com/ZkG2kbI.gif)
+![user popout](./screenshots/user%20popout.gif)
 
-![channel list](https://i.imgur.com/z8Z0nBs.png)
+![channel list](./screenshots/channel%20list.png)
 
 </details>
 
