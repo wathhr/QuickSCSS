@@ -18,7 +18,7 @@
 @import "./src/snippets/custom-wordmark"; // Replaces the "Discord" on the titlebar with any text you want!
 @import "./src/snippets/osx-buttons"; // Makes the titlebar have more OSX-like buttons
 @import "./src/snippets/embeds"; // Make images/embeds wrap instead of stacking on messages
-@import "./src/snippets/no-dash"; // Makes channels have spaces instead of dashes
+@import "./src/snippets/no-dash"; // Makes channels have spaces instead of dashes (works best with Discord's default font)
 @import "./src/snippets/friend-grid"; // Makes your friend list be more grid-like
 //@import "./src/snippets/friend-grid2"; // (Likely) less buggy and more ugly version of the snippet above, use this only if you are experiencing problems with the snippet above
 @import "./src/snippets/better-stage-discovery-tab"; // Makes the stage discovery tab able to have multiple columns
@@ -28,7 +28,7 @@
 @import "./src/user-popouts/main"; // The snippets in this category are made with this in mind, things might break if you disable this
 @import "./src/user-popouts/bigger-avatar"; // self explanatory
 @import "./src/user-popouts/spotify-buttons"; // Make the spotify activity buttons the same width
-@import "./src/user-popouts/better-connections"; // Improves the icons for connections and/or adds background images to connections
+@import "./src/user-popouts/better-connections"; // Improves the icons for connections
 @import "./src/user-popouts/better-activities"; // Brings back the colored activities for playing games, streaming and listening to spotify
 
 //? Harmony

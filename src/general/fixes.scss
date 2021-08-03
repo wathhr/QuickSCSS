@@ -144,8 +144,12 @@ div[class*="allactivities"] {
 }
 
 //? MLV2 edited message reply (great fix i know)
-.repliedTextContent-1R3vnK [aria-label^="Edited: "] {
-  display: none;
+.repliedTextContent-1R3vnK {
+  display: flex;
+  [editnum],
+  [aria-label^="Edited: "] {
+    display: none;
+  }
 }
 
 //? Codeblocks in blockquotes being small
