@@ -1,8 +1,18 @@
-.role-1P70N6, .role-78i2xt, // Locked channel allowed roles or something
-.role-3paDXR, // Server template preview
-.role-2irmRk { // User popout
+// this is pretty Broke
+
+.previewSection-1h_5aj .rolesWrapper-2yOx9S, // server template preview
+.rolesList-1geHY1 { // user popout
+  gap: 4px;
+}
+
+.role-1P70N6, .role-78i2xt, // locked channel allowed roles or something
+.role-3paDXR, // server template preview
+.role-2irmRk { // user popout
   min-width: 22px;
   height: 22px;
+  padding: 4px;
+  padding-left: 2px;
+  margin: 0;
   &:not(.addButton-pcyyf6) {
     position: relative;
     overflow: hidden;
@@ -15,11 +25,11 @@
       &::after {
         content: "";
         position: absolute;
+        z-index: -1;
         top: 0;
         right: 0;
         width: 100%;
         height: 100%;
-        z-index: -1;
         opacity: 0.2;
         background-color: inherit;
       }
@@ -29,20 +39,11 @@
     color: white;
   }
 }
-.members-2iaVuN { // Locked channel allowed roles or something
-  .role-1P70N6 {
-    padding-left: 5px;
-  }
-  .roleColor-fHISxl {
-    width: 12px;
-    height: 12px;
-    filter: none;
-  }
-}
 .addButton-pcyyf6 {
   position: relative;
   border: none;
   overflow: hidden;
+  border-radius: 50%;
   &::after {
     content: "";
     position: absolute;
@@ -57,5 +58,23 @@
     width: 12px;
     height: 12px;
     color: var(--interactive-active);
+  }
+}
+
+//? fixes
+// server template preview
+.rolesWrapper-2yOx9S .role-3paDXR {
+  padding-left: 6px;
+}
+// locked channel allowed roles or something
+.members-2iaVuN {
+  .role-1P70N6 {
+    padding: 0 5px;
+    padding-right: 7px;
+  }
+  .roleColor-fHISxl {
+    width: 12px;
+    height: 12px;
+    filter: none;
   }
 }

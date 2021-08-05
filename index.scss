@@ -4,8 +4,8 @@
 //@import './src/example/snippet';
 
 //! Do not disable
-@use "./vars.scss" as *;
-@use "./src/fonts/fonts.scss";
+@import "./vars";
+@import "./src/fonts/fonts";
 @import "./src/main/";
 
 //? General

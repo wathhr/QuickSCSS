@@ -1,5 +1,5 @@
 // Thinner scrollbar
-::-webkit-scrollbar {
+:not(.threadSidebar-1o3BTy .formSection-33c8Tg div)::-webkit-scrollbar {
   width: 5px !important;
 }
 ::-webkit-scrollbar-track-piece {
@@ -26,22 +26,17 @@
 
 // Round hover effect on user area buttons
 .button-14-BFJ {
-  border-radius: 50px;
-}
-
-// "bot tag fix"
-[aria-label="Verified Bot"] {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-radius: 50%;
 }
 
 // Round top-left corner
 .content-98HsJk {
+  .threadSidebarOpen-vdkwIh,
   .sidebar-2K8pFh {
     border-radius: unset;
     border-top-right-radius: $top-left-corner-roundedness;
   }
-  > div:not(.sidebar-2K8pFh):not(.threadSidebar-1o3BTy) {
+  > div:not(.sidebar-2K8pFh) {
     border-top-left-radius: $top-left-corner-roundedness;
   }
 }
@@ -50,8 +45,11 @@
   .contentRegionScroller-26nc1e {
     background-color: transparent;
   }
-  .sidebarRegion-VFTUkN *::-webkit-scrollbar {
-    display: none;
+  .sidebarRegion-VFTUkN [style^="overflow: hidden scroll;"] {
+    margin-top: $top-left-corner-roundedness * 1.125 !important;
+    > nav {
+      margin-top: ($top-left-corner-roundedness * 1.125) * -1;
+    }
   }
   .contentRegion-3nDuYy {
     border-top-left-radius: $top-left-corner-roundedness;
@@ -69,7 +67,7 @@
   }
 }
 
-// Make the "chat bars" ("You're viewing older messages", "X new messages since Y on Z" opaque
+// Make the "chat bars" ("You're viewing older messages", "X new messages since Y on Z") opaque
 .barBase-1c2Rfb {
   opacity: 1;
 }

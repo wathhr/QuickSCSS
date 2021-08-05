@@ -1,0 +1,73 @@
+$checked-settings: false;
+
+//? General
+//* Random enhancements / Blur
+$topbar-button-spacing: 6px; // How much space to be between the buttons on the top right
+$blur-amount: 6px; // How much to blur discrims and the DM list
+$custom-wordmark-text: Dicksword; // What the text on the titlebar should be (old font)
+
+//? Individual snippets
+//* Better stage discovery tab
+$stage-discovery-rows: 2; // The amount of rows the stage discovery tab has (works best with 1 or 2)
+
+//? User popouts/modals
+//* Bigger avatar
+$av-size: 96px; // How big avatars should be (works best with 80-96px)
+
+//? Harmony
+$top-left-corner-roundedness: 15px; // How round the top-left part next to the sidebar is
+
+//? Discolored
+$discolored-grayscale: 0.35;
+$discolored-opacity: 0.95;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//* CSS vars
+body { // thanks ducko for making me use body instead of :root
+  --qs-red: var(--old-red, hsl(359, calc(var(--saturation-factor, 1)*82.6%), 59.4%)); // #ED4245
+  --qs-yellow: hsl(37, calc(var(--saturation-factor, 1) * 81.2%), 43.9%); // #CB8515
+  --qs-green: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%)); // #3BA55D
+}

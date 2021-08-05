@@ -128,16 +128,18 @@ div[class*="allactivities"] {
 }
 
 //? Stuff clipping over the top of the titlebar
-.backdrop-1wrmKB,
-.layerContainer-yqaFcK,
-.biv-overlay {
-  top: 4px;
-  overflow: hidden;
+.platform-win {
+  .backdrop-1wrmKB,
+  .layerContainer-yqaFcK,
+  .biv-overlay {
+    top: 4px;
+    overflow: hidden;
+  }
 }
 
 //? Make the titlebar actually draggable when on fullscreen
 .titleBar-AC4pGV {
-  .maximized & {
+  .maximized &.typeWindows-1za-n7 {
     margin-top: 0;
     padding-top: 4px;
   }

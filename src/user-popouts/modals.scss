@@ -25,10 +25,8 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { // server profile modal
   }
   .customStatusActivity-nmH3DF {
     padding-bottom: 8px;
-  }
-
-  // "fix" custom status overflow
-  .customStatusActivity-nmH3DF {
+    
+    // "fix" custom status overflow
     .customStatus-1COQYu {
       display: flex;
     }
