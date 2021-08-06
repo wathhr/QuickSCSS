@@ -1,0 +1,46 @@
+@mixin tooltip($content: "", $pos: top) {
+  @keyframes tooltipPopMain {
+    from {
+      opacity: 0.5;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &::before {
+    content: "#{$content}";
+    position: absolute;
+    z-index: 2002;
+    min-width: max-content; // this is actually extremely dumb but it works lol
+    padding: 8px 12px;
+    @if $pos == top {
+      top: -145%;
+    } @else {
+      top: 135%;
+    }
+    border-radius: 5px;
+    font-size: 14px;
+    color: var(--text-normal);
+    box-shadow: var(--elevation-high);
+    background-color: var(--background-floating);
+    animation: tooltipPopMain 60ms forwards;
+    transform-origin: 50% 100%;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2002;
+    border: 5px solid transparent;
+    @if $pos == top {
+      top: -35%;
+      border-top-color: var(--background-floating);
+    } @else {
+      bottom: -35%;
+      border-bottom-color: var(--background-floating);
+    }
+  }
+}

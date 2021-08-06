@@ -37,29 +37,7 @@ $columns: 2;
       height: 18px;
     }
     &:not(.disabledButtonWrapper-3wH6-b):hover {
-      //* Tooltip
-      &::before { // Tooltip content
-        content: "Play on Spotify";
-        position: absolute;
-        min-width: max-content; // this is actually extremely dumb but it works lol
-        padding: 8px 12px;
-        top: -125%;
-        border-radius: 5px;
-        font-size: 14px;
-        color: var(--text-normal);
-        box-shadow: var(--elevation-high);
-        background-color: var(--background-floating);
-  
-        animation: TooltipPop 60ms forwards;
-        @keyframes TooltipPop {from{opacity:0.5;transform:scale(0.9);}to{opacity:1;transform:scale(1);}}
-      }
-      &::after { // Tooltip pointer
-        content: "";
-        position: absolute;
-        top: -25%;
-        border: 5px solid transparent;
-        border-top-color: var(--background-floating);
-      }
+      @include tooltip($content: "Listen on Spotify")
     }
   }
 }

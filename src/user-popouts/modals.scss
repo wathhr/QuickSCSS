@@ -41,9 +41,9 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { // server profile modal
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 8px;
-    }
-    .contentNoImagesProfile-371_Rv {
-      grid-column: span 3;
+      > .buttonSize-AQY2mE {
+        grid-column: span 3;
+      }
     }
     .buttonsWrapper-2spIeK {
       margin: 0;
@@ -52,6 +52,9 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { // server profile modal
     }
     .buttonSize-AQY2mE {
       width: 100%;
+    }
+    .contentNoImagesProfile-371_Rv {
+      grid-column: span 3;
     }
   }
 }

@@ -57,7 +57,7 @@
   // make the "body" actually good
   .body-3HBlXn {
     padding: 0 0 14px !important;
-    overflow-y: scroll !important;
+    overflow: visible !important;
     &::-webkit-scrollbar {
       width: 0 !important;
     }
