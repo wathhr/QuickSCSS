@@ -197,7 +197,7 @@ $classes: (
 
 // @everyone
 @mixin thing($nth1, $nth2, $fill) {
-  & :nth-child(#{$nth1}) > :nth-child(#{$nth2}) path {
+  :nth-child(#{$nth1}) > :nth-child(#{$nth2}) path {
     fill: $fill
   }
 }

@@ -31,6 +31,7 @@ a[href="https://support.discord.com"], //* Help button
 //? Chat area
 [aria-label="Send a gift"], //* Gift button
 //[aria-label="Open GIF picker"], //* GIF button
-[aria-label="Open sticker picker"] { //* Sticker button
+[aria-label="Open sticker picker"], //* Sticker button
+.real-class-so-you-can-disable-the-thing-above-easier {
   display: none;
 }

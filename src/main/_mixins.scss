@@ -10,16 +10,21 @@
     }
   }
 
-  &::before {
-    content: "#{$content}";
+  &::before,
+  &::after {
     position: absolute;
     z-index: 2002;
+    pointer-events: none;
+  }
+
+  &::before {
+    content: "#{$content}";
     min-width: max-content; // this is actually extremely dumb but it works lol
     padding: 8px 12px;
-    @if $pos == top {
-      top: -145%;
+    @if $pos == bottom {
+      bottom: -87.5%;
     } @else {
-      top: 135%;
+      top: -140%;
     }
     border-radius: 5px;
     font-size: 14px;
@@ -32,15 +37,13 @@
   
   &::after {
     content: "";
-    position: absolute;
-    z-index: 2002;
     border: 5px solid transparent;
-    @if $pos == top {
-      top: -35%;
-      border-top-color: var(--background-floating);
-    } @else {
-      bottom: -35%;
+    @if $pos == bottom {
+      bottom: -20%;
       border-bottom-color: var(--background-floating);
+    } @else {
+      top: -30%;
+      border-top-color: var(--background-floating);
     }
   }
 }

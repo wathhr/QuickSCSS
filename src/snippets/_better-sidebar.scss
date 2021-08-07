@@ -1,53 +1,78 @@
-.privateChannels-1nO12o {
-  .content-3YMskv {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .channel-2QD9_O,
-  div[style="height: 8px;"]:not([class]),
-  h2 {
-    flex-basis: 100%;
-  }
-  .channel-2QD9_O {
-    flex-grow: 1;
-    width: 0;
-    max-width: unset;
-    &:not([href^="/channels/"]:not([href="/channels/@me"])) {
+@if $use-better-sidebar {
+  .privateChannels-1nO12o {
+    .content-3YMskv {
       display: flex;
-      justify-content: center;
-      flex-grow: 1;
-      flex-basis: unset;
-      margin-left: 0;
-      margin-right: 8px;
-      &:first-of-type {
-        margin-left: 8px;
-      }
-      .layout-2DM8Md {
-        flex-grow: 1;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+    .channel-2QD9_O,
+    div[style="height: 8px;"]:not([class]),
+    h2 {
+      flex-basis: 100%;
+    }
+    .channel-2QD9_O {
+      width: 0;
+      max-width: unset;
+      &:not([href^="/channels/"]:not([href="/channels/@me"])) {
+        display: flex;
         justify-content: center;
+        flex-grow: 1;
+        flex-basis: unset;
+        margin-left: 0;
+        margin-right: 8px;
+        &:first-of-type {
+          margin-left: 8px;
+        }
+        .layout-2DM8Md {
+          flex-grow: 1;
+          justify-content: center;
+          > .children-gzQq2t { // friend req circle
+            position: absolute;
+            z-index: 1;
+            bottom: 8px;
+            right: 18%;
+            &::before,
+            &::after {
+              content: attr(href);
+              position: absolute;
+              z-index: -1;
+              inset: -2px;
+              border-radius: 50%;
+            }
+            &::before {
+              background-color: var(--background-secondary);
+            }
+          }
+        }
+        .avatar-3uk_u9 {
+          margin-right: 0;
+        }
+        .content-3QAtGj {
+          display: none;
+        }
+        &:hover {
+          @include tooltip($pos: bottom);
+        }
       }
-      .avatar-3uk_u9 {
-        margin-right: 0;
+      &:hover .layout-2DM8Md .children-gzQq2t::after {
+        background-color: var(--background-modifier-hover);
       }
-      .content-3QAtGj {
-        display: none;
-      }
-      &:hover {
-        @include tooltip($pos: bottom);
+      &.selected-aXhQR6 .layout-2DM8Md .children-gzQq2t::after {
+        background-color: var(--background-modifier-selected);
       }
     }
   }
-}
 
-$tooltip-content: (
-  "Friends": "channels/@me",
-  "Stage Discovery": "discovery",
-  "Nitro": "store",
-  "Library": "library",
-);
-@each $name, $selector in $tooltip-content {
-  .channel-2QD9_O[href="/#{$selector}"]:not([href^="/channels/"]:not([href="/channels/@me"])):hover::before {
-    content: $name;
+  $tooltip-content: (
+    "Friends": "channels/@me",
+    "Stage Discovery": "discovery",
+    "Library": "library",
+    "Nitro": "store",
+  );
+  @each $name, $selector in $tooltip-content {
+    #app-mount .privateChannels-1nO12o .channel-2QD9_O[href="/#{$selector}"]:hover::before {
+      content: $name;
+    }
   }
 }
 
