@@ -31,7 +31,8 @@ section.container-1r6BKw.themed-ANHk51:not(.callContainer-36WRfH section) {
 .activity-2INFPu,
 .userProfileActivity-Bnt1p_ {
   .xboxAssets-aGhVw8 {
-    flex-grow: 0;
+    flex: 0;
+    -webkit-box-flex: 0;
   }
 }
 .activityUserPopout-2yItg2 {
@@ -167,4 +168,10 @@ div[class*="allactivities"] {
   > svg {
     order: 1;
   }
+}
+
+//? #app-mount shifting up randomly
+#app-mount {
+  position: fixed;
+  overflow: unset;
 }

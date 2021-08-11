@@ -1,9 +1,11 @@
 @if $use-better-sidebar {
   .privateChannels-1nO12o {
+    $gap: 8px;
     .content-3YMskv {
       display: flex;
       flex-wrap: wrap;
       align-content: flex-start;
+      column-gap: $gap;
     }
     .channel-2QD9_O,
     div[style="height: 8px;"]:not([class]),
@@ -13,15 +15,14 @@
     .channel-2QD9_O {
       width: 0;
       max-width: unset;
-      &:not([href^="/channels/"]:not([href="/channels/@me"])) {
+      &:not([aria-label]) {
         display: flex;
         justify-content: center;
-        flex-grow: 1;
+        flex: 1;
         flex-basis: unset;
-        margin-left: 0;
-        margin-right: 8px;
+        margin: 0;
         &:first-of-type {
-          margin-left: 8px;
+          margin-left: $gap;
         }
         .layout-2DM8Md {
           flex-grow: 1;
@@ -32,7 +33,7 @@
           position: absolute;
           z-index: 1;
           bottom: 8px;
-          right: 18%;
+          right: 17.5%;
           &::before,
           &::after {
             content: "";
@@ -47,6 +48,9 @@
         }
         &:hover .layout-2DM8Md .children-gzQq2t::after {
           background-color: var(--background-modifier-hover);
+        }
+        &:active .layout-2DM8Md .children-gzQq2t::after {
+          background-color: var(--background-modifier-active);
         }
         &.selected-aXhQR6 .layout-2DM8Md .children-gzQq2t::after {
           background-color: var(--background-modifier-selected);

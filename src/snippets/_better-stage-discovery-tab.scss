@@ -35,6 +35,10 @@
       .grid-3fdl0Y {
         grid-template-rows: repeat(2, 1fr);
       }
+      .textInGridContainer-XBWCa-,
+      .textInGrid-1ba1AD {
+        max-width: unset;
+      }
     }
     .container-1WCE6w {
       grid-column: span $stage-discovery-rows;

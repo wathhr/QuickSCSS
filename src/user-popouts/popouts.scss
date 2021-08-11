@@ -30,9 +30,11 @@
     }
   }
 
+  @at-root .activityVoiceChannel-OPU-Fm,
   .activity-2INFPu {
     // make the big asset bigger
     .assets-VMAukC {
+      .assetsLargeImage-eYwpTX,
       .assetsLargeImageStreamPreview-1A9lfF,
       .assetsLargeImageUserPopout-3Pp8BK,
       .assetsLargeImageUserPopoutXbox-2hgKt0 {
@@ -72,9 +74,9 @@
     }
   }
 
-  // UserDetails stuff
   .bodyInnerWrapper-26fQXj {
     display: grid;
+    // UserDetails stuff
     [class^="UserDetails-"][class$="body" i] {
       order: 1;
       margin-bottom: 12px;

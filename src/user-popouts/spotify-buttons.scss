@@ -1,7 +1,7 @@
 $columns: 2;
 .horizontal-3fI3M- {
   //* User popout & voice chat popout
-  .timeBarUserPopout-AWPFf2 + &,
+  .activityUserPopout-2yItg2 > &,
   .activityVoiceChannel-OPU-Fm + & {
     display: grid;
     grid-template-columns: repeat($columns, 1fr);
@@ -37,7 +37,7 @@ $columns: 2;
       height: 18px;
     }
     &:not(.disabledButtonWrapper-3wH6-b):hover {
-      @include tooltip($content: "Listen on Spotify")
+      @include tooltip($content: "Listen on Spotify");
     }
   }
 }

@@ -1,5 +1,5 @@
 // Thinner scrollbar
-:not(.threadSidebar-1o3BTy .formSection-33c8Tg div)::-webkit-scrollbar {
+:not(.channelTextAreaInner-1WnnRS):not(.channelTextArea-2VhZ6z [class^="scrollable"])::-webkit-scrollbar {
   width: 5px !important;
 }
 ::-webkit-scrollbar-track-piece {
@@ -58,12 +58,8 @@
 
 // Text area buttons positioning
 .channelTextArea-rNsIhG {
-  border-radius: 25px;
   .sansAttachButton-td2irx {
     padding-left: 12px;
-  }
-  .buttons-3JBrkn {
-    margin-right: 2px;
   }
 }
 

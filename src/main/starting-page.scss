@@ -1,5 +1,5 @@
 $top: 120px;
-& { // why does @at-root break @if statements https://media1.tenor.com/images/f14f214b3e79b325c7c0dfd5666460be/tenor.gif
+& { // why does @at-root break @if statements https://cdn.discordapp.com/attachments/842102506674585642/874762167038128148/pain.gif
   text-align: center;
   &:not([lang^="en-"]) body {
     &::after {

@@ -89,7 +89,6 @@ $colored-message-events: (
   transition: background-color 0.75s;
 }
 
-
 //? Improved spotify modal
 .powercord-spotify {
   border-top: 1px solid var(--background-secondary);
@@ -160,15 +159,6 @@ $colored-message-events: (
   }
 }
 
-//? Revert switches badly
-svg.slider-TkfMQL svg {
-  display: none;
-}
-.container-3auIfb:not([style*="hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%)"]) {
-  background-color: var(--brand-experiment) !important;
-  transition: background-color 0.6s;
-}
-
 //? Revert autocomplete
 .contentTitle-2tG_sM {
   color: var(--text-muted);
@@ -194,9 +184,10 @@ svg.slider-TkfMQL svg {
     transform: none !important;
     background: var(--interactive-normal);
   }
-  &.emojiButtonHovered-1rWNal {
+  &.emojiButtonHovered-1rWNal,
+  &:active {
     .sprite-2iCowe {
-      background: var(--interactive-hover);
+      background: var(--interactive-active);
     }
   }
 }
@@ -329,6 +320,14 @@ $colored-status: (
   }
 }
 
+//? Make the "Voice connected" text color change depending on your connection
+.rtcConnectionQualityAverage-3KV0u- .rtcConnectionStatusConnected-VRZDjy {
+  color: var(--text-warning);
+}
+.rtcConnectionQualityBad-1J7mUU .rtcConnectionStatusConnected-VRZDjy {
+  color: var(--text-danger);
+}
+
 //? Rainbow mentions
 @keyframes rainbowmention{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}
 .wrapper-3WhCwL:not(.roleMention-2Bj0ju[style]),
@@ -368,7 +367,7 @@ $colored-status: (
   user-select: none;
 }
 
-//? Better threads suggestions
+//? Better thread suggestions
 @keyframes appear {
   to {
     opacity: 1;

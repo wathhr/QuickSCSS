@@ -17,12 +17,13 @@
       order: 1;
     }
 
+    .ephemeralMessage-1fEWtQ, // "Only you can see this" on local messages
     .reactions-12N0jA, // reactions
     .container-2nXavw { // "Share with your followers" container on announcement channels
       flex: 1 0 100%;
       order: 500;
     }
-    .spine-5jbOmI.cozy-XCy5h_ + .container-3hZ-gs { // threads
+    .spine-5jbOmI + .container-3hZ-gs { // threads
       margin-right: clamp(80%, 85%, 100%);
       min-width: auto;
       order: 550;
