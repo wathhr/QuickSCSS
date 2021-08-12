@@ -28,7 +28,7 @@ $colors: (
         inset: -12px;
         border-radius: 4px;
         background-color: $col;
-        box-shadow: 4px 4px 0 desaturate(darken($col, 17.5%), 25%);
+        box-shadow: 4px 4px 0 desaturate(darken($col, 10%), 15%);
       }
     }
   }
@@ -39,13 +39,19 @@ $colors: (
   padding-bottom: 0;
   margin: 8px;
   margin-bottom: 24px;
+  @at-root .divider-ewBQKj + .bodyInnerWrapper-26fQXj {
+    .newPopoutActivityStyles:first-of-type,
+    [class^="UserDetails-"][class$="body" i] + .newPopoutActivityStyles {
+      margin-top: 12px;
+    }
+  }
   #app-mount & {
     .content-3JfFJh span {
       color: inherit;
     }
     .content-3JfFJh,
     .content-3JfFJh div {
-      color: #f0f0f0;
+      color: #ededed;
     }
     .content-3JfFJh h3,
     .content-3JfFJh a,

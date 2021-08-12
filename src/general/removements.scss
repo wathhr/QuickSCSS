@@ -22,6 +22,7 @@
 //? Misc
 .setIdentityLink-1t8Ahd, //* "Set a server nickname" on user popouts
 #user-context-invite-to-server, //* Invite to server context menu button when right clicking on users
+#message.menu-3sdvDG .wrapper-3_530D, //* Quick reactions on context menus
 .wumpusWrapper-2H_Ezt, //* New user wumpus
 
 //? Topbar
@@ -32,6 +33,6 @@ a[href="https://support.discord.com"], //* Help button
 [aria-label="Send a gift"], //* Gift button
 //[aria-label="Open GIF picker"], //* GIF button
 [aria-label="Open sticker picker"], //* Sticker button
-.real-class-so-you-can-disable-the-thing-above-easier {
+#DONT-DISABLE-THIS {
   display: none;
 }
