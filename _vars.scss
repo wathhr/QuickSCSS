@@ -1,4 +1,4 @@
-$checked-settings: true;
+$checked-settings: false;
 
 //? General
 $topbar-button-spacing: 6px; // How much space to be between the buttons on the top right
@@ -70,4 +70,5 @@ body { // thanks ducko for making me use body instead of :root
   --qs-red: var(--old-red, hsl(359, calc(var(--saturation-factor, 1)*82.6%), 59.4%)); // #ED4245
   --qs-yellow: hsl(37, calc(var(--saturation-factor, 1) * 81.2%), 43.9%); // #CB8515
   --qs-green: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%)); // #3BA55D
+  --qs-pink: hsl(302, calc(var(--saturation-factor, 1)*100%), 72.5%); // #FF73FA
 }

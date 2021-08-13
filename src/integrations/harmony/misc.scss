@@ -1,14 +1,16 @@
 // Thinner scrollbar
-:not(.channelTextAreaInner-1WnnRS):not(.channelTextArea-2VhZ6z [class^="scrollable"])::-webkit-scrollbar {
-  width: 5px !important;
-}
-::-webkit-scrollbar-track-piece {
-  background-color: transparent !important;
-  border: none !important;
-}
-::-webkit-scrollbar-thumb,
-::-webkit-scrollbar-track {
-  border: none !important;
+:not(.channelTextAreaInner-1WnnRS):not(.channelTextArea-2VhZ6z [class^="scrollable"]) {
+  &::-webkit-scrollbar {
+    width: 5px !important;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent !important;
+    border: none !important;
+  }
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-track {
+    border: none !important;
+  }
 }
 
 // "hide protips bc im a pro"

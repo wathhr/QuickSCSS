@@ -30,10 +30,11 @@
         }
 
         .children-gzQq2t { // friend req circle
+          justify-self: center;
           position: absolute;
           z-index: 1;
+          margin-right: -16px;
           bottom: 8px;
-          right: 17.5%;
           &::before,
           &::after {
             content: "";

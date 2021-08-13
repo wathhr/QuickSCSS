@@ -1,14 +1,15 @@
-//? Settings devider
+//? Settings divider
 .item-PXvHYJ[data-item-id="pc-updater"] {
   align-items: unset !important;
   overflow: visible;
-  margin-bottom: 2.85em;
+  margin-bottom: 48px;
   &::after {
     content: "Plugin Settings";
     position: absolute;
     pointer-events: none;
-    width: 89.5%;
-    margin-top: 32px;
+    width: 89.5%; // alfred please
+    margin-top: 37px; // alfred please
+    margin-left: -81px; // alfred please
     line-height: 44px;
     font-size: 12px;
     font-weight: 700;

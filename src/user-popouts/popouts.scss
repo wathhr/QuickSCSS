@@ -30,9 +30,9 @@
     }
   }
 
-  @at-root .activityVoiceChannel-OPU-Fm,
-  .activity-2INFPu {
-    // make the big asset bigger
+  // make the big asset bigger
+  @at-root .activityVoiceChannel-OPU-Fm, .streamPreviewWrapper-2DSWOK,
+  & .activity-2INFPu {
     .assets-VMAukC {
       .assetsLargeImage-eYwpTX,
       .assetsLargeImageStreamPreview-1A9lfF,
