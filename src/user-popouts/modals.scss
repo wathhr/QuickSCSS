@@ -15,7 +15,30 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { // server profile modal
     }
   }
 
+  //? USRBG
+  .avatar-AvHqJA {
+    z-index: 1;
+    &::after {
+      content: '';
+      position: fixed;
+      z-index: -1;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 240px;
+              mask: i want to kill myself;
+      -webkit-mask: radial-gradient(circle farthest-side at #{$av-size / 1.334 + 4} 238px, transparent #{$av-size / 1.44}, LightGoldenRodYellow #{$av-size / 1.5} 100%);
+      background: var(--user-background) no-repeat var(--user-popout-position, center) / cover;
+    }
+  }
+  
   //? almost everything else
+  // banner height
+  .banner-2QYc2d {
+    height: 240px;
+  }
+
   // header positioning
   .nameTag-ECvD8P {
     margin-bottom: 12px; // thanks juby

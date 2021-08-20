@@ -1,3 +1,5 @@
+@import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
+
 .userPopout-xaxa6l {
   //? color changes
   .headerTop-3vNv-a,
@@ -14,7 +16,29 @@
     background-color: var(--background-secondary);
   }
 
+  //? USRBG
+  overflow: hidden;
+  transform: translateZ(0) !important;
+  .avatar-37jOim {
+    &::after {
+      content: '';
+      position: fixed;
+      z-index: -1;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: var(--user-background) no-repeat var(--user-popout-position, center) / cover;
+    }
+  }
+
   //? literally everything else
+  // banner height
+  .banner-2QYc2d {
+    height: 120px;
+  }
+
   // header positioning
   .headerTop-3vNv-a {
     padding-bottom: 8px;
@@ -45,7 +69,7 @@
       }
     }
 
-    // fix activities overflowing
+    // fix activity text overflowing
     .content-3JfFJh {
       width: 0;
     }
@@ -96,6 +120,27 @@
       }
       > div {
         margin-bottom: 0;
+      }
+    }
+    // Permission viewer
+    .newPopoutActivityStyles {
+      order: -2;
+    }
+    #permissions-popout {
+      order: -1;
+    }
+    .member-perms-header {
+      div,
+      ~ ul {
+        display: none;
+      }
+      .perm-details {
+        position: absolute;
+        right: 8px;
+        color: var(--header-secondary);
+      }
+      .perm-details-button {
+        height: 1em;
       }
     }
   }

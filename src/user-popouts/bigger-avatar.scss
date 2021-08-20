@@ -1,8 +1,5 @@
 //* User modal
 [aria-label="User profile modal"] {
-  .profileBanner-33-uE1 {
-    height: $av-size * 1.25;
-  }
   .avatar-AvHqJA {
     width: $av-size * 1.25 !important;
     height: $av-size * 1.25 !important;
@@ -33,11 +30,9 @@
 
 //* User popout
 .userPopout-xaxa6l {
-  .popoutBanner-19WKGg {
-    height: $av-size / 1.4;
-  }
   .avatarWrapperNormal-26WQIb {
     left: 8px;
+    top: 120px - $av-size / 1.8;
   }
   .avatar-37jOim,
   .avatarHint-2A3RNb {
