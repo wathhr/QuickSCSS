@@ -10,8 +10,8 @@
         position: absolute;
         inset: 0 8px;
         width: 1.25em;
-        mask: url("https://kaiidoo.github.io/Newcord/icons/general/unknowIcon.svg") center/contain no-repeat;
-        -webkit-mask: url("https://kaiidoo.github.io/Newcord/icons/general/unknowIcon.svg") center/contain no-repeat;
+                mask: url("https://rawcdn.githack.com/mwittrien/BetterDiscordAddons/68a9db3bc0b39643d4ac87dfb7e96da38eb8ecdd/Themes/_res/svgs/settingsicons/questionmark.svg") center/contain no-repeat;
+        -webkit-mask: url("https://rawcdn.githack.com/mwittrien/BetterDiscordAddons/68a9db3bc0b39643d4ac87dfb7e96da38eb8ecdd/Themes/_res/svgs/settingsicons/questionmark.svg") center/contain no-repeat;
         background-color: currentColor;
       }
       .icon-Zc-uZZ, // user settings
@@ -23,75 +23,95 @@
 }
 
 $icons: (
-  "personal settings": (
-    "My Account": "myAccount",
-    "Profile Customization": "userProfile",
-    "Privacy & Safety": "privacyAndSafety",
-    "Authorized Apps": "authorisedApps",
-    "Connections": "connections",
-    "Discord Nitro": "discordNitro",
-    "Nitro Server Boost": "serverBoost",
-    "Library Inventory": "giftInventory",
-    "Billing": "billing",
-    "Appearance": "appearance",
-    "Accessibility": "accessibility",
-    "Voice & Video": "voiceAndVideo",
-    "Text & Images": "textAndImage",
-    "Notifications": "notifications",
-    "Keybinds": "keybinds",
-    "Language": "language",
-    "Windows": "windowsSettings",
-    "Streamer Mode": "streamerMode",
-    "Advanced": "advanced",
-    "Game Activity": "activityStatus",
-    "Overlay": "gameOverlay",
-    "changelog": "changeLog",
-    "Hypesquad Online": "hypesquad",
-    "Experiments": "experiments",
-    "Developer Options": "developerOptions",
-    "logout": "logOut",
-    "pc-general": "settings",
-    "pc-moduleManager-plugins": "plugins",
-    "pc-moduleManager-themes": "themes",
+  //? User settings
+  //* USER SETTINGS
+  "My Account": "account",
+  "Profile Customization": "profile",
+  "Privacy & Safety": "privacy",
+  "Authorized Apps": "apps",
+  "Connections": "connections",
+  
+  //* PAYMENT SETTINGS
+  "Subscriptions": "subscriptions",
+  "Discord Nitro": "nitro",
+  "Nitro Server Boost": "boosts",
+  "Library Inventory": "gift",
+  "Billing": "billing",
+  
+  //* APP SETTINGS
+  "Appearance": "appearance",
+  "Accessibility": "accessibility",
+  "Voice & Video": "voice",
+  "Text & Images": "text",
+  "Notifications": "notifications",
+  "Keybinds": "keybinds",
+  "Language": "language",
+  "Windows": "windows",
+  "Streamer Mode": "streamermode",
+  "Advanced": "advanced",
+  
+  //* ACTIVITY SETTINGS
+  "Game Activity": "games",
+  "Overlay": "overlay",
+  
+  //* POWERCORD
+  "pc-general": "settings",
+  "pc-moduleManager-plugins": "plugins",
+  "pc-moduleManager-themes": "themes",
+  "pc-updater": "updatecheck",
+  
+  //* PLUGIN SETTINGS
+  "bdCompat": "betterdiscord",
 
-    "GUILD_PREMIUM": "serverBoost", // this should be below, i have no idea why kaiido put it here
-  ),
-  "server settings": (
-    "OVERVIEW": "overview",
-    "ROLES": "roles",
-    "EMOJI": "emoji",
-    "STICKERS": "stickers",
-    "MODERATION": "moderation",
-    "AUDIT_LOG": "auditLog",
-    "INTEGRATIONS": "integrations",
-    "WIDGET": "widget",
-    "GUILD_TEMPLATES": "serverTemplates",
-    "COMMUNITY": "communityOverview",
-    "ANALYTICS": "serverInsights",
-    "PARTNER": "partnerProgram",
-    "DISCOVERY": "discovery",
-    "MEMBER_VERIFICATION": "membershipScreening",
-    "COMMUNITY_WELCOME": "welcomeScreen",
-    "MEMBERS": "members",
-    "INSTANT_INVITES": "invites",
-    "BANS": "bans",
-    "DELETE": "deleteServer",
-  ),
+  //* 
+  "changelog": "changelog",
+  "Hypesquad Online": "hypesquad",
+  "Experiments": "experiments",
+  "Developer Options": "developer",
+  "logout": "logout",
+
+  //? Server settings
+  //* [server name]
+  "OVERVIEW": "overview",
+  "ROLES": "roles",
+  "EMOJI": "emotes",
+  "STICKERS": "stickers",
+  "MODERATION": "privacy",
+  "AUDIT_LOG": "audit",
+  "INTEGRATIONS": "integrations",
+  "WIDGET": "widgets",
+  "GUILD_TEMPLATES": "template",
+
+  //* COMMUNITY
+  "COMMUNITY": "overview",
+  "ANALYTICS": "analytics",
+  "PARTNER": "partner",
+  "DISCOVERY": "discovery",
+  "MEMBER_VERIFICATION": "rules",
+  "COMMUNITY_WELCOME": "welcome",
+  "THREADS": "threads",
+  "GUILD_PREMIUM": "boosts",
+
+  //* USER MANAGEMENT
+  "MEMBERS": "members",
+  "INSTANT_INVITES": "invites",
+  "BANS": "bans",
+  
+  //* 
+  "DELETE": "delete",
 );
-@each $folder, $icon in $icons {
-  @each $iconName, $newIcon in $icon {
-    .sidebar-CFHs9e {
-      .item-PXvHYJ[aria-controls="#{$iconName}-tab" i] {
-        // i want to kill myself
-        @if($iconName=="Discord Nitro"){color: var(--brand-experiment);}
-        @if($iconName=="Hypesquad Online"){color: var(--qs-yellow);}
-        @if($iconName=="Nitro Server Boost"){color: var(--qs-pink);}
-        @if($iconName=="GUILD_PREMIUM"){color: var(--qs-pink);}
+@each $oldIcon, $icon in $icons {
+  .sidebar-CFHs9e {
+    .item-PXvHYJ[aria-controls="#{$oldIcon}-tab"] {
+      // i want to kill myself
+      @if($oldIcon=="Discord Nitro"){color: var(--brand-experiment);}
+      @if($oldIcon=="Hypesquad Online"){color: var(--qs-yellow);}
+      @if($oldIcon=="Nitro Server Boost"){color: var(--qs-pink);}
+      @if($oldIcon=="GUILD_PREMIUM"){color: var(--qs-pink);}
 
-        &::before {
-          mask: url("https://kaiidoo.github.io/Newcord/icons/#{$folder}/#{$newIcon}.svg") center/contain no-repeat;
-          -webkit-mask: url("https://kaiidoo.github.io/Newcord/icons/#{$folder}/#{$newIcon}.svg") center/contain no-repeat;
-        }
+      &::before {
+                mask: url("https://rawcdn.githack.com/mwittrien/BetterDiscordAddons/68a9db3bc0b39643d4ac87dfb7e96da38eb8ecdd/Themes/_res/svgs/settingsicons/#{$icon}.svg") center/contain no-repeat;
+        -webkit-mask: url("https://rawcdn.githack.com/mwittrien/BetterDiscordAddons/68a9db3bc0b39643d4ac87dfb7e96da38eb8ecdd/Themes/_res/svgs/settingsicons/#{$icon}.svg") center/contain no-repeat;
       }
     }
   }

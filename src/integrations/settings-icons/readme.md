@@ -1,1 +1,2 @@
-## All credit goes to [Kaiido](https://github.com/Kaiidoo), I just stole pretty much all of assets used in their [Newcord theme](https://github.com/Kaiidoo/Newcord) and rewrote the settings icons part of it in SCSS
+## All credit goes to [DevilBro](https://github.com/mwittrien), I just rewrote the their [SettingsIcons](https://github.com/mwittrien/BetterDiscordAddons/blob/master/Themes/_res/SettingsIcons.css) snippet in SCSS
+
