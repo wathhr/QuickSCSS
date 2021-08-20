@@ -1,27 +1,49 @@
-$top: 120px;
+$top: 80px;
 & { // why does @at-root break @if statements https://cdn.discordapp.com/attachments/842102506674585642/874762167038128148/pain.gif
   text-align: center;
-  &:not([lang^="en-"]) body {
+  font-family: var(--font-primary);
+
+  //? Notices
+  $notice-start: "This theme is intended to be used with";
+  $notice-end: "you might encounter issues";
+  $notice-theme: $notice-start + " dark mode.\AIf you don't use dark mode, " + $notice-end + ",\A especially if you're using dark sidebar.";
+  $notice-lang: $notice-start + "\A either the en-GB or en-US locale.\AIf you don't use either of those locales;\A" + $notice-end + ".";
+  $lang: "en";
+  &::after {
+    position: absolute;
+    white-space: pre-wrap;
+    top: calc(#{$top} + 18.5em);
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(37ch, 800px, 75%);
+    padding: 8px 28px;
+    line-height: 36px;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--info-danger-foreground);
+    background-color: var(--info-danger-background);
+    outline: 4px dashed currentColor;
+    text-shadow: 0 0 2px currentColor;
+    box-shadow: 0 0 8px 2px currentColor;
+  }
+  &.theme-light {
     &::after {
-      content: "This theme is intended to be used with either the\A en-GB or en-US locale.\AIf you don't use either of those locales;\Ayou might encounter issues.";
-      position: absolute;
-      white-space: pre-wrap;
-      top: $top * 6;
-      left: 50%;
-      transform: translateX(-50%);
-      width: clamp(37ch, 800px, 75%);
-      padding: 8px 28px;
-      line-height: 36px;
-      font-size: 32px;
-      font-weight: 300;
-      color: var(--info-danger-foreground);
-      background-color: var(--info-danger-background);
-      outline: 4px dashed currentColor;
-      text-shadow: 0 0 2px currentColor;
-      box-shadow: 0 0 8px 2px currentColor;
+      content: $notice-theme;
+    }
+    &:not([lang^="#{$lang}-"]) {
+      &::after {
+        content: $notice-theme + "\A\A" + $notice-lang;
+      }
+    }
+  }
+  &:not([lang^="#{$lang}-"]) {
+    &::after {
+      content: $notice-lang;
     }
   }
 }
+
+//? Welcome message
 #app-mount {
   background-color: var(--background-secondary-alt);
   > div:not(.layerContainer-yqaFcK):not(.titleBar-AC4pGV) {
@@ -48,12 +70,12 @@ $top: 120px;
   &::after {
     content: "%userprofile%\\powercord\\src\\Powercord\\themes\\#{$theme}";
     position: absolute;
-    top: calc(#{$top} * 2.6);
+    top: calc(#{$top} + 8em);
     left: 50%;
     transform: translateX(-50%);
     padding: 0.125em;
     font-size: 24px;
-    font-family: Consolas, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace; // discord why don't you have a var for this
+    font-family: var(--font-code);
     border-radius: 6px;
     color: var(--text-normal);
     background-color: var(--background-tertiary);

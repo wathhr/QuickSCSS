@@ -130,7 +130,7 @@ $colored-message-events: (
 
 //? User area buttons bounce
 .button-14-BFJ {
-  color: white;
+  color: var(--interactive-active);
   transition: padding-bottom 0.2s;
   &:hover {
     padding-bottom: 5px;
