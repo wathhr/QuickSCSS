@@ -28,7 +28,7 @@ $colors: (
         inset: -12px;
         border-radius: 4px;
         background-color: $col;
-        box-shadow: 4px 4px 0 desaturate(darken($col, 10%), 15%);
+        box-shadow: 4px 4px 0 color.adjust($col, $saturation: -15%, $lightness: -10%);
       }
     }
   }

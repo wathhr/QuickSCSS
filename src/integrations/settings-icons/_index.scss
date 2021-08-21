@@ -111,11 +111,11 @@ $icons: (
   .sidebar-CFHs9e {
     .item-PXvHYJ[aria-controls="#{$oldIcon}-tab"] {
       // i want to kill myself
-      @if($oldIcon=="Subscriptions"){--color:var(--qs-yellow);} // subscriptions tab
+      @if($oldIcon=="Subscriptions"){--color:var(--qs-yellow1);} // subscriptions tab
       @if($oldIcon=="Discord Nitro"){--color:var(--brand-experiment);} // nitro tab
-      @if($oldIcon=="Hypesquad Online"){--color:var(--qs-yellow);} // hypesquad tab
+      @if($oldIcon=="Hypesquad Online"){--color:var(--qs-yellow1);} // hypesquad tab
       @if($oldIcon=="Nitro Server Boost"or$oldIcon=="GUILD_PREMIUM"){--color:var(--qs-pink);} // server boosts tab
-      @if($oldIcon=="logout"){--color:var(--qs-red);} // logout button
+      @if($oldIcon=="logout"or$oldIcon=="DELETE"){--color:var(--qs-red);} // logout and delete server buttons
 
       &::before {
                 mask: url("https://rawcdn.githack.com/mwittrien/BetterDiscordAddons/68a9db3bc0b39643d4ac87dfb7e96da38eb8ecdd/Themes/_res/svgs/settingsicons/#{$icon}.svg") center/contain no-repeat;

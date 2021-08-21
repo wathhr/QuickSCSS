@@ -24,28 +24,17 @@ div.typeWindows-1za-n7.titleBar-AC4pGV {
   }
 }
 $osx-buttons: (
-  ".winButtonClose-1HsbF-": (
-    #ff605c,
-    #ff605c80
-  ),
-  ".winButtonMinMax-PBQ2gm:nth-last-child(2)": (
-    #ffbd44,
-    #ffbd4480
-  ),
-  ".winButtonMinMax-PBQ2gm:nth-last-child(1)": (
-    #00ca4e,
-    #00ca4e80
-  ),
+  ".winButtonClose-1HsbF-": #ff605c,
+  ".winButtonMinMax-PBQ2gm:nth-last-child(2)": #ffbd44,
+  ".winButtonMinMax-PBQ2gm:nth-last-child(1)": #00ca4e
 );
-@each $class, $colors in $osx-buttons {
-  $neutral: nth($colors, 1);
-  $hover: nth($colors, 2);
+@each $class, $color in $osx-buttons {
   #{$class} {
     &::after {
-      background-color: $neutral;
+      background-color: $color;
     }
     &:hover::after {
-      background-color: $hover;
+      background-color: color.change($color, $alpha: 0.75);
     }
   }
 }

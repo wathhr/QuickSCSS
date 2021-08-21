@@ -4,8 +4,9 @@
 //@import './src/example/snippet';
 
 //! Do not disable
-@import "./vars";
-@import "./src/fonts/fonts";
+@use 'sass:color';
+@use "./vars" as *;
+@use "./src/fonts/fonts" as *;
 @import "./src/main/";
 
 //? General
