@@ -24,12 +24,12 @@
     color: var(--header-secondary);
     vertical-align: bottom;
   }
-  //? Imrpove the spotify icon positioning
+  //? Improve the spotify icon positioning
   #app-mount & .spotifyIcon-2J9kSv {
     top: 12px;
     right: 12px;
   }
-  //? Make the about me section not get limited less
+  //? Make the about me section get "limited" less
   .aboutMeBody-3GuvKk,
   .userBio-3tlrzS {
     &.clamped-IwJfxR {

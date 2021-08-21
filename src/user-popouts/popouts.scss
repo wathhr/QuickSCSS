@@ -20,7 +20,7 @@
   overflow: hidden;
   transform: translateZ(0) !important;
   .avatar-37jOim {
-    &::after {
+    &::before {
       content: '';
       position: fixed;
       z-index: -1;
