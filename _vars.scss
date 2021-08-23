@@ -74,6 +74,7 @@ body { // special thanks to ducko for making me use body instead of :root
   --qs-yellow1: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%); // #FAA81A
   --qs-yellow2: hsl(37, calc(var(--saturation-factor, 1) * 81.2%), 43.9%); // #CB8515
   --qs-green: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%)); // #3BA55D
+  --qs-green-hov: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%)); // #31894D
 }
 :root {
   --mouseX: 0;
