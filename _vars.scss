@@ -4,6 +4,7 @@ $checked-settings: false;
 $topbar-button-spacing: 6px; // How much space to be between the buttons on the top right
 $blur-amount: 6px; // How much to blur discrims and the DM list
 $custom-wordmark-text: Dicksword; // What the text on the titlebar should be (old font)
+$use-custom-font: false; // Replaces Discord's font with some "custom" fonts, Raleway, Open Sans and Fira Codew
 
 //? Individual snippets
 $stage-discovery-rows: 2; // The amount of rows the stage discovery tab has (works best with 1 or 2)
@@ -73,4 +74,10 @@ body { // special thanks to ducko for making me use body instead of :root
   --qs-yellow1: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%); // #FAA81A
   --qs-yellow2: hsl(37, calc(var(--saturation-factor, 1) * 81.2%), 43.9%); // #CB8515
   --qs-green: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%)); // #3BA55D
+}
+:root {
+  --mouseX: 0;
+  --mouseY: 0;
+  --clickX: 0;
+  --clickY: 0;
 }

@@ -13,83 +13,82 @@
     line-height: 44px;
     font-size: 12px;
     font-weight: 700;
+    font-family: var(--font-display);
     text-transform: uppercase;
     border-top: 1px solid var(--background-modifier-accent);
-    color: rgb(159, 159, 159);
+    color: var(--channels-default);
   }
 }
 
 //? Colored permissions in settings
 $colored-permissions: (
-  ".deny-3nAuT6": (
-    #f04747,
-    #ff6660
-  ),
-  ".passthrough-1c2ewQ": (
-    #faa61a,
-    #ffc23d
-  ),
-  ".allow-1PzSY3": (
-    #43b581,
-    #61d09a
-  )
+  ".deny-3nAuT6": #f04747,
+  ".passthrough-1c2ewQ": #faa61a,
+  ".allow-1PzSY3": #43b581,
 );
-@each $class, $colors in $colored-permissions {
-  $neutral: nth($colors, 1);
-  $hover-active: nth($colors, 2);
+@each $class, $color in $colored-permissions {
   #app-mount {
     #{$class} {
-      color: $neutral;
+      color: $color;
       &:hover {
         color: white;
-        background-color: $neutral !important;
+        background-color: color.adjust($color, $lightness: 5%, $saturation: 2.5%) !important;
       }
       &.selected-2YhbGh {
         color: white;
-        background-color: $hover-active !important;
+        background-color: $color !important;
       }
     }
   }
 }
 
-//? Different color for different messages events
+//? Message event colors, slide and ripple
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 $colored-message-events: (
-  ".mentioned-xhSam7": (
-    rgba(250, 168, 25, 0.9),
-    rgba(250, 168, 25, 0.05),
-    rgba(250, 168, 25, 0.08)
-  ),
-  ".replying-1x3H0T": (
-    rgba(2, 183, 87, 0.9),
-    rgba(2, 183, 87, 0.05),
-    rgba(2, 183, 87, 0.08)
-  ),
-  ".wrapper-2a6GCs.ephemeral-1PsL1r:not(.replying-1x3H0T)": ( // local bot message
-    rgba(114, 137, 218, 0.9),
-    rgba(114, 137, 218, 0.05),
-    rgba(114, 137, 218, 0.08)
-  )
+  ".mentioned-xhSam7":  rgb(250, 168, 25),
+  ".replying-1x3H0T": rgb(2, 183, 87),
+  ".ephemeral-1PsL1r:not(.replying-1x3H0T)":  rgb(114, 137, 218)
 );
-@each $type, $colors in $colored-message-events {
-  $side: nth($colors, 1);
-  $default: nth($colors, 2);
-  $hover: nth($colors, 3);
-  #app-mount .message-2qnXI6 {
-    &#{$type} {
-      background-color: $default;
-      &::before {
-        background-color: $side;
+#app-mount {
+  .message-2qnXI6,
+  .messagesWrapper-1sRNjr .groupStart-23k01U {
+    animation: slide 300ms ease;
+    @include ripple;
+    .markup-2BOw-j,
+    .container-1ov-mD {
+      z-index: 1;
+    }
+    .avatar-1BDn8e.clickable-1bVtEA {
+      z-index: 2;
+    }
+
+    @each $type, $color in $colored-message-events {
+      &#{$type} {
+        --ripple-col: #{color.change($color, $alpha: 0.35)};
+        background-color: color.change($color, $alpha: 0.075);
+        &:hover {
+          background-color: color.change($color, $alpha: 0.1);
+        }
+        &::before {
+          background-color: color.change($color, $alpha: 0.9);
+        }
       }
-      &:hover {
-        background-color: $hover;
-      }
+    }
+    &:hover {
+      transition: background-color 250ms;
     }
   }
 }
-#app-mount .messagesWrapper-1sRNjr .groupStart-23k01U:hover {
-  transition: background-color 0.75s;
-}
-
+  
 //? Improved spotify modal
 .powercord-spotify {
   border-top: 1px solid var(--background-secondary);
@@ -111,21 +110,6 @@ $colored-message-events: (
       color: hsl(0, 0%, 70%);
     }
   }
-}
-
-//? Message slide
-@keyframes slide {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.message-2qnXI6 {
-  animation: slide 0.3s ease;
 }
 
 //? User area buttons bounce
@@ -233,6 +217,7 @@ div.ian-toast,
 }
 
 //? Topbar improvements
+// TODO: rewrite this
 .input-2A_zIr,
 .input-2A_zIr:hover {
   margin-top: 1px;
@@ -258,7 +243,16 @@ svg.icon-3cZ1F_ > path {
 }
 .searchBar-3dMhjb,
 .libraryFilter-31ZUa2 {
+  resize: horizontal;
+  min-width: 160px;
   width: 240px;
+  max-width: 560px;
+}
+.focused-31_ccS {
+  .searchBar-3dMhjb,
+  .libraryFilter-31ZUa2 {
+    min-width: 240px;
+  }
 }
 
 //? Blurple sidebar buttons
@@ -430,4 +424,11 @@ $colored-status: (
       }
     }
   }
+}
+
+//? Make online friends counter not wrap
+div.onlineFriends-counter {
+  margin-inline: 12px;
+  width: 100%;
+  font-size: 12px;
 }

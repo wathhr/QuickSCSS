@@ -1,12 +1,14 @@
-//? This file is mostly for disabling stuff.
-//* To disable something add a "//" at the start of the thing you want to disable.
-//* Like this:
-//@import './src/example/snippet';
+/*
+ ? This file is mostly for disabling stuff.
+ * To disable something add a "//"at the start of the thing you want to disable.
+ * Like this:
+ * //@import './src/example/snippet';
+*/
 
 //! Do not disable
 @use 'sass:color';
 @use "./vars" as *;
-@use "./src/fonts/fonts" as *;
+@import "./src/fonts/fonts";
 @import "./src/main/";
 
 //? General
@@ -39,9 +41,6 @@
 
 //? Settings icons
 @import "./src/integrations/settings-icons"; // Adds icons to all of Discord's settings menus
-
-
-
 
 
 

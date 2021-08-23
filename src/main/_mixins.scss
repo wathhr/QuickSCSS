@@ -1,5 +1,6 @@
+//? Tooltip
 @mixin tooltip($content: "", $pos: top) {
-  @keyframes tooltipPopMain {
+  @keyframes tooltipPop {
     from {
       opacity: 0.5;
       transform: scale(0.9);
@@ -31,7 +32,7 @@
     color: var(--text-normal);
     box-shadow: var(--elevation-high);
     background-color: var(--background-floating);
-    animation: tooltipPopMain 60ms forwards;
+    animation: tooltipPop 60ms forwards;
     transform-origin: 50% 100%;
     
     @content
@@ -47,7 +48,32 @@
       top: -30%;
       border-top-color: var(--background-floating);
     }
-    animation: tooltipPopMain 60ms forwards;
+    animation: tooltipPop 60ms forwards;
     transform-origin: 50% 100%;
+  }
+}
+
+//? Ripple
+@mixin ripple($col: var(--background-tertiary), $size: 5) {
+  --ripple-col: #{$col};
+
+  &::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    inset: 0;
+    opacity: 0;
+    background-size: (100% * $size);
+    background-image: radial-gradient(circle at calc(var(--clickX) + 50%) calc(var(--clickY) + 50%), var(--ripple-col) 24%, transparent 25%, transparent 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    $anim: cubic-bezier(0.05, 0.2, 0.45, 1);
+    transition: background-size 200ms $anim,
+                opacity 650ms $anim;
+  }
+  &:not(:active)::after {
+    transition: 0ms;
+    opacity: 0.3;
+    background-size: 0%;
   }
 }
