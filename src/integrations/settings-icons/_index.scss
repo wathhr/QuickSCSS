@@ -17,8 +17,8 @@
         position: absolute;
         inset: 0 8px;
         width: 1.3em;
-                mask: url("https://rawcdn.githack.com/mwittrien/BetterDiscordAddons/68a9db3bc0b39643d4ac87dfb7e96da38eb8ecdd/Themes/_res/svgs/settingsicons/questionmark.svg") center/contain no-repeat;
-        -webkit-mask: url("https://rawcdn.githack.com/mwittrien/BetterDiscordAddons/68a9db3bc0b39643d4ac87dfb7e96da38eb8ecdd/Themes/_res/svgs/settingsicons/questionmark.svg") center/contain no-repeat;
+                mask: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/settings-icons/questionmark.svg") center/contain no-repeat;
+        -webkit-mask: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/settings-icons/questionmark.svg") center/contain no-repeat;
         background-color: currentColor;
       }
       .icon-Zc-uZZ, // user settings
@@ -32,80 +32,80 @@
 $icons: (
   //? User settings
   //* USER SETTINGS
-  "My Account": "account",
-  "Profile Customization": "profile",
-  "Privacy & Safety": "privacy",
-  "Authorized Apps": "apps",
-  "Connections": "connections",
+  "my-account": "account",
+  "profile-customization": "profile",
+  "privacy-&-safety": "privacy",
+  "authorized-apps": "apps",
+  "connections": "connections",
   
   //* PAYMENT SETTINGS
-  "Subscriptions": "subscriptions",
-  "Discord Nitro": "nitro",
-  "Nitro Server Boost": "boosts",
-  "Library Inventory": "gift",
-  "Billing": "billing",
+  "subscriptions": "subscriptions",
+  "discord-nitro": "nitro",
+  "nitro-server-boost": "boosts",
+  "library-inventory": "gift",
+  "billing": "billing",
   
   //* APP SETTINGS
-  "Appearance": "appearance",
-  "Accessibility": "accessibility",
-  "Voice & Video": "voice",
-  "Text & Images": "text",
-  "Notifications": "notifications",
-  "Keybinds": "keybinds",
-  "Language": "language",
-  "Windows": "windows",
-  "Streamer Mode": "streamermode",
-  "Advanced": "advanced",
+  "appearance": "appearance",
+  "accessibility": "accessibility",
+  "voice-&-video": "voice",
+  "text-&-images": "text",
+  "notifications": "notifications",
+  "keybinds": "keybinds",
+  "language": "language",
+  "windows": "windows",
+  "streamer-mode": "streamermode",
+  "advanced": "advanced",
   
   //* ACTIVITY SETTINGS
-  "Game Activity": "games",
-  "Overlay": "overlay",
+  "game-activity": "games",
+  "overlay": "overlay",
   
   //* POWERCORD
   "pc-general": "settings",
-  "pc-moduleManager-plugins": "plugins",
-  "pc-moduleManager-themes": "themes",
+  "pc-modulemanager-plugins": "plugins",
+  "pc-modulemanager-themes": "themes",
   "pc-updater": "updatecheck",
   
   //* PLUGIN SETTINGS
-  "bdCompat": "betterdiscord",
+  "bdcompat": "betterdiscord",
 
   //* 
   "changelog": "changelog",
-  "Hypesquad Online": "hypesquad",
-  "Experiments": "experiments",
-  "Developer Options": "developer",
+  "hypesquad-online": "hypesquad",
+  "experiments": "experiments",
+  "developer-options": "developer",
   "logout": "logout",
 
   //? Server settings
   //* [server name]
-  "OVERVIEW": "overview",
-  "ROLES": "roles",
-  "EMOJI": "emotes",
-  "STICKERS": "stickers",
-  "MODERATION": "privacy",
-  "AUDIT_LOG": "audit",
-  "INTEGRATIONS": "integrations",
-  "WIDGET": "widgets",
-  "GUILD_TEMPLATES": "template",
+  "overview": "overview",
+  "roles": "roles",
+  "emoji": "emotes",
+  "stickers": "stickers",
+  "moderation": "privacy",
+  "audit_log": "audit",
+  "integrations": "integrations",
+  "widget": "widgets",
+  "guild_templates": "template",
 
   //* COMMUNITY
-  "COMMUNITY": "overview",
-  "ANALYTICS": "analytics",
-  "PARTNER": "partner",
-  "DISCOVERY": "discovery",
-  "MEMBER_VERIFICATION": "rules",
-  "COMMUNITY_WELCOME": "welcome",
-  "THREADS": "threads",
-  "GUILD_PREMIUM": "boosts",
+  "community": "overview",
+  "analytics": "analytics",
+  "partner": "partner",
+  "discovery": "discovery",
+  "member_verification": "rules",
+  "welcome_screen": "welcome",
+  "threads": "threads",
+  "guild_premium": "boosts",
 
   //* USER MANAGEMENT
-  "MEMBERS": "members",
-  "INSTANT_INVITES": "invites",
-  "BANS": "bans",
+  "members": "members",
+  "instant_invites": "invites",
+  "bans": "bans",
   
   //* 
-  "DELETE": "delete",
+  "delete": "delete",
 );
 @each $oldIcon, $icon in $icons {
   .sidebar-CFHs9e {
@@ -118,8 +118,8 @@ $icons: (
       @if($oldIcon=="logout"or$oldIcon=="DELETE"){--color:var(--qs-red);} // logout and delete server buttons
 
       &::before {
-                mask: url("https://rawcdn.githack.com/mwittrien/BetterDiscordAddons/68a9db3bc0b39643d4ac87dfb7e96da38eb8ecdd/Themes/_res/svgs/settingsicons/#{$icon}.svg") center/contain no-repeat;
-        -webkit-mask: url("https://rawcdn.githack.com/mwittrien/BetterDiscordAddons/68a9db3bc0b39643d4ac87dfb7e96da38eb8ecdd/Themes/_res/svgs/settingsicons/#{$icon}.svg") center/contain no-repeat;
+                mask: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$icon}.svg") center/contain no-repeat;
+        -webkit-mask: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$icon}.svg") center/contain no-repeat;
       }
     }
   }
