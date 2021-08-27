@@ -154,7 +154,7 @@ div[class*="allactivities"] {
 }
 
 //? Codeblocks in blockquotes being small
-.blockquoteContainer-U5TVEi {
+.blockquoteContainer-U5TVEi:not(.powercord-toast div) {
   blockquote {
     width: 100%;
   }

@@ -17,7 +17,6 @@
         position: absolute;
         inset: 0 8px;
         width: 1.3em;
-                mask: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/settings-icons/questionmark.svg") center/contain no-repeat;
         -webkit-mask: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/settings-icons/questionmark.svg") center/contain no-repeat;
         background-color: currentColor;
       }
@@ -118,7 +117,6 @@ $icons: (
       @if($oldIcon=="logout"or$oldIcon=="delete"){--color:var(--qs-red);} // logout and delete server buttons
 
       &::before {
-                mask: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$icon}.svg") center/contain no-repeat;
         -webkit-mask: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$icon}.svg") center/contain no-repeat;
       }
     }

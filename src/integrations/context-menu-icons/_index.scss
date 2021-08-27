@@ -1,0 +1,62 @@
+$context-unknown: if($context-left, true, false) !default;
+.menu-3sdvDG.styleFlexible-wGDiIL {
+  .item-1tOPte .label-22pbtT#{if($context-left, ":not(.iconContainerLeft-3SHzHp + .label-22pbtT)", ":only-child")} {
+    display: flex;
+    justify-content: if($context-left, left, space-between);
+    &::#{if($context-left, before, after)} {
+      content: if($context-unknown, "", unset);
+      width: if($context-left, 20px, 18px);
+      aspect-ratio: 1/1;
+      -webkit-mask-image: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/questionmark.svg");
+      -webkit-mask-size: 18px;
+      -webkit-mask-position: center/contain;
+      -webkit-mask-repeat: no-repeat;
+      text-align: center;
+      margin: {
+        left: if($context-left, 0, 8px);
+        right: if($context-left, 8px, 0);
+      }
+      background-color: currentColor;
+    }
+  }
+}
+
+$context-menu-icons: (
+  "-delete": ("delete", "*"),
+  "edit": ("edit", "$"),
+  "thread": ("threads", "$"),
+  "invite": ("share", "*"),
+  "copy-link": ("share", "$"),
+  "reply": ("reply", "$"),
+  "pin": ("pin", "$"),
+  "mark-unread": ("mark-unread", "$"),
+  "tts": ("tts", "$"),
+  "copy-id": ("copy-id", "$"),
+  "view-raw": ("view-raw", "$"),
+  "copy-raw": ("copy-raw", "$"),
+  "copy-native-link": ("share", "$"),
+  "open-native-link": ("open-link", "$"),
+  "-translate": ("translate", "*"),
+  "add-folder": ("create-folder", "$"),
+  "-mlv2": ("MLv2", "*"),
+  "guild-profile": ("server-profile", "$"),
+  "-read": ("mark-as-read", "$"),
+  "notifications": ("notifications", "*"),
+  "privacy": ("privacy", "*"),
+  "change-nickname": ("edit", "$"),
+  "create-channel": ("create", "$"),
+  "create-category": ("create-folder", "$"),
+  "call": ("call", "$"),
+);
+@each $id, $name in $context-menu-icons {
+  $svg: nth($name, 1);
+  $operator: nth($name, 2);
+  #app-mount .item-1tOPte[id#{$operator}="#{$id}" i] {
+    .label-22pbtT {
+      &::#{if($context-left, before, after)} {
+        content: "";
+        -webkit-mask-image: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/#{$svg}.svg");
+      }
+    }
+  }
+}

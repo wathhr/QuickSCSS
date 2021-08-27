@@ -27,7 +27,6 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { // server profile modal
       left: 0;
       right: 0;
       height: 240px;
-              mask: i want to kill myself;
       -webkit-mask: radial-gradient(circle farthest-side at #{$av-size / 1.32 + 4} 238px, transparent #{$av-size / 1.47}, LightGoldenRodYellow #{$av-size / 1.5} 100%);
       background: var(--user-background) no-repeat var(--user-popout-position, center) / cover;
     }
