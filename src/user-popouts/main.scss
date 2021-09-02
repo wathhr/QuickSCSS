@@ -1,8 +1,10 @@
+@import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
 @import './modals.scss';
 @import './popouts.scss';
 
 .userPopout-xaxa6l, .profileBannerPreview-3_l0Wd,
 [aria-label="User profile modal"] {
+
   //? Badges
   [aria-label="User badges"] {
     top: 8px;
@@ -16,6 +18,7 @@
       width: 28px;
     }
   }
+
   //? Smaller discrim
   .discrimBase-24vY8o, // popout
   .discriminator-1swucG, // modal
@@ -24,11 +27,13 @@
     color: var(--header-secondary);
     vertical-align: bottom;
   }
+
   //? Improve the spotify icon positioning
   #app-mount & .spotifyIcon-2J9kSv {
     top: 12px;
     right: 12px;
   }
+
   //? Make the about me section get "limited" less
   .aboutMeBody-3GuvKk,
   .userBio-3tlrzS {
@@ -36,14 +41,18 @@
       -webkit-line-clamp: 10;
     }
   }
+
   //? Activity text positioning
-  .assets-VMAukC {
-    margin-right: 8px
-  }
   .gameIcon-_0rmMm {
     margin-right: 6px;
   }
   .content-3JfFJh { 
     margin-left: 0;
+  }
+
+  //? Remove the edit thing when hovering over your banner and "Upload your own personalised banner and more with Discord Nitro!" icon
+  .premiumIconWrapper-1A-UH5,
+  .bannerOverlay-1uIerX {
+    display: none;
   }
 }

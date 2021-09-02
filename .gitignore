@@ -1,3 +1,10 @@
-/todo.md
+todo.md
+/src/assets
+
+dist.*
+building.md
 
 *.config
+
+package*.json
+node_modules

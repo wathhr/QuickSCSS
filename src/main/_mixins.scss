@@ -54,8 +54,8 @@
 }
 
 //? Ripple
-@mixin ripple($col: var(--background-tertiary), $size: 5) {
-  --ripple-col: #{$col};
+@mixin ripple($color: inherit, $size: 5) {
+  --ripple-col: #{$color};
 
   &::after {
     content: "";
@@ -64,7 +64,7 @@
     inset: 0;
     opacity: 0;
     background-size: (100% * $size);
-    background-image: radial-gradient(circle at calc(var(--clickX) + 50%) calc(var(--clickY) + 50%), var(--ripple-col) 24%, transparent 25%, transparent 100%);
+    background-image: radial-gradient(circle at calc(var(--clickX) + 50%) calc(var(--clickY) + 50%), var(--ripple-col) 25%, transparent 25.5%, transparent 100%);
     background-repeat: no-repeat;
     background-position: center;
     $anim: cubic-bezier(0.05, 0.2, 0.45, 1);

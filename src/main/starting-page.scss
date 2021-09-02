@@ -4,11 +4,10 @@ $top: 80px;
   font-family: var(--font-primary);
 
   //? Notices
-  $notice-start: "This theme is intended to be used with";
-  $notice-end: "you might encounter issues";
-  $notice-theme: $notice-start + " dark mode.\AIf you don't use dark mode, " + $notice-end + ",\A especially if you're using dark sidebar.";
-  $notice-lang: $notice-start + "\A either the en-GB or en-US locale.\AIf you don't use either of those locales;\A" + $notice-end + ".";
   $lang: "en";
+  $notice-start: "This theme is intended to be used with";
+  $notice-theme: "#{$notice-start} dark mode.\AIf you don't use dark mode, you might encounter issues,\A especially if you're using dark sidebar.";
+  $notice-lang: "#{$notice-start}\A either the en-GB or en-US locale.\AIf you don't use either of those locales;\Ayou might encounter issues.";
   &::after {
     position: absolute;
     white-space: pre-wrap;

@@ -40,8 +40,33 @@
         max-width: unset;
       }
     }
-    .container-1WCE6w {
+    .container-2rNpDV, // "What are you passionate about?"
+    .container-1WCE6w { // Refresh thing
       grid-column: span $stage-discovery-rows;
+    }
+    .container-2rNpDV {
+      place-self: center;
+      margin-top: 0;
+      min-width: 60rem;
+      width: 45%;
+      max-width: 80%;
+      background: linear-gradient(115deg, hsl(221, calc(var(--saturation-factor, 1) * 70%), 55.5%), hsl(269, calc(var(--saturation-factor, 1)*83.8%), 71%)) no-repeat;
+      .content-1cqZ_C {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        width: unset;
+        inset: 32px;
+        padding: 0;
+        > h3,
+        > div {
+          text-align: center;
+          margin: 0;
+        }
+      }
+    }
+    .container-1WCE6w {
       margin: 0;
       padding: 16px 0 28px;
     }

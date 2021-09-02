@@ -28,11 +28,16 @@
       min-width: auto;
       order: 550;
     }
-
-    .systemMessageContainer-2ddkN3 {
-      &:not(:nth-child(2)) {
-        margin-top: -0.5em;
-      }
+    .spine-5jbOmI.cozy-XCy5h_ {
+      display: block;
+      width: 28px;
+      bottom: 28px;
+      top: 4px;
+      left: -34px;
     }
+  }
+  &.hasThread-2k82W0:after {
+    border: none;
+    width: unset !important;
   }
 }

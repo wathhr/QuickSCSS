@@ -66,8 +66,9 @@ $context-left: false; // Whether the context menu icons are on the left or not
 
 
 
-//* CSS vars
+//? CSS vars
 body { // special thanks to ducko for making me use body instead of :root
+  //* QS vars 
   --qs-pink: hsl(305, calc(var(--saturation-factor, 1) * 100%), 75%); // #FF80F4
   --qs-red: var(--old-red, hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%)); // #ED4245
   --qs-orange: hsl(21, calc(var(--saturation-factor, 1) * 90.7%), 57.6%); // #F57531
@@ -75,10 +76,13 @@ body { // special thanks to ducko for making me use body instead of :root
   --qs-yellow2: hsl(37, calc(var(--saturation-factor, 1) * 81.2%), 43.9%); // #CB8515
   --qs-green: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%)); // #3BA55D
   --qs-green-hov: var(--old-green, hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%)); // #31894D
-}
-:root {
-  --mouseX: 0;
-  --mouseY: 0;
+
+  //* Other vars
+  --spotify-color: hsl(141, calc(var(--saturation-factor, 1) * 72.9%), 42%); // #1DB954
+
+  //* Ripple support
+  // --mouseX: 0;
+  // --mouseY: 0;
   --clickX: 0;
   --clickY: 0;
 }

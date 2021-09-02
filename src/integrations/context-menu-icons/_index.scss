@@ -1,62 +1,183 @@
+//$context-unknown: true;
 $context-unknown: if($context-left, true, false) !default;
-.menu-3sdvDG.styleFlexible-wGDiIL {
-  .item-1tOPte .label-22pbtT#{if($context-left, ":not(.iconContainerLeft-3SHzHp + .label-22pbtT)", ":only-child")} {
-    display: flex;
-    justify-content: if($context-left, left, space-between);
-    &::#{if($context-left, before, after)} {
-      content: if($context-unknown, "", unset);
-      width: if($context-left, 20px, 18px);
-      aspect-ratio: 1/1;
-      -webkit-mask-image: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/questionmark.svg");
-      -webkit-mask-size: 18px;
-      -webkit-mask-position: center/contain;
-      -webkit-mask-repeat: no-repeat;
-      text-align: center;
-      margin: {
-        left: if($context-left, 0, 8px);
-        right: if($context-left, 8px, 0);
+.menu-3sdvDG:not([id="channel-attach"]) { // doing #channel-attach breaks stuff because specificity:tm:
+  max-width: 320px + if($context-left, 10px, 8px);
+  min-width: 188px + if($context-left, 10px, 8px);
+  .item-1tOPte:not([id*="context-mute-"][id*="--"]) {
+    .label-22pbtT#{if($context-left, ":not(.iconContainerLeft-3SHzHp + div):not([id*="reaction--"] div):not([id^="user-context-roles--"] div):not([id$=-search] ~ .submenuContainer-2gbm7M div)", ":only-child")} { // this looks lovely
+      display: flex;
+      justify-content: if($context-left, start, space-between);
+      align-items: center;
+      > strong {
+        margin-left: 0.22em;
       }
-      background-color: currentColor;
+      &::#{if($context-left, before, after)} {
+        content: if($context-unknown, "", unset);
+        inset: 0;
+        width: 18px;
+        aspect-ratio: 1/1;
+        -webkit-mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/questionmark.svg?sanitize=true");
+        -webkit-mask-size: 18px;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        margin: {
+          left: if($context-left, 0, 8px);
+          right: if($context-left, 10px, 0);
+        }
+        background-color: currentColor;
+      }
+    }
+  }
+  @if $context-left {
+    &[id="message-actions"] .iconContainer-2-XQPY,
+    &[id="guild-header-popout"] .iconContainer-2-XQPY path:not([d="M18.625 3H5.375C4.06519 3 3 4.06519 3 5.375V18.625C3 19.936 4.06519 21 5.375 21H18.625C19.936 21 21 19.936 21 18.625V5.375C21.0057 4.08803 19.9197 3 18.625 3ZM19 19V5H4.99999V19H19Z"]):not(.checkbox-3s5GYZ):not(.checkbox-3s5GYZ ~ path) { // i want to vomit
+        display: none;
     }
   }
 }
+div#app-mount .menu-3sdvDG .item-1tOPte {
+  &:hover {
+    color: var(--interactive-active);
+  }
+}
 
+// TODO: remove the * from the id
 $context-menu-icons: (
-  "-delete": ("delete", "*"),
-  "edit": ("edit", "$"),
-  "thread": ("threads", "$"),
-  "invite": ("share", "*"),
-  "copy-link": ("share", "$"),
-  "reply": ("reply", "$"),
-  "pin": ("pin", "$"),
-  "mark-unread": ("mark-unread", "$"),
-  "tts": ("tts", "$"),
-  "copy-id": ("copy-id", "$"),
-  "view-raw": ("view-raw", "$"),
-  "copy-raw": ("copy-raw", "$"),
-  "copy-native-link": ("share", "$"),
-  "open-native-link": ("open-link", "$"),
-  "-translate": ("translate", "*"),
-  "add-folder": ("create-folder", "$"),
-  "-mlv2": ("MLv2", "*"),
-  "guild-profile": ("server-profile", "$"),
-  "-read": ("mark-as-read", "$"),
-  "notifications": ("notifications", "*"),
-  "privacy": ("privacy", "*"),
-  "change-nickname": ("edit", "$"),
-  "create-channel": ("create", "$"),
-  "create-category": ("create-folder", "$"),
-  "call": ("call", "$"),
+  "message": (
+    "copy": "copy",
+    "search-google": "google",
+    "add-reaction": "add-reaction",
+    "reactions": "reactions",
+    "edit": "edit",
+    "pin": "pin",
+    "unpin": "pin",
+    "reply": "reply",
+    "thread": "threads",
+    "apps": "bot",
+    "mark-unread": "mark-unread",
+    "copy-link": "share",
+    "tts": "tts",
+    "remove-reactions": "remove-reactions",
+    "delete": "delete",
+    "save-image": "save",
+    "view-raw": "view-raw",
+    "copy-raw": "copy-raw",
+    "translate": "translate",
+    "copy-native-link": "share",
+    "open-native-link": "open-link",
+    "devmode-copy-id": "copy-id",
+    "mlv2": "MLv2",
+    "str": "save",
+  ),
+  "message-actions": (
+    "edit": "edit",
+    "pin": "pin",
+    "unpin": "pin",
+    "reply": "reply",
+    "thread": "threads",
+    "mark-unread": "mark-unread",
+    "reactions": "reactions",
+    "copy-link": "share",
+    "tts": "tts",
+    "delete": "delete",
+    "copy-id": "copy-id",
+  ),
+  "user-context": (
+    "mark-channel-read": "mark-as-read",
+    "user-profile": "profile",
+    "mention": "mention",
+    "message": "message",
+    "call": "call",
+    "note": "note",
+    "mute": "mute",
+    "disable-video": "disable-video",
+    "apps": "bot",
+    "remove-friend": "remove-friend",
+    "block": "block",
+    "change-nickname": "edit",
+    "ban": "ban",
+    "roles": "roles",
+    "devmode-copy-id": "copy-id",
+    "mlv2": "MLv2",
+    "str": "save",
+  ),
+  "user-profile-actions": (
+    "user-block": "block",
+    "user-unblock": "unblock",
+    "user-remove": "remove-friend",
+    "user-message": "message",
+  ),
+  "guild-header-popout": (
+    "guild-profile": "server-profile",
+    "premium-subscribe": "boost",
+    "invite-people": "invite",
+    "settings": "settings",
+    "insights": "insights",
+    "create-channel": "create",
+    "create-category": "create-folder",
+    "notifications": "notifications",
+    "privacy": "privacy",
+    "change-nickname": "edit",
+    "leave": "leave",
+  ),
+  "guild-context": (
+    "guild-profile": "server-profile",
+    "mark-guild-read": "mark-as-read",
+    "invite-people": "invite",
+    "mute-guild": "mute",
+    "guild-settings": "settings",
+    "notifications": "notifications",
+    "privacy": "privacy",
+    "change-nickname": "edit",
+    "create-channel": "create",
+    "create-category": "create-folder",
+    "leave": "leave",
+    "devmode-copy-id": "copy-id",
+    "mlv2": "MLv2",
+    "str": "save",
+  ),
+  "channel-context": (
+    "mark-channel-read": "mark-as-read",
+    "mute": "mute",
+    "channel-notifications": "notifications",
+    "edit-channel": "edit",
+    "invite-people": "invite",
+    "create-text-channel": "create",
+    "delete-channel": "delete",
+    "devmode-copy-id": "copy-id",
+    "mlv2": "MLv2",
+  ),
+  "textarea-context": (
+    "add-to-dictionary": "dictionary",
+    "sticker-suggestions": "sticker",
+    "spellcheck": "spellcheck",
+    "languages": "language",
+    "copy": "copy",
+    "cut": "cut",
+    "paste": "paste",
+  ),
+  "-str-": (
+    "": "folder",
+    "add-folder": "create-folder",
+    "save-as": "save-alt",
+  ),
 );
-@each $id, $name in $context-menu-icons {
-  $svg: nth($name, 1);
-  $operator: nth($name, 2);
-  #app-mount .item-1tOPte[id#{$operator}="#{$id}" i] {
-    .label-22pbtT {
-      &::#{if($context-left, before, after)} {
-        content: "";
-        -webkit-mask-image: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/#{$svg}.svg");
+@each $context, $name in $context-menu-icons {
+  @each $id, $svg in $name {
+    #app-mount .item-1tOPte[id*="#{$context}-#{$id}"] {
+      .label-22pbtT {
+        &::#{if($context-left, before, after)} {
+          content: "";
+          -webkit-mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/#{$svg}.svg?sanitize=true");
+          @if $context-left and $svg == "mark-as-read" {
+            -webkit-mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/#{$svg}-alt.svg?sanitize=true");
+          }
+        }
       }
+  
+      // i want to kill myself
+      @if($svg=="boost"){color:var(--qs-pink);}
+      @if($svg=="block"){color:var(--qs-red);}
     }
   }
 }

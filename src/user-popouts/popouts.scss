@@ -1,5 +1,3 @@
-@import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
-
 .userPopout-xaxa6l {
   //? color changes
   .headerTop-3vNv-a,
@@ -21,25 +19,23 @@
   transform: translateZ(0) !important;
   .avatar-37jOim {
     &::before {
-      content: '';
+      content: "";
       position: fixed;
       z-index: -1;
       pointer-events: none;
-      top: 0;
-      left: 0;
-      right: 0;
+      inset: 0;
       height: 120px;
       background: var(--user-background) no-repeat var(--user-popout-position, center) / cover;
     }
   }
 
   //? literally everything else
-  // banner height
+  //* banner height
   .banner-2QYc2d {
     height: 120px;
   }
 
-  // header positioning
+  //* header positioning
   .headerTop-3vNv-a {
     padding-bottom: 8px;
     @at-root .customStatus-oN4ZZY,
@@ -54,33 +50,33 @@
     }
   }
 
-  // make the big asset bigger
+  //* make the big assets bigger
   @at-root .activityVoiceChannel-OPU-Fm, .streamPreviewWrapper-2DSWOK,
   & .activity-2INFPu {
     .assets-VMAukC {
+      margin-right: 8px;
       .assetsLargeImage-eYwpTX,
       .assetsLargeImageStreamPreview-1A9lfF,
       .assetsLargeImageUserPopout-3Pp8BK,
       .assetsLargeImageUserPopoutXbox-2hgKt0 {
         height: 72px;
         width: 72px;
-        mask-size: cover;
         -webkit-mask-size: cover;
       }
     }
 
-    // fix activity text overflowing
+    //* fix activity text overflowing
     .content-3JfFJh {
       width: 0;
     }
   }
 
-  // get rid of the devider
+  //* get rid of the devider
   .divider-ewBQKj {
     display: none;
   }
 
-  // make the "body" actually good
+  //* make the "body" actually good
   .body-3HBlXn {
     padding: 0 0 14px !important;
     overflow: visible !important;
@@ -92,15 +88,15 @@
       padding-right: 16px;
     }
 
-    // improve positioning
+    //* improve positioning
     h3:not(.activityUserPopout-2yItg2 h3) {
       margin-bottom: 6px;
     }
   }
 
-  .bodyInnerWrapper-26fQXj {
+  .bodyInnerWrapper-26fQXj { // this is pain
     display: grid;
-    // UserDetails stuff
+    //* UserDetails stuff
     [class^="UserDetails-"][class$="body" i] {
       order: 1;
       margin-bottom: 12px;
@@ -122,7 +118,7 @@
         margin-bottom: 0;
       }
     }
-    // Permission viewer
+    //* Permission viewer
     .newPopoutActivityStyles {
       order: -2;
     }
@@ -149,6 +145,9 @@
 //? Settings user popout
 .profileBannerPreview-3_l0Wd {
   background-color: var(--background-tertiary);
+  .banner-hcPdsd {
+    height: 120px;
+  }
   .popoutInfo-pKbpvG {
     background-color: var(--background-secondary);
     padding-top: 12px;

@@ -17,7 +17,7 @@
         position: absolute;
         inset: 0 8px;
         width: 1.3em;
-        -webkit-mask: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/settings-icons/questionmark.svg") center/contain no-repeat;
+        -webkit-mask: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/questionmark.svg?sanitize=true") center/contain no-repeat;
         background-color: currentColor;
       }
       .icon-Zc-uZZ, // user settings
@@ -68,6 +68,7 @@ $icons: (
   
   //* PLUGIN SETTINGS
   "bdcompat": "betterdiscord",
+  "pc-spotify": "spotify",
 
   //* 
   "changelog": "changelog",
@@ -112,12 +113,13 @@ $icons: (
       // i want to kill myself
       @if($oldIcon=="subscriptions"){--color:var(--qs-yellow1);} // subscriptions tab
       @if($oldIcon=="discord-nitro"){--color:var(--brand-experiment);} // nitro tab
+      @if($oldIcon=="pc-spotify"){--color:var(--spotify-color);} // spotify
       @if($oldIcon=="hypesquad-online"){--color:var(--qs-yellow1);} // hypesquad tab
-      @if($oldIcon=="nitro-server-boost"or$oldIcon=="premium"){--color:var(--qs-pink);} // server boosts tab
+      @if($oldIcon=="nitro-server-boost"or$oldIcon=="guild_premium"){--color:var(--qs-pink);} // server boosts tab
       @if($oldIcon=="logout"or$oldIcon=="delete"){--color:var(--qs-red);} // logout and delete server buttons
 
       &::before {
-        -webkit-mask: url("https://raw.githack.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$icon}.svg") center/contain no-repeat;
+        -webkit-mask: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$icon}.svg?sanitize=true") center/contain no-repeat;
       }
     }
   }

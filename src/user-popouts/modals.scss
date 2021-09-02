@@ -1,5 +1,5 @@
 [aria-label="User profile modal"],
-div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { // server profile modal
+div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { //* server profile modal
   //? color changes
   .topSection-y3p-_D {
     background-color: var(--background-tertiary);
@@ -17,28 +17,24 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { // server profile modal
 
   //? USRBG
   .avatar-AvHqJA {
-    z-index: 1;
+    isolation: isolate;
     &::before {
-      content: '';
+      content: "";
       position: fixed;
-      z-index: -1;
-      pointer-events: none;
-      top: 0;
-      left: 0;
-      right: 0;
+      inset: 0;
       height: 240px;
-      -webkit-mask: radial-gradient(circle farthest-side at #{$av-size / 1.32 + 4} 238px, transparent #{$av-size / 1.47}, LightGoldenRodYellow #{$av-size / 1.5} 100%);
+      -webkit-mask: radial-gradient(circle farthest-side at #{$av-size / 1.325 + 4} 238px, transparent #{$av-size / 1.45}, black #{$av-size / 1.43} 100%);
       background: var(--user-background) no-repeat var(--user-popout-position, center) / cover;
     }
   }
   
   //? almost everything else
-  // banner height
+  //* banner height
   .banner-2QYc2d {
     height: 240px;
   }
 
-  // header positioning
+  //* header positioning
   .nameTag-ECvD8P {
     margin-bottom: 12px; // thanks juby
     &.nameTagWithCustomStatus-2kkfrQ {
@@ -48,7 +44,7 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { // server profile modal
   .customStatusActivity-nmH3DF {
     padding-bottom: 8px;
     
-    // "fix" custom status overflow
+    //* "fix" custom status overflow
     .customStatus-1COQYu {
       display: flex;
     }
@@ -78,5 +74,12 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { // server profile modal
     .contentNoImagesProfile-371_Rv {
       grid-column: span 3;
     }
+  }
+}
+
+//? Settings user modal
+.accountProfileCard-1XCH88 {
+  .settingsBanner-15-pZk {
+    height: 240px;
   }
 }
