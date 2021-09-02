@@ -8,9 +8,11 @@ yeah
 
 ![yeah](./screenshots/yeah.gif)
 
-![user popout](./screenshots/user%20popout.gif)
+![messages](./screenshots/messages.gif)
 
-![channel list](./screenshots/channel%20list.png)
+![user popout](./screenshots/user-popout.png)
+
+![channel list](./screenshots/channel-list.png)
 
 </details>
 
@@ -29,27 +31,35 @@ I suggest using the extension named "Better comments"/"Colored comments"
 
 ---
 
+## [Building](./BUILDING.md)
+
 ## Credits
 
 - Powercord's terrible Quick CSS.
-  - Pretty much the only reason I made this is because of how bad Powercord's Quick CSS "editor" is.
+  - Pretty much the only reason I made this is because of how bad powerCord's Quick CSS "editor" is.
   - It randomly wipes itself after Discord crashes.
-    - how does that even happen
   - No SCSS support.
 
 - [Hyblocker](https://github.com/hyblocker)
-  - I Stole their [better connection icons "snippet"](https://github.com/hyblocker/pixelcord/blob/8bd986b36742e578b1a627b098f2e9202b9ae2a6/src/app/app/misc_pages/_avatarpage.scss#L48-L111).
-  - I Stole their [no dashes "snippet"](https://github.com/hyblocker/pixelcord/blob/main/src/app/qol/_space_channels.scss).
+  - I Stole their [better connection icons "snippet"](https://github.com/hyblocker/pixelcord/blob/a7327786c7c45810b9a80321afb7ef3ec0a65393/src/app/app/misc_pages/_avatarpage.scss#L52-L117).
+  - I Stole their [no dashes "snippet"](https://github.com/hyblocker/pixelcord/blob/59856ce1a9f7c59634101d5991f38c6e091a6063/src/app/qol/_space_channels.scss).
 
 - [KraXen72](https://github.com/KraXen72)
-  - I implemented an old and customized version of their [Harmony](https://github.com/KraXen72/harmony-discord/) theme into this theme.
+  - I stole an old and customized version of their [Harmony theme](https://github.com/KraXen72/harmony-discord/).
 
 - [NYRI4](https://github.com/NYRI4) & [Snapperito](https://github.com/Snapperito)
-  - I stole their [Discolored](https://github.com/NYRI4/Discolored) theme.
+  - I stole their [Discolored theme](https://github.com/NYRI4/Discolored).
+
+- [ClearVision team](https://github.com/ClearVision)
+  - I stole their [Settings icons snippet](https://github.com/ClearVision/ClearVision-v6/blob/master/src/settings/icons.scss) idea.
+
+- [Daniel Klingel](https://github.com/CorellanStoma)
+  - I stole their [Context menu icons theme](https://github.com/CorellanStoma/Menu-Icons) idea.
 
 - [Alfred](https://www.youtube.com/watch?v=NWD7iqtOJSE) ( Epic !! ))))
+  
 - All the people I forgot I stole snippets from lol
-  - Some snippets on this theme were "stolen" from the [#css-snippets](https://canary.discord.com/channels/538759280057122817/755005803303403570/) channel on the Powercord server.
+  - Some snippets on this theme were "stolen" from the [#css-snippets channel on the Powercord server](https://canary.discord.com/channels/538759280057122817/755005803303403570/).
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 ![funy image hahahaahaahaha](https://svg-banners.vercel.app/api?type=origin&text1=amognsu&text2=haha%20funy&width=1337&height=420)

@@ -1,10 +1,7 @@
 todo.md
-/src/assets
 
-dist.*
-building.md
+*.css
 
 *.config
 
-package*.json
 node_modules

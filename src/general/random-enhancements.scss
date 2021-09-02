@@ -68,11 +68,12 @@ $colored-message-events: (
     animation: slide 300ms ease;
     @include ripple($color: rgba(4, 4, 5, 0.5));
     &:hover {
+      transition: background-color 250ms;
       background-color: rgba(4, 4, 5, 0.1);
     }
     &:active,
     &.selected-.zalgo-jN1Ica {
-      background-color: rgba(4, 4, 5, 0.15);
+      background-color: rgba(4, 4, 5, 0.175);
     }
     &:not(.zalgo-jN1Ica) {
       background-color: unset;
@@ -106,9 +107,6 @@ $colored-message-events: (
           background-color: color.change($color, $alpha: 0.9);
         }
       }
-    }
-    &:hover {
-      transition: background-color 250ms;
     }
   }
 }

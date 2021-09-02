@@ -1,0 +1,38 @@
+{
+  "name": "quickscss",
+  "version": "2.8.1",
+  "description": "yeah",
+  "scripts": {
+    "clear": "del *.css",
+    "dev": "sass --watch index.scss:dist.css --no-source-map",
+    "build": "sass index.scss:dist.css --no-source-map -q && postcss dist.css -u postcss-csso -r --no-map",
+    "build-bd": "sass index.scss:QuickSCSS.theme.css --no-source-map -q && postcss QuickSCSS.theme.css -u postcss-csso -r --no-map && build-bd",
+    "build-web": "sass index.scss:dist.web.css --no-source-map -q && postcss dist.web.css -u postcss-unprefix autoprefixer postcss-csso -r --no-map",
+    "build-all": "npm run build && npm run build-bd && npm run build-web"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wathhr/QuickSCSS.git"
+  },
+  "keywords": [
+    "discord-theme",
+    "powercord-theme"
+  ],
+  "author": "walter",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/wathhr/QuickSCSS/issues"
+  },
+  "homepage": "https://github.com/wathhr/QuickSCSS#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.3.3",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-csso": "^5.0.1",
+    "postcss-unprefix": "^2.1.4",
+    "sass": "^1.35.2"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
