@@ -4,6 +4,7 @@
   "description": "yeah",
   "scripts": {
     "clear": "del *.css",
+    "clear2": "del *.css && node_modules",
     "dev": "sass --watch index.scss:dist.css --no-source-map",
     "build": "sass index.scss:dist.css --no-source-map -q && postcss dist.css -u postcss-csso -r --no-map",
     "build-bd": "sass index.scss:QuickSCSS.theme.css --no-source-map -q && postcss QuickSCSS.theme.css -u postcss-csso -r --no-map && build-bd",

@@ -1,7 +1,7 @@
 todo.md
 
-*.css
-
 *.config
+
+*.css
 
 node_modules
