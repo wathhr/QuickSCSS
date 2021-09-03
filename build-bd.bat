@@ -2,9 +2,10 @@
 echo "" > temp
 echo /** > temp
 echo  * @name QuickSCSS >> temp
-echo  * @author walter >> temp
 echo  * @description yeah >> temp
-echo  * @version im not bothered updating a 3rd file lol >> temp
+echo  * @discord wYdxqw5gHB >> temp
+echo  * @author walter >> temp
+echo  * @version 2.8.2 >> temp
 echo  */ >> temp
 type QuickSCSS.theme.css >> temp
 type temp > QuickSCSS.theme.css
