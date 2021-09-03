@@ -1,14 +1,14 @@
 {
   "name": "quickscss",
-  "version": "2.8.2",
+  "version": "2.8.3",
   "description": "yeah",
   "scripts": {
     "clear": "del *.css",
     "clear2": "del *.css && node_modules",
     "dev": "sass --watch index.scss:dist.css --no-source-map",
-    "build": "sass index.scss:dist.css --no-source-map -q && postcss dist.css -u postcss-csso -r --no-map",
-    "build-bd": "sass index.scss:QuickSCSS.theme.css --no-source-map -q && postcss QuickSCSS.theme.css -u postcss-csso -r --no-map && build-bd",
-    "build-web": "sass index.scss:dist.web.css --no-source-map -q && postcss dist.web.css -u postcss-unprefix autoprefixer postcss-csso -r --no-map",
+    "build": "sass index.scss:dist.css --style=compressed --no-source-map -q && postcss dist.css -u postcss-csso -r --no-map",
+    "build-bd": "sass index.scss:QuickSCSS.theme.css --style=compressed --no-source-map -q && postcss QuickSCSS.theme.css -u postcss-csso -r --no-map && build-bd",
+    "build-web": "sass index.scss:QuickSCSS.user.css --style=compressed --no-source-map -q && postcss QuickSCSS.user.css -u postcss-unprefix autoprefixer postcss-csso -r --no-map && build-web",
     "build-all": "npm run build && npm run build-bd && npm run build-web"
   },
   "repository": {
