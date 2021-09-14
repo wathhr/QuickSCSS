@@ -28,16 +28,21 @@ $columns: 2;
     }
   }
   //* Main
-  .fullWidth-1orjjo:not(:only-child) {
-    font-size: 0;
-    padding: 0;
-    .spotifyButtonLogo-3uT57D {
-      margin: 0;
-      width: 18px;
-      height: 18px;
+  .fullWidth-1orjjo {
+    &:only-child {
+      grid-column: span $columns;
     }
-    &:not(.disabledButtonWrapper-3wH6-b):hover {
-      @include tooltip($content: "Listen on Spotify");
+    &:not(:only-child) {
+      font-size: 0;
+      padding: 0;
+      .spotifyButtonLogo-3uT57D {
+        margin: 0;
+        width: 18px;
+        height: 18px;
+      }
+      &:not(.disabledButtonWrapper-3wH6-b):hover {
+        @include tooltip($content: "Listen on Spotify");
+      }
     }
   }
 }

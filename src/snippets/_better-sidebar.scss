@@ -8,7 +8,7 @@
       column-gap: $gap;
     }
     .channel-2QD9_O,
-    div[style="height: 8px;"]:not([class]),
+    div[style="height: 8px;"],
     h2 {
       flex-basis: 100%;
     }
@@ -35,6 +35,7 @@
           z-index: 1;
           margin-right: -16px;
           bottom: 8px;
+          // imagine mask
           &::before,
           &::after {
             content: "";
@@ -86,7 +87,7 @@
 //? No dash
 @if $use_no_dash {
   .containerDefault--pIXnN > .wrapper-2jXpOf:not(.typeThread-3ESTm-) .channelName-2YrOjO, // channel list
-  [aria-label="Channel header"] .title-29uC1r, // channel headers
+  [aria-label="Channel header"] .title-29uC1r:not(.parentChannelName-1C2HEo ~ h3), // channel headers
   .content-3YMskv .emptyChannelIcon-cc932w ~ .size32-o_H79z, // header at the start of channels
   .mention.iconMentionText-8GCluA, // mentions
   .channelTextArea-rNsIhG .placeholder-37qJjk, // text area placeholder

@@ -2,14 +2,17 @@
 $context-unknown: if($context-left, true, false) !default;
 .menu-3sdvDG:not([id="channel-attach"]) { // doing #channel-attach breaks stuff because specificity:tm:
   max-width: 320px + if($context-left, 10px, 8px);
-  min-width: 188px + if($context-left, 10px, 8px);
   .item-1tOPte:not([id*="context-mute-"][id*="--"]) {
     .label-22pbtT#{if($context-left, ":not(.iconContainerLeft-3SHzHp + div):not([id*="reaction--"] div):not([id^="user-context-roles--"] div):not([id$=-search] ~ .submenuContainer-2gbm7M div)", ":only-child")} { // this looks lovely
       display: flex;
+      flex-wrap: wrap;
       justify-content: if($context-left, start, space-between);
       align-items: center;
       > strong {
         margin-left: 0.22em;
+      }
+      .subtext-13Lvrj {
+        flex-basis: 100%;
       }
       &::#{if($context-left, before, after)} {
         content: if($context-unknown, "", unset);
@@ -160,6 +163,9 @@ $context-menu-icons: (
     "copy": "copy",
     "cut": "cut",
     "paste": "paste",
+  ),
+  "live-stage-tile-context": (
+    "devmode-copy-id": "copy-id",
   ),
   "-str-": (
     "": "folder",

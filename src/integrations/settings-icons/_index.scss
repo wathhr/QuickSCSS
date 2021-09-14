@@ -1,9 +1,14 @@
+// this is a Mess
+
 .sidebar-CFHs9e {
+  --icon-size: 1.3em;
+  width: calc(218px + var(--icon-size) / 2);
   .side-8zPYf6 {
     [aria-controls] {
       padding-left: 2.3em;
       text-transform: capitalize;
-      color: var(--color, var(--interactive-normal));
+      white-space: nowrap;
+      color: var(--color, var(--interactive-normal)) !important;
       &.selected-3s45Ha,
       &:active {
         color: white !important;
@@ -16,7 +21,7 @@
         content: "";
         position: absolute;
         inset: 0 8px;
-        width: 1.3em;
+        width: var(--icon-size);
         -webkit-mask: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/questionmark.svg?sanitize=true") center/contain no-repeat;
         background-color: currentColor;
       }
@@ -24,6 +29,20 @@
       .icon-3Povsy { // server settings
         display: none;
       }
+    }
+    .searchdiv {
+      #settingssearch {
+        width: 100%;
+      }
+      .settingsicon {
+        pointer-events: none;
+      }
+    }
+    .noresults { // this is so Dumb
+      width: 100%;
+      padding-bottom: 14em;
+      background-position: center bottom;
+      background-size: 80%;
     }
   }
 }

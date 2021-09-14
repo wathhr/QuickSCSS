@@ -20,7 +20,7 @@
 
   &::before {
     content: $content;
-    min-width: max-content; // this is actually extremely dumb but it works lol
+    width: max-content;
     padding: 8px 12px;
     @if $pos == bottom {
       bottom: -87.5%;

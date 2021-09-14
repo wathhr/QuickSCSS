@@ -50,6 +50,22 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { //* server profile modal
     }
   }
 
+  //? improve the tab thingies
+  .listScroller-3GmIYj {
+    overflow: hidden overlay !important;
+    .iconActiveMedium-1UaEIR {
+      border-radius: 50%;
+      transition: border-radius 200ms linear;
+    }
+    .listRow-1iDGel {
+      &:hover {
+        .iconActiveMedium-1UaEIR {
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+
   //? move buttons below the actual activities
   .activityProfile-2bJRaP {
     .assets-VMAukC {

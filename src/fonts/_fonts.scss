@@ -24,8 +24,34 @@
     --font-display: "Open Sans", Ginto;
     --font-code: "Fira Code", Consolas;
   }
-  code,
-  span.codeBlockSyntax-2i-tMA {
-    font-family: var(--font-code);
-  }
+}
+
+// i don't fucking know what any of these classes are, discord has set their font set to consolas so yeah
+code,
+.maxLength-39QFBo,
+.container-2SuFUc,
+.durationTimeDisplay-jww5fr,
+.durationTimeSeparator-2_xpJ7,
+.monospace-2wHjP3,
+.after_inlineCode-1KfVgj,
+.before_inlineCode-1G9rTK,
+.inlineCode-2ngu6Y,
+.codeBlockText-9TnoxQ,
+.codeLine-14BKbG,
+.prefix-3OjVJv,
+.inviteCode-202N0U,
+.countdown-3GoVpq,
+.uses-mYuoF0,
+.code-16ahh6,
+.countdown-2VKTMl,
+.errorDetails-qKU8eS,
+.fakeActivityTimeValues-1FwoxE,
+.multiInputLast-33BbRU input,
+.secret-VW-wXa,
+.userSettingsSecurity-3IYeMF .checkboxGroup-3_9osm .code-2d9-2m,
+.score-HzQK9w,
+.autocompleteQuerySymbol-1kyGZ5,
+.pinNumber-2Y-fxV,
+.stackTraceCode-h5MUsb {
+  font-family: var(--font-code);
 }
