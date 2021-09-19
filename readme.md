@@ -59,7 +59,7 @@ yeah
 <!-- Ha Ha Ha Ha Idiot Alfred Is Gone Ha Ha Ha Ha -->
   
 - All the people I forgot I stole snippets from lol
-  - Some snippets on this theme were "stolen" from the [#css-snippets channel on the Powercord server](discord://https://canary.discord.com/channels/538759280057122817/755005803303403570/).
+  - Some snippets on this theme were "stolen" from the [#css-snippets channel on the Powercord server](https://canary.discord.com/channels/538759280057122817/755005803303403570/).
 
 ---
 
