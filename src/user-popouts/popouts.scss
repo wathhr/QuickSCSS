@@ -55,7 +55,8 @@
   & .activity-2INFPu {
     .assets-VMAukC {
       margin-right: 8px;
-      .assetsLargeImage-eYwpTX,
+      > svg,
+      .assetsLargeImage-eYwpTX:not(foreignObject > img),
       .assetsLargeImageStreamPreview-1A9lfF,
       .assetsLargeImageUserPopout-3Pp8BK,
       .assetsLargeImageUserPopoutXbox-2hgKt0 {

@@ -1,4 +1,4 @@
-// this is pretty janky and bad, i have no idea how grid works
+// this is pretty janky and bad, i have no idea how grid works and stage containers are dumb
 #stage-discovery-tab {
   + .nowPlayingSidebar-2OFn0o {
     display: none;
@@ -26,9 +26,12 @@
     .container-S9SaVf {
       max-width: unset;
       width: 100%;
-      height: 160px;
+      height: 100%;
       margin: 0;
-      border: none;
+      border: 1px solid var(--background-modifier-accent);
+      &.connected-2MF1ew {
+        border-color: var(--status-positive-background);
+      }
       .topicText-2H6hYP {
         -webkit-line-clamp: 1;
       }

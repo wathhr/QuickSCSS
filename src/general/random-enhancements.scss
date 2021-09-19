@@ -65,6 +65,7 @@ $colored-message-events: (
   }
   .message-2qnXI6 {
     animation: slide 300ms ease;
+
     @include ripple($color: rgba(4, 4, 5, 0.5)); // --background-message-hover
     &:hover {
       transition: background-color 250ms;
@@ -340,12 +341,13 @@ $colored-status: (
 .message-15tBk4 strong {
   color: hsl(185, calc(var(--saturation-factor, 1) * 100%), 55%);
   animation: rainbow 10s infinite linear;
-  transition: color 0.15s;
 }
-#app-mount .wrapper-3WhCwL {
+#app-mount .wrapper-3WhCwL,
+.message-15tBk4 strong {
   background: transparent !important;
+  transition: color 0.15s;
   &:hover {
-    color: white;
+    color: white !important;
     text-decoration: none;
   }
 }

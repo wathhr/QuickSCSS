@@ -1,15 +1,11 @@
 {
   "name": "quickscss",
-  "version": "2.8.3",
+  "version": "0",
   "description": "yeah",
   "scripts": {
-    "clear": "del *.css",
-    "clear2": "del *.css && node_modules",
+    "clear": "rmdir /s /q dist",
     "dev": "sass --watch index.scss:dist.css --no-source-map",
-    "build": "sass index.scss:dist.css --style=compressed --no-source-map -q && postcss dist.css -u postcss-csso -r --no-map",
-    "build-bd": "sass index.scss:QuickSCSS.theme.css --style=compressed --no-source-map -q && postcss QuickSCSS.theme.css -u postcss-csso -r --no-map && build-bd",
-    "build-web": "sass index.scss:QuickSCSS.user.css --style=compressed --no-source-map -q && postcss QuickSCSS.user.css -u postcss-unprefix autoprefixer postcss-csso -r --no-map && build-web",
-    "build-all": "npm run build && npm run build-bd && npm run build-web"
+    "build": "echo why does npm not want to pass vars properly"
   },
   "repository": {
     "type": "git",
@@ -31,7 +27,7 @@
     "postcss-cli": "^8.3.1",
     "postcss-csso": "^5.0.1",
     "postcss-unprefix": "^2.1.4",
-    "sass": "^1.35.2"
+    "sass": "1.35.2"
   },
   "browserslist": [
     "defaults"
