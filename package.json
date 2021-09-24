@@ -5,7 +5,9 @@
   "scripts": {
     "clear": "rmdir /s /q dist",
     "dev": "sass --watch index.scss:dist.css --no-source-map",
-    "build": "echo why does npm not want to pass vars properly"
+    "build": "build",
+    "build-bd": "build bd",
+    "build-web": "build web"
   },
   "repository": {
     "type": "git",

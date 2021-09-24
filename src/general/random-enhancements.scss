@@ -54,7 +54,7 @@ $colored-permissions: (
 }
 $colored-message-events: (
   ".ephemeral-1PsL1r:not(.replying-1x3H0T)":  rgb(114, 137, 218),
-  ".replying-1x3H0T[id]": rgb(2, 183, 87),
+  ".replying-1x3H0T.replying-1x3H0T": rgb(2, 183, 87),
   ".mentioned-xhSam7": rgb(250, 168, 25),
   ".mentioned-xhSam7.ml2-deleted-alt": rgb(245, 115, 50),
   ".ml2-deleted-alt": rgb(240, 71, 71),

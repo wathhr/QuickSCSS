@@ -4,10 +4,11 @@ $top: 80px;
   font-family: var(--font-primary);
 
   //? Notices
-  $lang: "en";
+  $lang: "en-GB";
   $notice-start: "This theme is intended to be used with";
   $notice-theme: "#{$notice-start} dark mode.\AIf you don't use dark mode, you might encounter issues,\A especially if you're using dark sidebar.";
-  $notice-lang: "#{$notice-start}\A either the en-GB or en-US locale.\AIf you don't use either of those locales;\Ayou might encounter issues.";
+  $notice-lang: "#{$notice-start}\A the UK English locale. If you don't use that locale;\Ayou might encounter issues.";
+
   &::after {
     position: absolute;
     white-space: pre-wrap;
@@ -25,19 +26,19 @@ $top: 80px;
     text-shadow: 0 0 2px currentColor;
     box-shadow: 0 0 8px 2px currentColor;
   }
+  &:not([lang="#{$lang}"]) {
+    &::after {
+      content: $notice-lang;
+    }
+  }
   &.theme-light {
     &::after {
       content: $notice-theme;
     }
-    &:not([lang^="#{$lang}-"]) {
+    &:not([lang="#{$lang}"]) {
       &::after {
         content: $notice-theme + "\A\A" + $notice-lang;
       }
-    }
-  }
-  &:not([lang^="#{$lang}-"]) {
-    &::after {
-      content: $notice-lang;
     }
   }
 }

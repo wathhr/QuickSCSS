@@ -43,8 +43,6 @@ goto :end
 :end
 del temp 2>nul
 del temp.css 2>nul
-if not [%1]==[] (
-  echo Compiled %1 successfully.
-)
+if not [%1]==[] echo Compiled %1 successfully.
 cd..
 REM npm run clear
