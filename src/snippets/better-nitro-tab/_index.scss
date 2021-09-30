@@ -1,0 +1,102 @@
+.applicationStore-1pNvnv .premiumContainer-2Iux5m {
+  max-width: unset;
+}
+.applicationStore-1pNvnv .premiumContainer-2Iux5m,
+.contentColumnDefault-1VQkGM {
+  .content-2c3hgM {
+    > div:not(.hero-EvfTTA),
+    > h3 {
+      width: fit-content;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+    .hero-EvfTTA {
+      justify-content: center;
+      height: 600px;
+      max-width: unset;
+      .heroIcon-3QgOM5 {
+        margin: 0;
+        width: 23%;
+        height: unset;
+      }
+      .heroHeader-IulZgg {
+        font-size: 52px;
+        line-height: unset;
+      }
+    }
+    .featureGrid-3-fNl- {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: {
+        left: 17%;
+        right: 17%;
+      }
+      .feature-2w65J5 {
+        width: 206px;
+        z-index: 1;
+        box-shadow: var(--elevation-medium);
+        transition: transform 400ms cubic-bezier(0.215, 0.61, 0.355, 1),
+                    box-shadow 400ms cubic-bezier(0.215, 0.61, 0.355, 1),
+                    z-index 350ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        &:hover {
+          z-index: 2;
+          transform: scale(1.8);
+          box-shadow: var(--elevation-high);
+          transition-delay: 175ms;
+        }
+      }
+    }
+  }
+  .marketingRefreshTier2Cta-bw9Vyc {
+    ~ div,
+    ~ section {
+      background-color: var(--background-primary);
+    }
+  }
+  .marketingRefreshSectionTier1-dRwS-6 {
+    padding-bottom: 32px;
+    text-align: center;
+    border-top: none;
+    &,
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    img, span {
+      margin: 0;
+    }
+    .marketingRefreshTier1Graphic-9B12wx {
+      content: url("https://nyri4.github.io/Discolored/assets/nitro.svg");
+      filter: none;
+      width: 240px;
+      height: unset;
+      margin-bottom: 12px;
+    }
+    .marketingRefreshTier1Logo-sY6Lgd {
+      width: 280px;
+      height: unset;
+    }
+    .marketingRefreshDescription-UL0ZTA,
+    .perkList-2pAPzu {
+      padding: 0 17%;
+    }
+  }
+  .shinyButton-3uFlM- {
+    color: #f6f6f7;
+    background-color: var(--qs-green);
+    &:hover {
+      background-color: var(--qs-green-hov);
+    }
+    + button {
+      color: #f6f6f7;
+      background-color: #4f545c;
+      &:hover {
+        background-color: #72767d;
+      }
+    }
+  }
+}

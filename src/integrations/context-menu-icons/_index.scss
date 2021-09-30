@@ -19,10 +19,12 @@ $context-unknown: if($context-left, true, false) !default;
         inset: 0;
         width: 18px;
         aspect-ratio: 1/1;
-        -webkit-mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/questionmark.svg?sanitize=true");
-        -webkit-mask-size: 18px;
-        -webkit-mask-position: center;
-        -webkit-mask-repeat: no-repeat;
+        -webkit-mask: {
+          image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/questionmark.svg?sanitize=true");
+          size: 18px;
+          position: center;
+          repeat: no-repeat;
+        }
         margin: {
           left: if($context-left, 0, 8px);
           right: if($context-left, 10px, 0);

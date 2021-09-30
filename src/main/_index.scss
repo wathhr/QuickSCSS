@@ -1,11 +1,4 @@
 $theme: "QuickSCSS";
+@import "./starting-page.scss";
 
 @import "./mixins.scss";
-
-// this is Dumb but it works, I don't want to nest an entire file in an @if statement
-%starting-page {@import "./starting-page.scss";}
-@if not $checked-settings {
-  html {
-    @extend %starting-page;
-  }
-}

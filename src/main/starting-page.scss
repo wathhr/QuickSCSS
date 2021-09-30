@@ -1,113 +1,102 @@
 $top: 80px;
-& { // why does @at-root break @if statements https://cdn.discordapp.com/attachments/842102506674585642/874762167038128148/pain.gif
-  text-align: center;
-  font-family: var(--font-primary);
+@if not $checked-settings {
+  html {
+    text-align: center;
+    font-family: var(--font-primary);
 
-  //? Notices
-  $lang: "en-GB";
-  $notice-start: "This theme is intended to be used with";
-  $notice-theme: "#{$notice-start} dark mode.\AIf you don't use dark mode, you might encounter issues,\A especially if you're using dark sidebar.";
-  $notice-lang: "#{$notice-start}\A the UK English locale. If you don't use that locale;\Ayou might encounter issues.";
+    //? Notices
+    $lang: "en-GB";
+    $notice-start: "This theme is intended to be used with";
+    $notice-lang: "#{$notice-start}\A the UK English locale. If you don't use that locale;\Ayou might encounter issues.";
 
-  &::after {
-    position: absolute;
-    white-space: pre-wrap;
-    top: calc(#{$top} + 18.5em);
-    left: 50%;
-    transform: translateX(-50%);
-    width: clamp(37ch, 800px, 75%);
-    padding: 8px 28px;
-    line-height: 36px;
-    font-size: 32px;
-    font-weight: 300;
-    color: var(--info-danger-foreground);
-    background-color: var(--info-danger-background);
-    outline: 4px dashed currentColor;
-    text-shadow: 0 0 2px currentColor;
-    box-shadow: 0 0 8px 2px currentColor;
-  }
-  &:not([lang="#{$lang}"]) {
     &::after {
-      content: $notice-lang;
-    }
-  }
-  &.theme-light {
-    &::after {
-      content: $notice-theme;
+      position: absolute;
+      white-space: pre-wrap;
+      top: calc(#{$top} + 18.5em);
+      left: 50%;
+      transform: translateX(-50%);
+      width: clamp(37ch, 800px, 75%);
+      padding: 8px 28px;
+      line-height: 36px;
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--info-danger-foreground);
+      background-color: var(--info-danger-background);
+      outline: 4px dashed currentColor;
+      text-shadow: 0 0 2px currentColor;
+      box-shadow: 0 0 8px 2px currentColor;
     }
     &:not([lang="#{$lang}"]) {
       &::after {
-        content: $notice-theme + "\A\A" + $notice-lang;
+        content: $notice-lang;
       }
     }
   }
-}
 
-//? Welcome message
-#app-mount {
-  background-color: var(--background-secondary-alt);
-  > div:not(.layerContainer-yqaFcK):not(.titleBar-AC4pGV) {
-    display: none;
-  }
-  &::before {
-    content: "Hey, thanks for using my theme (#{$theme}),\AI hope you like it, I've worked really hard on it.\A\ATo continue using this theme please go to\Athis theme's theme folder, should be located at\A\A and open the \"vars.scss\" file, in there\A edit the 1st line to say you\A\"true\" instead of \"false\".\A\AIf there is anything you don't like about the theme,\Ayou can remove/edit it either in the\A\"vars.scss\" file or the \"index.scss\" file!\A\AI hope you like my theme, bye!";
-    position: absolute;
-    white-space: pre-wrap;
-    top: $top;
-    left: 50%;
-    transform: translateX(-50%);
-    width: clamp(37ch, 800px, 75%);
-    padding: 8px 28px;
-    line-height: 36px;
-    font-size: 32px;
-    font-weight: 300;
-    color: var(--text-normal);
-    background-color: var(--background-primary);
-    outline: 4px dashed currentColor;
-    text-shadow: 0 0 2px currentColor;
-    box-shadow: 0 0 8px 0 currentColor;
-  }
-  &::after {
-    content: "%userprofile%\\powercord\\src\\Powercord\\themes\\#{$theme}";
-    position: absolute;
-    top: calc(#{$top} + 8em);
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.125em;
-    font-size: 24px;
-    font-family: var(--font-code);
-    border-radius: 6px;
-    color: var(--text-normal);
-    background-color: var(--background-tertiary);
-  }
-  .layerContainer-yqaFcK:not(.layerContainer-yqaFcK ~ .layerContainer-yqaFcK) {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 20px;
-      bottom: 6px;
-      left: 6px;
-      right: 6px;
-      -webkit-app-region: drag;
-    }
-    &::after {
-      content: "Sorry for the text not being selectable!";
-      position: absolute;
-      bottom: 4px;
-      left: 6px;
-      font-size: 14px;
-      color: var(--interactive-normal);
-    }
-  }
-  .titleBar-AC4pGV {
-    background-color: transparent;
-  }
-}
-&.platform-linux,
-&.platform-osx {
+  //? Welcome message
   #app-mount {
+    background-color: var(--background-secondary-alt);
+    > div:not(.layerContainer-yqaFcK):not(.titleBar-AC4pGV) {
+      display: none;
+    }
+    &::before {
+      content: "Hey, thanks for using my theme (#{$theme}),\AI hope you like it, I've worked really hard on it.\A\ATo continue using this theme please go to\Athis theme's theme folder, should be located at\A\A and open the \"vars.scss\" file, in there\A edit the 1st line to say you\A\"true\" instead of \"false\".\A\AIf there is anything you don't like about the theme,\Ayou can remove/edit it either in the\A\"vars.scss\" file or the \"index.scss\" file!\A\AI hope you like my theme, bye!";
+      position: absolute;
+      white-space: pre-wrap;
+      top: $top;
+      left: 50%;
+      transform: translateX(-50%);
+      width: clamp(37ch, 800px, 75%);
+      padding: 8px 28px;
+      line-height: 36px;
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--text-normal);
+      background-color: var(--background-primary);
+      outline: 4px dashed currentColor;
+      text-shadow: 0 0 2px currentColor;
+      box-shadow: 0 0 8px 0 currentColor;
+    }
     &::after {
-      content: "~/powercord/src/Powercord/themes/#{$theme}" !important;
+      content: "%userprofile%\\powercord\\src\\Powercord\\themes\\#{$theme}";
+      position: absolute;
+      top: calc(#{$top} + 8em);
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.125em;
+      font-size: 24px;
+      font-family: var(--font-code);
+      border-radius: 6px;
+      color: var(--text-normal);
+      background-color: var(--background-tertiary);
+    }
+    .platform-linux,
+    .platform-osx {
+      &::after {
+        content: "~/powercord/src/Powercord/themes/#{$theme}";
+      }
+    }
+    .layerContainer-yqaFcK:not(.layerContainer-yqaFcK ~ .layerContainer-yqaFcK) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        bottom: 6px;
+        left: 6px;
+        right: 6px;
+        -webkit-app-region: drag;
+      }
+      &::after {
+        content: "Sorry for the text not being selectable!";
+        position: absolute;
+        bottom: 4px;
+        left: 6px;
+        font-size: 14px;
+        color: var(--interactive-normal);
+      }
+    }
+    .titleBar-AC4pGV {
+      background-color: transparent;
     }
   }
 }

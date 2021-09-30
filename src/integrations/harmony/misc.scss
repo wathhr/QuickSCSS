@@ -47,10 +47,9 @@
   .contentRegionScroller-26nc1e {
     background-color: transparent;
   }
-  .sidebarRegion-VFTUkN [style^="overflow: hidden scroll;"] {
-    margin-top: $top-left-corner-roundedness * 1.125 !important;
-    > nav {
-      margin-top: ($top-left-corner-roundedness * 1.125) * -1;
+  .sidebarRegionScroller-3MXcoP {
+    &::-webkit-scrollbar-track {
+      margin-top: $top-left-corner-roundedness * 1.125
     }
   }
   .contentRegion-3nDuYy {

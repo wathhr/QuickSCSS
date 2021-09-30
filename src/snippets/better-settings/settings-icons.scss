@@ -4,7 +4,7 @@
   --icon-size: 1.3em;
   width: calc(218px + var(--icon-size) / 2);
   .side-8zPYf6 {
-    [aria-controls] {
+    .item-PXvHYJ[aria-controls] {
       padding-left: 2.3em;
       text-transform: capitalize;
       white-space: nowrap;
@@ -41,14 +41,14 @@ $icons: (
   "privacy-&-safety": "privacy",
   "authorized-apps": "apps",
   "connections": "connections",
-  
+
   //* PAYMENT SETTINGS
   "subscriptions": "subscriptions",
   "discord-nitro": "nitro",
   "nitro-server-boost": "boosts",
   "library-inventory": "gift",
   "billing": "billing",
-  
+
   //* APP SETTINGS
   "appearance": "appearance",
   "accessibility": "accessibility",
@@ -60,20 +60,23 @@ $icons: (
   "windows": "windows",
   "streamer-mode": "streamermode",
   "advanced": "advanced",
-  
+
   //* ACTIVITY SETTINGS
   "game-activity": "games",
   "overlay": "overlay",
-  
+
   //* POWERCORD
   "pc-general": "settings",
   "pc-modulemanager-plugins": "plugins",
   "pc-modulemanager-themes": "themes",
   "pc-updater": "updatecheck",
-  
+
   //* PLUGIN SETTINGS
   "bdcompat": "betterdiscord",
   "pc-spotify": "spotify",
+
+  //* CUMCORD
+  "cumcord_plugins": "plugins",
 
   //* 
   "changelog": "changelog",
@@ -109,20 +112,20 @@ $icons: (
   "members": "members",
   "instant_invites": "invites",
   "bans": "bans",
-  
+
   //* 
   "delete": "delete",
 );
-@each $oldIcon, $icon in $icons {
-  .sidebar-CFHs9e {
-    .item-PXvHYJ[aria-controls="#{$oldIcon}-tab"] {
+@each $name, $icon in $icons {
+  #app-mount .sidebar-CFHs9e {
+    [aria-controls="#{$name}-tab"] {
       // i want to kill myself
-      @if($oldIcon=="subscriptions"){--color:var(--qs-yellow1);} // subscriptions tab
-      @if($oldIcon=="discord-nitro"){--color:var(--brand-experiment);} // nitro tab
-      @if($oldIcon=="pc-spotify"){--color:var(--spotify-color);} // spotify
-      @if($oldIcon=="hypesquad-online"){--color:var(--qs-yellow1);} // hypesquad tab
-      @if($oldIcon=="nitro-server-boost"or$oldIcon=="guild_premium"){--color:var(--qs-pink);} // server boosts tab
-      @if($oldIcon=="logout"or$oldIcon=="delete"){--color:var(--qs-red);} // logout and delete server buttons
+      @if($icon=="subscriptions"){--color:var(--qs-yellow1);} // subscriptions tab
+      @if($icon=="nitro"){--color:var(--brand-experiment);} // nitro tab
+      @if($icon=="spotify"){--color:var(--spotify-color);} // spotify
+      @if($icon=="hypesquad"){--color:var(--qs-yellow1);} // hypesquad tab
+      @if($icon=="boosts"){--color:var(--qs-pink);} // server boosts tab
+      @if($icon=="delete"or$icon=="logout"){--color:var(--qs-red);} // logout and delete server buttons
 
       &::before {
         -webkit-mask: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$icon}.svg?sanitize=true") center/contain no-repeat;

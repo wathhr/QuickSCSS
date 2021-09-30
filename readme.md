@@ -45,7 +45,7 @@ yeah
   - I Stole their [Space channels "snippet"](https://github.com/hyblocker/pixelcord/blob/59856ce1a9f7c59634101d5991f38c6e091a6063/src/app/qol/_space_channels.scss).
 
 - [KraXen72](https://github.com/KraXen72)
-  - I stole an old and customized version of their [Harmony theme](https://github.com/KraXen72/harmony-discord/).
+  - I stole an old and customized version of their [Harmony theme](https://github.com/KraXen72/harmony-discord).
 
 - [NYRI4](https://github.com/NYRI4) & [Snapperito](https://github.com/Snapperito)
   - I stole their [Discolored theme](https://github.com/NYRI4/Discolored).
@@ -61,7 +61,8 @@ yeah
 
 ---
 
-### [Building](./BUILDING.md)
+## [Building](./BUILDING.md)
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 ![funy image hahahaahaahaha](https://svg-banners.vercel.app/api?type=origin&text1=very&text2=comedic&width=1337&height=420)
