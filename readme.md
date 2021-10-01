@@ -3,6 +3,10 @@ QuickSCSS [![CodeFactor](https://www.codefactor.io/repository/github/wathhr/quic
 
 yeah
 
+<sub>_This theme is meant to be used with the English UK locale, using a different locale might cause some issues._</sub>
+
+---
+
 <details><summary>Screenshots</summary><br>
 
 ![yeah](./screenshots/yeah.gif)

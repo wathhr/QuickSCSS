@@ -41,78 +41,6 @@ $colored-permissions: (
   }
 }
 
-//? Message event colors, slide and ripple
-@keyframes slide {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-$colored-message-events: (
-  ".ephemeral-1PsL1r:not(.replying-1x3H0T)":  rgb(114, 137, 218),
-  ".replying-1x3H0T.replying-1x3H0T": rgb(2, 183, 87),
-  ".mentioned-xhSam7": rgb(250, 168, 25),
-  ".mentioned-xhSam7.ml2-deleted-alt": rgb(245, 115, 50),
-  ".ml2-deleted-alt": rgb(240, 71, 71),
-  );
-#app-mount {
-  .barBase-1c2Rfb {
-    z-index: 3;
-  }
-  .messageListItem-1-jvGY {
-    animation: slide 350ms ease !important; // added the !important here so the settings modal doesn't Eat it
-  }
-  .message-2qnXI6 {
-
-    @include ripple($color: rgba(4, 4, 5, 0.4)); // --background-message-hover
-    &:hover {
-      transition: background-color 250ms;
-      background-color: rgba(4, 4, 5, 0.075);
-    }
-    &:active,
-    &.selected-.zalgo-jN1Ica {
-      background-color: rgba(4, 4, 5, 0.125);
-    }
-    &:not(.zalgo-jN1Ica) {
-      background-color: unset;
-    }
-    .channelTextArea-2VhZ6z,
-    .markup-2BOw-j,
-    .container-1ov-mD {
-      z-index: 1;
-    }
-    .avatar-1BDn8e.clickable-1bVtEA {
-      z-index: 2;
-    }
-
-    @each $type, $color in $colored-message-events {
-      &#{$type} {
-        --ripple-col: #{color.change($color, $alpha: 0.4)};
-        background-color: color.change($color, $alpha: 0.05);
-        &:hover {
-          background-color: color.change($color, $alpha: 0.075); // special thanks to lighty for making this not fucking work at all for deleted messages
-        }
-        &:active,
-        &.selected-2P5D_Z {
-          background-color: color.change($color, $alpha: 0.125) !important; // special thanks to lighty for making me add this !important
-        }
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          inset: 0;
-          width: 2px;
-          background-color: color.change($color, $alpha: 0.9);
-        }
-      }
-    }
-  }
-}
-
 //? Improved spotify modal
 .powercord-spotify {
   border-top: 1px solid var(--background-secondary);
@@ -453,5 +381,164 @@ div.onlineFriends-counter {
       }
       background-color: var(--text-muted);
     }
+  }
+}
+
+//? Round top left border
+.content-98HsJk {
+  .threadSidebarOpen-vdkwIh,
+  .sidebar-2K8pFh {
+    border-radius: unset;
+    border-top-right-radius: $top-left-corner-roundedness;
+  }
+  > div:not(.sidebar-2K8pFh) {
+    border-top-left-radius: $top-left-corner-roundedness;
+  }
+}
+.standardSidebarView-3F1I7i { // Settings
+  background-color: var(--background-secondary);
+  .contentRegionScroller-26nc1e {
+    background-color: transparent;
+  }
+  .sidebarRegionScroller-3MXcoP {
+    &::-webkit-scrollbar-track {
+      margin-top: $top-left-corner-roundedness * 1.125
+    }
+  }
+  .contentRegion-3nDuYy {
+    border-top-left-radius: $top-left-corner-roundedness;
+  }
+}
+
+//? Bigger avatars in calls
+.participant-1lOCsd {
+  &,
+  .wrapper-2QE8vf,
+  .callAvatarMask-1SLlRi {
+    width: 96px !important;
+    height: 96px !important;
+  }
+}
+
+//? Better "Active Now" sidebar
+.nowPlayingSidebar-2OFn0o,
+.nowPlayingColumn-2sl4cE {
+  > div {
+    background-color: var(--background-secondary);
+    .scroller-2ZPeAD {
+      border-left: none;
+    }
+    .itemCard-v9viV7 {
+      border: none;
+      transition: background-color 0.3s;
+      background-color: var(--background-secondary-alt);
+      section {
+        transition: background-color 0.3s;
+        background-color: var(--background-secondary);
+      }
+      &:hover,
+      &.active-1xchHY {
+        background-color: var(--background-tertiary) !important;
+        section {
+          background-color: var(--background-secondary-alt);
+        }
+      }
+    }
+  }
+}
+
+//? Thinner scrollbar
+.auto-Ge5KZx {
+  &::-webkit-scrollbar {
+    width: 4px !important;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent !important;
+    border: none !important;
+  }
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-track {
+    border: none !important;
+  }
+}
+
+//! alfred fix this ok thanks
+//? Role pills
+.previewSection-1h_5aj .rolesWrapper-2yOx9S, // server template preview
+.rolesList-1geHY1, .member-perms { // user popout
+  gap: 4px;
+}
+
+.role-1P70N6, .role-78i2xt, // locked channel allowed roles or something
+.role-3paDXR, // server template preview
+.role-2irmRk { // user popout
+  min-width: 22px;
+  height: 22px;
+  padding: 4px;
+  padding-left: 2px;
+  margin: 0;
+  &:not(.addButton-pcyyf6) {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    border-radius: 50px;
+    background-color: transparent;
+    .roleCircle-3xAZ1j, .roleCircle-3DE8xJ,
+    .roleColor-fHISxl {
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        background-color: inherit;
+      }
+    }
+  }
+  [class^="roleName"] {
+    color: var(--interactive-active);
+  }
+}
+.addButton-pcyyf6 {
+  position: relative;
+  border: none;
+  overflow: hidden;
+  border-radius: 50%;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.125;
+    background-color: var(--interactive-normal);
+  }
+  svg {
+    width: 12px;
+    height: 12px;
+    color: var(--interactive-active);
+  }
+}
+
+//? fixes
+// server template preview
+.rolesWrapper-2yOx9S .role-3paDXR {
+  padding-left: 6px;
+}
+// locked channel allowed roles or something
+.members-2iaVuN {
+  .role-1P70N6 {
+    padding: 0 5px;
+    padding-right: 7px;
+  }
+  .roleColor-fHISxl {
+    width: 12px;
+    height: 12px;
+    filter: none;
   }
 }
