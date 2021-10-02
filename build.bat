@@ -1,6 +1,6 @@
-:: Imagine Using JavaScript For Build Scripts Instead Of A Really Dumb Batch Script :joy: :joy: :joy: :joy: :joy: 
+:: Imagine Using JavaScript For Build Scripts Instead Of A Really Dumb Batch Script :joy: :joy: :joy: :joy: :joy:
 @echo off
-set "version=2.8.7"
+set "version=3-beta"
 
 call sass index.scss:dist/temp.css --style=compressed --no-source-map -q
 if [%1]==[] rename dist\temp.css dist.css 2>nul
@@ -33,8 +33,7 @@ echo @version %version% >> temp
 echo @license GNU GPLv3 >> temp
 echo @preprocessor default >> temp
 echo ==/UserStyle== */ >> temp
-echo @-moz-document regexp("https://(canary|ptb)\\.discord\\.com/.*"), >> temp
-echo                url-prefix("https://discord.com/") { >> temp
+echo @-moz-document domain("discord.com") { >> temp
 type QuickSCSS.user.css >> temp
 type temp > QuickSCSS.user.css
 echo } >> QuickSCSS.user.css
