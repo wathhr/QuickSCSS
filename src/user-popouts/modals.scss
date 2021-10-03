@@ -1,4 +1,4 @@
-[aria-label="User profile modal"],
+.layer-2KE1M9 > [aria-label][aria-modal="true"] .small-3iVZYw.root-3QyAh1,
 div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { //* server profile modal
   //? color changes
   .topSection-y3p-_D {
@@ -27,7 +27,7 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { //* server profile modal
       background: var(--user-background) no-repeat var(--user-popout-position, center) / cover;
     }
   }
-  
+
   //? almost everything else
   //* banner height
   .banner-2QYc2d {
@@ -43,7 +43,7 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { //* server profile modal
   }
   .customStatusActivity-nmH3DF {
     padding-bottom: 8px;
-    
+
     //* "fix" custom status overflow
     .customStatus-1COQYu {
       display: flex;

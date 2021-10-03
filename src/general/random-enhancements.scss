@@ -384,6 +384,16 @@ div.onlineFriends-counter {
   }
 }
 
+//? Bigger avatars in calls
+.participant-1lOCsd {
+  &,
+  .wrapper-2QE8vf,
+  .callAvatarMask-1SLlRi {
+    width: 96px !important;
+    height: 96px !important;
+  }
+}
+
 //? Round top left border
 .content-98HsJk {
   .threadSidebarOpen-vdkwIh,
@@ -407,16 +417,6 @@ div.onlineFriends-counter {
   }
   .contentRegion-3nDuYy {
     border-top-left-radius: $top-left-corner-roundedness;
-  }
-}
-
-//? Bigger avatars in calls
-.participant-1lOCsd {
-  &,
-  .wrapper-2QE8vf,
-  .callAvatarMask-1SLlRi {
-    width: 96px !important;
-    height: 96px !important;
   }
 }
 
@@ -525,7 +525,7 @@ div.onlineFriends-counter {
   }
 }
 
-//? fixes
+//* fixes
 // server template preview
 .rolesWrapper-2yOx9S .role-3paDXR {
   padding-left: 6px;
