@@ -1,7 +1,6 @@
-todo.md
-
-*.config
-
+#
 dist
-
 node_modules
+
+#
+todo.md
