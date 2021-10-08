@@ -4,9 +4,9 @@
     transform: unset !important;
     &::after {
       content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 100;
+      position: fixed;
+      inset: -100%;
+      z-index: 101;
       transition: opacity 200ms;
       opacity: 0.85;
       background-color: black;
@@ -18,7 +18,7 @@
     }
   }
   .layer-3QrUeG[aria-label] {
-    inset: 11%;
+    inset: 12vh;
     z-index: 101;
     border-radius: 4px;
     .standardSidebarView-3F1I7i {

@@ -2,6 +2,7 @@
   "name": "quickscss",
   "version": "0.0.0",
   "description": "yeah",
+  "private": true,
   "scripts": {
     "clear": "rmdir /s /q dist",
     "dev": "sass --watch index.scss:dist.css --no-source-map",

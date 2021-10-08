@@ -1,0 +1,50 @@
+/*
+ * // TODO: make the role wrappers flex with gap and replace the margin
+ * // TODO: improve the +
+ * i fucking hate sass maps im not doing this
+ * @owlfee you can improve if you want or something
+*/
+
+$role-pills: (
+  ".role-2irmRk": ".roleCircle-3xAZ1j", // main
+  ".role-1P70N6": ".roleColor-fHISxl", // locked channel start
+  ".role-3paDXR": ".roleCircle-3DE8xJ", // server template
+);
+@each $role, $role-circle in $role-pills {
+  #{$role} {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: {
+      block: 4px;
+      left: 6px;
+      right: 8px;
+    }
+    border: {
+      width: 0;
+      radius: 100vw;
+    }
+    background-color: unset;
+    [class*="rolename" i] {
+      margin: 0;
+      color: white;
+    }
+    #{$role-circle} {
+      width: 12px;
+      height: unset;
+      aspect-ratio: 1;
+      margin: 0;
+      margin-right: 6px;
+      padding: 0;
+      filter: none;
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.25;
+        background-color: inherit;
+      }
+    }
+  }
+}

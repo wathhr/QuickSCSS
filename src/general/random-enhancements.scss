@@ -198,10 +198,10 @@ div.ian-toast,
 }
 
 //? Blurple sidebar buttons
-.circleIconButton-1QV--U.circleButtonBase-2DCxIZ {
+.circleIconButton-1XqULR.circleButtonBase-33sh5_ {
   color: var(--brand-experiment);
-  &.selected-1JjBPm {
-    background-color: var(--brand-experiment);
+  &.selected-2jcQaY {
+    background-color: currentColor;
     path {
       fill: white;
     }
@@ -437,5 +437,16 @@ div.onlineFriends-counter {
   }
 }
 
-//? Role pills
-//! @owlfee :thumbsup:
+//? Make the titlebar have a solid background color
+.typeWindows-1za-n7 {
+  position: relative;
+  isolation: isolate;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: var(--background-secondary);
+  }
+}

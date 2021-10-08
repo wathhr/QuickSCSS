@@ -1,11 +1,15 @@
 //? Server sidebar color
 .guilds-1SWlCJ .scrollerBase-289Jih,
-#app-mount, .bg-h5JY_x { // titlebar
+#app-mount, .bg-h5JY_x, // titlebar
+.base-3dtUhz > .notice-3bPHh-.colorDark-1yVQpk { // "Enhance your Discord experience!"
   background-color: var(--background-secondary);
+}
+.base-3dtUhz > .notice-3bPHh-.colorDark-1yVQpk {
+  box-shadow: unset;
 }
 
 .guilds-1SWlCJ div[aria-label]:not([class]) {
-  //? Server folders
+  //? Server folder color
   .expandedFolderBackground-1cujaW,
   .folder-1hbNCn {
     background-color: var(--background-tertiary) !important;

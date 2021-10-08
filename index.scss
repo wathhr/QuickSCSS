@@ -31,6 +31,7 @@
 //? User popouts/modals
 @import "./src/user-popouts/main"; // The snippets in this category are made with this in mind, things will most likely break if you disable this
 @import "./src/user-popouts/bigger-avatars"; // Self explanatory
+@import "./src/user-popouts/role-pills"; // Makes the roles more pill-like
 @import "./src/user-popouts/better-activities"; // Brings back the colored activities in the style of https://github.com/Discord-Theme-Addons/amazing-activity-cards
 @import "./src/user-popouts/spotify-buttons"; // Make the spotify activity buttons nicer
 @import "./src/user-popouts/better-connections"; // Improves the icons for connections
