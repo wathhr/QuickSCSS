@@ -27,6 +27,7 @@ $colored-message-events: (
       background-color: var(--background-secondary);
       box-shadow: var(--elevation-stroke), var(--elevation-medium);
     }
+
     @include ripple($color: rgba(4, 4, 5, 0.4)); // --background-message-hover
     &:hover {
       transition: background-color 250ms;

@@ -1,14 +1,20 @@
 :: Imagine Using JavaScript For Build Scripts Instead Of A Really Dumb Batch Script :joy: :joy: :joy: :joy: :joy:
 @echo off
-set "version=3-beta"
+set version=3-beta
+
+set build=%1
+if [%1]==[] set build=pc
+for /f "usebackq delims=" %%I in (`powershell "\"%build%\".toUpper()"`) do set "build=%%~I" & REM I Love Using PowerShell For Such Trivial Such As This Making My Scripts Unnecessarily Badly Performant
 
 call sass index.scss:dist/temp.css --style=compressed --no-source-map -q
-if [%1]==[] rename dist\temp.css dist.css 2>nul
 echo Compiled SCSS successfully.
 cd dist
-if [%1]==[] goto :end
 
-goto %1 || cd..
+goto %build%
+
+:pc
+rename dist\temp.css dist.css 2>nul
+goto :end
 
 :bd
 call npx postcss temp.css -u postcss-csso --no-map -o QuickSCSS.theme.css
@@ -36,12 +42,12 @@ echo ==/UserStyle== */ >> temp
 echo @-moz-document domain("discord.com") { >> temp
 type QuickSCSS.user.css >> temp
 type temp > QuickSCSS.user.css
-echo } >> QuickSCSS.user.css
+type } > QuickSCSS.user.css
 goto :end
 
 :end
 del temp 2>nul
 del temp.css 2>nul
-if not [%1]==[] echo Compiled %1 successfully.
+echo Compiled %build% successfully.
 cd..
 REM npm run clear

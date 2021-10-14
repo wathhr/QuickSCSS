@@ -1,50 +1,77 @@
-/*
- * // TODO: make the role wrappers flex with gap and replace the margin
- * // TODO: improve the +
- * i fucking hate sass maps im not doing this
- * @owlfee you can improve if you want or something
-*/
-
 $role-pills: (
-  ".role-2irmRk": ".roleCircle-3xAZ1j", // main
-  ".role-1P70N6": ".roleColor-fHISxl", // locked channel start
-  ".role-3paDXR": ".roleCircle-3DE8xJ", // server template
+  "rolesList-1geHY1": ( // user popout
+    main: "role-2irmRk",
+    circle: "roleCircle-3xAZ1j",
+  ),
+  "members-2iaVuN": ( // locked channel
+    main: "role-1P70N6",
+    circle: "roleColor-fHISxl",
+  ),
+  "rolesWrapper-2yOx9S": ( // server template
+    main: "role-3paDXR",
+    circle: "roleCircle-3DE8xJ",
+  ),
 );
-@each $role, $role-circle in $role-pills {
-  #{$role} {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    padding: {
-      block: 4px;
-      left: 6px;
-      right: 8px;
-    }
-    border: {
-      width: 0;
-      radius: 100vw;
-    }
-    background-color: unset;
-    [class*="rolename" i] {
+@each $role-wrapper, $role in $role-pills {
+  $role-main: map-get($role, main);
+  $role-circle: map-get($role, circle);
+  .#{$role-wrapper} {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 4px;
+    .#{$role-main} {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
       margin: 0;
+      padding: {
+        block: 4px;
+        inline: 6px;
+        right: 8px;
+      }
+      border: {
+        radius: 100vw;
+        width: 0;
+      }
       color: white;
+      background-color: unset;
     }
-    #{$role-circle} {
+    [class*="name" i] { // i love this
+      margin: 0;
+      color: inherit;
+    }
+    .#{$role-circle} {
       width: 12px;
       height: unset;
       aspect-ratio: 1;
       margin: 0;
-      margin-right: 6px;
-      padding: 0;
+      margin-right: 4px;
       filter: none;
       &::after {
         content: "";
         position: absolute;
         inset: 0;
         z-index: -1;
-        opacity: 0.25;
+        opacity: 0.35;
         background-color: inherit;
+        filter: Saturate(var(--saturation-factor, 1)); // i love the sass version powerFart is on, making me use Saturate instead of saturate
       }
     }
+  }
+}
+.roleRemoveIcon-2-TeGW {
+  width: 8px;
+  height: unset;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+button.addButton-pcyyf6.role-2irmRk {
+  padding: 4px;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: hsl(0 0 100% / 0.15);
   }
 }

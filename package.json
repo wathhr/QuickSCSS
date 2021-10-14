@@ -4,11 +4,13 @@
   "description": "yeah",
   "private": true,
   "scripts": {
-    "clear": "rmdir /s /q dist",
+    "clear": "rmdir /s /q dist 2>nul || echo Already cleared.",
+    "clear:npm": "rmdir /s /q node_modules 2>nul || echo Already cleared.",
     "dev": "sass --watch index.scss:dist.css --no-source-map",
     "build": "build",
-    "build-bd": "build bd",
-    "build-web": "build web"
+    "build:pc": "build",
+    "build:bd": "build bd",
+    "build:web": "build web"
   },
   "repository": {
     "type": "git",
