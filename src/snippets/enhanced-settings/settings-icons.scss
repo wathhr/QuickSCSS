@@ -20,7 +20,16 @@
         position: absolute;
         inset: 0 8px;
         width: var(--icon-size);
-        -webkit-mask: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/unknown.svg?sanitize=true") center/contain no-repeat;
+        -webkit-mask: {
+          image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/unknown.svg?sanitize=true");
+          position: center;
+          repeat: no-repeat;
+        }
+        mask: {
+          image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/unknown.svg?sanitize=true");
+          position: center;
+          repeat: no-repeat;
+        }
         background-color: currentColor;
       }
       .icon-Zc-uZZ, // user settings
@@ -241,7 +250,8 @@ $settings-icons: (
       [aria-controls="#{$tab}-tab"] {
         --color: #{$color};
         &::before {
-          -webkit-mask: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$svg}.svg?sanitize=true") center/contain no-repeat;
+          -webkit-mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$svg}.svg?sanitize=true");
+          mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$svg}.svg?sanitize=true");
         }
       }
     }

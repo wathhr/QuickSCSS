@@ -1,26 +1,30 @@
 $role-pills: (
-  "rolesList-1geHY1": ( // user popout
-    main: "role-2irmRk",
-    circle: "roleCircle-3xAZ1j",
+  ".rolesList-1geHY1": ( // user popout
+    main: ".role-2irmRk",
+    circle: ".roleCircle-3xAZ1j",
   ),
-  "members-2iaVuN": ( // locked channel
-    main: "role-1P70N6",
-    circle: "roleColor-fHISxl",
+  ".userInfoSection-q_35fn.colorStandard-2KCXvj > .wrap-ZIn9Iy": ( // user modal (userdetails by strencher)
+    main: ".role-2irmRk",
+    circle: ".roleCircle-3xAZ1j",
   ),
-  "rolesWrapper-2yOx9S": ( // server template
-    main: "role-3paDXR",
-    circle: "roleCircle-3DE8xJ",
+  ".members-2iaVuN": ( // locked channel
+    main: ".role-1P70N6",
+    circle: ".roleColor-fHISxl",
+  ),
+  ".rolesWrapper-2yOx9S": ( // server template
+    main: ".role-3paDXR",
+    circle: ".roleCircle-3DE8xJ",
   ),
 );
 @each $role-wrapper, $role in $role-pills {
   $role-main: map-get($role, main);
   $role-circle: map-get($role, circle);
-  .#{$role-wrapper} {
+  #{$role-wrapper} {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 4px;
-    .#{$role-main} {
+    #{$role-main} {
       position: relative;
       isolation: isolate;
       overflow: hidden;
@@ -41,7 +45,7 @@ $role-pills: (
       margin: 0;
       color: inherit;
     }
-    .#{$role-circle} {
+    #{$role-circle} {
       width: 12px;
       height: unset;
       aspect-ratio: 1;
@@ -53,7 +57,7 @@ $role-pills: (
         position: absolute;
         inset: 0;
         z-index: -1;
-        opacity: 0.35;
+        opacity: var(--role-opacity);
         background-color: inherit;
         filter: Saturate(var(--saturation-factor, 1)); // i love the sass version powerFart is on, making me use Saturate instead of saturate
       }
@@ -66,12 +70,13 @@ $role-pills: (
   aspect-ratio: 1;
   cursor: pointer;
 }
-button.addButton-pcyyf6.role-2irmRk {
-  padding: 4px;
+.addButton-pcyyf6 {
+  padding: 4px !important; // i really do not want to do specificity fighting
   &::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: hsl(0 0 100% / 0.15);
+    opacity: 0.35;
+    background-color: hsl(0 0% 100% / var(--role-opacity));
   }
 }

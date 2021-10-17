@@ -11,8 +11,8 @@
       opacity: 0.85;
       background-color: black;
     }
-    @for $i from 0 through 10 {
-      &[style*="transform: scale(#{$i / 10})"]::after {
+    @for $i from 0 through 8 { // these numbers are pretty much random, just used whatever looked good enough
+      &[style*="transform: scale(#{($i - 1) / 6})"]::after { // this is lovely
         opacity: $i / 32;
       }
     }

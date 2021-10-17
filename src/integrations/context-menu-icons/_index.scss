@@ -21,7 +21,13 @@ $context-unknown: if($context-left, true, false) !default;
         aspect-ratio: 1/1;
         -webkit-mask: {
           image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/questionmark.svg?sanitize=true");
-          size: 18px;
+          size: 100%;
+          position: center;
+          repeat: no-repeat;
+        }
+        mask: {
+          image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/questionmark.svg?sanitize=true");
+          size: 100%;
           position: center;
           repeat: no-repeat;
         }
@@ -182,9 +188,7 @@ $context-menu-icons: (
         &::#{if($context-left, before, after)} {
           content: "";
           -webkit-mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/#{$svg}.svg?sanitize=true");
-          @if $context-left and $svg == "mark-as-read" {
-            -webkit-mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/#{$svg}-alt.svg?sanitize=true");
-          }
+          mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/#{$svg}.svg?sanitize=true");
         }
       }
 

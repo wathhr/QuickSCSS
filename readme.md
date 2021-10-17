@@ -1,11 +1,11 @@
 QuickSCSS [![CodeFactor](https://www.codefactor.io/repository/github/wathhr/quickscss/badge/dev?s=5f2850cfa164e62ecf2eaa497b0a075cf28b67cf)](https://www.codefactor.io/repository/github/wathhr/quickscss/overview/dev)
 ===
 
-A customizable Discord theme, mainly for PowerCord.
+A customizable Discord theme, mainly for [PowerCord](https://github.com/powercord-org/powercord).
 
 QuickSCSS tries to work alongside other themes, while still looking nice with Discord's base design.
 
-<sup>_This theme is meant to be used with the English UK locale, using a different locale might cause some issues._</sup>
+<sup>*This theme is intended to be used with the English UK locale, using a different locale might cause some issues.*</sup>
 
 <details><summary>Screenshots</summary><br>
 
@@ -55,3 +55,20 @@ QuickSCSS tries to work alongside other themes, while still looking nice with Di
   - I stole their [Context menu icons theme](https://github.com/CorellanStoma/Menu-Icons) idea.
 
 ## [Building](./BUILDING.md)
+
+## License
+```
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+```
+Copyright &copy; 2020-2021 wathhr

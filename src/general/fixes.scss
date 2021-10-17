@@ -12,7 +12,6 @@ section.container-1r6BKw.themed-ANHk51:not(.callContainer-36WRfH section) {
   height: 50px;
   border-bottom: 1px solid var(--background-secondary-alt);
   box-shadow: none;
-  -webkit-box-shadow: none;
 }
 .content-yTz4x3,
 .tabBody-3YRQ8W {
@@ -40,12 +39,12 @@ section.container-1r6BKw.themed-ANHk51:not(.callContainer-36WRfH section) {
 }
 
 //? Show all activities buttons
-div[class*="allactivities"] {
-  margin-top: 0;
+div.allactivities-margin {
+  margin: 0;
+  width: 32px;
+  aspect-ratio: 1;
   > button {
-    padding: 0;
-    height: 32px;
-    width: 32px;
+    padding: 4px;
   }
 }
 

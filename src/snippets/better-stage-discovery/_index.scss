@@ -1,4 +1,5 @@
 // this is pretty janky and bad, i have no idea how grid works and stage containers are dumb
+// imagine if this still works when/if discord brings stage discovery back
 #stage-discovery-tab {
   + .nowPlayingSidebar-2OFn0o {
     display: none;
@@ -34,6 +35,7 @@
       }
       .topicText-2H6hYP {
         -webkit-line-clamp: 1;
+        line-clamp: 1;
       }
       .grid-3fdl0Y {
         grid-template-rows: repeat(2, 1fr);

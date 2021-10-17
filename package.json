@@ -8,7 +8,7 @@
     "clear:npm": "rmdir /s /q node_modules 2>nul || echo Already cleared.",
     "dev": "sass --watch index.scss:dist.css --no-source-map",
     "build": "build",
-    "build:pc": "build",
+    "build:pc": "build pc",
     "build:bd": "build bd",
     "build:web": "build web"
   },
@@ -27,11 +27,10 @@
   },
   "homepage": "https://github.com/wathhr/QuickSCSS#readme",
   "devDependencies": {
-    "autoprefixer": "^10.3.3",
-    "postcss": "^8.3.6",
-    "postcss-cli": "^8.3.1",
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
     "postcss-csso": "^5.0.1",
-    "postcss-unprefix": "^2.1.4",
     "sass": "1.35.2"
   },
   "browserslist": [
