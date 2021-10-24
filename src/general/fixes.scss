@@ -43,6 +43,13 @@ div.allactivities-margin {
   margin: 0;
   width: 32px;
   aspect-ratio: 1;
+  // good one hellbound
+  &[aria-label="Next"] {
+    margin-left: 8px;
+  }
+  &[aria-label="Previous"] {
+    margin-right: 8px;
+  }
   > button {
     padding: 4px;
   }
@@ -65,13 +72,13 @@ div.allactivities-margin {
 //? Chat area background height
 .chat-3bRxxu {
   .messagesWrapper-1sRNjr > .scroller-2LSbBU {
-    margin-bottom: -40px;
+    margin-bottom: -80px;
     .scrollerContent-WzeG7R {
-      padding-bottom: 40px;
+      padding-bottom: 80px;
     }
   }
   .form-2fGMdU {
-    z-index: 0;
+    isolation: isolate;
     &::after {
       content: "";
       position: absolute;

@@ -11,6 +11,10 @@ $role-pills: (
     main: ".role-1P70N6",
     circle: ".roleColor-fHISxl",
   ),
+  ".roleWrapper-1Hde_V > .flex-1O1GKY": ( // Member server settings
+    main: ".role-2irmRk",
+    circle: ".roleCircle-3xAZ1j"
+  ),
   ".rolesWrapper-2yOx9S": ( // server template
     main: ".role-3paDXR",
     circle: ".roleCircle-3DE8xJ",
@@ -62,6 +66,16 @@ $role-pills: (
         filter: Saturate(var(--saturation-factor, 1)); // i love the sass version powerFart is on, making me use Saturate instead of saturate
       }
     }
+    .addButton-pcyyf6 {
+      padding: 4px;
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.35;
+        background-color: hsl(0 0% 100% / var(--role-opacity));
+      }
+    }
   }
 }
 .roleRemoveIcon-2-TeGW {
@@ -69,14 +83,4 @@ $role-pills: (
   height: unset;
   aspect-ratio: 1;
   cursor: pointer;
-}
-.addButton-pcyyf6 {
-  padding: 4px !important; // i really do not want to do specificity fighting
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0.35;
-    background-color: hsl(0 0% 100% / var(--role-opacity));
-  }
 }

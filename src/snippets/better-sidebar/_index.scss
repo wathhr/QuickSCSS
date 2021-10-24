@@ -78,7 +78,7 @@ $tooltip-content: (
   "Store": "/store/skus/",
 );
 @each $name, $href in $tooltip-content {
-  #app-mount .privateChannels-1nO12o .channel-2QD9_O[href^="#{$href}"]:not([href^="/channels/@me/"]):hover::before {
+  #app-mount .channel-2QD9_O[href^="#{$href}"]:not([href^="/channels/@me/"]):hover::before {
     content: $name;
   }
 }

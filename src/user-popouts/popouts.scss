@@ -9,14 +9,16 @@
     border-color: var(--background-tertiary);
   }
   &,
-  .body-3HBlXn, .bodyInnerWrapper-26fQXj,
   .footer-3UKYOU {
     background-color: var(--background-secondary);
+  }
+  .bodyInnerWrapper-26fQXj {
+    background-color: transparent;
   }
 
   //? USRBG
   overflow: hidden;
-  transform: translateZ(0) !important;
+  transform: translateZ(0);
   .avatar-37jOim {
     &::before {
       content: "";
@@ -154,13 +156,16 @@
 
 //? Settings user popout
 .profileBannerPreview-3_l0Wd {
-  background-color: var(--background-tertiary);
+  background-color: transparent;
+  .banner-hcPdsd {
+    height: 120px;
+  }
   .avatarUploaderInner-Oiob_P {
     background-color: var(--background-tertiary);
     border-color: var(--background-tertiary);
   }
-  .banner-hcPdsd {
-    height: 120px;
+  .headerTop-3vNv-a {
+    background-color: var(--background-tertiary);
   }
   .popoutInfo-pKbpvG {
     background-color: var(--background-secondary);

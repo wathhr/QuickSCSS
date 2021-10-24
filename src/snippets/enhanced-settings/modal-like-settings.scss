@@ -18,12 +18,21 @@
     }
   }
   .layer-3QrUeG[aria-label] {
-    inset: 12vh;
+    inset: 6vw;
     z-index: 101;
     border-radius: 4px;
     .standardSidebarView-3F1I7i {
       top: 0;
       border-radius: inherit;
+    }
+    // reset some stuff
+    .contentRegion-3nDuYy {
+      border-top-left-radius: 0;
+    }
+    .sidebarRegionScroller-3MXcoP {
+      &::-webkit-scrollbar-track {
+        margin-top: unset;
+      }
     }
     .toolsContainer-1edPuj {
       position: fixed;

@@ -1,0 +1,63 @@
+//? Server sidebar color
+.guilds-1SWlCJ .scrollerBase-289Jih,
+.bg-h5JY_x, // titlebar
+.base-3dtUhz > .notice-3bPHh-.colorDark-1yVQpk { // "Enhance your Discord experience!"
+  background-color: var(--background-secondary);
+}
+.base-3dtUhz > .notice-3bPHh-.colorDark-1yVQpk {
+  box-shadow: unset;
+}
+
+.guilds-1SWlCJ {
+  //? Server folder color
+  .expandedFolderBackground-1cujaW,
+  .folderIconWrapper-1_bOZe {
+    background-color: var(--background-tertiary) !important;
+    transition: background-color 0.3s;
+    &.hover-qTxTR_ {
+      background-color: var(--background-secondary-alt);
+    }
+  }
+
+  //? Expanded folder background width
+  .wrapper-3Njo_c {
+    display: grid;
+    place-items: center;
+    .expandedFolderBackground-1cujaW {
+      width: 42px;
+      left: unset;
+    }
+  }
+
+  //? Make dragging a server over another server/folder
+  .listItem-1hlISG {
+    .dragOver-Iim8_W.centerTarget-1vR_1- {
+      &::before {
+        content: unset;
+      }
+    }
+    .wobble-3KAYb_ {
+      position: relative;
+      isolation: isolate;
+      border-radius: 18px;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: -3px;
+        border-radius: inherit;
+        background-color: var(--qs-green);
+      }
+    }
+  }
+
+  //? Blurple discovery and add server buttons
+  .circleIconButton-1XqULR {
+    color: var(--brand-experiment);
+    &.selected-2jcQaY {
+      background-color: currentColor;
+      svg {
+        color: white;
+      }
+    }
+  }
+}

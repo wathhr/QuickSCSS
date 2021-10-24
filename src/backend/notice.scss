@@ -1,0 +1,29 @@
+@keyframes notice-disappear {
+  to {
+    opacity: 0;
+  }
+}
+
+body {
+  &::after {
+    content: "hi :) \a\a - walter";
+    position: absolute;
+    inset: 6rem 20% 100%;
+    padding: 1.4rem;
+    height: fit-content;
+    white-space: pre;
+    text-align: center;
+    pointer-events: none;
+    border: 3px dashed var(--qs-yellow2);
+    font: {
+      size: 1.4rem;
+      family: "Montserrat", var(--font-primary);
+    }
+    filter: brightness(1.15) opacity(0.95);
+    color: var(--text-normal);
+    background-color: var(--background-tertiary);
+    box-shadow: var(--elevation-high),
+                inset var(--elevation-medium);
+    animation: notice-disappear 600ms 2600ms forwards;
+  }
+}
