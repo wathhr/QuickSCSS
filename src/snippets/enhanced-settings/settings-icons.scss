@@ -1,8 +1,9 @@
+// this is quite a mess
 .sidebar-CFHs9e {
-  --icon-size: 1.55em;
+  --icon-size: 24px;
   width: calc(218px + var(--icon-size) / 2);
   .side-8zPYf6 {
-    .item-PXvHYJ[aria-controls] {
+    .item-PXvHYJ[aria-controls]:not([aria-label*="#"]) {
       padding-left: calc(8px + var(--icon-size) * 1.15);
       text-transform: capitalize;
       white-space: nowrap;
@@ -67,7 +68,7 @@ $settings-icons: (
     ),
     "subscriptions": (
       icon: "subscriptions",
-      color: var(--qs-yellow1)
+      color: var(--qs-yellow)
     ),
     "library-inventory": (
       icon: "gift",
@@ -232,6 +233,7 @@ $settings-icons: (
     ),
     "instant_invites": (
       icon: "invites",
+      color: var(--brand-experiment)
     ),
     "integrations": (
       icon: "integrations",
@@ -241,6 +243,14 @@ $settings-icons: (
       color: var(--qs-red)
     ),
   ),
+  RTC_DEBUG: (
+    "outbound": (
+      icon: "outbound",
+    ),
+    "transport": (
+      icon: "transport",
+    ),
+  ),
 );
 @each $category, $icons in $settings-icons {
   @each $tab, $icon in $icons {
@@ -248,7 +258,10 @@ $settings-icons: (
     $color: map-get($icon, color);
     $color: var(--color, var(--interactive-normal)) !default;
     #app-mount [aria-label="#{$category}"] .sidebar-CFHs9e {
-      [aria-controls="#{$tab}-tab"] {
+      #{if($category=="RTC_DEBUG",
+        "[aria-controls*=\"#{$tab}\"]", // RTC_DEBUG
+        "[aria-controls=\"#{$tab}-tab\"]" // main
+      )} {
         --color: #{$color};
         &::before {
           -webkit-mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$svg}.svg?sanitize=true");

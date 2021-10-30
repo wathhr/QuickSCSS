@@ -4,8 +4,9 @@
   flex-basis: 100%; // make the sidebar take up as little space as possible
   .contentColumn-2hrIYH, .customColumn-Rb6toI, // make the actual content take up everything else
   .customScroller-26gWhv > div, // various different menus
-  .contentWidth-xLB44s, // edit role tab
+  .descriptionWrapper-1GiGtP, // welcome screen description
   .noticeRegion-1YviSH, // "Careful - you have unsaved changes!" bar
+  .contentWidth-xLB44s, // edit role tab
   [style="opacity: 1;"] .sidebarScrollable-1qPI87 + .content-1rPSz4 { // channel permissions
     max-width: unset;
   }

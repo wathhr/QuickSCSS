@@ -6,18 +6,17 @@
 
 body {
   &::after {
-    content: "hi :) \a\a - walter";
-    position: absolute;
-    inset: 6rem 20% 100%;
+    content: "hi :)\a\a - walter";
+    position: fixed;
+    inset: 6rem 20% auto;
     padding: 1.4rem;
-    height: fit-content;
     white-space: pre;
     text-align: center;
     pointer-events: none;
     border: 3px dashed var(--qs-yellow2);
     font: {
       size: 1.4rem;
-      family: "Montserrat", var(--font-primary);
+      family: var(--font-primary);
     }
     filter: brightness(1.15) opacity(0.95);
     color: var(--text-normal);

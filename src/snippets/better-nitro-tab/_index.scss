@@ -2,7 +2,7 @@
   max-width: unset;
 }
 .applicationStore-1pNvnv .premiumContainer-2Iux5m,
-.contentColumnDefault-1VQkGM {
+.contentColumnDefault-1VQkGM .container-1KLQDM {
   .content-2c3hgM {
     > div:not(.hero-EvfTTA),
     > h3 {
@@ -79,7 +79,7 @@
       padding: 0 17%;
     }
   }
-  .shinyButton-3uFlM- {
+  button.shinyButton-3uFlM- {
     color: #f6f6f7;
     background-color: var(--qs-green);
     &:hover {
@@ -87,9 +87,9 @@
     }
     + button {
       color: #f6f6f7;
-      background-color: #4f545c;
+      background-color: var(--qs-gray);
       &:hover {
-        background-color: #72767d;
+        background-color: var(--qs-gray-hov);
       }
     }
   }
