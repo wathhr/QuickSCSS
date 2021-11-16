@@ -12,6 +12,9 @@ section.container-1r6BKw.themed-ANHk51:not(.callContainer-36WRfH section) {
   height: 50px;
   border-bottom: 1px solid var(--background-secondary-alt);
   box-shadow: none;
+  &::before {
+    content: unset;
+  }
 }
 .content-yTz4x3,
 .tabBody-3YRQ8W {
@@ -195,5 +198,5 @@ div.allactivities-margin {
 
 //? Bot tag being at the bottom
 .px-10SIf7.botTag-2WPJ74 {
-  display: flex;
+  display: inline-flex;
 }

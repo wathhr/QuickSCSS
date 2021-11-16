@@ -1,41 +1,114 @@
+// looking back at this i can see how mad and over this i was when i wrote the comment below lol, still somewhat true tho
+//! this is still such a fucking mess, even starting to become a shitpost at this point
 $context-unknown: true;
 $context-unknown: if($context-icons-side=="left", true, false) !default;
 .menu-3sdvDG {
+  --icon-size: #{if($context-icons-side=="left", 24px, 18px)};
   .item-1tOPte {
-    .label-22pbtT:nth-last-child(1) {
-      &::after {
-        content: if($context-unknown, "", unset);
-        float: $context-icons-side;
-        width: 18px;
-        aspect-ratio: 1;
-        margin-#{if($context-icons-side=="left", "right", "left")}: 8px;
-        -webkit-mask: {
-          image: var(--icon, url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/unknown.svg?sanitized=true"));
-          repeat: no-repeat;
-          size: cover;
-          position: center;
+    --content: #{if($context-unknown, inspect(""), unset)};
+    &[role="menuitem"]#{if($context-icons-side=="left", "", "[aria-haspopup])")} {
+      &:not(
+        [id^="message-add-reaction--"],
+        [id^="status-picker-switch-account--"]:not(#status-picker-switch-account--manage-accounts)
+      ) {
+        .label-22pbtT,
+        .statusItem-33LqPf[aria-label] {
+          display: grid;
+          grid-template-columns: if($context-icons-side=="left", var(--icon-size) 1fr, 1fr var(--icon-size));
+          grid-template-rows: 1fr auto;
+          column-gap: 8px;
+          align-items: center;
+          color: var(--color);
+          &:hover {
+            color: var(--interactive-hover);
+          }
+          &:active:not(.hideInteraction-1iHO1O),
+          &.focused-3afm-j:not(:hover) {
+            color: var(--interactive-active);
+          }
+          .subtext-13Lvrj {
+            grid-column: 1/-1;
+            order: 2;
+          }
+          &::before {
+            content: var(--content);
+            order: if($context-icons-side=="left", unset, 1);
+            width: var(--icon-size);
+            aspect-ratio: 1;
+            -webkit-mask: {
+              image: var(--icon, url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/unknown.svg?sanitized=true"));
+              repeat: no-repeat;
+              size: cover;
+              position: center;
+            }
+            mask: {
+              image: var(--icon, url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/unknown.svg?sanitized=true"));
+              repeat: no-repeat;
+              size: cover;
+              position: center;
+            }
+            background-color: currentColor;
+          }
         }
-        mask: {
-          image: var(--icon, url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/unknown.svg?sanitized=true"));
-          repeat: no-repeat;
-          size: cover;
-          position: center;
-        }
-        background-color: currentColor;
       }
     }
-    @if ($context-icons-side=="left") {
-      .iconContainer-2-XQPY,
-      .imageContainer-2fGqYU {
-        order: -1;
-        margin: 0;
-        margin-right: 8px;
-        > svg {
-          width: 18px;
-          height: unset;
-          aspect-ratio: 1;
+
+    @if ($context-icons-side=="right") {
+      // fix context menu items with arrow
+      &[aria-haspopup].labelContainer-1BLJti {
+        --content: unset;
+      }
+    } @else {
+      // fix status picker
+      .label-22pbtT > .statusItem-33LqPf {
+        &::before { // this is a mess
+          content: unset !important;
         }
       }
+
+      // make reactions actually be alligned properly
+      &[id*="message-add-reaction--"] {
+        flex-direction: row-reverse;
+        gap: 8px;
+        > div {
+          margin: 0;
+        }
+      }
+    }
+
+    // make svgs be the right size
+    .imageContainer-2fGqYU > img, // emojis on "Add reaction"
+    .switchAccountsIcon-355frb,
+    .optionIcon-1HDcpY { // attach button
+      width: var(--icon-size);
+      height: var(--icon-size);
+    }
+
+    // remove icons
+    &:not(
+      [aria-checked],
+      [id*="message-add-reaction--"]
+    ) {
+      .iconContainer-2-XQPY:not([aria-haspopup] div),
+      .customEmoji-2_2FwB, // custom status
+      .optionIcon-1HDcpY, // attach button
+      .switchAccountsIcon-355frb {
+        display: none;
+      }
+    }
+
+    // fix switch accounts on status picker
+    .statusItem-33LqPf {
+      display: flex;
+      width: unset;
+    }
+
+    // fix attach context menu
+    .optionLabel-gOA3fK {
+      font-size: unset;
+    }
+    .optionName-uM5yH- {
+      margin: 0;
     }
   }
 }
@@ -59,9 +132,11 @@ $context-icons: (
 @each $menu, $items in $context-icons {
   @each $item, $icon in $items {
     $color: map-get($icon, color);
-    $color: var(--color, var(--interactive-normal)) !default;
     ##{$menu}-#{$item} {
-      .label-22pbtT {
+      --color: #{$color};
+      .label-22pbtT,
+      .statusItem-33LqPf[aria-label] {
+        --content: "";
         --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/#{map-get($icon, icon)}.svg?sanitize=true");
       }
     }

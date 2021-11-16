@@ -10,47 +10,41 @@
 
 .guilds-1SWlCJ {
   //? Server folder color
-  .expandedFolderBackground-1cujaW,
-  .folderIconWrapper-1_bOZe {
+  .expandedFolderBackground-3ZDF05,
+  .folderIconWrapper-1Ml_1q {
     background-color: var(--background-tertiary) !important;
     transition: background-color 0.3s;
   }
 
   //? Expanded folder background width
-  .wrapper-3Njo_c {
+  .wrapper-shyHJt {
     display: grid;
     place-items: center;
-    .expandedFolderBackground-1cujaW {
+    .expandedFolderBackground-3ZDF05 {
       width: 42px;
       left: unset;
     }
   }
 
   //? Make dragging a server over another server/folder
-  .listItem-1hlISG {
+  .listItem-2Ig28I {
     .dragOver-Iim8_W.centerTarget-1vR_1- {
       &::before {
         content: unset;
       }
     }
-    .wobble-3KAYb_ {
+    .wobble-35H26H {
       position: relative;
       isolation: isolate;
       border-radius: 18px;
-      &::before {
-        content: "";
-        position: absolute;
-        inset: -3px;
-        border-radius: inherit;
-        background-color: var(--qs-green);
-      }
+      box-shadow: 0 0 0 3px var(--qs-green);
     }
   }
 
   //? Blurple discovery and add server buttons
-  .circleIconButton-1XqULR {
+  .circleIconButton-hZmpE8 {
     color: var(--brand-experiment);
-    &.selected-2jcQaY {
+    &.selected-3mFF3I {
       background-color: currentColor;
       svg {
         color: white;

@@ -53,5 +53,6 @@ goto :end
 del temp 2>nul
 del temp.css 2>nul
 echo Built %build% successfully.
+echo .
 cd..
 REM npm run clear

@@ -23,18 +23,11 @@
 @import "./src/snippets/no_dash/"; // Makes channel names have spaces instead of dashes
 @import "./src/snippets/better-sidebar"; // Makes the icons on the DM channel list more compact
 @import "./src/snippets/better-server-sidebar"; // Makes the server sidebar look a little nicer by changing its color and making expanded folders thinner
+@import "./src/snippets/better-user-popouts/"; // Makes user popouts and modals nicer
 @import "./src/snippets/better-friend-list"; // Makes the friend list have be more grid-ish and makes the "Active Now" sidebar a little nicer
 //@import "./src/snippets/better-stage-discovery"; // Makes the stage discovery tab able to have multiple columns
 @import "./src/snippets/better-nitro-tab"; // Improves the UI of the Nitro tab
 @import "./src/snippets/enhanced-settings"; // Makes the settings tab look nicer by adding icons and making it more like a modal
-
-//? User popouts/modals
-@import "./src/user-popouts/main"; // The snippets in this category are made with this in mind, things will most likely break if you disable this
-@import "./src/user-popouts/bigger-avatars"; // Self explanatory
-@import "./src/user-popouts/role-pills"; // Makes the roles more pill-like
-@import "./src/user-popouts/better-activities"; // Brings back the colored activities in the style of https://github.com/Discord-Theme-Addons/amazing-activity-cards
-@import "./src/user-popouts/spotify-buttons"; // Make the spotify activity buttons nicer
-@import "./src/user-popouts/better-connections"; // Improves the icons for connections
 
 //? Discolored
 @import "./src/integrations/discolored"; // Makes Discord's "boring" SVGs colored. By https://github.com/NYRI4 & https://github.com/Snapperito

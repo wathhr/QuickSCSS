@@ -174,14 +174,16 @@ div.ian-toast,
 }
 
 //? Topbar improvements
-.title-3qD0b-.container-1r6BKw {
+.container-1r6BKw.themed-ANHk51, // main
+.headerWrapper-3NUKsd > section { // vc
   .divider-3FBTu8 {
     width: 2.5px;
     height: 20px;
     margin: 0 4px;
   }
   .icon-22AiRD,
-  .icon-3cZ1F_ {
+  .icon-3cZ1F_,
+  .iconWrapper-2OrFZ1 { // library
     color: var(--header-primary);
   }
   .searchBar-3dMhjb,
@@ -204,7 +206,7 @@ div.ian-toast,
   .edited-3sfAzf:not(.message-translate-indicator),
   .ml2-edited time {
     font-size: 0;
-    &:after {
+    &::after {
       content: " (sus)";
       font-size: 0.625rem;
     }
@@ -397,7 +399,7 @@ div.onlineFriends-counter {
     border-radius: unset;
     border-top-right-radius: $top-left-corner-roundedness;
   }
-  > div:not(.sidebar-2K8pFh) {
+  > div:not(.sidebar-2K8pFh):not(.hidden-3iamF5 + div) {
     border-top-left-radius: $top-left-corner-roundedness;
   }
 }
@@ -440,5 +442,37 @@ div.typeWindows-1za-n7 {
     inset: 0;
     pointer-events: none;
     background-color: var(--background-secondary);
+  }
+}
+
+//? Better status picker
+#status-picker {
+  width: 220px;
+  > .scrollerBase-289Jih {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .separator-2I32lJ,
+  .betaTag-2ehOEB {
+    display: none;
+  }
+  .statusItem-33LqPf {
+    &:not([aria-label]) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      .status-1fhblQ,
+      .description-2L932D {
+        display: none;
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  #status-picker-invisible ~ div {
+    grid-column: 1/-1;
   }
 }

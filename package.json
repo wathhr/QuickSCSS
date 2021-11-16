@@ -7,10 +7,10 @@
     "clear": "rmdir /s /q dist 2>nul || echo Already cleared.",
     "clear:npm": "rmdir /s /q node_modules 2>nul || echo Already cleared.",
     "dev": "sass --watch index.scss:dist.css --no-source-map",
-    "build": "build",
-    "build:pc": "build pc",
-    "build:bd": "build bd",
-    "build:web": "build web"
+    "build": ".\\scripts\\build.bat",
+    "build:pc": ".\\scripts\\build.bat pc",
+    "build:bd": ".\\scripts\\build.bat bd",
+    "build:web": ".\\scripts\\build.bat web"
   },
   "repository": {
     "type": "git",

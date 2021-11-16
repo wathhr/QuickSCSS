@@ -1,24 +1,23 @@
-//? General
-$topbar-button-spacing: 6px; // How much space to be between the buttons on the top right
-$blur-amount: 6px; // How much to blur discrims and the DM list
-$custom-wordmark-text: Dicksword; // What the text on the titlebar should be (old font)
-$use-custom-font: false; // Replaces Discord's font with some "custom" fonts, Raleway, Open Sans and Fira Codew
-
-//? Individual snippets
-$stage-discovery-rows: 2; // The amount of rows the stage discovery tab has (works best with 1 or 2)
+//! This file will start being deprecated, most things that were done in here will be able to be done via CSS variables.
 
 //? User popouts/modals
 $av-size: 96px; // How big avatars should be (works best with 80-96px)
-
-//? Harmony
-$top-left-corner-roundedness: 15px; // How round the top-left part next to the sidebar is
 
 //? Discolored
 $discolored-grayscale: 0.35;
 $discolored-opacity: 0.95;
 
 //? Context menu icons
-$context-icons-side: left; // Which side the context menu icons should be [left/right]
+$context-icons-side: right; // Which side the context menu icons should be [left/right]
+
+//? Custom wordmark
+$custom-wordmark-text: Dicksword; // What the text on the titlebar should be (old font)
+
+//? Misc
+$top-left-corner-roundedness: 15px; // How round the top-left part next to the sidebar should be
+$topbar-button-spacing: 6px; // How much space should be between the buttons on the top right
+$use-custom-font: false; // Replaces Discord's font with some "custom" fonts; Raleway, Open Sans and Fira Code
+$blur-amount: 0.4em; // How much to blur discrims and the DM list
 
 
 

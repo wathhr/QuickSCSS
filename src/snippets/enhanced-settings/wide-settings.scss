@@ -95,28 +95,24 @@
   }
 
   // make emoji settings not as Dumb
-  .marginBottom40-2vIwTv {
-    > [style="flex: 1 1 auto;"]:first-of-type {
-      [style="flex: 1 1 50%;"]:last-of-type {
-        text-align: right;
+  h5.marginBottom20-32qID7 + .marginBottom40-2vIwTv {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    .flex-1O1GKY.horizontal-1ae9ci {
+      display: grid;
+      column-gap: 8px;
+      grid-column: 1/-1;
+      grid-template-columns: inherit;
+      > div {
+        margin: 0;
       }
-    }
-  }
-  .emojiRow-zIc7ZX {
-    .positionRelative-3HNyhz {
-      flex-basis: 100% !important;
-    }
-    .emojiRowText-2j4TNM {
-      position: unset;
-      margin-inline: 0.5em;
-    }
-    .emojiAliasInput-1y-NBz {
-      width: 100%;
     }
     .emojiUploader-1f0pVx {
       display: flex;
-      flex-direction: row-reverse;
-      flex-basis: 10% !important;
+      gap: 8px;
+    }
+    .emojiRowText-2j4TNM {
+      position: unset;
     }
   }
 

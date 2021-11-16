@@ -33,7 +33,7 @@
         }
         background-color: currentColor;
       }
-      .icon-Zc-uZZ, // user settings
+      .premiumLabel-fDtYys svg, // user settings
       .icon-3Povsy { // server settings
         display: none;
       }
@@ -254,7 +254,6 @@ $settings-icons: (
 );
 @each $category, $icons in $settings-icons {
   @each $tab, $icon in $icons {
-    $svg: map-get($icon, icon);
     $color: map-get($icon, color);
     $color: var(--color, var(--interactive-normal)) !default;
     #app-mount [aria-label="#{$category}"] .sidebar-CFHs9e {
@@ -264,8 +263,8 @@ $settings-icons: (
       )} {
         --color: #{$color};
         &::before {
-          -webkit-mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$svg}.svg?sanitize=true");
-          mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{$svg}.svg?sanitize=true");
+          -webkit-mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{map-get($icon, icon)}.svg?sanitize=true");
+          mask-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{map-get($icon, icon)}.svg?sanitize=true");
         }
       }
     }

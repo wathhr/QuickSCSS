@@ -9,11 +9,11 @@ PS> cd QuickSCSS
 
 PS> npm i
 
-PS> .\build pc                             # for a PowerCord build (Default)
+PS> npm run build:pc                             # for a PowerCord build (Default)
 
-PS> .\build bd                             # for a BetterDiscord build
+PS> npm run build:bd                             # for a BetterDiscord build
 
-PS> .\build web                            # for a web build
+PS> npm run build:web                            # for a web build
 ```
 
 that should output a file in ``./dist/``

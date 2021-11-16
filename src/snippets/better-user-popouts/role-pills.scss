@@ -63,7 +63,7 @@ $role-pills: (
         z-index: -1;
         opacity: var(--role-opacity);
         background-color: inherit;
-        filter: Saturate(var(--saturation-factor, 1)); // i love the sass version powerFart is on, making me use Saturate instead of saturate
+        filter: css-function(saturate, var(--saturation-factor, 1));
       }
     }
     .addButton-pcyyf6 {

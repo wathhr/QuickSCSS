@@ -1,0 +1,6 @@
+@function css-function($function, $values...) { // this is very fucking necesarry, thanks sass
+  @return $function
+    + unquote("(")
+    + $values
+    + unquote(")");
+}

@@ -10,14 +10,12 @@
       transform: scale(1);
     }
   }
-
   &::before,
   &::after {
     position: absolute;
     z-index: 2002;
     pointer-events: none;
   }
-
   &::before {
     content: $content;
     width: max-content;
@@ -34,10 +32,8 @@
     background-color: var(--background-floating);
     animation: tooltipPop 60ms forwards;
     transform-origin: 50% 100%;
-
     @content
   }
-
   &::after {
     content: "";
     border: 5px solid transparent;

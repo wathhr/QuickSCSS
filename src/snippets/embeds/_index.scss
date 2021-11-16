@@ -1,12 +1,9 @@
 .message-2qnXI6 {
-  .container-1ov-mD {
+  transform: translateZ(0);
+  .container-1ov-mD:not(:empty) {
     display: flex;
     flex-wrap: wrap;
     gap: 0.25em;
-
-    &:empty {
-      display: none;
-    }
 
     > div {
       margin: 0;
@@ -17,27 +14,33 @@
       order: 1;
     }
 
-    .ephemeralMessage-1fEWtQ, // "Only you can see this" on local messages
     .reactions-12N0jA, // reactions
+    .ephemeralMessage-1fEWtQ, // "Only you can see this" on local messages
     .container-2nXavw { // "Share with your followers" container on announcement channels
       flex: 1 0 100%;
       order: 500;
     }
     .spine-5jbOmI + .container-3hZ-gs { // threads
-      margin-right: clamp(80%, 85%, 100%);
+      margin-right: 100%;
       min-width: auto;
       order: 550;
     }
     .spine-5jbOmI.cozy-XCy5h_ {
       display: block;
-      width: 28px;
-      bottom: 28px;
-      top: 4px;
-      left: -34px;
+      position: fixed;
+      width: 2rem;
+      top: 3rem;
+      bottom: 29px;
+      left: 2.2rem;
     }
   }
-  &.hasThread-2k82W0:after {
-    border: none;
-    width: unset !important;
+  &.hasThread-2k82W0 {
+    &.isSystemMessage-2MkNHd .spine-5jbOmI.cozy-XCy5h_ {
+      top: 1.8rem;
+    }
+    &::after {
+      border: unset;
+      width: unset !important; // i really do not want to do specificity fighting
+    }
   }
 }
