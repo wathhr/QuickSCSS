@@ -6,7 +6,7 @@ $context-unknown: if($context-icons-side=="left", true, false) !default;
   --icon-size: #{if($context-icons-side=="left", 24px, 18px)};
   .item-1tOPte {
     --content: #{if($context-unknown, inspect(""), unset)};
-    &[role="menuitem"]#{if($context-icons-side=="left", "", "[aria-haspopup]")} {
+    &[role="menuitem"]#{if($context-icons-side=="left", "", ":not([aria-haspopup])")} {
       &:not(
         [id^="message-add-reaction--"],
         [id^="status-picker-switch-account--"]:not(#status-picker-switch-account--manage-accounts)
