@@ -16,21 +16,6 @@
     background-color: transparent;
   }
 
-  //? USRBG
-  overflow: hidden;
-  transform: translateZ(0);
-  .avatar-37jOim {
-    &::before {
-      content: "";
-      position: fixed;
-      z-index: -1;
-      pointer-events: none;
-      inset: 0;
-      height: 120px;
-      background: var(--user-background) no-repeat var(--user-popout-position, center) / cover;
-    }
-  }
-
   //? literally everything else
   //* banner height
   .banner-2QYc2d {
@@ -155,19 +140,19 @@
 }
 
 //? Settings user popout
-.profileBannerPreview-3_l0Wd {
+.profileBannerPreview-gaX5MP {
   background-color: transparent;
   .banner-hcPdsd {
     height: 120px;
   }
-  .avatarUploaderInner-Oiob_P {
+  .avatarUploaderInner-mAGe3e {
     background-color: var(--background-tertiary);
     border-color: var(--background-tertiary);
   }
   .headerTop-3vNv-a {
     background-color: var(--background-tertiary);
   }
-  .popoutInfo-pKbpvG {
+  .popoutInfo-1A9dyK {
     background-color: var(--background-secondary);
     padding-top: 12px;
   }

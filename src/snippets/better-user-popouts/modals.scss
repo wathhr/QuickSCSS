@@ -15,20 +15,6 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { //* server profile modal
     }
   }
 
-  //? USRBG
-  .avatar-AvHqJA {
-    isolation: isolate;
-    &::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      height: 240px;
-      -webkit-mask: radial-gradient(circle farthest-side at #{$av-size / 1.325 + 4} 238px, transparent #{$av-size / 1.45}, black #{$av-size / 1.43} 100%); // very not hacky
-      mask: radial-gradient(circle farthest-side at #{$av-size / 1.325 + 4} 238px, transparent #{$av-size / 1.45}, black #{$av-size / 1.43} 100%); // very not hacky
-      background: var(--user-background) no-repeat var(--user-popout-position, center) / cover;
-    }
-  }
-
   //? almost everything else
   //* banner height
   .banner-2QYc2d {

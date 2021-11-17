@@ -213,22 +213,6 @@ div.ian-toast,
   }
 }
 
-//? Always colored status
-$colored-status: (
-  "online": hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%),
-  "idle": hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%),
-  "dnd": hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%),
-  "offline": hsl(214, calc(var(--saturation-factor, 1) * 9.9%), 50.4%)
-);
-@each $status, $color in $colored-status {
-  [mask="url(#svg-mask-status-#{$status})"][fill="currentColor"] {
-    fill: $color;
-  }
-  [mask="url(#svg-mask-status-#{$status})"] {
-    color: $color;
-  }
-}
-
 //? Make the "Voice connected" text color change depending on your connection
 .rtcConnectionQualityAverage-3KV0u- .rtcConnectionStatusConnected-VRZDjy {
   color: var(--text-warning);
@@ -241,7 +225,7 @@ $colored-status: (
 @keyframes rainbow{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}
 .wrapper-3WhCwL:not(.roleMention-2Bj0ju[style]):not([style*="; color: "]),
 .message-15tBk4 strong {
-  color: hsl(185, calc(var(--saturation-factor, 1) * 100%), 55%);
+  color: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
   animation: rainbow 10s infinite linear;
 }
 #app-mount .wrapper-3WhCwL,

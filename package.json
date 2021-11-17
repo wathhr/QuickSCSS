@@ -4,9 +4,9 @@
   "description": "yeah",
   "private": true,
   "scripts": {
+    "dev": "sass --watch index.scss:dist.css --no-source-map",
     "clear": "rmdir /s /q dist 2>nul || echo Already cleared.",
     "clear:npm": "rmdir /s /q node_modules 2>nul || echo Already cleared.",
-    "dev": "sass --watch index.scss:dist.css --no-source-map",
     "build": ".\\scripts\\build.bat",
     "build:pc": ".\\scripts\\build.bat pc",
     "build:bd": ".\\scripts\\build.bat bd",

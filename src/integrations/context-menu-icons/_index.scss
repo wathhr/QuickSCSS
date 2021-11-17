@@ -4,11 +4,14 @@ $context-unknown: true;
 $context-unknown: if($context-icons-side=="left", true, false) !default;
 .menu-3sdvDG {
   --icon-size: #{if($context-icons-side=="left", 24px, 18px)};
+  &.styleFlexible-wGDiIL {
+    max-width: calc(320px + var(--icon-size));
+  }
   .item-1tOPte {
     --content: #{if($context-unknown, inspect(""), unset)};
-    &[role="menuitem"]#{if($context-icons-side=="left", "", ":not([aria-haspopup])")} {
+    &#{if($context-icons-side=="left", "", "[role=\"menuitem\"]:not([aria-haspopup])")} {
       &:not(
-        [id^="message-add-reaction--"],
+        [id^="message-add-reaction--"]:not(#message-add-reaction--other-reactions),
         [id^="status-picker-switch-account--"]:not(#status-picker-switch-account--manage-accounts)
       ) {
         .label-22pbtT,
@@ -53,12 +56,7 @@ $context-unknown: if($context-icons-side=="left", true, false) !default;
       }
     }
 
-    @if ($context-icons-side=="right") {
-      // fix context menu items with arrow
-      &[aria-haspopup].labelContainer-1BLJti {
-        --content: unset;
-      }
-    } @else {
+    @if ($context-icons-side=="left") {
       // fix status picker
       .label-22pbtT > .statusItem-33LqPf {
         &::before { // this is a mess
@@ -86,10 +84,10 @@ $context-unknown: if($context-icons-side=="left", true, false) !default;
 
     // remove icons
     &:not(
-      [aria-checked],
-      [id*="message-add-reaction--"]
+      [aria-checked], // checkboxes
+      [id*="message-add-reaction--"]:not(#message-add-reaction--other-reactions)
     ) {
-      .iconContainer-2-XQPY:not([aria-haspopup] div),
+      .iconContainer-2-XQPY:not([aria-haspopup] div), // did it like this because of the switch accounts item
       .customEmoji-2_2FwB, // custom status
       .optionIcon-1HDcpY, // attach button
       .switchAccountsIcon-355frb {
