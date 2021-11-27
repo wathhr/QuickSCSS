@@ -1,15 +1,14 @@
 .message-2qnXI6 {
-  transform: translateZ(0);
   .container-1ov-mD:not(:empty) {
     display: flex;
     flex-wrap: wrap;
+    position: static;
     gap: 0.25em;
-
     > div {
       margin: 0;
     }
 
-    .wrapper-35wsBm,
+    .wrapper-35wsBm, // server invite
     .embedSpotify-tvxDCr {
       order: 1;
     }
@@ -27,7 +26,7 @@
     }
     .spine-5jbOmI.cozy-XCy5h_ {
       display: block;
-      position: fixed;
+      position: absolute;
       width: 2rem;
       top: 3rem;
       bottom: 29px;
@@ -41,6 +40,25 @@
     &::after {
       border: unset;
       width: unset !important; // i really do not want to do specificity fighting
+    }
+  }
+
+  // make the remove attachment/embed buttons nice
+  .embedSuppressButton-1FonMn,
+  .removeAttachmentButton-2qVPxg {
+    top: 2px;
+    right: 2px;
+    padding: 0;
+    z-index: 1;
+    mix-blend-mode: difference;
+    &:hover {
+      color: var(--interactive-hover);
+    }
+    &:active {
+      color: var(--interactive-active);
+    }
+    path {
+      d: path("M15 3.999V2H9V3.999H3V5.999H21V3.999H15Z M5 6.99902V18.999C5 20.101 5.897 20.999 7 20.999H17C18.103 20.999 19 20.101 19 18.999V6.99902H5ZM11 17H9V11H11V17ZM15 17H13V11H15V17Z");
     }
   }
 }

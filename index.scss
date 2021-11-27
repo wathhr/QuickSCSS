@@ -1,7 +1,7 @@
-//? This file is mostly for disabling stuff
+//? This file is for disabling stuff
 //* To disable something add a "//" at the start of the thing you want to disable
 //* Like this:
-//@import './src/example/snippet';
+//@import "./src/example/snippet";
 
 //! Do not disable
 @use "sass:color";
@@ -27,6 +27,7 @@
 @import "./src/snippets/better-friend-list"; // Makes the friend list have be more grid-ish and makes the "Active Now" sidebar a little nicer
 //@import "./src/snippets/better-stage-discovery"; // Makes the stage discovery tab able to have multiple columns
 @import "./src/snippets/better-nitro-tab"; // Improves the UI of the Nitro tab
+@import "./src/snippets/better-server-discovery"; // Improves the UI of the Nitro tab
 @import "./src/snippets/enhanced-settings"; // Makes the settings tab look nicer by adding icons and making it more like a modal
 
 //? Discolored

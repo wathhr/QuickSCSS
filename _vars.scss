@@ -1,4 +1,8 @@
-//! This file will start being deprecated, most things that were done in here will be able to be done via CSS variables.
+/*
+ ! This file will start being, mostly "deprecated" soon,
+ ! most of the things you used to be able to do here
+ ! will be able to be done via CSS variables instead.
+*/
 
 //? User popouts/modals
 $av-size: 96px; // How big avatars should be (works best with 80-96px)
@@ -14,24 +18,26 @@ $context-icons-side: right; // Which side the context menu icons should be [left
 $custom-wordmark-text: Dicksword; // What the text on the titlebar should be (old font)
 
 //? Misc
-$top-left-corner-roundedness: 15px; // How round the top-left part next to the sidebar should be
 $topbar-button-spacing: 6px; // How much space should be between the buttons on the top right
 $use-custom-font: false; // Replaces Discord's font with some "custom" fonts; Raleway, Open Sans and Fira Code
-$blur-amount: 0.4em; // How much to blur discrims and the DM list
-
-
-
-
-
-
-
-
-
 
 //? CSS vars
 body { // special thanks to ducko for making me use body instead of :root
-  //* QS vars
-  $qs-vars: (
+
+  //? Misc color vars
+  --spotify-color: hsl(141, calc(var(--saturation-factor, 1) * 72.9%), 42%);
+
+  //? Role pills
+  --role-opacity: 0.25; // changes the opacity of the role pill backgrounds
+
+  //? Blur
+  --blur-amount: 0.4em; // blur amount for certain parts of your client that might be considered "private", such as your DM list and Discriminations
+
+  //? Misc
+  --corner-radius: 15px; // how round (usually) the top left corner of Discord should be
+
+  //? QS color vars
+  $qs-vars: ( // these variables will most likely change names soon:tm:
     "pink" hsl(302, calc(var(--saturation-factor, 1) * 100%), 72.5%),
     "red" var(--old-red, hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%)),
     "orange" hsl(21, calc(var(--saturation-factor, 1) * 90.7%), 57.6%),
@@ -46,14 +52,4 @@ body { // special thanks to ducko for making me use body instead of :root
   @each $name, $val in $qs-vars {
     --qs-#{$name}: #{$val};
   }
-
-  //* Other vars
-  --spotify-color: hsl(141, calc(var(--saturation-factor, 1) * 72.9%), 42%);
-  --role-opacity: 0.25; // changes the opacity of the role pill backgrounds
-
-  //* Ripple support
-  // --mouseX: 0;
-  // --mouseY: 0;
-  --clickX: 0;
-  --clickY: 0;
 }

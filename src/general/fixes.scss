@@ -75,25 +75,42 @@ div.allactivities-margin {
 //? Chat area background height
 .chat-3bRxxu {
   .messagesWrapper-1sRNjr > .scroller-2LSbBU {
-    margin-bottom: -80px;
+    margin-bottom: -100px;
     .scrollerContent-WzeG7R {
-      padding-bottom: 80px;
+      padding-bottom: 100px;
     }
   }
   .form-2fGMdU {
+    transform: translateZ(0);
     isolation: isolate;
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 66px;
-      background-color: var(--background-primary);
-    }
     &::before {
       content: unset;
+    }
+    .scrollableContainer-2NUZem {
+      &.hasConnectedBar-1MrFne {
+        --top: 34px;
+      }
+      &::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        top: var(--top, 0);
+        background-color: var(--background-primary);
+      }
+    }
+  }
+  .channelTextAreaDisabled-8rmlrp {
+    &::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.5;
+      background-color: var(--background-primary);
+    }
+    .scrollableContainer-2NUZem {
+      opacity: unset;
     }
   }
 }

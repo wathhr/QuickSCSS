@@ -73,14 +73,24 @@
 
   //* make the "body" actually good
   .body-3HBlXn {
+    display: flex;
+    flex-direction: column;
     padding: 0 0 14px !important;
     overflow: visible !important;
+    scrollbar-width: none;
     &::-webkit-scrollbar {
       width: 0 !important;
     }
     > div {
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-inline: 16px;
+    }
+    > button {
+      margin-inline: 16px;
+    }
+
+    //* fix "Add to Server" button
+    .applicationInstallButton-1M2YjM {
+      width: unset;
     }
 
     //* improve positioning
@@ -91,7 +101,6 @@
 
   .bodyInnerWrapper-26fQXj {
     display: grid;
-
     //* UserDetails stuff
     [class^="UserDetails-"][class$="body" i] { // this is great
       order: 1;

@@ -27,7 +27,7 @@
         justify-content: center;
       }
 
-      .children-gzQq2t { // friend req circle
+      .children-gzQq2t:not(:empty, .holidayPromotionSelectedBackground-181xIv div) { // friend req circle
         justify-self: center;
         position: absolute;
         isolation: isolate;

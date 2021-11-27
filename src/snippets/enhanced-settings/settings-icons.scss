@@ -4,21 +4,31 @@
   width: calc(218px + var(--icon-size) / 2);
   .side-8zPYf6 {
     .item-PXvHYJ[aria-controls]:not([aria-label*="#"]) {
+      isolation: isolate;
       padding-left: calc(8px + var(--icon-size) * 1.15);
       text-transform: capitalize;
       white-space: nowrap;
-      color: var(--color, var(--interactive-normal)) !important;
-      &.selected-3s45Ha,
-      &:active {
-        color: white !important;
-        background-color: var(--color, var(--brand-experiment)) !important;
+      color: var(--color, var(--interactive-normal));
+      &:active,
+      &.selected-3s45Ha {
+        color: var(--interactive-active);
       }
-      &:active {
-        filter: brightness(0.825);
+      &.selected-3s45Ha {
+        background-color: var(--color, var(--brand-experiment));
       }
+
+      // remove the defualt backgrounds
       .background-CYva7T {
+        z-index: -1;
+      }
+      &[aria-selected="false"] .background-CYva7T {
         display: none;
       }
+      .premiumLabel-fDtYys {
+        color: unset;
+      }
+
+      // icons
       &::before {
         content: "";
         position: absolute;

@@ -7,35 +7,42 @@ $context-unknown: if($context-icons-side=="left", true, false) !default;
   &.styleFlexible-wGDiIL {
     max-width: calc(320px + var(--icon-size));
   }
+  .scroller-3BxosC {
+    overflow: hidden auto !important;
+    padding: 6px 8px !important;
+  }
   .item-1tOPte {
     --content: #{if($context-unknown, inspect(""), unset)};
+    color: var(--color, var(--interactive-normal));
+    &:hover {
+      color: var(--interactive-hover);
+      background-color: var(--background-modifier-hover);
+    }
+    &:active:not(.hideInteraction-1iHO1O),
+    &.focused-3afm-j:not(:hover) {
+      color: var(--interactive-active);
+      background-color: var(--background-modifier-active);
+    }
     &#{if($context-icons-side=="left", "", "[role=\"menuitem\"]:not([aria-haspopup])")} {
       &:not(
         [id^="message-add-reaction--"]:not(#message-add-reaction--other-reactions),
-        [id^="status-picker-switch-account--"]:not(#status-picker-switch-account--manage-accounts)
+        [id^="status-picker-switch-account--"]:not(#status-picker-switch-account--manage-accounts),
+        #message-apps + .layer-v9HyYc div
       ) {
         .label-22pbtT,
         .statusItem-33LqPf[aria-label] {
           display: grid;
-          grid-template-columns: if($context-icons-side=="left", var(--icon-size) 1fr, 1fr var(--icon-size));
-          grid-template-rows: 1fr auto;
+          grid-template-areas: if($context-icons-side=="left", "icon main secondary", "main secondary icon")
+                               "subtext subtext subtext";
+          grid-template-columns: if($context-icons-side=="left", var(--icon-size) auto 1fr, auto 1fr var(--icon-size));
           column-gap: 8px;
           align-items: center;
-          color: var(--color);
-          &:hover {
-            color: var(--interactive-hover);
-          }
-          &:active:not(.hideInteraction-1iHO1O),
-          &.focused-3afm-j:not(:hover) {
-            color: var(--interactive-active);
-          }
           .subtext-13Lvrj {
-            grid-column: 1/-1;
-            order: 2;
+            grid-area: subtext;
           }
           &::before {
             content: var(--content);
-            order: if($context-icons-side=="left", unset, 1);
+            grid-area: icon;
             width: var(--icon-size);
             aspect-ratio: 1;
             -webkit-mask: {
@@ -74,31 +81,46 @@ $context-unknown: if($context-icons-side=="left", true, false) !default;
       }
     }
 
-    // make svgs be the right size
-    .imageContainer-2fGqYU > img, // emojis on "Add reaction"
-    .switchAccountsIcon-355frb,
-    .optionIcon-1HDcpY { // attach button
-      width: var(--icon-size);
-      height: var(--icon-size);
+    // make the add reaction emojis be the right size
+    .imageContainer-2fGqYU {
+      max-height: unset;
+      &,
+      > img {
+        width: var(--icon-size);
+        height: var(--icon-size);
+      }
     }
 
     // remove icons
     &:not(
       [aria-checked], // checkboxes
-      [id*="message-add-reaction--"]:not(#message-add-reaction--other-reactions)
+      [id*="message-add-reaction--"]:not(#message-add-reaction--other-reactions),
+      #message-apps + .layer-v9HyYc div
     ) {
       .iconContainer-2-XQPY:not([aria-haspopup] div), // did it like this because of the switch accounts item
-      .customEmoji-2_2FwB, // custom status
+      .customEmojiPlaceholder-37iZ_j, // custom status
       .optionIcon-1HDcpY, // attach button
-      .switchAccountsIcon-355frb {
+      .switchAccountsIcon-355frb,
+      .hintContainer-Vai8dx { // "Copy"
         display: none;
       }
     }
 
-    // fix switch accounts on status picker
+    // fix custom status picker or something
+    &#status-picker-custom-status {
+      min-height: 32px;
+      padding: 6px 8px;
+    }
     .statusItem-33LqPf {
-      display: flex;
-      width: unset;
+      min-height: unset;
+      padding: 0;
+      &.statusItemNoPadding-2yFleV {
+        display: block;
+      }
+      &.customStatusItem-1TTIxM,
+      &.customStatusWithEmoji-8-XZ8I {
+        grid-template-rows: 1fr;
+      }
     }
 
     // fix attach context menu
@@ -124,12 +146,14 @@ $context-icons: (
     ),
     "mark-unread": (
       icon: "mark-unread",
+      color: red
     ),
   ),
 );
 @each $menu, $items in $context-icons {
   @each $item, $icon in $items {
     $color: map-get($icon, color);
+    $color: var(--interactive-normal) !default;
     ##{$menu}-#{$item} {
       --color: #{$color};
       .label-22pbtT,

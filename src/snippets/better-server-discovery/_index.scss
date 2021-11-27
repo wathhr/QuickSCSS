@@ -1,0 +1,153 @@
+.sidebar-2K8pFh > .scrollerBase-289Jih {
+  .categoryItem-ONe8JV {
+    margin-bottom: 2px;
+    padding: 6px 10px;
+    font-size: 16px;
+    line-height: 20px;
+    &:not(.selectedCategoryItem-28UllF) {
+      cursor: pointer;
+    }
+    &:hover {
+      background-color: var(--background-modifier-hover);
+    }
+    &.selectedCategoryItem-28UllF,
+    &:active {
+      color: var(--interactive-active);
+      background-color: var(--brand-experiment);
+    }
+    &:active {
+      filter: brightness(0.825);
+    }
+
+    > div {
+      all: unset;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .avatar-3uk_u9 {
+      all: unset;
+      display: flex;
+    }
+  }
+}
+
+.pageWrapper-1PgVDX {
+  // header
+  .searchHeader-2I26nG {
+    min-height: unset;
+    margin-top: 32px;
+  }
+  .headerImage-3X1tyY {
+    display: none;
+  }
+  .headerContentWrapper-2u32yq {
+    all: revert;
+    width: 100%;
+    height: 100%;
+  }
+  .headerContent-2gImvv {
+    all: revert;
+  }
+  .searchSubtitle-2jsC5X {
+    display: none;
+  }
+  .container-V70vZ2:not(.searchPage-3GKAdT) > .search-1iTphC {
+    max-width: 85%;
+    margin: auto;
+  }
+
+  // main
+  .viewWrapper-8-8h4T {
+    max-width: unset;
+  }
+  h3.size20-17Iy80 {
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 48px 0 16px;
+  }
+  .guildList-3cJX3d {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    > div {
+      width: 248px;
+    }
+  }
+
+  // search results
+  .container-V70vZ2,
+  .categories-1ywIbh {
+    justify-content: center;
+  }
+  .search-1iTphC,
+  .categories-1ywIbh {
+    max-width: 85%;
+  }
+  .results-2a-SSB {
+    &,
+    .guildList-1ItbxP {
+      max-width: unset;
+    }
+    .guildList-1ItbxP {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      > div {
+        width: 248px
+      }
+    }
+    .card-PN0gR4 {
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: var(--background-secondary-alt);
+      transition: box-shadow .2s ease-out,
+                  transform .2s ease-out,
+                  background-color .2s ease-out,
+                  opacity .2s ease-in;
+      &:hover {
+        background-color: var(--background-tertiary);
+        transform: translateY(-1px);
+        box-shadow: var(--elevation-high);
+      }
+      .container-1lb8C4 {
+        flex-direction: column;
+        gap: 32px;
+      }
+      .splashContainer-enaItk {
+        height: 143px;
+        margin: unset;
+        border-radius: unset;
+      }
+      .splashImage-3dNUXz {
+        width: 100%;
+        transform: unset;
+      }
+      .content-eOXYoI {
+        padding: 0 16px 16px;
+        width: unset;
+      }
+      .header-26TfPy {
+        > svg {
+          position: absolute;
+          width: 40px;
+          height: unset;
+          aspect-ratio: 1;
+          margin-top: -(32px + 40px / 1.5);
+          border-radius: 18px;
+          border: 4px solid var(--background-secondary-alt);
+        }
+        &, .headerName-3ZW18n, h3 {
+          max-width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+    hr {
+      display: none;
+    }
+  }
+}

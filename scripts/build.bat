@@ -1,5 +1,6 @@
 :: Imagine Using JavaScript For Build Scripts Instead Of A Really Dumb Batch Script :joy: :joy: :joy: :joy: :joy:
 @echo off
+setlocal
 set version=3-beta
 
 if [%1]==[] (
@@ -7,21 +8,25 @@ if [%1]==[] (
 ) else (
   set build=%1
 )
-for /f "usebackq delims=" %%I in (`powershell "\"%build%\".toUpper()"`) do set "build=%%~I" & REM I Love Using PowerShell For Such Trivial Such As This Making My Scripts Unnecessarily Badly Performant
+for /f "usebackq delims=" %%I in (`powershell "\"%build%\".toUpper()"`) do set "build=%%~I" & REM I Love Using PowerShell For Such Trivial Things Such As This Making My Scripts Unnecessarily Badly Performant
 
-call sass index.scss:dist/temp.css --style=compressed --no-source-map -q
-echo Compiled SCSS successfully.
+call sass index.scss:dist/temp --style=compressed --no-source-map -q && (
+  echo Compiled SCSS successfully.
+) || (
+  goto :eof
+)
 cd dist
 
 goto %build%
 
 :pc
-call npx postcss temp.css -u postcss-csso --no-map -r
-rename temp.css dist.css
+call npx postcss temp -u postcss-csso --no-map -o dist.css
+if errorlevel 1 goto :fuck
 goto :end
 
 :bd
-call npx postcss temp.css -u postcss-csso --no-map -o QuickSCSS.theme.css
+call npx postcss temp -u postcss-csso --no-map -o QuickSCSS.theme.css
+if errorlevel 1 goto :fuck
 >> temp echo /**
 >> temp echo  * @name QuickSCSS
 >> temp echo  * @description yeah
@@ -34,7 +39,8 @@ type temp > QuickSCSS.theme.css
 goto :end
 
 :web
-call npx postcss temp.css -u autoprefixer postcss-csso --no-map -o QuickSCSS.user.css
+call npx postcss temp -u autoprefixer postcss-csso --no-map -o QuickSCSS.user.css
+if errorlevel 1 goto :fuck
 >> temp echo /* ==UserStyle==
 >> temp echo @name QuickSCSS
 >> temp echo @namespace QuickSCSS
@@ -50,9 +56,13 @@ type temp > QuickSCSS.user.css
 goto :end
 
 :end
-del temp 2>nul
-del temp.css 2>nul
+del temp* 2>nul
 echo Built %build% successfully.
-echo .
 cd..
+goto :eof
 REM npm run clear
+
+:fuck
+del temp* 2>nul
+echo Failed to build %build%
+goto :eof

@@ -19,10 +19,44 @@
 
   // video preview
   .userSettingsVoice-iwdUCU {
-    div:not([class]) [style="flex: 1 1 50%;"]:first-of-type {
-      flex-basis: 100% !important;
-      + [style="flex: 1 1 50%;"] {
-        flex-basis: unset !important;
+    .marginBottom40-2vIwTv + div:not([class]):not(:last-of-type) {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 12px;
+      > :where(div:not(.divider-3573oO, .selector-3qI8sT)), > h3 { // :where() for lower specificity
+        margin: 0;
+      }
+      h1, .divider-3573oO {
+        grid-column: 1/-1;
+      }
+      .selector-3qI8sT {
+        margin-top: 8px;
+        margin-bottom: 20px;
+      }
+      .previewToggle-1Ertm9 {
+        grid-row: 4; // this sucks
+        margin-bottom: 20px;
+      }
+      .backgroundOptions-2NdDN_ {
+        margin-top: 8px;
+      }
+      .backgroundImageOption-127aO7 {
+        transform: unset !important;
+      }
+      [aria-label]:not([class]):hover { //broken background option
+        box-shadow: var(--elevation-medium);
+      }
+      // make the camera be on the side
+      .cameraWrapper-2n3EKe {
+        grid-column: 2;
+        grid-row: 2/10;
+        place-self: center;
+        margin-left: 20px;
+        aspect-ratio: 16/9;
+      }
+      .media-engine-video {
+        width: unset !important;
+        height: unset !important;
       }
     }
   }

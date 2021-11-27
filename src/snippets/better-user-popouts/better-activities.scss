@@ -39,12 +39,6 @@ $colors: (
   padding-bottom: 0;
   margin: 8px;
   margin-bottom: 24px;
-  @at-root .divider-ewBQKj + .bodyInnerWrapper-26fQXj {
-    .newPopoutActivityStyles:first-of-type,
-    [class^="UserDetails-"][class$="body" i] + .newPopoutActivityStyles {
-      margin-top: 16px;
-    }
-  }
   #app-mount & {
     .content-3JfFJh span {
       color: inherit;
@@ -72,7 +66,7 @@ $colors: (
       background-color: transparent;
     }
   }
-  .spotifyIcon-2J9kSv {
+  [src="/assets/eaeac24163b35f7526704a3d9b3c7722.svg"] { // spotify icon
     display: none !important;
   }
   .xboxAssets-aGhVw8 {
