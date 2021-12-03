@@ -5,8 +5,10 @@
 }
 
 body {
+  $content: "hi :)";
+  $content-end: "\a\a- walter";
   &::after {
-    content: "hi :)\a\a - walter";
+    content: $content $content-end;
     position: fixed;
     inset: 6rem 20% auto;
     padding: 1.4rem;
@@ -14,15 +16,18 @@ body {
     text-align: center;
     pointer-events: none;
     border: 3px dashed var(--qs-yellow2);
-    font: {
-      size: 1.4rem;
-      family: var(--font-primary);
-    }
+    font-size: 1.4rem;
     filter: brightness(1.15) opacity(0.95);
     color: var(--text-normal);
     background-color: var(--background-tertiary);
     box-shadow: var(--elevation-high),
                 inset var(--elevation-medium);
-    animation: notice-disappear 600ms 2600ms forwards;
+    animation: notice-disappear 600ms 2400ms forwards;
+  }
+  .theme-light & {
+    &::after {
+      content: $content "\a\a QuickSCSS is not intended to be used with light theme, you might encounter some accessibility issues if you continue." $content-end;
+      animation-delay: 4000ms;
+    }
   }
 }

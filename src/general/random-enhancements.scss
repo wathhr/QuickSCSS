@@ -341,6 +341,7 @@ div.onlineFriends-counter {
     border-top-right-radius: var(--corner-radius);
   }
   > div:not(.sidebar-2K8pFh):not(.hidden-3iamF5 + div) {
+    overflow: hidden;
     border-top-left-radius: var(--corner-radius);
   }
 }

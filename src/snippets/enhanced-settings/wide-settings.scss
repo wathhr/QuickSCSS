@@ -141,7 +141,7 @@
     }
     .emojiUploader-1f0pVx {
       display: flex;
-      gap: 8px;
+      row-gap: 8px;
     }
     .emojiRowText-2j4TNM {
       position: unset;
@@ -149,8 +149,9 @@
   }
 
   // make the boost upsell not repeat on the stickers tab
-  .upsellContainer-3UlEOE {
+  .upsellContainer-j6r8ts {
     background-size: cover;
+    background-position: center 40%;
   }
 
   // make the widget preview not be Huge
@@ -163,11 +164,14 @@
     width: unset;
   }
 
-  // make welcome screen example actually work
-  .welcomeDescription-16dYOx {
-    + .exampleContainer-25sB-A {
-      background-size: contain;
-      background-position: left;
+  // welcome screen
+  .exampleContainer-I8Et0j { // welcome screen example
+    background-size: contain;
+    background-position: left;
+  }
+  .welcomeHeader-11Eeto {
+    .descriptionWrapper-3wyGCv {
+      max-width: unset;
     }
   }
 }

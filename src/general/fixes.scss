@@ -80,34 +80,33 @@ div.allactivities-margin {
       padding-bottom: 100px;
     }
   }
+  %psuedo {
+    content: "";
+    position: fixed;
+    inset: 0;
+    top: var(--top, 0);
+    background-color: var(--background-primary);
+  }
   .form-2fGMdU {
     transform: translateZ(0);
     isolation: isolate;
-    &::before {
-      content: unset;
-    }
     .scrollableContainer-2NUZem {
       &.hasConnectedBar-1MrFne {
         --top: 34px;
       }
       &::after {
-        content: "";
-        position: fixed;
-        inset: 0;
+        @extend %psuedo;
         z-index: -1;
-        top: var(--top, 0);
-        background-color: var(--background-primary);
       }
+    }
+    &::before {
+      content: unset;
     }
   }
   .channelTextAreaDisabled-8rmlrp {
     &::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
+      @extend %psuedo;
       opacity: 0.5;
-      background-color: var(--background-primary);
     }
     .scrollableContainer-2NUZem {
       opacity: unset;

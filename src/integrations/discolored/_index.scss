@@ -136,7 +136,7 @@ $classes: (
   @include thing(4, 5, #7a8ec7);
   @include thing(4, 6, #7a8ec7);
   @include thing(4, 7, #8ba0d2);
-  @include thing(4, 8, #c2d2f1);
+  @include thing(4, 8, #c2d2f117);
   @include thing(6, 2, #99abd8);
   @include thing(10, 1, #e0c310);
   @include thing(11, 1, #fbd907);
@@ -148,6 +148,8 @@ $classes: (
   [style*="background-image: url(\"#{$asset1}\");"],
   [style*="background-image: url(\"#{$asset2}\");"] {
     background-image: url("https://nyri4.github.io/Discolored/assets/#{$name}.svg") !important;
+    background-repeat: no-repeat;
+    background-position: center;
     filter: grayscale($discolored-grayscale) opacity($discolored-opacity);
   }
 }
@@ -163,52 +165,47 @@ $classes: (
 @each $name, $class in $classes {
   #{$class} {
     background-image: url("https://nyri4.github.io/Discolored/assets/#{$name}.svg") !important;
+    background-repeat: no-repeat;
+    background-position: center;
     filter: grayscale($discolored-grayscale) opacity($discolored-opacity);
   }
 }
 
 //? manual overrides
-//* community banner
-.previewCard-DOrO3c .splashImage-352DQ1 {
-  content: url("https://nyri4.github.io/Discolored/assets/community_banner.svg");
-}
+#app-mount {
+  //* community banner
+  .previewCard-DOrO3c .splashImage-352DQ1 {
+    content: url("https://nyri4.github.io/Discolored/assets/community_banner.svg");
+  }
 
-//* boost
-.channelNotice-3DDmsB {
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  //* friend
+  .invite-OjTXrW {
+    background-position: center 20px;
+  }
 
-//* friend
-.channelNotice-1-XFjC.invite-OjTXrW {
-  background-repeat: no-repeat;
-  background-position: center 20px;
-  background-size: 40%;
-  filter: none;
-}
+  //* key
+  .guildMFAWarning-3GEzs8 {
+    background-position: center 20px;
+    background-size: 40%;
+  }
 
-//* key
-.channelNotice-1-XFjC.guildMFAWarning-3GEzs8 {
-  background-repeat: no-repeat;
-  background-position: center 20px;
-  background-size: 40%;
-  filter: none;
-}
+  //* no mutuals
+  .emptyIconFriends-2l7flK {
+    background-size: 100%
+  }
 
-//* no mutuals
-.emptyIconFriends-2l7flK {
-  background-size: 100%
-}
+  //* no results conversation
+  .emptyState-2gL-9T {
+    background-size: 20%;
+  }
 
-//* no results conversation
-.emptyState-2gL-9T {
-  background-size: 20%;
-}
+  //* switch
+  .quickswitcher-35bYg4 {
+    background-position: center 35px;
+  }
 
-//* switch
-.channelNotice-1-XFjC.quickswitcher-35bYg4 {
-  background-repeat: no-repeat;
-  background-position: center 20px;
-  background-size: 40%;
-  filter: none;
+  //? fixes
+  .channelNotice-1-XFjC {
+    filter: none;
+  }
 }

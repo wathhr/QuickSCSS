@@ -4,13 +4,13 @@
   "description": "yeah",
   "private": true,
   "scripts": {
-    "dev": "sass --watch index.scss:dist.css --no-source-map",
-    "clear": "rmdir /s /q dist 2>nul || echo Already cleared.",
-    "clear:npm": "rmdir /s /q node_modules 2>nul || echo Already cleared.",
-    "build": ".\\scripts\\build.bat",
-    "build:pc": ".\\scripts\\build.bat pc",
-    "build:bd": ".\\scripts\\build.bat bd",
-    "build:web": ".\\scripts\\build.bat web"
+    "clear": "rmdir /s /q dist 2>nul && echo Done. || echo Nothing to clear.",
+    "clear:npm": "rmdir /s /q node_modules 2>nul && echo Done. || echo Nothing to clear.",
+    "build": "scripts\\build.bat",
+    "build:pc": "scripts\\build.bat pc",
+    "build:bd": "scripts\\build.bat bd",
+    "build:web": "scripts\\build.bat web",
+    "build:all": "scripts\\build.bat all"
   },
   "repository": {
     "type": "git",

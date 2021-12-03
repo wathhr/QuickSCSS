@@ -3,30 +3,32 @@
 setlocal
 set version=3-beta
 
-if [%1]==[] (
-  set build=pc
-) else (
+if not [%1]==[] (
   set build=%1
+) else (
+  set build=all
 )
-for /f "usebackq delims=" %%I in (`powershell "\"%build%\".toUpper()"`) do set "build=%%~I" & REM I Love Using PowerShell For Such Trivial Things Such As This Making My Scripts Unnecessarily Badly Performant
+mkdir dist 2>nul
+cd dist
+set build=%build:"=%
+goto :build
 
-call sass index.scss:dist/temp --style=compressed --no-source-map -q && (
+:scss
+call sass ../index.scss:dist.css --style=compressed --no-source-map -q && (
   echo Compiled SCSS successfully.
 ) || (
   goto :eof
 )
-cd dist
+call npx postcss dist.css -u postcss-csso --no-map -r
+goto :eof
 
-goto %build%
+:build-pc
+set build=PC
+goto :eof
 
-:pc
-call npx postcss temp -u postcss-csso --no-map -o dist.css
-if errorlevel 1 goto :fuck
-goto :end
-
-:bd
-call npx postcss temp -u postcss-csso --no-map -o QuickSCSS.theme.css
-if errorlevel 1 goto :fuck
+:build-bd
+set build=BD
+copy dist.css QuickSCSS.theme.css >nul
 >> temp echo /**
 >> temp echo  * @name QuickSCSS
 >> temp echo  * @description yeah
@@ -35,11 +37,13 @@ if errorlevel 1 goto :fuck
 >> temp echo  * @version %version%
 >> temp echo  */
 >> temp type QuickSCSS.theme.css
-type temp > QuickSCSS.theme.css
-goto :end
+>  QuickSCSS.theme.css type temp
+del temp 2>nul
+goto :eof
 
-:web
-call npx postcss temp -u autoprefixer postcss-csso --no-map -o QuickSCSS.user.css
+:build-web
+set build=Web
+call npx postcss dist.css -u autoprefixer --no-map -o QuickSCSS.user.css
 if errorlevel 1 goto :fuck
 >> temp echo /* ==UserStyle==
 >> temp echo @name QuickSCSS
@@ -49,20 +53,35 @@ if errorlevel 1 goto :fuck
 >> temp echo @license GNU GPLv3
 >> temp echo @preprocessor default
 >> temp echo ==/UserStyle== */
->> temp echo @-moz-document domain("discord.com") {
+>> temp echo @-moz-document regexp("https?:\/\/.*discord\.com\/(?!developers|app).*\S") {
 >> temp type QuickSCSS.user.css
-type temp > QuickSCSS.user.css
+>  QuickSCSS.user.css type temp
 >> QuickSCSS.user.css echo }
+del temp 2>nul
+goto :eof
+
+:build-all
+call :build-bd && call :success
+call :build-web && call :success
+set build=All
+goto :end
+
+:build
+call :scss
+if errorlevel 1 goto :fuck
+call :build-%build%
+if errorlevel 1 goto :fuck
+call :success
 goto :end
 
 :end
-del temp* 2>nul
-echo Built %build% successfully.
-cd..
+cd ..
 goto :eof
-REM npm run clear
+
+:success
+echo Built %build% successfully.
+goto :eof
 
 :fuck
-del temp* 2>nul
-echo Failed to build %build%
-goto :eof
+echo Failed to build %build%.
+goto :end
