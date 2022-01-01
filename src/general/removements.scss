@@ -1,12 +1,5 @@
 //? Notes
-.rolesList-1geHY1 { // popout
-  ~ .note-1oo11U,
-  ~ h3 {
-    display: none;
-  }
-}
-.bodyInnerWrapper-26fQXj {
-  margin-bottom: -4px;
+.bodyInnerWrapper-26fQXj { // popout
   > h3:last-of-type,
   .note-1oo11U {
     display: none;
@@ -19,13 +12,12 @@
   }
 }
 
-//? Misc
-.setIdentityLink-1t8Ahd, //* "Set a server nickname" on user popouts
-#user-context-invite-to-server, //* Invite to server context menu button when right clicking on users
-#message.menu-3sdvDG .wrapper-3_530D, //* Quick reactions on context menus
-.wumpusWrapper-2H_Ezt, //* New user wumpus
-.menu-3sdvDG .separator-2I32lJ, //* Context menu seperators
+//? Context menu
+#message.menu-3sdvDG .wrapper-3_530D, //* Quick reactions
+.menu-3sdvDG .separator-2I32lJ, //* Seperators
 #status-picker .description-2L932D, //* Status descriptions
+#user-context-invite-to-server, //* Invite to server
+#user-context-note, //* Add note
 
 //? Topbar
 [aria-label="Hide Member List"], //* "Hide member list" button
@@ -35,6 +27,10 @@ a[href="https://support.discord.com"], //* Help button
 [aria-label="Send a gift"], //* Gift button
 //[aria-label="Open GIF picker"], //* GIF button
 [aria-label="Open sticker picker"], //* Sticker button
+
+//? Misc
+.setIdentityLink-1t8Ahd, //* "Set a server nickname" on user popouts
+.wumpusWrapper-2H_Ezt, //* New user wumpus
 #DONT-DISABLE-THIS {
   display: none;
 }

@@ -1,53 +1,62 @@
 // TODO: make this actually good
-//* User modal
+//? User modal
 [aria-label="User profile modal"] {
   .avatar-AvHqJA {
-    width: $av-size * 1.25 !important;
-    height: $av-size * 1.25 !important;
-    top: $av-size * -0.7084;
-    left: $av-size / 9.6;
-    border-width: $av-size / 15;
+    width: calc(var(--av-size) * 1.25) !important;
+    height: calc(var(--av-size) * 1.25) !important;
+    top: calc(var(--av-size) * -0.7084);
+    left: calc(var(--av-size) / 9.6);
+    border-width: calc(var(--av-size) / 15);
   }
 }
 
-//* Settings tab user "modal"
+//? Settings tab user "modal"
 .accountProfileCard-1XCH88 {
   .avatar-1uQSZT {
-    width: $av-size * 1.25 !important;
-    height: $av-size * 1.25 !important;
-    top: $av-size * 1.8;
-    left: $av-size / 9.6;
-    border-width: $av-size / 15;
+    width: calc(var(--av-size) * 1.25) !important;
+    height: calc(var(--av-size) * 1.25) !important;
+    top: calc(var(--av-size) * 1.8);
+    left: calc(var(--av-size) / 9.6);
+    border-width: calc(var(--av-size) / 15);
   }
   .userInfo-iCloHO {
     height: unset;
-    padding-bottom: $av-size / 2.4;
-    padding-left: $av-size * 1.55;
+    padding-bottom: calc(var(--av-size) / 2.4);
+    padding-left: calc(var(--av-size) * 1.55);
   }
 }
 
-//* User popout
+//? User popout
 .userPopout-xaxa6l {
   .avatarWrapperNormal-26WQIb {
     left: 8px;
-    top: 120px - $av-size / 1.8;
+    top: calc(120px - var(--av-size) / 1.8);
   }
   .avatar-37jOim,
   .avatarHint-2A3RNb {
-    width: $av-size !important;
-    height: $av-size !important;
+    width: var(--av-size) !important;
+    height: var(--av-size) !important;
   }
   .profileBadges-ohc0Vu {
-    max-width: calc(88% - #{$av-size});
+    max-width: calc(88% - var(--av-size));
+  }
+}
+//? Settings tab user popout
+.profileBannerPreview-3_l0Wd {
+  .avatarUploaderInner-Oiob_P {
+    width: var(--av-size);
+    height: var(--av-size);
+    top: calc(120px - var(--av-size) / 1.3);
+    left: -8px;
   }
 }
 
-//* Settings tab user popout
-.profileBannerPreview-3_l0Wd {
-  .avatarUploaderInner-Oiob_P {
-    width: $av-size;
-    height: $av-size;
-    top: 120px - $av-size / 1.3;
-    left: -8px;
+//? Calls
+.participant-1lOCsd {
+  &,
+  .wrapper-2QE8vf,
+  .callAvatarMask-1SLlRi {
+    width: var(--av-size) !important;
+    height: var(--av-size) !important;
   }
 }

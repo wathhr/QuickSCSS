@@ -76,6 +76,7 @@ goto :end
 
 :end
 cd ..
+endlocal
 goto :eof
 
 :success

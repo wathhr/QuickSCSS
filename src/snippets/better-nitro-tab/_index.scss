@@ -81,15 +81,15 @@
   }
   button.shinyButton-3uFlM- {
     color: #f6f6f7;
-    background-color: var(--qs-green);
+    background-color: var(--qs-col-green);
     &:hover {
-      background-color: var(--qs-green-hov);
+      background-color: var(--qs-col-green-hov);
     }
     + button {
       color: #f6f6f7;
-      background-color: var(--qs-gray);
+      background-color: var(--qs-col-gray);
       &:hover {
-        background-color: var(--qs-gray-hov);
+        background-color: var(--qs-col-gray-hov);
       }
     }
   }

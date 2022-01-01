@@ -8,7 +8,7 @@ $colors: (
     #593695
   ),
   "Xbox": (
-    ".xboxAssets-aGhVw8",
+    ".fullWidth-1orjjo > .contents-18-Yxp > .flex-1u2qrf",
     #107C10
   ),
   "Spotify": (
@@ -22,10 +22,10 @@ $colors: (
   .newPopoutActivityStyles {
     #{$class} {
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         z-index: -1;
-        inset: -12px;
+        inset: var(--inset);
         border-radius: 4px;
         background-color: $col;
         box-shadow: 4px 4px 0 color.adjust($col, $saturation: -15%, $lightness: -10%);
@@ -34,11 +34,37 @@ $colors: (
   }
 }
 
+#app-mount {
+  .ShowAllActivities-wrapper-wrapper {
+    position: relative;
+    isolation: isolate;
+    margin-bottom: calc((var(--inset) - 2px) * -1);
+    --inset: -10px;
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: calc(var(--inset) - 2px);
+      margin-bottom: inherit;
+      border-radius: 4px;
+      background-color: var(--background-secondary-alt);
+      box-shadow: 4px 4px 0 var(--background-tertiary);
+    }
+  }
+  .ShowAllActivities-wrapper-controls {
+    margin: 0 0 12px;
+    background-color: var(--background-tertiary);
+    box-shadow: 4px 4px 0 var(--background-floating);
+  }
+}
 .newPopoutActivityStyles {
-  z-index: 1;
-  padding-bottom: 0;
+  isolation: isolate;
   margin: 8px;
+  padding-bottom: 0;
   margin-bottom: 24px;
+  --inset: -12px;
+
+  // improve text color
   #app-mount & {
     .content-3JfFJh span {
       color: inherit;
@@ -53,7 +79,9 @@ $colors: (
       color: white;
     }
   }
-  .lookFilled-1Gx00P.colorGrey-2DXtkV {
+
+  // make buttons be nicer
+  .buttonSize-AQY2mE.lookFilled-1Gx00P {
     border: 1px solid currentColor;
     color: #fff;
     background-color: transparent;
@@ -66,10 +94,17 @@ $colors: (
       background-color: transparent;
     }
   }
-  [src="/assets/eaeac24163b35f7526704a3d9b3c7722.svg"] { // spotify icon
+
+  // remove spotify icon
+  [src="/assets/eaeac24163b35f7526704a3d9b3c7722.svg"] {
     display: none !important;
   }
-  .xboxAssets-aGhVw8 {
+
+  // fix xbox
+  .button-38aScr {
     position: static;
+    .platformIcon-2L1fux {
+      display: none;
+    }
   }
 }

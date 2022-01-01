@@ -25,11 +25,11 @@ QuickSCSS tries to work alongside other themes, while still looking nice with Di
 
 <details><summary>I suggest using the extension named "Better comments"/"Colored comments"</summary>
 
-  - [VSCode](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+- [VSCode](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
 
-  - [Sublime text](https://packagecontrol.io/packages/Colored%20Comments)
+- [Sublime text](https://packagecontrol.io/packages/Colored%20Comments)
 
-  - [Atom](https://github.com/AndrewKralovec/atom-better-comments)
+- [Atom](https://github.com/AndrewKralovec/atom-better-comments)
 
 <sub>_If your text editor is not listed, the extension probably has not been ported over to it_</sub>
 
@@ -42,8 +42,8 @@ QuickSCSS tries to work alongside other themes, while still looking nice with Di
   - No SCSS support.
 
 - [Hyblocker](https://github.com/hyblocker)
-  - I Stole their [Fix blurry connection icons "snippet"](https://github.com/hyblocker/pixelcord/blob/a7327786c7c45810b9a80321afb7ef3ec0a65393/src/app/app/misc_pages/_avatarpage.scss#L52-L117).
   - I Stole their [Space channels "snippet"](https://github.com/hyblocker/pixelcord/blob/59856ce1a9f7c59634101d5991f38c6e091a6063/src/app/qol/_space_channels.scss).
+  - And probably a lot of other random stuff I forgot about.
 
 - [NYRI4](https://github.com/NYRI4) & [Snapperito](https://github.com/Snapperito)
   - I stole their [Discolored theme](https://github.com/NYRI4/Discolored).
@@ -56,7 +56,7 @@ QuickSCSS tries to work alongside other themes, while still looking nice with Di
 
 ## [Building](./BUILDING.md)
 
-## License
+## Licensing
 ```
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

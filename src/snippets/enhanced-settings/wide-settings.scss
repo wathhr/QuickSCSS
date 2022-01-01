@@ -19,12 +19,16 @@
 
   // video preview
   .userSettingsVoice-iwdUCU {
-    .marginBottom40-2vIwTv + div:not([class]):not(:last-of-type) {
+    // all of this sucks
+    .marginBottom40-2vIwTv + div:not([class], :last-of-type) {
       display: grid;
       grid-template-columns: 1fr auto;
-      column-gap: 12px;
+      column-gap: 20px;
       > :where(div:not(.divider-3573oO, .selector-3qI8sT)), > h3 { // :where() for lower specificity
         margin: 0;
+      }
+      > div {
+        grid-column: 1;
       }
       h1, .divider-3573oO {
         grid-column: 1/-1;
@@ -34,7 +38,7 @@
         margin-bottom: 20px;
       }
       .previewToggle-1Ertm9 {
-        grid-row: 4; // this sucks
+        grid-row: 4;
         margin-bottom: 20px;
       }
       .backgroundOptions-2NdDN_ {
@@ -49,14 +53,14 @@
       // make the camera be on the side
       .cameraWrapper-2n3EKe {
         grid-column: 2;
-        grid-row: 2/10;
-        place-self: center;
-        margin-left: 20px;
+        grid-row: 3/10;
+        place-self: start center;
+        margin-top: 8px;
         aspect-ratio: 16/9;
       }
       .media-engine-video {
-        width: unset !important;
-        height: unset !important;
+        width: 100% !important;
+        height: 100% !important;
       }
     }
   }
@@ -127,7 +131,7 @@
   }
 
   // make emoji settings not as Dumb
-  h5.marginBottom20-32qID7 + .marginBottom40-2vIwTv {
+  h5.marginBottom20-32qID7 + [class="marginBottom40-2vIwTv"] {
     display: grid;
     grid-template-columns: auto 1fr 1fr;
     .flex-1O1GKY.horizontal-1ae9ci {

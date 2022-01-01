@@ -11,10 +11,11 @@
       color: var(--color, var(--interactive-normal));
       &:active,
       &.selected-3s45Ha {
-        color: var(--interactive-active);
+        color: var(--interactive-active) !important;
+        background-color: var(--background-modifier-active) !important;
       }
       &.selected-3s45Ha {
-        background-color: var(--color, var(--brand-experiment));
+        background-color: var(--color, var(--brand-experiment)) !important;
       }
 
       // remove the defualt backgrounds
@@ -77,11 +78,11 @@ $settings-icons: (
     ),
     "nitro-server-boost": (
       icon: "boost",
-      color: var(--qs-pink)
+      color: var(--qs-col-pink)
     ),
     "subscriptions": (
       icon: "subscriptions",
-      color: var(--qs-yellow)
+      color: var(--qs-col-yellow)
     ),
     "library-inventory": (
       icon: "gift",
@@ -155,11 +156,11 @@ $settings-icons: (
     ),
     "hypesquad-online": (
       icon: "hypesquad",
-      color: var(--qs-hypesquad-yellow)
+      color: var(--qs-col-hypesquad-yellow)
     ),
     "experiments": (
       icon: "experiments",
-      color: var(--qs-green)
+      color: var(--qs-col-green)
     ),
     "developer-options": (
       icon: "developer-options",
@@ -169,7 +170,7 @@ $settings-icons: (
     ),
     "logout": (
       icon: "logout",
-      color: var(--qs-red)
+      color: var(--qs-col-red)
     ),
   ),
   GUILD_SETTINGS: (
@@ -220,7 +221,7 @@ $settings-icons: (
     ),
     "guild_premium": (
       icon: "boost",
-      color: var(--qs-pink)
+      color: var(--qs-col-pink)
     ),
     "members": (
       icon: "members",
@@ -234,7 +235,7 @@ $settings-icons: (
     ),
     "delete": (
       icon: "delete",
-      color: var(--qs-red)
+      color: var(--qs-col-red)
     ),
   ),
   CHANNEL_SETTINGS: (
@@ -253,7 +254,7 @@ $settings-icons: (
     ),
     "delete": (
       icon: "delete",
-      color: var(--qs-red)
+      color: var(--qs-col-red)
     ),
   ),
   RTC_DEBUG: (

@@ -40,6 +40,7 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { //* server profile modal
   //? improve the tab thingies
   .listScroller-3GmIYj {
     overflow: hidden overlay !important;
+    counter-reset: mutuals;
     .iconActiveMedium-1UaEIR {
       border-radius: 50%;
       transition: border-radius 200ms linear;
@@ -49,6 +50,21 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { //* server profile modal
         .iconActiveMedium-1UaEIR {
           border-radius: 12px;
         }
+        &::after {
+          opacity: 1;
+        }
+      }
+      &::after {
+        content: counter(mutuals);
+        counter-increment: mutuals;
+        margin-inline: 4px 12px;
+        width: 2.4ch;
+        text-align: center;
+        opacity: 0.6;
+        transition: opacity 200ms linear;
+      }
+      .listName-U3shDM {
+        flex: 1;
       }
     }
   }

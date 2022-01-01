@@ -102,7 +102,7 @@
   .bodyInnerWrapper-26fQXj {
     display: grid;
     //* UserDetails stuff
-    [class^="UserDetails-"][class$="body" i] { // this is great
+    > [class^="UserDetails-"] { // this is great
       order: 1;
       margin-bottom: 12px;
       &[class*="connections"] {
@@ -125,7 +125,8 @@
     }
 
     //* Permission viewer
-    .newPopoutActivityStyles {
+    .newPopoutActivityStyles,
+    .ShowAllActivities-wrapper-wrapper {
       order: -2;
     }
     #permissions-popout {

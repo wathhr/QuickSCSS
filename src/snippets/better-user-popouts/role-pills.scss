@@ -11,7 +11,7 @@ $role-pills: (
     main: ".role-1P70N6",
     circle: ".roleColor-fHISxl",
   ),
-  ".roleWrapper-1Hde_V > .flex-1O1GKY": ( // Member server settings
+  ".roleWrapper-1Hde_V > .flex-1O1GKY": ( // member server settings
     main: ".role-2irmRk",
     circle: ".roleCircle-3xAZ1j"
   ),
@@ -39,7 +39,7 @@ $role-pills: (
         right: 8px;
       }
       border: {
-        radius: 100vw;
+        radius: 100vmax;
         width: 0;
       }
       color: white;
@@ -66,16 +66,16 @@ $role-pills: (
         filter: css-function(saturate, var(--saturation-factor, 1));
       }
     }
-    .addButton-pcyyf6 {
-      padding: 4px;
-      &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        opacity: 0.35;
-        background-color: hsl(0 0% 100% / var(--role-opacity));
-      }
-    }
+  }
+}
+.addButton-pcyyf6 {
+  padding: 4px;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.35;
+    background-color: hsl(0 0% 100% / var(--role-opacity));
   }
 }
 .roleRemoveIcon-2-TeGW {
