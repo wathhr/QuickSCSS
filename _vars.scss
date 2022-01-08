@@ -11,27 +11,17 @@ $discolored-opacity: 0.95;
 //? Context menu icons
 $context-icons-side: right; // Which side the context menu icons should be [left/right]
 
-//? Custom wordmark
-$custom-wordmark-text: Dicksword; // What the text on the titlebar should be (old font)
-
 //? Misc
 $topbar-button-spacing: 6px; // How much space should be between the buttons on the top right
 $use-custom-font: false; // Replaces Discord's font with some "custom" fonts; Raleway, Open Sans and Fira Code
 
 //? CSS vars
-body { // special thanks to ducko for making me use body instead of :root
-
-  //? Role pills
-  --role-opacity: 0.25; // changes the opacity of the role pill backgrounds
-
-  //? Blur
-  --blur-amount: 0.4em; // blur amount for certain parts of your client that might be considered "private", such as your DM list and discriminations
-
+body {
   //? Misc
+  --role-opacity: 0.25; // changes the opacity of the role pill backgrounds
   --corner-radius: 15px; // how round (usually) the top left corner of Discord should be
-
-  //? User popouts & modals
-  --av-size: 96px;
+  --avatar-size: 96px; // how big avatars (in user popouts/modals) should be
+  --wordmark-text: "Dicksword";
 
   //? QS color vars
   $vars: ( // these variables will most likely change names soon:tm:

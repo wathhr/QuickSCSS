@@ -13,11 +13,9 @@
 @import "./src/general/random-enhancements"; // Random stuff
 @import "./src/general/removements"; // Remove certain things from Discord, because just why
 @import "./src/general/fixes"; // Fixes some random stuff
-@import "./src/general/blur"; // Blurs certain parts of Discord, such as your recent DMs and the "Active Now" panel
 
 //? Snippets
-@import "./src/snippets/custom-wordmark"; // Replaces the "Discord" on the titlebar with any text you want (old font)
-@import "./src/snippets/osx-titlebar"; // Makes the titlebar have OSX-like buttons
+@import "./src/snippets/enhanced-titlebar/";
 @import "./src/snippets/enhanced-messages"; // Makes messages nicer, by adding a ripple, a slide whenever they are sent, and various other things
 @import "./src/snippets/embeds"; // Makes images/embeds wrap instead of stacking on messages
 @import "./src/snippets/no_dash/"; // Makes channel names have spaces instead of dashes

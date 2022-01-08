@@ -38,16 +38,6 @@
   color: var(--qs-col-red);
 }
 
-//? Nicer bot tag
-.botTagRegular-2HEhHi {
-  transition: color 0.5s;
-  background-color: var(--background-modifier-accent);
-  color: var(--brand-experiment);
-  &:hover {
-    color: white;
-  }
-}
-
 //? Revert autocomplete
 .contentTitle-2tG_sM {
   color: var(--text-muted);
@@ -79,17 +69,6 @@
     }
   }
 }
-
-//? Center text on "In App Notifications"
-div.ian-toast,
-.ian-toast div {
-  text-align: center;
-  justify-content: center;
-  .ian-simple-embed-color {
-    display: none;
-  }
-}
-
 .toolbar-1t6TWx {
   //? Topbar pill
   &:not(.transparent-2ZlE3R > div) {
@@ -121,19 +100,9 @@ div.ian-toast,
   }
 }
 
-//? Topbar improvements
+//? Bigger and adjustable search
 .container-1r6BKw.themed-ANHk51, // main
 .headerWrapper-3NUKsd > section { // vc
-  .divider-3FBTu8 {
-    width: 2.5px;
-    height: 20px;
-    margin: 0 4px;
-  }
-  .icon-22AiRD,
-  .icon-3cZ1F_,
-  .iconWrapper-2OrFZ1 { // library
-    color: var(--header-primary);
-  }
   .searchBar-3dMhjb,
   .libraryFilter-31ZUa2 {
     resize: horizontal;
@@ -149,40 +118,13 @@ div.ian-toast,
   }
 }
 
-//? When the edited message is Sus
-#app-mount {
-  .edited-3sfAzf:not(.message-translate-indicator),
-  .ml2-edited time {
-    font-size: 0;
-    &::after {
-      content: " (sus)";
-      font-size: 0.625rem;
-    }
-  }
-}
-
 //? Make the "Voice connected" text color change depending on your connection
-.rtcConnectionQualityAverage-3KV0u- .rtcConnectionStatusConnected-VRZDjy {
-  color: var(--text-warning);
-}
-.rtcConnectionQualityBad-1J7mUU .rtcConnectionStatusConnected-VRZDjy {
-  color: var(--text-danger);
-}
-
-//? Rainbow mentions
-@keyframes rainbow{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}
-.wrapper-3WhCwL:not(.roleMention-2Bj0ju[style]):not([style*="; color: "]),
-.message-15tBk4 strong {
-  color: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
-  animation: rainbow 10s infinite linear;
-}
-#app-mount .wrapper-3WhCwL,
-.message-15tBk4 strong {
-  background: transparent !important;
-  transition: color 0.15s;
-  &:hover {
-    color: white !important;
-    text-decoration: none;
+.rtcConnectionStatusConnected-VRZDjy {
+  .rtcConnectionQualityAverage-3KV0u- & {
+    color: var(--text-warning);
+  }
+  .rtcConnectionQualityBad-1J7mUU & {
+    color: var(--text-danger);
   }
 }
 
@@ -201,19 +143,8 @@ div.ian-toast,
   }
 }
 
-//? Make some text unselectable
-.timestamp-3ZCmNB,
-.botTag-1un5a6,
-.vpc-shiki-lang {
-  user-select: none;
-}
-
 //? Better thread suggestions
-@keyframes appear {
-  to {
-    opacity: 1;
-  }
-}
+@keyframes appear{to{opacity:1}}
 .chatContent-a9vAAp {
   .threadSuggestionBar-2ufK2Z {
     display: none;
@@ -284,12 +215,8 @@ div.onlineFriends-counter {
 
 //? Make jumped messages have a pin icon
 .backgroundFlash-24qWLN .wrapper-2a6GCs {
-  &.isSystemMessage-2MkNHd {
-    .messageContent-2qWWxC:not(.repliedMessage-VokQwo div) {
-      display: flex;
-    }
-  }
-  .messageContent-2qWWxC:not(.repliedMessage-VokQwo div) {
+  &.isSystemMessage-2MkNHd .container-3-pyIM,
+  .messageContent-2qWWxC:not(.isSystemMessage-2MkNHd div, .repliedMessage-VokQwo div) {
     &::after {
       content: "";
       display: inline-block;
@@ -355,18 +282,6 @@ div.onlineFriends-counter {
   &::-webkit-scrollbar-thumb,
   &::-webkit-scrollbar-track {
     border: none;
-  }
-}
-
-//? Make the titlebar have a solid background color
-div.typeWindows-1za-n7 {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background-color: var(--background-secondary);
   }
 }
 

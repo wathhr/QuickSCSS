@@ -1,5 +1,6 @@
 .peopleColumn-29fq28[id$="-tab"] {
   [data-list-id="people"] {
+    margin-top: 0;
     > div {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -8,7 +9,7 @@
       padding: 0 8px;
       .title-30qZAO {
         grid-column: 1/-1;
-        margin: 8px 12px 6px;
+        margin: 12px 12px 4px;
       }
       .peopleListItem-2nzedh {
         position: relative;
@@ -53,8 +54,8 @@
         .avatar-3W3CeO {
           position: absolute;
           left: 8px;
-          top: calc(120px - var(--av-size) / 1.8);
-          width: var(--av-size) !important;
+          top: calc(120px - var(--avatar-size, 80px) / 1.8);
+          width: var(--avatar-size, 80px) !important;
           height: unset !important;
           aspect-ratio: 1;
           margin: 0;

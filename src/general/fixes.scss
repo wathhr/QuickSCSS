@@ -138,14 +138,6 @@ div.allactivities-margin {
   place-items: start;
 }
 
-//? Make the titlebar actually draggable when in fullscreen
-.titleBar-AC4pGV {
-  .maximized &.typeWindows-1za-n7 {
-    margin-top: 0;
-    padding-top: 4px;
-  }
-}
-
 //? Hide MLv2 deleted local messages
 [__mlv2_deletetime].ephemeral-1PsL1r:not(.replying-1x3H0T) {
   display: none;
