@@ -1,3 +1,4 @@
-@import "./mixins";
-@import "./functions";
-@import "./notice.scss";
+@forward './vars';
+@forward './mixins';
+@forward './functions';
+@forward './notice.scss';

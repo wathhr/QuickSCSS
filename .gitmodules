@@ -1,4 +1,4 @@
 [submodule "src/assets"]
-  path = src/assets
+  path = assets
   url = https://github.com/walter-moment/quickscss-assets
   ignore = dirty
