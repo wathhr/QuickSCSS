@@ -1,13 +1,13 @@
-  .containerDefault--pIXnN > .wrapper-2jXpOf:not(.typeThread-3ESTm-) .channelName-2YrOjO, // channel list
-  [aria-label="Channel header"] .title-29uC1r:not(.parentChannelName-1C2HEo ~ h3), // channel headers
-  .content-3YMskv .emptyChannelIcon-cc932w ~ .size32-o_H79z, // header at the start of channels
-  .mention.iconMentionText-8GCluA, // mentions
-  .channelTextArea-rNsIhG .placeholder-37qJjk, // text area placeholder
-  #search-results .resultChannel-3BYgHX, // search
-  [id^="ian"].powercord-toast .lookOutlined-3sRXeN.colorBrand-3pXr91 .flexChild-faoVW3, // In App Notifications button
-  .iconSizeLarge-161qtT + .channelContainer-1x3D6I .channelName-2HcGlq, // following an announcement channel
-  .inviteSettingsInviteRow-3p2O-N .user-3x-NP9 + .size12-3cLvbJ, // invite settings
-  .welcomeChannel-1rFrIO .size12-3cLvbJ, // welcome screen settings
+  .containerDefault-YUSmu3 > .wrapper-NhbLHG:not(.typeThread-2Aqh6X) .channelName-3KPsGw, // channel list
+  [aria-label="Channel header"] .title-17SveM:not(.parentChannelName-R4UlaT ~ h3), // channel headers
+  .content-2a4AW9 .emptyChannelIcon-1YdEz2 ~ .size32-5yOQel, // header at the start of channels
+  .mention.iconMentionText-1_WCtN, // mentions
+  .channelTextArea-1FufC0 .placeholder-1_mJY1, // text area placeholder
+  #search-results .resultChannel-1ZxSuE, // search
+  [id^="ian"].powercord-toast .lookOutlined-3yKVGo.colorBrand-I6CyqQ .flexChild-3PzYmX, // In App Notifications button
+  .iconSizeLarge-_r2zCK + .channelContainer-3YAhb_ .channelName-2P3bqL, // following an announcement channel
+  .inviteSettingsInviteRow-1rZeIM .user-32vk-K + .size12-oc4dx4, // invite settings
+  .welcomeChannel-1rFrIO .size12-oc4dx4, // welcome screen settings
   [data-list-item-id^="audit-log__"] strong { // audit log items
     font-family: "no dash", var(--font-primary);
   }

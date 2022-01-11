@@ -9,21 +9,21 @@
   }
 }
 $colored-message-events: (
-  ".ephemeral-1PsL1r:not(.replying-1x3H0T)":  rgb(114, 137, 218),
-  ".replying-1x3H0T.replying-1x3H0T": rgb(2, 183, 87),
-  ".mentioned-xhSam7": rgb(250, 168, 25),
-  ".mentioned-xhSam7.ml2-deleted-alt": rgb(245, 115, 50),
+  ".ephemeral-2nDdnn:not(.replying-eZ7p5z)":  rgb(114, 137, 218),
+  ".replying-eZ7p5z.replying-eZ7p5z": rgb(2, 183, 87),
+  ".mentioned-Tre-dv": rgb(250, 168, 25),
+  ".mentioned-Tre-dv.ml2-deleted-alt": rgb(245, 115, 50),
   ".ml2-deleted-alt": rgb(240, 71, 71),
 );
 #app-mount {
-  .barBase-1c2Rfb {
+  .barBase-3xxDXu {
     z-index: 3;
   }
-  .messageListItem-1-jvGY {
+  .messageListItem-ZZ7v6g {
     animation: slide 350ms ease !important; // added the !important here so the settings modal doesn't Eat it
   }
-  .message-2qnXI6 {
-    .wrapper-2aW0bm {
+  .message-2CShn3 {
+    .wrapper-2vIMkT {
       background-color: var(--background-secondary);
       box-shadow: var(--elevation-stroke), var(--elevation-medium);
     }
@@ -34,18 +34,18 @@ $colored-message-events: (
       background-color: rgba(4, 4, 5, 0.075);
     }
     &:active,
-    &.selected-.zalgo-jN1Ica {
+    &.selected-.zalgo-26OfGz {
       background-color: rgba(4, 4, 5, 0.125);
     }
-    &:not(.zalgo-jN1Ica) {
+    &:not(.zalgo-26OfGz) {
       background-color: unset;
     }
-    .channelTextArea-2VhZ6z,
-    .markup-2BOw-j,
-    .container-1ov-mD {
+    .channelTextArea-1VQBuV,
+    .markup-eYLPri,
+    .container-2sjPya {
       z-index: 1;
     }
-    .avatar-1BDn8e.clickable-1bVtEA {
+    .avatar-2e8lTP.clickable-31pE3P {
       z-index: 2;
     }
 
@@ -57,7 +57,7 @@ $colored-message-events: (
           background-color: color.change($color, $alpha: 0.075); // special thanks to lighty for making this not fucking work at all for deleted messages
         }
         &:active,
-        &.selected-2P5D_Z {
+        &.selected-2LX7Jy {
           background-color: color.change($color, $alpha: 0.125) !important; // special thanks to lighty for making me add this !important
         }
         &::before {

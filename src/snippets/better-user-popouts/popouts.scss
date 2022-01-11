@@ -1,37 +1,37 @@
-.userPopout-xaxa6l {
+.userPopout-2j1gM4 {
   //? color changes
-  .headerTop-3vNv-a,
-  .customStatus-oN4ZZY {
+  .headerTop-3GPUSF,
+  .customStatus-3XAoF9 {
     background-color: var(--background-tertiary);
   }
-  .avatar-37jOim {
+  .avatar-2Vndt_ {
     background-color: var(--background-tertiary);
     border-color: var(--background-tertiary);
   }
   &,
-  .footer-3UKYOU {
+  .footer-3naVBw {
     background-color: var(--background-secondary);
   }
-  .bodyInnerWrapper-26fQXj {
+  .bodyInnerWrapper-2bQs1k {
     background-color: transparent;
   }
 
   //? literally everything else
   //* banner height
-  .banner-2QYc2d {
+  .banner-1YaD3N {
     height: 120px;
   }
 
   //* header positioning
-  .headerTop-3vNv-a {
+  .headerTop-3GPUSF {
     padding-bottom: 8px;
-    @at-root .customStatus-oN4ZZY,
-    &:not(.headerTopWithCustomStatus-1DHAjX) {
+    @at-root .customStatus-3XAoF9,
+    &:not(.headerTopWithCustomStatus-1aNSNd) {
       padding-bottom: 12px;
       margin-bottom: 8px;
     }
   }
-  div.customStatus-oN4ZZY {
+  div.customStatus-3XAoF9 {
     border: unset;
     padding-top: 8px;
     padding-bottom: 10px;
@@ -40,17 +40,17 @@
     }
   }
 
-  @at-root .activityVoiceChannel-OPU-Fm, .streamPreviewWrapper-2DSWOK,
-  & .activity-2INFPu {
+  @at-root .activityVoiceChannel-2vojOH, .streamPreviewWrapper-rIrOy5,
+  & .activity-1gTu-L {
     max-width: 100%;
     //* make the big assets bigger
-    .assets-VMAukC {
+    .assets-3PQvAh {
       margin-right: 8px;
       > svg,
-      .assetsLargeImage-eYwpTX:not(foreignObject > img),
-      .assetsLargeImageStreamPreview-1A9lfF,
-      .assetsLargeImageUserPopout-3Pp8BK,
-      .assetsLargeImageUserPopoutXbox-2hgKt0 {
+      .assetsLargeImage-8U5dlz:not(foreignObject > img),
+      .assetsLargeImageStreamPreview-3peV91,
+      .assetsLargeImageUserPopout-pY2WJv,
+      .assetsLargeImageUserPopoutXbox-tkbJgJ {
         height: 72px;
         width: 72px;
         -webkit-mask-size: cover;
@@ -59,20 +59,20 @@
     }
 
     //* fix activity text overflowing
-    .content-3JfFJh,
-    .headerText-1HLrL7 {
+    .content-tXPNDw,
+    .headerText-3g1XK9 {
       width: 0;
       flex-grow: 1;
     }
   }
 
   //* get rid of the devider
-  .divider-ewBQKj {
+  .divider-1wtgZ3 {
     display: none;
   }
 
   //* make the "body" actually good
-  .body-3HBlXn {
+  .body-2wLx-E {
     display: flex;
     flex-direction: column;
     padding: 0 0 14px !important;
@@ -89,17 +89,17 @@
     }
 
     //* fix "Add to Server" button
-    .applicationInstallButton-1M2YjM {
+    .applicationInstallButton-taCWKH {
       width: unset;
     }
 
     //* improve positioning
-    h3:not(.activityUserPopout-2yItg2 h3) {
+    h3:not(.activityUserPopout-2MzGCj h3) {
       margin-bottom: 6px;
     }
   }
 
-  .bodyInnerWrapper-26fQXj {
+  .bodyInnerWrapper-2bQs1k {
     display: grid;
     //* UserDetails stuff
     > [class^="UserDetails-"] { // this is great
@@ -150,23 +150,23 @@
 }
 
 //? Settings user popout
-.profileBannerPreview-gaX5MP {
+.profileBannerPreview-3mLIdO {
   background-color: transparent;
   .banner-hcPdsd {
     height: 120px;
   }
-  .avatarUploaderInner-mAGe3e {
+  .avatarUploaderInner-p38nm2 {
     background-color: var(--background-tertiary);
     border-color: var(--background-tertiary);
   }
-  .headerTop-3vNv-a {
+  .headerTop-3GPUSF {
     background-color: var(--background-tertiary);
   }
-  .popoutInfo-1A9dyK {
+  .popoutInfo-16MuYF {
     background-color: var(--background-secondary);
     padding-top: 12px;
   }
-  .divider-ewBQKj {
+  .divider-1wtgZ3 {
     display: none;
   }
 }

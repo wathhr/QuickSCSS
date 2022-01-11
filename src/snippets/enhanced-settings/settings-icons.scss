@@ -1,31 +1,31 @@
 // this is quite a mess
-.sidebar-CFHs9e {
+.sidebar-nqHbhN {
   --icon-size: 24px;
   width: calc(218px + var(--icon-size) / 2);
-  .side-8zPYf6 {
-    .item-PXvHYJ[aria-controls]:not([aria-label*="#"]) {
+  .side-2ur1Qk {
+    .item-3XjbnG[aria-controls]:not([aria-label*="#"]) {
       isolation: isolate;
       padding-left: calc(8px + var(--icon-size) * 1.15);
       text-transform: capitalize;
       white-space: nowrap;
       color: var(--color, var(--interactive-normal));
       &:active,
-      &.selected-3s45Ha {
+      &.selected-g-kMVV {
         color: var(--interactive-active) !important;
         background-color: var(--background-modifier-active) !important;
       }
-      &.selected-3s45Ha {
+      &.selected-g-kMVV {
         background-color: var(--color, var(--brand-experiment)) !important;
       }
 
       // remove the defualt backgrounds
-      .background-CYva7T {
+      .background-3iPORX {
         z-index: -1;
       }
-      &[aria-selected="false"] .background-CYva7T {
+      &[aria-selected="false"] .background-3iPORX {
         display: none;
       }
-      .premiumLabel-fDtYys {
+      .premiumLabel-V52REm {
         color: unset;
       }
 
@@ -47,7 +47,7 @@
         }
         background-color: currentColor;
       }
-      .premiumLabel-fDtYys svg, // user settings
+      .premiumLabel-V52REm svg, // user settings
       .icon-3Povsy { // server settings
         display: none;
       }
@@ -270,7 +270,7 @@ $settings-icons: (
   @each $tab, $icon in $icons {
     $color: map-get($icon, color);
     $color: var(--color, var(--interactive-normal)) !default;
-    #app-mount [aria-label="#{$category}"] .sidebar-CFHs9e {
+    #app-mount [aria-label="#{$category}"] .sidebar-nqHbhN {
       #{if($category=="RTC_DEBUG",
         "[aria-controls*=\"#{$tab}\"]", // RTC_DEBUG
         "[aria-controls=\"#{$tab}-tab\"]" // main

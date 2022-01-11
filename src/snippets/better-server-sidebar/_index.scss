@@ -1,42 +1,42 @@
 //? Server sidebar color
-.guilds-1SWlCJ .scrollerBase-289Jih,
-.bg-h5JY_x, // titlebar
-.notice-3bPHh-.colorDark-1yVQpk { // "Enhance your Discord experience!"
+.guilds-2JjMmN .scrollerBase-_bVAAt,
+.bg-1QIAus, // titlebar
+.notice-2HEN-u.colorDark-17ICom { // "Enhance your Discord experience!"
   background-color: var(--background-secondary);
 }
-#app-mount .navigationBar-2JJXBp {
+#app-mount .navigationBar-2Z_P4D {
   background-color: var(--background-secondary-alt);
 }
-.notice-3bPHh- {
+.notice-2HEN-u {
   box-shadow: unset;
 }
 
-.guilds-1SWlCJ {
+.guilds-2JjMmN {
   //? Server folder color
-  .expandedFolderBackground-3ZDF05,
-  .folderIconWrapper-1Ml_1q {
+  .expandedFolderBackground-1kSAf6,
+  .folderIconWrapper-1oRIZr {
     background-color: var(--background-tertiary) !important;
     transition: background-color 0.3s;
   }
 
   //? Expanded folder background width
-  .wrapper-shyHJt {
+  .wrapper-38slSD {
     display: grid;
     place-items: center;
-    .expandedFolderBackground-3ZDF05 {
+    .expandedFolderBackground-1kSAf6 {
       width: 42px;
       left: unset;
     }
   }
 
   //? Make dragging a server over another server/folder
-  .listItem-2Ig28I {
-    .dragOver-Iim8_W.centerTarget-1vR_1- {
+  .listItem-3SmSlK {
+    .dragOver-1OKbo2.centerTarget-S6BLFQ {
       &::before {
         content: unset;
       }
     }
-    .wobble-35H26H {
+    .wobble-18SYQm {
       position: relative;
       isolation: isolate;
       border-radius: 18px;
@@ -45,9 +45,9 @@
   }
 
   //? Blurple discovery and add server buttons
-  .circleIconButton-hZmpE8 {
+  .circleIconButton-1VxDrg {
     color: var(--brand-experiment);
-    &.selected-3mFF3I {
+    &.selected-2r1Hvo {
       background-color: currentColor;
       svg {
         color: white;

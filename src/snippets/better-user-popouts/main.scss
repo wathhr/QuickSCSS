@@ -1,7 +1,7 @@
 @import "./modals.scss";
 @import "./popouts.scss";
 
-.userPopout-xaxa6l, .profileBannerPreview-3_l0Wd,
+.userPopout-2j1gM4, .profileBannerPreview-3_l0Wd,
 [aria-label="User profile modal"] {
   //? Badges
   [aria-label="User badges"] {
@@ -18,9 +18,9 @@
   }
 
   //? Smaller discrim
-  .discrimBase-24vY8o, // popout
-  .discriminator-1swucG, // modal
-  .discriminator-2C3qJO { // settings modal
+  .discrimBase-1VOoau, // popout
+  .discriminator-1bqsd3, // modal
+  .discriminator-2m-MqL { // settings modal
     font-size: 14px;
     color: var(--header-secondary);
     vertical-align: bottom;
@@ -33,19 +33,19 @@
   }
 
   //? Make the about me section get "limited" less
-  .aboutMeBody-3GuvKk,
-  .userBio-3tlrzS {
-    &.clamped-IwJfxR {
+  .aboutMeBody-1J8rhz,
+  .userBio-2-tr00 {
+    &.clamped-2ZePhX {
       -webkit-line-clamp: 10;
       line-clamp: 10;
     }
   }
 
   //? Activity text positioning
-  .gameIcon-_0rmMm {
+  .gameIcon-1siQqm {
     margin-right: 6px;
   }
-  .content-3JfFJh {
+  .content-tXPNDw {
     margin-left: 0;
   }
 }

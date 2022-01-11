@@ -1,53 +1,53 @@
-.layer-2KE1M9 > [aria-label][aria-modal="true"] .small-3iVZYw.root-3QyAh1,
-div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { //* server profile modal
+.layer-1Ixpg3 > [aria-label][aria-modal="true"] .small-23Atuv.root-8LYsGj,
+div:not([class]) .backdrop-2ByYRN + .modal-2LBig1 { //* server profile modal
   //? color changes
-  .topSection-y3p-_D {
+  .topSection-13QKHs {
     background-color: var(--background-tertiary);
   }
-  .avatar-AvHqJA {
+  .avatar-3QF_VA {
     background-color: var(--background-tertiary);
     border-color: var(--background-tertiary);
   }
-  .body-r6_QPy {
+  .body-1Ukv50 {
     background-color: var(--background-secondary);
-    &.noTabBar-3ZjPNR {
+    &.noTabBar-2Q-iE_ {
       border-top: none;
     }
   }
 
   //? almost everything else
   //* banner height
-  .banner-2QYc2d {
+  .banner-1YaD3N {
     height: 240px;
   }
 
   //* header positioning
-  .nameTag-ECvD8P {
+  .nameTag-2Nlmsy {
     margin-bottom: 12px; // thanks juby
-    &.nameTagWithCustomStatus-2kkfrQ {
+    &.nameTagWithCustomStatus-5c-v3- {
       margin-bottom: 8px;
     }
   }
-  .customStatusActivity-nmH3DF {
+  .customStatusActivity-WKWGD- {
     padding-bottom: 8px;
 
     //* "fix" custom status overflow
-    .customStatus-1COQYu {
+    .customStatus-kFfkj5 {
       display: flex;
     }
   }
 
   //? improve the tab thingies
-  .listScroller-3GmIYj {
+  .listScroller-entkMk {
     overflow: hidden overlay !important;
     counter-reset: mutuals;
-    .iconActiveMedium-1UaEIR {
+    .iconActiveMedium-27_R5B {
       border-radius: 50%;
       transition: border-radius 200ms linear;
     }
-    .listRow-1iDGel {
+    .listRow-2nO1T6 {
       &:hover {
-        .iconActiveMedium-1UaEIR {
+        .iconActiveMedium-27_R5B {
           border-radius: 12px;
         }
         &::after {
@@ -63,42 +63,42 @@ div:not([class]) .backdrop-1wrmKB + .modal-3c3bKg { //* server profile modal
         opacity: 0.6;
         transition: opacity 200ms linear;
       }
-      .listName-U3shDM {
+      .listName-PwbeHL {
         flex: 1;
       }
     }
   }
 
   //? move buttons below the actual activities
-  .activityProfile-2bJRaP {
-    .assets-VMAukC {
+  .activityProfile-1712BN {
+    .assets-3PQvAh {
       margin: 0;
     }
-    .body-ZAhrcj {
+    .body-u1Y8uL {
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 8px;
-      > .buttonSize-AQY2mE {
+      > .buttonSize-dIiz43 {
         grid-column: span 3;
       }
     }
-    .buttonsWrapper-2spIeK {
+    .buttonsWrapper-2ARRp1 {
       margin: 0;
       grid-row: 2;
       grid-column: span 3;
     }
-    .buttonSize-AQY2mE {
+    .buttonSize-dIiz43 {
       width: 100%;
     }
-    .contentNoImagesProfile-371_Rv {
+    .contentNoImagesProfile-Xss4dS {
       grid-column: span 3;
     }
   }
 }
 
 //? Settings user modal
-.accountProfileCard-1XCH88 {
-  .settingsBanner-15-pZk {
+.accountProfileCard-lbN7n- {
+  .settingsBanner-1eDJ5w {
     height: 240px;
   }
 }

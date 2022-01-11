@@ -1,57 +1,57 @@
-.contentRegion-3nDuYy {
+.contentRegion-3HkfJJ {
   flex-basis: 100%; // make the sidebar take up as little space as possible
-  .contentColumn-2hrIYH, .customColumn-Rb6toI, // make the actual content take up everything else
-  .customScroller-26gWhv > div, // various different menus
+  .contentColumn-1C7as6, .customColumn-2n-oKU, // make the actual content take up everything else
+  .customScroller-m1-jZn > div, // various different menus
   .descriptionWrapper-1GiGtP, // welcome screen description
-  .noticeRegion-1YviSH, // "Careful - you have unsaved changes!" bar
-  .contentWidth-xLB44s, // edit role tab
-  [style="opacity: 1;"] .sidebarScrollable-1qPI87 + .content-1rPSz4 { // channel permissions
+  .noticeRegion-qjyUVg, // "Careful - you have unsaved changes!" bar
+  .contentWidth-3aWel5, // edit role tab
+  [style="opacity: 1;"] .sidebarScrollable-2mW9Ls + .content-2ssVKB { // channel permissions
     max-width: unset;
   }
-  .customScroller-26gWhv > div {
+  .customScroller-m1-jZn > div {
     margin-inline: 40px;
   }
 
   // user profile
-  .baseLayout-NX_bpH > div:not([class]) {
+  .baseLayout-8AMrwn > div:not([class]) {
     flex-grow: 1;
   }
 
   // video preview
-  .userSettingsVoice-iwdUCU {
+  .userSettingsVoice-1_dzjw {
     // all of this sucks
-    .marginBottom40-2vIwTv + div:not([class], :last-of-type) {
+    .marginBottom40-fvAlAV + div:not([class], :last-of-type) {
       display: grid;
       grid-template-columns: 1fr auto;
       column-gap: 20px;
-      > :where(div:not(.divider-3573oO, .selector-3qI8sT)), > h3 { // :where() for lower specificity
+      > :where(div:not(.divider-_0um2u, .selector-2eK4L1)), > h3 { // :where() for lower specificity
         margin: 0;
       }
       > div {
         grid-column: 1;
       }
-      h1, .divider-3573oO {
+      h1, .divider-_0um2u {
         grid-column: 1/-1;
       }
-      .selector-3qI8sT {
+      .selector-2eK4L1 {
         margin-top: 8px;
         margin-bottom: 20px;
       }
-      .previewToggle-1Ertm9 {
+      .previewToggle-vfkyIm {
         grid-row: 4;
         margin-bottom: 20px;
       }
-      .backgroundOptions-2NdDN_ {
+      .backgroundOptions-1MtBFY {
         margin-top: 8px;
       }
-      .backgroundImageOption-127aO7 {
+      .backgroundImageOption-3P1JaZ {
         transform: unset !important;
       }
       [aria-label]:not([class]):hover { //broken background option
         box-shadow: var(--elevation-medium);
       }
       // make the camera be on the side
-      .cameraWrapper-2n3EKe {
+      .cameraWrapper-1hB0cM {
         grid-column: 2;
         grid-row: 3/10;
         place-self: start center;
@@ -66,7 +66,7 @@
   }
 
   // make the color picker take up as much space as possible
-  .bsi-settings-tab-bar ~ .flex-1xMQg5 {
+  .bsi-settings-tab-bar ~ .flex-2S1XBF {
     [style="flex: 1 1 70%;"] {
       flex-basis: 100% !important;
     }
@@ -81,14 +81,14 @@
   }
 
   // hypesquad video
-  .features-2npk2D {
+  .features-6z-RVS {
     margin-inline: auto;
     width: 50%;
   }
 
   // server icon
-  .children-rWhLdy {
-    .horizontal-1ae9ci[style="flex: 1 1 50%;"] {
+  .children-1xdcWE {
+    .horizontal-112GEH[style="flex: 1 1 50%;"] {
       flex-basis: unset !important;
       flex-grow: 0 !important;
       [style="flex: 1 1 auto; max-width: 180px;"] {
@@ -98,7 +98,7 @@
   }
 
   // server invite and banner background
-  [style="flex: 1 1 auto;"] .alignStart-H-X2h-.noWrap-3jynv6[style="flex: 1 1 50%;"] {
+  [style="flex: 1 1 auto;"] .alignStart-2nShwY.noWrap-hBpHBz[style="flex: 1 1 50%;"] {
     + [style="flex: 1 1 50%;"] {
       flex-basis: unset !important;
     }
@@ -106,35 +106,35 @@
 
   // make role settings not as Dumb
   div:not([class]) {
-    .rolesTable-3622Dd {
-      .memberSpacing-1zJbKJ,
-      .buttonsSpacing-3twfdv {
+    .rolesTable-2Z8MuS {
+      .memberSpacing-1RRW7k,
+      .buttonsSpacing-3-Z_p5 {
         display: none;
       }
     }
-    ~ .roleRow-30TwGe {
-      .roleNameSpacing-XtjbtV {
+    ~ .roleRow-3LoHQ6 {
+      .roleNameSpacing-2VQrKU {
         flex-basis: 900%;
       }
-      .memberSpacing-1zJbKJ {
+      .memberSpacing-1RRW7k {
         flex-basis: unset;
         justify-content: unset;
         margin-right: 52px;
       }
-      .buttonsSpacing-3twfdv {
+      .buttonsSpacing-3-Z_p5 {
         flex-basis: unset;
       }
-      .editButton-1V012_ {
+      .editButton-2P76Jg {
         visibility: unset;
       }
     }
   }
 
   // make emoji settings not as Dumb
-  h5.marginBottom20-32qID7 + [class="marginBottom40-2vIwTv"] {
+  h5.marginBottom20-315RVT + [class="marginBottom40-fvAlAV"] {
     display: grid;
     grid-template-columns: auto 1fr 1fr;
-    .flex-1O1GKY.horizontal-1ae9ci {
+    .flex-3BkGQD.horizontal-112GEH {
       display: grid;
       column-gap: 8px;
       grid-column: 1/-1;
@@ -153,7 +153,7 @@
   }
 
   // make the boost upsell not repeat on the stickers tab
-  .upsellContainer-j6r8ts {
+  .upsellContainer-22N_CL {
     background-size: cover;
     background-position: center 40%;
   }
@@ -164,17 +164,17 @@
   }
 
   // make membership screening settings not be Dumb
-  .editableFieldsContainer-1LYE1s {
+  .editableFieldsContainer-1p_q_4 {
     width: unset;
   }
 
   // welcome screen
-  .exampleContainer-I8Et0j { // welcome screen example
+  .exampleContainer-hz7EUM { // welcome screen example
     background-size: contain;
     background-position: left;
   }
-  .welcomeHeader-11Eeto {
-    .descriptionWrapper-3wyGCv {
+  .welcomeHeader-1Sv05u {
+    .descriptionWrapper-Maz2Cn {
       max-width: unset;
     }
   }

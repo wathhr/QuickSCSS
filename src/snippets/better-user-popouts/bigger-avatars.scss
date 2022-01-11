@@ -1,7 +1,7 @@
 // TODO: make this actually good
 //? User modal
 [aria-label="User profile modal"] {
-  .avatar-AvHqJA {
+  .avatar-3QF_VA {
     width: calc(var(--avatar-size) * 1.25) !important;
     height: calc(var(--avatar-size) * 1.25) !important;
     top: calc(var(--avatar-size) * -0.7084);
@@ -11,15 +11,15 @@
 }
 
 //? Settings tab user "modal"
-.accountProfileCard-1XCH88 {
-  .avatar-1uQSZT {
+.accountProfileCard-lbN7n- {
+  .avatar-3mTjvZ {
     width: calc(var(--avatar-size) * 1.25) !important;
     height: calc(var(--avatar-size) * 1.25) !important;
     top: calc(var(--avatar-size) * 1.8);
     left: calc(var(--avatar-size) / 9.6);
     border-width: calc(var(--avatar-size) / 15);
   }
-  .userInfo-iCloHO {
+  .userInfo-regn9W {
     height: unset;
     padding-bottom: calc(var(--avatar-size) / 2.4);
     padding-left: calc(var(--avatar-size) * 1.55);
@@ -27,17 +27,17 @@
 }
 
 //? User popout
-.userPopout-xaxa6l {
-  .avatarWrapperNormal-26WQIb {
+.userPopout-2j1gM4 {
+  .avatarWrapperNormal-ahVUaC {
     left: 8px;
     top: calc(120px - var(--avatar-size) / 1.8);
   }
-  .avatar-37jOim,
-  .avatarHint-2A3RNb {
+  .avatar-2Vndt_,
+  .avatarHint-k7pYop {
     width: var(--avatar-size) !important;
     height: var(--avatar-size) !important;
   }
-  .profileBadges-ohc0Vu {
+  .profileBadges-2pItdR {
     max-width: calc(88% - var(--avatar-size));
   }
 }
@@ -52,10 +52,10 @@
 }
 
 //? Calls
-.participant-1lOCsd {
+.participant-1l6khj {
   &,
-  .wrapper-2QE8vf,
-  .callAvatarMask-1SLlRi {
+  .wrapper-3mYmFS,
+  .callAvatarMask-fiNMWy {
     width: var(--avatar-size) !important;
     height: var(--avatar-size) !important;
   }

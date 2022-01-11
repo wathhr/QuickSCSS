@@ -1,21 +1,21 @@
 //? Notes
-.bodyInnerWrapper-26fQXj { // popout
+.bodyInnerWrapper-2bQs1k { // popout
   > h3:last-of-type,
-  .note-1oo11U {
+  .note-Go5ZP2 {
     display: none;
   }
 }
-.userInfoSection-q_35fn:not(.colorStandard-2KCXvj) { // modal
+.userInfoSection-2u2hir:not(.colorStandard-21JIj7) { // modal
   > h3:last-of-type,
-  .note-367eZJ {
+  .note-3M15gE {
     display: none;
   }
 }
 
 //? Context menu
-#message.menu-3sdvDG .wrapper-3_530D, //* Quick reactions
-.menu-3sdvDG .separator-2I32lJ, //* Seperators
-#status-picker .description-2L932D, //* Status descriptions
+#message.menu-1QACrS .wrapper--nA0oy, //* Quick reactions
+.menu-1QACrS .separator-1So4YB, //* Seperators
+#status-picker .description-3Cwkxk, //* Status descriptions
 #user-context-invite-to-server, //* Invite to server
 #user-context-note, //* Add note
 
@@ -29,8 +29,8 @@ a[href="https://support.discord.com"], //* Help button
 [aria-label="Open sticker picker"], //* Sticker button
 
 //? Misc
-.setIdentityLink-1t8Ahd, //* "Set a server nickname" on user popouts
-.wumpusWrapper-2H_Ezt, //* New user wumpus
+.setIdentityLink-hOFsMl, //* "Set a server nickname" on user popouts
+.wumpusWrapper-3ReSr0, //* New user wumpus
 #DONT-DISABLE-THIS {
   display: none;
 }

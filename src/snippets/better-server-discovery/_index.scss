@@ -1,16 +1,16 @@
-.sidebar-2K8pFh > .scrollerBase-289Jih {
-  .categoryItem-ONe8JV {
+.sidebar-1tnWFu > .scrollerBase-_bVAAt {
+  .categoryItem-Kc_HK_ {
     margin-bottom: 2px;
     padding: 6px 10px;
     font-size: 16px;
     line-height: 20px;
-    &:not(.selectedCategoryItem-28UllF) {
+    &:not(.selectedCategoryItem-ZjqSui) {
       cursor: pointer;
     }
     &:hover {
       background-color: var(--background-modifier-hover);
     }
-    &.selectedCategoryItem-28UllF,
+    &.selectedCategoryItem-ZjqSui,
     &:active {
       color: var(--interactive-active);
       background-color: var(--brand-experiment);
@@ -25,49 +25,49 @@
       align-items: center;
       gap: 8px;
     }
-    .avatar-3uk_u9 {
+    .avatar-6qzftW {
       all: unset;
       display: flex;
     }
   }
 }
 
-.pageWrapper-1PgVDX {
+.pageWrapper-2PwDoS {
   // header
-  .searchHeader-2I26nG {
+  .searchHeader-3ZIh2x {
     min-height: unset;
     margin-top: 32px;
   }
-  .headerImage-3X1tyY {
+  .headerImage-2D5D-v {
     display: none;
   }
-  .headerContentWrapper-2u32yq {
+  .headerContentWrapper-1u9R_E {
     all: revert;
     width: 100%;
     height: 100%;
   }
-  .headerContent-2gImvv {
+  .headerContent-2Z-1wE {
     all: revert;
   }
-  .searchSubtitle-2jsC5X {
+  .searchSubtitle-C5P4gh {
     display: none;
   }
-  .container-V70vZ2:not(.searchPage-3GKAdT) > .search-1iTphC {
+  .container-2rCwVJ:not(.searchPage-3tt6dh) > .search-25t1e9 {
     max-width: 85%;
     margin: auto;
   }
 
   // main
-  .viewWrapper-8-8h4T {
+  .viewWrapper-2sTW6t {
     max-width: unset;
   }
-  h3.size20-17Iy80 {
+  h3.size20-9iTTnl {
     text-align: center;
     font-size: 24px;
     line-height: 30px;
     margin: 48px 0 16px;
   }
-  .guildList-3cJX3d {
+  .guildList-3GXKvP {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -77,20 +77,20 @@
   }
 
   // search results
-  .container-V70vZ2,
-  .categories-1ywIbh {
+  .container-2rCwVJ,
+  .categories-2LoSbA {
     justify-content: center;
   }
-  .search-1iTphC,
-  .categories-1ywIbh {
+  .search-25t1e9,
+  .categories-2LoSbA {
     max-width: 85%;
   }
-  .results-2a-SSB {
+  .results-1Lsvf8 {
     &,
-    .guildList-1ItbxP {
+    .guildList-QjZKeK {
       max-width: unset;
     }
-    .guildList-1ItbxP {
+    .guildList-QjZKeK {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -98,7 +98,7 @@
         width: 248px
       }
     }
-    .card-PN0gR4 {
+    .card-1rhKXq {
       overflow: hidden;
       border-radius: 8px;
       background-color: var(--background-secondary-alt);
@@ -111,24 +111,24 @@
         transform: translateY(-1px);
         box-shadow: var(--elevation-high);
       }
-      .container-1lb8C4 {
+      .container-2R6xAU {
         flex-direction: column;
         gap: 32px;
       }
-      .splashContainer-enaItk {
+      .splashContainer-2PC_Bm {
         height: 143px;
         margin: unset;
         border-radius: unset;
       }
-      .splashImage-3dNUXz {
+      .splashImage-1UBFEm {
         width: 100%;
         transform: unset;
       }
-      .content-eOXYoI {
+      .content-3Xrx5s {
         padding: 0 16px 16px;
         width: unset;
       }
-      .header-26TfPy {
+      .header-3m4_6U {
         > svg {
           position: absolute;
           width: 40px;
@@ -138,7 +138,7 @@
           border-radius: 18px;
           border: 4px solid var(--background-secondary-alt);
         }
-        &, .headerName-3ZW18n, h3 {
+        &, .headerName-1IcEWM, h3 {
           max-width: 100%;
           text-overflow: ellipsis;
           overflow: hidden;

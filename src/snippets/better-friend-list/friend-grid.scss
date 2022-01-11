@@ -1,4 +1,4 @@
-.peopleColumn-29fq28[id$="-tab"] {
+.peopleColumn-1wMU14[id$="-tab"] {
   [data-list-id="people"] {
     margin-top: 0;
     > div {
@@ -7,11 +7,11 @@
       //grid-template-columns: repeat(auto-fill, 300px);
       gap: 8px;
       padding: 0 8px;
-      .title-30qZAO {
+      .title-x4dI75 {
         grid-column: 1/-1;
         margin: 12px 12px 4px;
       }
-      .peopleListItem-2nzedh {
+      .peopleListItem-u6dGxF {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -35,23 +35,23 @@
             size: cover;
           }
         }
-        .listItemContents-95HL3L, // normal
-        .listItemContents-BUaJR_, // blocked
-        .listItemContents-2w6nwE { // pending
+        .listItemContents-2n2Uy9, // normal
+        .listItemContents-f4Uz5J, // blocked
+        .listItemContents-2NFd61 { // pending
           display: revert;
           flex: 0;
           margin-bottom: 8px;
           padding: 64px 16px 12px 16px;
           background-color: var(--background-tertiary);
         }
-        .userInfo-2zN2z8 {
+        .userInfo-2WpsYG {
           flex-direction: column;
           font: {
             size: 20px;
             weight: 600;
           }
         }
-        .avatar-3W3CeO {
+        .avatar-2MSPKk {
           position: absolute;
           left: 8px;
           top: calc(120px - var(--avatar-size, 80px) / 1.8);
@@ -62,13 +62,13 @@
           border: 6px solid var(--background-tertiary);
           background-color: var(--background-tertiary);
         }
-        .discriminator-22Okc1 {
+        .discriminator-WV5K5s {
           visibility: revert;
         }
-        .subtext-24R4-w {
+        .subtext-xfubwR {
           display: none;
         }
-        .actionButton-uPB8Fs {
+        .actionButton-3-B2x- {
           position: absolute;
           top: 6px;
           height: 16px;
@@ -88,12 +88,12 @@
           }
         }
         &:hover {
-          .actionButton-uPB8Fs {
+          .actionButton-3-B2x- {
             opacity: 1;
             transform: unset;
           }
         }
-        .icon-35-fSh {
+        .icon-1WVg4I {
           width: unset;
           height: inherit;
           aspect-ratio: 1;

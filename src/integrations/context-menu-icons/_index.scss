@@ -2,24 +2,24 @@
 //! this is still such a fucking mess, even starting to become a shitpost at this point
 $context-unknown: true;
 $context-unknown: if($context-icons-side=="left", true, false) !default;
-.menu-3sdvDG {
+.menu-1QACrS {
   --icon-size: #{if($context-icons-side=="left", 24px, 18px)};
-  &.styleFlexible-wGDiIL {
+  &.styleFlexible-x0_sIC {
     max-width: calc(320px + var(--icon-size));
   }
-  .scroller-3BxosC {
+  .scroller-1bVxF5 {
     overflow: hidden auto !important;
     padding: 6px 8px !important;
   }
-  .item-1tOPte {
+  .item-1OdjEX {
     --content: #{if($context-unknown, inspect(""), unset)};
     color: var(--color, var(--interactive-normal));
     &:hover {
       color: var(--interactive-hover);
       background-color: var(--background-modifier-hover);
     }
-    &:active:not(.hideInteraction-1iHO1O),
-    &.focused-3afm-j:not(:hover) {
+    &:active:not(.hideInteraction-2jPGL_),
+    &.focused-3qFvc8:not(:hover) {
       color: var(--interactive-active);
       background-color: var(--background-modifier-active);
     }
@@ -27,17 +27,17 @@ $context-unknown: if($context-icons-side=="left", true, false) !default;
       &:not(
         [id^="message-add-reaction--"]:not(#message-add-reaction--other-reactions),
         [id^="status-picker-switch-account--"]:not(#status-picker-switch-account--manage-accounts),
-        #message-apps + .layer-v9HyYc div
+        #message-apps + .layer-2aCOJ3 div
       ) {
-        .label-22pbtT,
-        .statusItem-33LqPf[aria-label] {
+        .label-2gNW3x,
+        .statusItem-2hiCNB[aria-label] {
           display: grid;
           grid-template-areas: if($context-icons-side=="left", "icon main secondary", "main secondary icon")
                                "subtext subtext subtext";
           grid-template-columns: if($context-icons-side=="left", var(--icon-size) auto 1fr, auto 1fr var(--icon-size));
           column-gap: 8px;
           align-items: center;
-          .subtext-13Lvrj {
+          .subtext-2GlkbE {
             grid-area: subtext;
           }
           &::before {
@@ -65,7 +65,7 @@ $context-unknown: if($context-icons-side=="left", true, false) !default;
 
     @if ($context-icons-side=="left") {
       // fix status picker
-      .label-22pbtT > .statusItem-33LqPf {
+      .label-2gNW3x > .statusItem-2hiCNB {
         &::before { // this is a mess
           content: unset !important;
         }
@@ -82,7 +82,7 @@ $context-unknown: if($context-icons-side=="left", true, false) !default;
     }
 
     // make the add reaction emojis be the right size
-    .imageContainer-2fGqYU {
+    .imageContainer-1wSPgI {
       max-height: unset;
       &,
       > img {
@@ -95,13 +95,13 @@ $context-unknown: if($context-icons-side=="left", true, false) !default;
     &:not(
       [aria-checked], // checkboxes
       [id*="message-add-reaction--"]:not(#message-add-reaction--other-reactions),
-      #message-apps + .layer-v9HyYc div
+      #message-apps + .layer-2aCOJ3 div
     ) {
-      .iconContainer-2-XQPY:not([aria-haspopup] div), // did it like this because of the switch accounts item
-      .customEmojiPlaceholder-37iZ_j, // custom status
-      .optionIcon-1HDcpY, // attach button
-      .switchAccountsIcon-355frb,
-      .hintContainer-Vai8dx { // "Copy"
+      .iconContainer-1-SsTR:not([aria-haspopup] div), // did it like this because of the switch accounts item
+      .customEmojiPlaceholder-3mRJqA, // custom status
+      .optionIcon-1Ft8w0, // attach button
+      .switchAccountsIcon-36imMT,
+      .hintContainer-2UwhLP { // "Copy"
         display: none;
       }
     }
@@ -111,23 +111,23 @@ $context-unknown: if($context-icons-side=="left", true, false) !default;
       min-height: 32px;
       padding: 6px 8px;
     }
-    .statusItem-33LqPf {
+    .statusItem-2hiCNB {
       min-height: unset;
       padding: 0;
-      &.statusItemNoPadding-2yFleV {
+      &.statusItemNoPadding-3ExFcy {
         display: block;
       }
-      &.customStatusItem-1TTIxM,
-      &.customStatusWithEmoji-8-XZ8I {
+      &.customStatusItem-1qQzss,
+      &.customStatusWithEmoji-Y8lMLP {
         grid-template-rows: 1fr;
       }
     }
 
     // fix attach context menu
-    .optionLabel-gOA3fK {
+    .optionLabel-1o-h-l {
       font-size: unset;
     }
-    .optionName-uM5yH- {
+    .optionName-1ebPjH {
       margin: 0;
     }
   }
@@ -157,8 +157,8 @@ $context-icons: (
     $color: var(--interactive-normal) !default;
     ##{$menu}-#{$item} {
       --color: #{$color};
-      .label-22pbtT,
-      .statusItem-33LqPf[aria-label] {
+      .label-2gNW3x,
+      .statusItem-2hiCNB[aria-label] {
         --content: "";
         --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/#{map-get($icon, icon)}.svg?sanitize=true");
       }

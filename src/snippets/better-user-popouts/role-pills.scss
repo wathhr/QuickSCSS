@@ -1,23 +1,23 @@
 $role-pills: (
-  ".rolesList-1geHY1": ( // user popout
-    main: ".role-2irmRk",
-    circle: ".roleCircle-3xAZ1j",
+  ".rolesList-3uZoaa": ( // user popout
+    main: ".role-2TIOKu",
+    circle: ".roleCircle-1EgnFN",
   ),
-  ".userInfoSection-q_35fn.colorStandard-2KCXvj > .wrap-ZIn9Iy": ( // user modal (userdetails by strencher)
-    main: ".role-2irmRk",
-    circle: ".roleCircle-3xAZ1j",
+  ".userInfoSection-2u2hir.colorStandard-21JIj7 > .wrap-7NZuTn": ( // user modal (userdetails by strencher)
+    main: ".role-2TIOKu",
+    circle: ".roleCircle-1EgnFN",
   ),
-  ".members-2iaVuN": ( // locked channel
-    main: ".role-1P70N6",
-    circle: ".roleColor-fHISxl",
+  ".members-1CYCy_": ( // locked channel
+    main: ".role-23oyrw",
+    circle: ".roleColor-3cA0as",
   ),
-  ".roleWrapper-1Hde_V > .flex-1O1GKY": ( // member server settings
-    main: ".role-2irmRk",
-    circle: ".roleCircle-3xAZ1j"
+  ".roleWrapper-1Hde_V > .flex-3BkGQD": ( // member server settings
+    main: ".role-2TIOKu",
+    circle: ".roleCircle-1EgnFN"
   ),
-  ".rolesWrapper-2yOx9S": ( // server template
-    main: ".role-3paDXR",
-    circle: ".roleCircle-3DE8xJ",
+  ".rolesWrapper-1LLZrU": ( // server template
+    main: ".role-2mCo-N",
+    circle: ".roleCircle-1ER2zO",
   ),
 );
 @each $role-wrapper, $role in $role-pills {
@@ -68,7 +68,7 @@ $role-pills: (
     }
   }
 }
-.addButton-pcyyf6 {
+.addButton-1_dZYu {
   padding: 4px;
   &::after {
     content: "";
@@ -78,7 +78,7 @@ $role-pills: (
     background-color: hsl(0 0% 100% / var(--role-opacity));
   }
 }
-.roleRemoveIcon-2-TeGW {
+.roleRemoveIcon-387wKV {
   width: 8px;
   height: unset;
   aspect-ratio: 1;

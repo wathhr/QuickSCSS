@@ -8,7 +8,7 @@
 }
 
 //? Channel headers
-section.container-1r6BKw.themed-ANHk51:not(.callContainer-36WRfH section) {
+section.container-ZMc96U.themed-Hp1KC_:not(.callContainer-HtHELf section) {
   height: 50px;
   border-bottom: 1px solid var(--background-secondary-alt);
   box-shadow: none;
@@ -16,27 +16,27 @@ section.container-1r6BKw.themed-ANHk51:not(.callContainer-36WRfH section) {
     content: unset;
   }
 }
-.content-yTz4x3,
-.tabBody-3YRQ8W {
+.content-1jQy2l,
+.tabBody-2dgbAs {
   &::before {
     content: unset;
   }
 }
 
 //? Certain popups being "scrolled" upward
-.form-26zE04 {
+.form-2oOOG9 {
   transform: translateY(10px);
 }
 
 //? XBox activity icon
-.activity-2INFPu,
-.userProfileActivity-Bnt1p_ {
+.activity-1gTu-L,
+.userProfileActivity-sal5no {
   .xboxAssets-aGhVw8 {
     flex-grow: 0;
   }
 }
-.activityUserPopout-2yItg2 {
-  .buttonSize-AQY2mE:first-of-type {
+.activityUserPopout-2MzGCj {
+  .buttonSize-dIiz43:first-of-type {
     width: 100%;
   }
 }
@@ -65,10 +65,10 @@ div.allactivities-margin {
 }
 
 //? Chat area background height
-.chat-3bRxxu {
-  .messagesWrapper-1sRNjr > .scroller-2LSbBU {
+.chat-2ZfjoI {
+  .messagesWrapper-RpOMA3 > .scroller-kQBbkU {
     margin-bottom: -100px;
-    .scrollerContent-WzeG7R {
+    .scrollerContent-2SW0kQ {
       padding-bottom: 100px;
     }
   }
@@ -80,11 +80,11 @@ div.allactivities-margin {
     pointer-events: none;
     background-color: var(--background-primary);
   }
-  .form-2fGMdU {
+  .form-3gdLxP {
     transform: translateZ(0);
     isolation: isolate;
-    .scrollableContainer-2NUZem {
-      &.hasConnectedBar-1MrFne {
+    .scrollableContainer-15eg7h {
+      &.hasConnectedBar-1vN2JH {
         --top: 34px;
       }
       &::after {
@@ -96,25 +96,25 @@ div.allactivities-margin {
       content: unset;
     }
   }
-  .channelTextAreaDisabled-8rmlrp {
+  .channelTextAreaDisabled-1p2fQv {
     &::after {
       @extend %psuedo;
       opacity: 0.5;
     }
-    .scrollableContainer-2NUZem {
+    .scrollableContainer-15eg7h {
       opacity: unset;
     }
   }
 }
 
 //? Dumb margin when an activity doesn't have a description
-.activityUserPopout-2yItg2,
-.activityVoiceChannel-OPU-Fm {
-  .headerContainer-1_MTZL.marginBottom8-AtZOdT {
+.activityUserPopout-2MzGCj,
+.activityVoiceChannel-2vojOH {
+  .headerContainer-1wJjOa.marginBottom8-emkd0_ {
     margin-bottom: 0;
-    + .body-ZAhrcj {
-      > .content-3JfFJh:not(:empty),
-      .assets-VMAukC, .gameIcon-_0rmMm,
+    + .body-u1Y8uL {
+      > .content-tXPNDw:not(:empty),
+      .assets-3PQvAh, .gameIcon-1siQqm,
       div[class*="allactivities"] {
         margin-top: 8px;
       }
@@ -123,37 +123,37 @@ div.allactivities-margin {
 }
 
 //? Random line at the top of connected accounts
-#app-mount .connectedAccounts-QlRa4m:empty::before {
+#app-mount .connectedAccounts-1YaT2t:empty::before {
   background-color: transparent;
 }
 
 //? Regional selector being Dumb in VCs
-.quickSelectPopoutOption-opKBx9:focus {
+.quickSelectPopoutOption-2E2UmS:focus {
   color: unset;
   background-color: unset;
 }
 
 //? "Send Friend Request" / "Send Message" buttons shifting
-[aria-label="User profile modal"] .headerTop-547GTz {
+[aria-label="User profile modal"] .headerTop-1PNKck {
   place-items: start;
 }
 
 //? Hide MLv2 deleted local messages
-[__mlv2_deletetime].ephemeral-1PsL1r:not(.replying-1x3H0T) {
+[__mlv2_deletetime].ephemeral-2nDdnn:not(.replying-eZ7p5z) {
   display: none;
 }
 
 //? Codeblocks in blockquotes being small
-.messagesWrapper-1sRNjr .blockquoteContainer-U5TVEi {
+.messagesWrapper-RpOMA3 .blockquoteContainer-3VtvI1 {
   blockquote {
     width: 100%;
   }
 }
 
 //? Bot tag on replies
-.repliedMessage-VokQwo {
+.repliedMessage-3Z6XBG {
   > div:not(.toprole-wrapper),
-  > span:not(.username-1A8OIy),
+  > span:not(.username-h_Y3Us),
   > svg {
     order: 1;
   }
@@ -167,37 +167,37 @@ div.allactivities-margin {
 }
 
 //? Hide mouse when media player controls are hidden
-.wrapperControlsHidden-35Gtol {
+.wrapperControlsHidden-2BK8R2 {
   cursor: none;
 }
 
 //? Make dropdowns not be scrollable
-.translate-2dAEQ6.didRender-33z1u8 {
-  .popout-VcNcHB.scrollerBase-289Jih[style*="max-height:"] {
+.translate-PeW1wK.didRender-2SiRlm {
+  .popout-1KHNAq.scrollerBase-_bVAAt[style*="max-height:"] {
     max-height: unset !important;
   }
 }
 
 //? QuickSwitcher
-.quickswitcher-3JagVE {
+.quickswitcher-pKcM9U {
   padding: 20px;
   padding-bottom: 24px;
-  .scroller-zPkAnE {
+  .scroller-2qwVWY {
     margin-right: 0;
   }
-  .content-3YMskv {
+  .content-2a4AW9 {
     height: unset !important;
   }
 }
 
 //? Attach button positioning
-.channelTextArea-rNsIhG {
-  .sansAttachButton-td2irx {
+.channelTextArea-1FufC0 {
+  .sansAttachButton-1ERHue {
     padding-left: 12px;
   }
 }
 
 //? Bot tag being at the bottom
-.px-10SIf7.botTag-2WPJ74 {
+.px-MnE_OR.botTag-7aX5WZ {
   display: inline-flex;
 }

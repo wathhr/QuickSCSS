@@ -92,31 +92,31 @@ $srcs: (
 
 $classes: (
   "boost": ".channelNotice-3DDmsB",
-  "broken": ".errorImage-12Q43V",
-  "castle": ".verification-3RfWYC .image-2LVZ_j",
-  "crash": ".image-3zK3Wt",
-  "empty": ".image-3rvd0n, .emptyImage-1ABqhB",
-  "friend": ".channelNotice-1-XFjC.invite-OjTXrW",
-  "gif_not_found": ".sadImage-2ph8SI",
-  "gif_picker_end": ".endContainer-1ZDW8j::after",
-  "groups": ".noFriends-1fVUuM .errorStateIcon-3fNXE5",
-  "gift_inventory": ".emptyStateImage-2MrSNs, .emptyWumpus-12J3jI",
-  "houses": ".emptyIconGuilds-zT7p-8",
+  "broken": ".errorImage-19HeaA",
+  "castle": ".verification-2oQUwN .image-cLINxN",
+  "crash": ".image-35kDIs",
+  "empty": ".image-3rvd0n, .emptyImage-2pCD2j",
+  "friend": ".channelNotice-tO6Tus.invite-OjTXrW",
+  "gif_not_found": ".sadImage-2_mw0p",
+  "gif_picker_end": ".endContainer-3FEUTM::after",
+  "groups": ".noFriends-1Y8EWR .errorStateIcon-3y6XWh",
+  "gift_inventory": ".emptyStateImage-2qGUMK, .emptyWumpus-11kRB0",
+  "houses": ".emptyIconGuilds-2NNSTU",
   "integrations": ".footerImage-4UrEF0",
-  "key": ".channelNotice-1-XFjC.guildMFAWarning-3GEzs8",
-  "no_mutuals": ".emptyIconFriends-2l7flK",
-  "no_results": ".noResultsImage-3Y0eCI",
-  "no_results_conv": ".emptyState-2gL-9T",
-  "phones": ".verificationBlock-1Chfpc .image-2LVZ_j.phone-27MBJz",
-  "poop": ".imageError-2OefUi, .invalidPoop-pnUbq7, .guildIconExpired-2Qcq05",
-  "searching": ".searchIndexBackground-HQa_J9",
-  "server_outage": ".art-clkMXs",
-  "spotify_error": '.artworkSpotifySessionEnded-11d_If',
-  "streamer_mode": ".streamerModeEnabledImage-3vynUz",
-  "switch": ".channelNotice-1-XFjC.quickswitcher-35bYg4",
+  "key": ".channelNotice-tO6Tus.guildMFAWarning-3GEzs8",
+  "no_mutuals": ".emptyIconFriends-2LNxTX",
+  "no_results": ".noResultsImage-1-dP2n",
+  "no_results_conv": ".emptyState-1OLqEw",
+  "phones": ".verificationBlock-xhj3fR .image-cLINxN.phone-2wue_-",
+  "poop": ".imageError-dy476I, .invalidPoop--w1123, .guildIconExpired-2BFmZC",
+  "searching": ".searchIndexBackground-2pbSFD",
+  "server_outage": ".art-_juKdZ",
+  "spotify_error": '.artworkSpotifySessionEnded-D18iXB',
+  "streamer_mode": ".streamerModeEnabledImage-2EveVD",
+  "switch": ".channelNotice-tO6Tus.quickswitcher-35bYg4",
   "unclaimed": ".imageUnclaimed-5nJyYs",
-  "vocal_full": ".fullArt-2zAZvG",
-  "wumpus_tea_party": ".errorStateIcon-3fNXE5",
+  "vocal_full": ".fullArt-KDeDyg",
+  "wumpus_tea_party": ".errorStateIcon-3y6XWh",
 );
 
 // @everyone
@@ -190,12 +190,12 @@ $classes: (
   }
 
   //* no mutuals
-  .emptyIconFriends-2l7flK {
+  .emptyIconFriends-2LNxTX {
     background-size: 100%
   }
 
   //* no results conversation
-  .emptyState-2gL-9T {
+  .emptyState-1OLqEw {
     background-size: 20%;
   }
 
@@ -205,7 +205,7 @@ $classes: (
   }
 
   //? fixes
-  .channelNotice-1-XFjC {
+  .channelNotice-tO6Tus {
     filter: none;
   }
 }

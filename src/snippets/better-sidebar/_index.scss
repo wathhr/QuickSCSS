@@ -1,5 +1,5 @@
-.privateChannels-1nO12o {
-  .content-3YMskv {
+.privateChannels-oVe7HL {
+  .content-2a4AW9 {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -7,12 +7,12 @@
     column-gap: $gap;
     padding-left: $gap;
   }
-  .channel-2QD9_O,
+  .channel-1Shao0,
   div[style="height: 8px;"],
   h2 {
     flex-basis: 100%;
   }
-  .channel-2QD9_O {
+  .channel-1Shao0 {
     width: 0;
     max-width: unset;
     margin-left: unset;
@@ -22,12 +22,12 @@
       flex: 1;
       flex-basis: 20%;
       margin: 0;
-      .layout-2DM8Md {
+      .layout-1qmrhw {
         flex-grow: 1;
         justify-content: center;
       }
 
-      .children-gzQq2t:not(:empty, .holidayPromotionSelectedBackground-181xIv div) { // friend req circle
+      .children-283-lq:not(:empty, .holidayPromotionSelectedBackground-irywjz div) { // friend req circle
         justify-self: center;
         position: absolute;
         isolation: isolate;
@@ -46,20 +46,20 @@
           background-color: var(--background-secondary);
         }
       }
-      &:hover .layout-2DM8Md .children-gzQq2t::after {
+      &:hover .layout-1qmrhw .children-283-lq::after {
         background-color: var(--background-modifier-hover);
       }
-      &:active .layout-2DM8Md .children-gzQq2t::after {
+      &:active .layout-1qmrhw .children-283-lq::after {
         background-color: var(--background-modifier-active);
       }
-      &.selected-aXhQR6 .layout-2DM8Md .children-gzQq2t::after {
+      &.selected-1-Z6gm .layout-1qmrhw .children-283-lq::after {
         background-color: var(--background-modifier-selected);
       }
 
-      .avatar-3uk_u9 {
+      .avatar-6qzftW {
         margin-right: 0;
       }
-      .content-3QAtGj {
+      .content-1U25dZ {
         display: none;
       }
       &:hover {
@@ -78,7 +78,7 @@ $tooltip-content: (
   "Store": "/store/skus/",
 );
 @each $name, $href in $tooltip-content {
-  #app-mount .channel-2QD9_O[href^="#{$href}"]:not([href^="/channels/@me/"]):hover::before {
+  #app-mount .channel-1Shao0[href^="#{$href}"]:not([href^="/channels/@me/"]):hover::before {
     content: $name;
   }
 }

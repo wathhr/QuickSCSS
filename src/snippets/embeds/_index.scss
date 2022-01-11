@@ -1,5 +1,5 @@
-.message-2qnXI6 {
-  .container-1ov-mD:not(:empty) {
+.message-2CShn3 {
+  .container-2sjPya:not(:empty) {
     display: flex;
     flex-wrap: wrap;
     position: static;
@@ -8,23 +8,23 @@
       margin: 0;
     }
 
-    .wrapper-35wsBm, // server invite
-    .embedSpotify-tvxDCr {
+    .wrapper-1HIH0j, // server invite
+    .embedSpotify-1rDvOE {
       order: 1;
     }
 
-    .reactions-12N0jA, // reactions
-    .ephemeralMessage-1fEWtQ, // "Only you can see this" on local messages
-    .container-2nXavw { // "Share with your followers" container on announcement channels
+    .reactions-1BUEKl, // reactions
+    .ephemeralMessage-11q8XZ, // "Only you can see this" on local messages
+    .container-LxpXNv { // "Share with your followers" container on announcement channels
       flex: 1 0 100%;
       order: 500;
     }
-    .spine-5jbOmI + .container-3hZ-gs { // threads
+    .spine-2vt3pM + .container-3i3IzO { // threads
       margin-right: 100%;
       min-width: auto;
       order: 550;
     }
-    .spine-5jbOmI.cozy-XCy5h_ {
+    .spine-2vt3pM.cozy-1HM6-i {
       display: block;
       position: absolute;
       width: 2rem;
@@ -33,8 +33,8 @@
       left: 2.2rem;
     }
   }
-  &.hasThread-2k82W0 {
-    &.isSystemMessage-2MkNHd .spine-5jbOmI.cozy-XCy5h_ {
+  &.hasThread-3h-KJV {
+    &.isSystemMessage-QNv9ZH .spine-2vt3pM.cozy-1HM6-i {
       top: 1.8rem;
     }
     &::after {
@@ -44,8 +44,8 @@
   }
 
   // make the remove attachment/embed buttons nice
-  .embedSuppressButton-1FonMn,
-  .removeAttachmentButton-2qVPxg {
+  .embedSuppressButton-1rZHq6,
+  .removeAttachmentButton-1iO1qS {
     top: 2px;
     right: 2px;
     padding: 0;

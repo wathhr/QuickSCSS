@@ -1,5 +1,5 @@
 //? Improve padding
-.sidebar-CFHs9e {
+.sidebar-nqHbhN {
   padding: {
     top: 36px;
     bottom: 48px;
@@ -8,7 +8,7 @@
 }
 
 //? Settings divider
-.item-PXvHYJ[data-item-id="pc-updater"] {
+.item-3XjbnG[data-item-id="pc-updater"] {
   align-items: unset !important;
   overflow: visible;
   margin-bottom: 47px;
@@ -30,9 +30,9 @@
 
 //? Colored permission buttons
 $colored-permissions: (
-  ".deny-3nAuT6": #f04747,
-  ".passthrough-1c2ewQ": #faa61a,
-  ".allow-1PzSY3": #43b581,
+  ".deny-1GO6vI": #f04747,
+  ".passthrough--fbdFR": #faa61a,
+  ".allow-1h61-Z": #43b581,
 );
 @each $class, $color in $colored-permissions {
   #app-mount {
@@ -42,7 +42,7 @@ $colored-permissions: (
         color: white;
         background-color: color.adjust($color, $lightness: 5%, $saturation: 2.5%) !important;
       }
-      &.selected-2YhbGh {
+      &.selected-3jieYB {
         color: white;
         background-color: $color !important;
       }
