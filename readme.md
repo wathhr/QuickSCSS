@@ -1,5 +1,7 @@
-QuickSCSS [![CodeFactor](https://www.codefactor.io/repository/github/wathhr/quickscss/badge/dev?s=5f2850cfa164e62ecf2eaa497b0a075cf28b67cf)](https://www.codefactor.io/repository/github/wathhr/quickscss/overview/dev)
+QuickSCSS [![CodeFactor](https://www.codefactor.io/repository/github/wathhr/quickscss/badge/dev?s=5f2850cfa164e62ecf2eaa497b0a075cf28b67cf)](https://www.codefactor.io/repository/github/wathhr/quickscss/overview/legacy)
 ===
+
+> ⚠ This branch will most likely be deprecated soon, this was made for the sole purpose of having something to use while the v3 rewrite is taking place.
 
 A customizable Discord theme, mainly for [PowerCord](https://github.com/powercord-org/powercord).
 
@@ -71,4 +73,4 @@ QuickSCSS tries to work alongside other themes, while still looking nice with Di
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
-Copyright &copy; 2020-2021 wathhr
+Copyright &copy; 2020-2022 wathhr
