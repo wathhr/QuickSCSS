@@ -1,0 +1,30 @@
+#status-picker {
+  > .scroller-1bVxF5 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #status-picker-online {
+    + .separator-1So4YB {
+      display: none;
+    }
+  }
+  [id^="status-picker"]:not([id$="switch-account"], [id$="custom-status"]) {
+    .statusItem-2hiCNB {
+      display: block;
+      aspect-ratio: 1;
+    }
+    .icon-Lz4Y-_ {
+      width: 100%;
+      height: 100%;
+    }
+    .status-3TYC5W,
+    .description-3Cwkxk {
+      display: none;
+    }
+  }
+  #status-picker-invisible {
+    ~ div {
+      grid-column: 1/-1;
+    }
+  }
+}

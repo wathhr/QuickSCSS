@@ -1,3 +1,6 @@
 [submodule "assets"]
 	path = assets
 	url = https://github.com/walter-moment/quickscss-assets.git
+[submodule "src/fonts/Fonts"]
+	path = src/fonts/Fonts
+	url = https://github.com/walter-moment/Fonts.git

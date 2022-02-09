@@ -1,0 +1,17 @@
+@use './map.scss' as *;
+
+@each $platform, $assets in $connections {
+  $asset: map-get($assets, asset);
+  $old-asset: map-get($assets, old-asset);
+
+  [class*="conn"] {
+    $url: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/#{$platform}.svg?sanitized=true");
+    [src="#{$asset}"], &[src="#{$asset}"]
+    #{if($old-asset, ",[src=\"#{$old-asset}\"],&[src=\"#{$old-asset}\"]", "")} {
+      content: $url !important;
+    }
+    [style*="background-image: url(\"#{$asset}\")"], &[style*="background-image: url(\"#{$asset}\")"] {
+      background-image: $url !important;
+    }
+  }
+}

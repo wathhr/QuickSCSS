@@ -1,0 +1,56 @@
+@use 'sass:color';
+
+body {
+  //* User variables
+  $user-vars: (
+    topbar: (
+      'height': 48px,
+    ),
+    titlebar: (
+      'height': 18px,
+    ),
+    server-sidebar: (
+      'width': 72px,
+    ),
+    settings: (
+      'sidebar-width': 238px,
+      'icon-size': 24px,
+    ),
+  );
+  @each $primary, $vars in $user-vars {
+    @if (type-of($vars) == map) {
+      @each $name, $val in $vars {
+        --#{$primary}-#{$name}: #{$val};
+      }
+    } @else {
+      --#{$primary}: #{$vals};
+    }
+  }
+}
+
+:root {
+  //* Color variables
+  $qs-vars: (
+    col: (
+      'pink': #ff73fa,
+      'red': #ed4245,
+      'orange': #f57531,
+      'yellow': #faa81a,
+      'hypesquad-yellow': #fbb946,
+      'green': #3ba55d,
+      'gray': #4f545c,
+    ),
+  );
+  @each $category, $vars in $qs-vars {
+    @each $name, $val in $vars {
+      --qs-#{$category}-#{$name}: #{$val};
+      @if (type-of($val) == color) {
+        $dark: color.lightness($val) < 1;
+        --qs-#{$category}-#{$name}-hov: #{if($dark,
+          color.scale($val, $lightness: 15%),
+          color.scale($val, $lightness: -15%)
+        )};
+      }
+    }
+  }
+}

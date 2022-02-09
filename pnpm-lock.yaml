@@ -5,14 +5,14 @@ specifiers:
   postcss: ^8.3.9
   postcss-cli: ^9.0.1
   postcss-csso: ^5.0.1
-  sass: 1.35.2
+  sass: ^1.49.0
 
 devDependencies:
   autoprefixer: 10.3.7_postcss@8.3.9
   postcss: 8.3.9
   postcss-cli: 9.0.1_postcss@8.3.9
   postcss-csso: 5.0.1_postcss@8.3.9
-  sass: 1.35.2
+  sass: 1.49.0
 
 packages:
 
@@ -261,6 +261,10 @@ packages:
   /ignore/5.1.8:
     resolution: {integrity: sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==}
     engines: {node: '>= 4'}
+    dev: true
+
+  /immutable/4.0.0:
+    resolution: {integrity: sha512-zIE9hX70qew5qTUjSS7wi1iwj/l7+m54KWU247nhM3v806UdGj1yDndXj+IOYxxtW9zyLI+xqFNZjTuDaLUqFw==}
     dev: true
 
   /import-cwd/3.0.0:
@@ -522,12 +526,14 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
-  /sass/1.35.2:
-    resolution: {integrity: sha512-jhO5KAR+AMxCEwIH3v+4zbB2WB0z67V1X0jbapfVwQQdjHZUGUyukpnoM6+iCMfsIUC016w9OPKQ5jrNOS9uXw==}
+  /sass/1.49.0:
+    resolution: {integrity: sha512-TVwVdNDj6p6b4QymJtNtRS2YtLJ/CqZriGg0eIAbAKMlN8Xy6kbv33FsEZSF7FufFFM705SQviHjjThfaQ4VNw==}
     engines: {node: '>=8.9.0'}
     hasBin: true
     dependencies:
       chokidar: 3.5.2
+      immutable: 4.0.0
+      source-map-js: 0.6.2
     dev: true
 
   /slash/4.0.0:

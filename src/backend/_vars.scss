@@ -1,1 +1,8 @@
-$context-icons-side: right;
+//* Titlebar
+$titlebar-style: osx; // none/default, osx, native, topbar (WIP)
+
+//* Context menu
+$context-icon-side: right; // left, right
+
+//* Settings
+$topbar-back-button: true;

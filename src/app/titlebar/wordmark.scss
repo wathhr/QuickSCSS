@@ -1,0 +1,15 @@
+.wordmark-2u86JB {
+  position: fixed;
+  padding: 8px 12px 0;
+  svg {
+    display: none;
+  }
+  &::after {
+    content: var(--wordmark-text, 'Discord');
+    font: {
+      family: 'Discord', 'Ginto Nord';
+      size: 10px;
+      weight: 600;
+    }
+  }
+}

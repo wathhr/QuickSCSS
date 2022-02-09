@@ -1,0 +1,1509 @@
+@charset "UTF-8";
+:root {
+  --topbar-height: 48px;
+  --topbar-padding: 8px;
+  --server-sidebar-width: 72px;
+  --settings-sidebar-width: 238px;
+  --settings-icon-size: 24px;
+  --context-icon-size: 18px;
+}
+
+body {
+  --topbar-height: 48px;
+  --titlebar-height: 18px;
+  --server-sidebar-width: 72px;
+  --settings-sidebar-width: 238px;
+  --settings-icon-size: 24px;
+}
+
+:root {
+  --qs-col-pink: #ff73fa;
+  --qs-col-pink-hov: #ff3cf8;
+  --qs-col-red: #ed4245;
+  --qs-col-red-hov: #e9191c;
+  --qs-col-orange: #f57531;
+  --qs-col-orange-hov: #ee5a0c;
+  --qs-col-yellow: #faa81a;
+  --qs-col-yellow-hov: #e69305;
+  --qs-col-hypesquad-yellow: #fbb946;
+  --qs-col-hypesquad-yellow-hov: #faa717;
+  --qs-col-green: #3ba55d;
+  --qs-col-green-hov: #328c4f;
+  --qs-col-gray: #4f545c;
+  --qs-col-gray-hov: #43474e;
+}
+
+@keyframes notice-disappear {
+  to {
+    opacity: 0;
+  }
+}
+body::after {
+  content: "hi :)" "\a\a- walter";
+  position: fixed;
+  inset: 6rem 20% auto;
+  padding: 1.4rem;
+  white-space: pre;
+  text-align: center;
+  pointer-events: none;
+  border: 3px dashed var(--qs-col-yellow);
+  font-size: 1.4rem;
+  filter: brightness(1.15) opacity(0.95);
+  color: var(--text-normal);
+  background-color: var(--background-tertiary);
+  box-shadow: var(--elevation-high), inset var(--elevation-medium);
+  animation: notice-disappear 600ms 2400ms forwards;
+}
+.theme-light body::after {
+  content: "hi :)" "\a\aQuickSCSS is not intended to be used with light theme, you might encounter some accessibility issues if you continue." "\a\a- walter";
+  animation-delay: 4000ms;
+}
+
+.message-2CShn3 .container-2sjPya:not(:empty) {
+  display: flex;
+  flex-wrap: wrap;
+  position: static;
+  isolation: isolate;
+  gap: 0.25em;
+}
+.message-2CShn3 .container-2sjPya:not(:empty) > div {
+  margin: 0;
+}
+.message-2CShn3 .container-2sjPya:not(:empty) .wrapper-1HIH0j,
+.message-2CShn3 .container-2sjPya:not(:empty) .embedSpotify-1rDvOE {
+  order: 1;
+}
+.message-2CShn3 .container-2sjPya:not(:empty) .reactions-1BUEKl,
+.message-2CShn3 .container-2sjPya:not(:empty) .ephemeralMessage-11q8XZ,
+.message-2CShn3 .container-2sjPya:not(:empty) .container-LxpXNv {
+  flex: 1 0 100%;
+  order: 500;
+}
+.message-2CShn3 .container-2sjPya:not(:empty) .spine-2vt3pM + .container-3i3IzO {
+  margin-right: 100%;
+  min-width: auto;
+  order: 550;
+}
+.message-2CShn3.compact-2Nkcau.hasThread-3h-KJV .contents-2MsGLg::before {
+  content: none;
+}
+.message-2CShn3.compact-2Nkcau.hasThread-3h-KJV .spine-2vt3pM {
+  left: 2.4rem;
+  top: 1.6rem;
+}
+.message-2CShn3.compact-2Nkcau.hasThread-3h-KJV .systemMessageSpine-18-bd2 {
+  left: 3rem;
+  top: 1.8rem;
+}
+.message-2CShn3 .embedSuppressButton-1rZHq6,
+.message-2CShn3 .removeAttachmentButton-1iO1qS {
+  top: 2px;
+  right: 2px;
+  padding: 0;
+  z-index: 1;
+  mix-blend-mode: difference;
+  cursor: pointer;
+  color: var(--interactive-normal);
+}
+.message-2CShn3 .embedSuppressButton-1rZHq6:hover,
+.message-2CShn3 .removeAttachmentButton-1iO1qS:hover {
+  color: var(--interactive-hover);
+}
+.message-2CShn3 .embedSuppressButton-1rZHq6:active, .message-2CShn3 .embedSuppressButton-1rZHq6none,
+.message-2CShn3 .removeAttachmentButton-1iO1qS:active,
+.message-2CShn3 .removeAttachmentButton-1iO1qSnone {
+  color: var(--interactive-active);
+}
+.message-2CShn3 .embedSuppressButton-1rZHq6 path,
+.message-2CShn3 .removeAttachmentButton-1iO1qS path {
+  d: path("M15 3.999V2H9V3.999H3V5.999H21V3.999H15Z M5 6.99902V18.999C5 20.101 5.897 20.999 7 20.999H17C18.103 20.999 19 20.101 19 18.999V6.99902H5ZM11 17H9V11H11V17ZM15 17H13V11H15V17Z");
+}
+
+.container-ZMc96U,
+.header-3OsQeK,
+.searchBar-3TnChZ {
+  height: var(--topbar-height);
+}
+
+.platform-win .sidebarRegion-1VBisG {
+  background-color: var(--background-secondary);
+}
+.platform-win .sidebarRegionScroller-FXiQOh {
+  position: relative;
+  top: var(--titlebar-height);
+  height: calc(100% - var(--titlebar-height));
+  background-color: transparent;
+}
+.platform-win .sidebarRegionScroller-FXiQOh::-webkit-scrollbar-track {
+  margin-top: calc(var(--titlebar-height) * -1);
+}
+
+.baseLayer-W6S8cY.stop-animations * {
+  pointer-events: none;
+  -webkit-app-region: unset;
+}
+
+.contentRegion-3HkfJJ .auto-2K3UW5 {
+  margin-top: calc(var(--topbar-height) - 38px);
+}
+.contentRegion-3HkfJJ .auto-2K3UW5::-webkit-scrollbar-track {
+  margin-top: calc(var(--topbar-height) - 8px);
+}
+.contentRegion-3HkfJJ .auto-2K3UW5 :is(.customHeader-3mDgmH,
+:is(main, .content-2a4AW9) > .title-3hptVQ,
+:is(main, .content-2a4AW9) > div:first-child > :is(h1, h2),
+:is(main, .content-2a4AW9) > div[style]:not([class]):first-child,
+:is(main, .content-2a4AW9) > div[style]:not([class]):first-child + div > :is(h1, h2),
+:is(main, .content-2a4AW9) > div:first-child > div:first-child > :is(h1, h2),
+:is(main, .content-2a4AW9) > div:first-child > div:first-child > div:first-child > :is(h1, h2),
+:is(main, .content-2a4AW9) > div:first-child > .emojiUploadContainer-1tS7L7 + div :is(h1, h2)):first-child,
+.contentRegion-3HkfJJ .auto-2K3UW5 :is(.customHeader-3mDgmH,
+:is(main, .content-2a4AW9) > .title-3hptVQ,
+:is(main, .content-2a4AW9) > div:first-child > :is(h1, h2),
+:is(main, .content-2a4AW9) > div[style]:not([class]):first-child,
+:is(main, .content-2a4AW9) > div[style]:not([class]):first-child + div > :is(h1, h2),
+:is(main, .content-2a4AW9) > div:first-child > div:first-child > :is(h1, h2),
+:is(main, .content-2a4AW9) > div:first-child > div:first-child > div:first-child > :is(h1, h2),
+:is(main, .content-2a4AW9) > div:first-child > .emojiUploadContainer-1tS7L7 + div :is(h1, h2)):first-child + .divider-_0um2u {
+  display: none;
+}
+
+.standardSidebarView-E9Pc3j {
+  transform: translateZ(0);
+}
+.standardSidebarView-E9Pc3j div.toolsContainer-25FL6V {
+  all: unset;
+  position: fixed;
+  inset: calc(var(--topbar-padding) / 2) auto auto calc(var(--settings-sidebar-width) + var(--topbar-padding));
+  z-index: 10;
+  width: calc(var(--topbar-height) - var(--topbar-padding));
+  aspect-ratio: 1;
+  -webkit-app-region: no-drag;
+}
+.standardSidebarView-E9Pc3j div.toolsContainer-25FL6V .closeButton-PCZcma {
+  all: revert;
+  width: 100%;
+  aspect-ratio: 1;
+  cursor: pointer;
+  color: var(--interactive-normal);
+}
+.standardSidebarView-E9Pc3j div.toolsContainer-25FL6V .closeButton-PCZcma:hover {
+  color: var(--interactive-hover);
+}
+.standardSidebarView-E9Pc3j div.toolsContainer-25FL6V .closeButton-PCZcma:active, .standardSidebarView-E9Pc3j div.toolsContainer-25FL6V .closeButton-PCZcmanone {
+  color: var(--interactive-active);
+}
+.standardSidebarView-E9Pc3j div.toolsContainer-25FL6V .closeButton-PCZcma svg {
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+}
+.standardSidebarView-E9Pc3j div.toolsContainer-25FL6V .closeButton-PCZcma path {
+  d: path("M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21v-2z");
+  fill: currentColor;
+}
+.standardSidebarView-E9Pc3j div.toolsContainer-25FL6V .tools-kIrEGr {
+  position: revert;
+}
+.standardSidebarView-E9Pc3j div.toolsContainer-25FL6V .keybind-13vtq8 {
+  display: none;
+}
+.standardSidebarView-E9Pc3j .icon-3CDcPB,
+.standardSidebarView-E9Pc3j .titleContainer-3fPic2, .standardSidebarView-E9Pc3j .header-JUTO-g {
+  z-index: revert;
+}
+
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"])[aria-controls] {
+  --text: attr(aria-controls);
+}
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"])[data-item-id] {
+  --text: attr(data-item-id);
+}
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"])[aria-label] {
+  --text: attr(aria-label);
+}
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"]).selected-g-kMVV::after {
+  content: var(--text, "???");
+  position: fixed;
+  inset: 0 0 auto var(--settings-sidebar-width);
+  z-index: 10;
+  height: var(--topbar-height);
+  box-sizing: border-box;
+  padding: var(--topbar-padding);
+  line-height: calc(var(--topbar-height) - var(--topbar-padding) * 2);
+  font-size: calc((var(--topbar-height) - var(--topbar-padding)) * 0.5);
+  font-family: var(--font-display);
+  font-weight: 600;
+  -webkit-app-region: drag;
+  text-indent: calc(var(--topbar-height) - var(--topbar-padding) + 4px);
+  text-transform: none;
+  border-bottom: 4px solid var(--color, var(--brand-experiment));
+  border-image: linear-gradient(90deg, var(--color, var(--brand-experiment)) 10%, transparent) 1;
+  background-color: var(--background-secondary);
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=my-account-tab] {
+  --text: "My Account";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=profile-customization-tab] {
+  --text: "Profile Customization";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls="privacy-&-safety-tab"] {
+  --text: "Privacy & Safety";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=authorized-apps-tab] {
+  --text: "Authorized Apps";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=connections-tab] {
+  --text: "Connections";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=discord-nitro-tab] {
+  --text: "Scam";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=nitro-server-boost-tab] {
+  --text: "Server Boost";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=subscriptions-tab] {
+  --text: "Subscriptions";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=library-inventory-tab] {
+  --text: "Gift Inventory";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=billing-tab] {
+  --text: "🔒 Billing";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=appearance-tab] {
+  --text: "Appearance";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=accessibility-tab] {
+  --text: "Accessibility";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls="voice-&-video-tab"] {
+  --text: "Voice & Video";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls="text-&-images-tab"] {
+  --text: "Text & Images";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=notifications-tab] {
+  --text: "Notifications";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=keybinds-tab] {
+  --text: "Keybinds";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=language-tab] {
+  --text: "Language";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=windows-tab] {
+  --text: "Windows Settings";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=streamer-mode-tab] {
+  --text: "Streamer Mode";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=advanced-tab] {
+  --text: "Advanced";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=game-activity-tab] {
+  --text: "Activity Status";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=overlay-tab] {
+  --text: "Game Overlay";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=hypesquad-online-tab] {
+  --text: "Hypesquad";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=experiments-tab] {
+  --text: "Experiments";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=developer-options-tab] {
+  --text: "Developer Options";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=hotspot-options-tab] {
+  --text: "Hotspot Options";
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=dismissible-content-options-tab] {
+  --text: "Dismissible Content";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=overview-tab] {
+  --text: "Server Overview";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=roles-tab] {
+  --text: "Server Roles";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=emoji-tab] {
+  --text: "Server Emojis";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=stickers-tab] {
+  --text: "Server Stickers";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=moderation-tab] {
+  --text: "Moderation";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=audit_log-tab] {
+  --text: "Audit Log";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=integrations-tab] {
+  --text: "Server Integrations";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=widget-tab] {
+  --text: "Server Widget";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=guild_templates-tab] {
+  --text: "Server Template";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=community-tab] {
+  --text: "Community Overview";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=analytics-tab] {
+  --text: "Community Insights";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=partner-tab] {
+  --text: "Community Partner Programme";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=discovery-tab] {
+  --text: "Community Discovery";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=member_verification-tab] {
+  --text: "Membership Screening";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=community_welcome-tab] {
+  --text: "Welcome Screen";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=guild_premium-tab] {
+  --text: "Server Boost Status";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=members-tab] {
+  --text: "Server Members";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=instant_invites-tab] {
+  --text: "Server Invites";
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=bans-tab] {
+  --text: "Server Bans";
+}
+
+#app-mount [aria-label=CHANNEL_SETTINGS] .sidebar-nqHbhN [aria-controls=overview-tab] {
+  --text: "Channel Overview";
+}
+
+#app-mount [aria-label=CHANNEL_SETTINGS] .sidebar-nqHbhN [aria-controls=permissions-tab] {
+  --text: "Channel Permissions";
+}
+
+#app-mount [aria-label=CHANNEL_SETTINGS] .sidebar-nqHbhN [aria-controls=instant_invites-tab] {
+  --text: "Channel Invites";
+}
+
+#app-mount [aria-label=CHANNEL_SETTINGS] .sidebar-nqHbhN [aria-controls=integrations-tab] {
+  --text: "Channel Integrations";
+}
+
+.contentRegion-3HkfJJ {
+  flex-basis: 100%;
+}
+.contentRegion-3HkfJJ .toolsContainer-25FL6V {
+  width: unset;
+}
+.contentRegion-3HkfJJ .contentColumn-1C7as6, .contentRegion-3HkfJJ .customColumn-2n-oKU,
+.contentRegion-3HkfJJ .customScroller-m1-jZn > div,
+.contentRegion-3HkfJJ .descriptionWrapper-1GiGtP,
+.contentRegion-3HkfJJ .noticeRegion-qjyUVg,
+.contentRegion-3HkfJJ .contentWidth-3aWel5,
+.contentRegion-3HkfJJ [style="opacity: 1;"] .sidebarScrollable-2mW9Ls + .content-2ssVKB {
+  max-width: unset;
+}
+.contentRegion-3HkfJJ .customScroller-m1-jZn {
+  padding: 60px 40px 80px;
+}
+.contentRegion-3HkfJJ .customScroller-m1-jZn .content-28mbXd {
+  margin: 0;
+}
+.contentRegion-3HkfJJ .baseLayout-8AMrwn > div:not([class]) {
+  flex-grow: 1;
+}
+.contentRegion-3HkfJJ .contentColumnDefault-3eyv5o > .container-LUKdw8 > .content-374sTA {
+  max-width: 740px;
+}
+.contentRegion-3HkfJJ .contentColumnDefault-3eyv5o > .container-LUKdw8 > .content-374sTA .featureGrid-SSlfD0 {
+  justify-content: unset;
+}
+.contentRegion-3HkfJJ .userSettingsVoice-1_dzjw .marginBottom40-fvAlAV + div:not([class], :last-of-type) {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 20px;
+}
+.contentRegion-3HkfJJ .userSettingsVoice-1_dzjw .marginBottom40-fvAlAV + div:not([class], :last-of-type) > div {
+  grid-column: 1;
+}
+.contentRegion-3HkfJJ .userSettingsVoice-1_dzjw .marginBottom40-fvAlAV + div:not([class], :last-of-type) .cameraWrapper-1hB0cM {
+  grid-column: 2;
+  grid-row: 2/10;
+  place-self: start center;
+  aspect-ratio: 16/9;
+}
+.contentRegion-3HkfJJ .userSettingsVoice-1_dzjw .marginBottom40-fvAlAV + div:not([class], :last-of-type) .media-engine-video {
+  width: 100% !important;
+  height: 100% !important;
+}
+.contentRegion-3HkfJJ .bsi-settings-tab-bar ~ .flex-2S1XBF [style="flex: 1 1 70%;"] {
+  flex-basis: 100% !important;
+}
+.contentRegion-3HkfJJ .discordTweaksSettings {
+  display: grid;
+}
+.contentRegion-3HkfJJ .discordTweaksSettings .tweaks .tweakCard {
+  width: 100%;
+}
+.contentRegion-3HkfJJ .features-6z-RVS {
+  margin-inline: auto;
+  width: clamp(400px, 40vw, 50%);
+}
+.contentRegion-3HkfJJ .children-1xdcWE .horizontal-112GEH[style="flex: 1 1 50%;"] {
+  flex-basis: unset !important;
+  flex-grow: 0 !important;
+}
+.contentRegion-3HkfJJ .children-1xdcWE .horizontal-112GEH[style="flex: 1 1 50%;"] [style="flex: 1 1 auto; max-width: 180px;"] {
+  display: none;
+}
+.contentRegion-3HkfJJ [style="flex: 1 1 auto;"] .alignStart-2nShwY.noWrap-hBpHBz[style="flex: 1 1 50%;"] + [style="flex: 1 1 50%;"] {
+  flex-basis: unset !important;
+}
+.contentRegion-3HkfJJ div:not([class]) .rolesTable-2Z8MuS .memberSpacing-1RRW7k,
+.contentRegion-3HkfJJ div:not([class]) .rolesTable-2Z8MuS .buttonsSpacing-3-Z_p5 {
+  display: none;
+}
+.contentRegion-3HkfJJ div:not([class]) ~ .roleRow-3LoHQ6 .roleNameSpacing-2VQrKU {
+  flex-basis: 900%;
+}
+.contentRegion-3HkfJJ div:not([class]) ~ .roleRow-3LoHQ6 .memberSpacing-1RRW7k {
+  flex-basis: unset;
+  justify-content: unset;
+  margin-right: 52px;
+}
+.contentRegion-3HkfJJ div:not([class]) ~ .roleRow-3LoHQ6 .buttonsSpacing-3-Z_p5 {
+  flex-basis: unset;
+}
+.contentRegion-3HkfJJ div:not([class]) ~ .roleRow-3LoHQ6 .editButton-2P76Jg {
+  visibility: unset;
+}
+.contentRegion-3HkfJJ h5.marginBottom20-315RVT + [class=marginBottom40-fvAlAV] {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+}
+.contentRegion-3HkfJJ h5.marginBottom20-315RVT + [class=marginBottom40-fvAlAV] .flex-3BkGQD.horizontal-112GEH {
+  display: grid;
+  column-gap: 8px;
+  grid-column: 1/-1;
+  grid-template-columns: inherit;
+}
+.contentRegion-3HkfJJ h5.marginBottom20-315RVT + [class=marginBottom40-fvAlAV] .flex-3BkGQD.horizontal-112GEH > div {
+  margin: 0;
+}
+.contentRegion-3HkfJJ h5.marginBottom20-315RVT + [class=marginBottom40-fvAlAV] .emojiUploader-1f0pVx {
+  display: flex;
+  row-gap: 8px;
+}
+.contentRegion-3HkfJJ h5.marginBottom20-315RVT + [class=marginBottom40-fvAlAV] .emojiRowText-2j4TNM {
+  position: unset;
+}
+.contentRegion-3HkfJJ .upsellContainer-22N_CL {
+  background-size: cover;
+  background-position: center 40%;
+}
+.contentRegion-3HkfJJ [src="/assets/016a7d812fd4854aa4b7a5b9c539b48d.svg"] {
+  flex-basis: unset !important;
+}
+.contentRegion-3HkfJJ .editableFieldsContainer-1p_q_4 {
+  width: unset;
+}
+.contentRegion-3HkfJJ .exampleContainer-hz7EUM {
+  background-size: contain;
+  background-position: left;
+}
+.contentRegion-3HkfJJ .welcomeHeader-1Sv05u .descriptionWrapper-Maz2Cn {
+  max-width: unset;
+}
+
+.sidebar-nqHbhN {
+  width: calc(218px + var(--settings-icon-size) / 2);
+}
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"]) {
+  isolation: isolate;
+  padding-left: calc(8px + var(--settings-icon-size) * 1.15);
+  text-transform: capitalize;
+  white-space: nowrap;
+  color: var(--color, var(--interactive-normal));
+}
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"]):active, .sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"]).selected-g-kMVV {
+  color: var(--interactive-active) !important;
+  background-color: var(--background-modifier-active) !important;
+}
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"]).selected-g-kMVV {
+  background-color: var(--color, var(--brand-experiment)) !important;
+}
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"]) .background-3iPORX {
+  z-index: -1;
+}
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"])[aria-selected=false] .background-3iPORX {
+  display: none;
+}
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"]) .premiumLabel-V52REm {
+  color: unset;
+}
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"])::before {
+  content: "";
+  position: absolute;
+  inset: 0 8px;
+  width: var(--settings-icon-size);
+  -webkit-mask-image: var(--icon, url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/unknown.svg?sanitize=true"));
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: var(--icon, url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/unknown.svg?sanitize=true"));
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: currentColor;
+}
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"]) .premiumLabel-V52REm svg,
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG[aria-controls]:not([aria-label*="#"]) .icon-3FU6Ir {
+  display: none;
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=my-account-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/account.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=profile-customization-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/profile.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls="privacy-&-safety-tab"] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/privacy.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=authorized-apps-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/apps.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=connections-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/connections.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=discord-nitro-tab] {
+  --color: var(--brand-experiment);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/nitro.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=nitro-server-boost-tab] {
+  --color: var(--qs-col-pink);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/boost.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=subscriptions-tab] {
+  --color: var(--qs-col-yellow);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/subscriptions.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=library-inventory-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/gift.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=billing-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/billing.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=appearance-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/appearance.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=accessibility-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/accessibility.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls="voice-&-video-tab"] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/voice-and-video.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls="text-&-images-tab"] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/text-and-images.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=notifications-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/notifications.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=keybinds-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/keybinds.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=language-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/language.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=windows-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/windows-settings.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=streamer-mode-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/streamer-mode.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=advanced-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/advanced.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=game-activity-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/activity-status.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=overlay-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/game-overlay.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=pc-general-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/settings.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=pc-modulemanager-plugins-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/plugins.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=pc-modulemanager-themes-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/themes.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=pc-updater-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/updater.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=bdcompat-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/betterdiscord.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=discord-tweaks-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/discord-tweaks.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=pc-spotify-tab] {
+  --color: var(--spotify-color);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/spotify.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=cumcord_plugins-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/plugins.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=changelog-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/changelog.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=hypesquad-online-tab] {
+  --color: var(--qs-col-hypesquad-yellow);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/hypesquad.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=experiments-tab] {
+  --color: var(--qs-col-green);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/experiments.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=developer-options-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/developer-options.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=hotspot-options-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/hotspot-options.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=dismissible-content-options-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/dismiss.svg?sanitize=true");
+}
+
+#app-mount [aria-label=USER_SETTINGS] .sidebar-nqHbhN [aria-controls=logout-tab] {
+  --color: var(--qs-col-red);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/logout.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=overview-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/overview.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=roles-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/roles.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=emoji-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/emoji.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=stickers-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/stickers.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=moderation-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/moderation.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=audit_log-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/audit-log.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=integrations-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/integrations.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=widget-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/apps.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=guild_templates-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/server-template.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=community-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/community.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=analytics-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/server-insights.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=partner-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/partner.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=discovery-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/discovery.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=member_verification-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/membership-screening.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=community_welcome-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/welcome-screen.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=guild_premium-tab] {
+  --color: var(--qs-col-pink);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/boost.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=members-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/members.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=instant_invites-tab] {
+  --color: var(--brand-experiment-360);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/invites.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=bans-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/bans.svg?sanitize=true");
+}
+
+#app-mount [aria-label=GUILD_SETTINGS] .sidebar-nqHbhN [aria-controls=delete-tab] {
+  --color: var(--qs-col-red);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/delete.svg?sanitize=true");
+}
+
+#app-mount [aria-label=CHANNEL_SETTINGS] .sidebar-nqHbhN [aria-controls=overview-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/overview.svg?sanitize=true");
+}
+
+#app-mount [aria-label=CHANNEL_SETTINGS] .sidebar-nqHbhN [aria-controls=permissions-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/roles.svg?sanitize=true");
+}
+
+#app-mount [aria-label=CHANNEL_SETTINGS] .sidebar-nqHbhN [aria-controls=instant_invites-tab] {
+  --color: var(--brand-experiment);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/invites.svg?sanitize=true");
+}
+
+#app-mount [aria-label=CHANNEL_SETTINGS] .sidebar-nqHbhN [aria-controls=integrations-tab] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/integrations.svg?sanitize=true");
+}
+
+#app-mount [aria-label=CHANNEL_SETTINGS] .sidebar-nqHbhN [aria-controls=delete-tab] {
+  --color: var(--qs-col-red);
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/delete.svg?sanitize=true");
+}
+
+#app-mount [aria-label=RTC_DEBUG] .sidebar-nqHbhN [aria-controls*=outbound] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/outbound.svg?sanitize=true");
+}
+
+#app-mount [aria-label=RTC_DEBUG] .sidebar-nqHbhN [aria-controls*=transport] {
+  --color: var(--color, var(--interactive-normal));
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/transport.svg?sanitize=true");
+}
+
+.sidebarRegion-1VBisG {
+  width: var(--settings-sidebar-width);
+  flex-basis: var(--settings-sidebar-width);
+}
+
+.sidebar-nqHbhN {
+  padding-left: 10px;
+  padding-bottom: 48px;
+}
+
+body {
+  --titlebar-height: calc(12px + 10px * 2);
+}
+
+.titleBar-1it3bQ.typeWindows-2-g3UY {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: absolute;
+  width: calc(var(--server-sidebar-width, 72px) - 2px);
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-app-region: drag;
+  z-index: 3001;
+}
+.titleBar-1it3bQ.typeWindows-2-g3UY .wordmark-2u86JB {
+  display: none;
+}
+.titleBar-1it3bQ.typeWindows-2-g3UY:hover {
+  --svg-vis: visible;
+}
+.titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg {
+  all: revert;
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--col, var(--background-modifier-accent));
+}
+.titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg:active {
+  opacity: 0.8;
+}
+.titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg::after {
+  content: var(--svg);
+  position: absolute;
+  inset: 0;
+  visibility: var(--svg-vis, hidden);
+}
+.titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg:nth-child(2) {
+  order: 2;
+}
+.app-focused .titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg:nth-child(2) {
+  --col: #fc615d;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath stroke='%234c0000' d='M8.5,3.5 L6,6 L3.5,3.5 L6,6 L3.5,8.5 L6,6 L8.5,8.5 L6,6 L8.5,3.5 Z'/%3E%3C/svg%3E");
+}
+.titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg:nth-child(3) {
+  order: 0;
+}
+.app-focused .titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg:nth-child(3) {
+  --col: #34c749;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cg fill='%23006500'%3E%3Cpath d='M5,3 C5,3 5,6.1325704 5,6.48601043 C5,6.83945045 5.18485201,7 5.49021559,7 L9,7 L9,6 L8,6 L8,5 L7,5 L7,4 L6,4 L6,3 L5,3 Z' transform='rotate(180 7 5)'/%3E%3Cpath d='M3,5 C3,5 3,8.1325704 3,8.48601043 C3,8.83945045 3.18485201,9 3.49021559,9 L7,9 L7,8 L6,8 L6,7 L5,7 L5,6 L4,6 L4,5 L3,5 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg:nth-child(4) {
+  order: 1;
+}
+.app-focused .titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg:nth-child(4) {
+  --col: #fdbc40;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Crect fill='%23975500' width='8' height='2' x='2' y='5'/%3E%3C/svg%3E");
+}
+.titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg:hover, .titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg:active, .titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg:focus {
+  --svg-vis: visible;
+}
+.titleBar-1it3bQ.typeWindows-2-g3UY .winButton-3UMjdg svg {
+  display: none;
+}
+
+#app-mount .notice-2HEN-u,
+#app-mount .container-ZMc96U,
+#app-mount .dragRegion-33J2sb,
+#app-mount .dragRegion-33RqQN,
+#app-mount .pageHeaderDrag-3HG1-5 {
+  -webkit-app-region: drag;
+}
+#app-mount .guilds-2JjMmN {
+  margin-top: 32px;
+}
+#app-mount .sidebar-1tnWFu {
+  border-radius: 0;
+}
+
+.wrapper-1f5byN::before,
+.splashBackground-6P4u0V::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  z-index: 1;
+  -webkit-app-region: drag;
+}
+
+.titleBar-1it3bQ.typeWindows-2-g3UY {
+  height: var(--titlebar-height);
+}
+
+.wordmark-2u86JB {
+  position: fixed;
+  padding: 8px 12px 0;
+}
+.wordmark-2u86JB svg {
+  display: none;
+}
+.wordmark-2u86JB::after {
+  content: var(--wordmark-text, "Discord");
+  font-family: "Discord", "Ginto Nord";
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.connectionIcon-3nqZDW + div::before, .accountBtnInner-3XK70s[aria-label]::before, .connectedAccountIcon-2vls0t + div::before {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  inset: -1px;
+  border-radius: var(--radius);
+  border: solid 1px var(--color, var(--background-modifier-accent));
+}
+
+.connectedAccount-1xKpli {
+  border-color: transparent;
+}
+
+.connectedAccount-1xKpli {
+  transform: translateZ(0);
+  isolation: isolate;
+}
+
+.connectedAccountIcon-2vls0t[src="/assets/37f15a06d062bdd0fc252d2b35d0b0bb.svg"] + div {
+  --color: #148eff;
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/32045743cb7670855ae726743c949e0c.svg"] + div {
+  --color: #0668e1;
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/6a853b4c87fce386cbfef4a2efbacb09.svg"] + div {
+  --color: #1b1f23;
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/7bab4490382024b0c8c29b5378eeaf8f.svg"] + div {
+  --color: #0070d1;
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/f3224f560c8f5974355596a4f7e9ce19.svg"] + div {
+  --color: #ff4500;
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/eaeac24163b35f7526704a3d9b3c7722.svg"] + div {
+  --color: var(--spotify-color, #1ed760);
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/d897626dfa2016ea3ad0af935acb6070.svg"] + div {
+  --color: #c5c3c0;
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/ca71e0b8818221eea1deebbaf8dc6518.svg"] + div {
+  --color: #9146ff;
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/85cf2b49d2a185c98ec8e383ad5a05d6.svg"] + div {
+  --color: #1d9bf0;
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/1fa6585cbb8c0fe21188e26d19fc6609.svg"] + div {
+  --color: #107c10;
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/57ee9535485efae7eb923ed4893abb57.svg"] + div {
+  --color: #ff0000;
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/94dc6f30a819026fa295d85f1f72b4ab.svg"] + div {
+  --color: #c89b3c;
+  --radius: 3px;
+}
+.connectedAccountIcon-2vls0t[src="/assets/316ed923548387f8983e28a3804e6712.svg"] + div {
+  --color: #0078ca;
+  --radius: 3px;
+}
+
+.accountBtn-1YkMgV {
+  transform: translateZ(0);
+  isolation: isolate;
+}
+
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/37f15a06d062bdd0fc252d2b35d0b0bb.svg")'] {
+  --color: #148eff;
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/32045743cb7670855ae726743c949e0c.svg")'] {
+  --color: #0668e1;
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/6a853b4c87fce386cbfef4a2efbacb09.svg")'] {
+  --color: #1b1f23;
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/7bab4490382024b0c8c29b5378eeaf8f.svg")'] {
+  --color: #0070d1;
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/f3224f560c8f5974355596a4f7e9ce19.svg")'] {
+  --color: #ff4500;
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/eaeac24163b35f7526704a3d9b3c7722.svg")'] {
+  --color: var(--spotify-color, #1ed760);
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/d897626dfa2016ea3ad0af935acb6070.svg")'] {
+  --color: #c5c3c0;
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/ca71e0b8818221eea1deebbaf8dc6518.svg")'] {
+  --color: #9146ff;
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/85cf2b49d2a185c98ec8e383ad5a05d6.svg")'] {
+  --color: #1d9bf0;
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/1fa6585cbb8c0fe21188e26d19fc6609.svg")'] {
+  --color: #107c10;
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/57ee9535485efae7eb923ed4893abb57.svg")'] {
+  --color: #ff0000;
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/94dc6f30a819026fa295d85f1f72b4ab.svg")'] {
+  --color: #c89b3c;
+  --radius: 5px;
+}
+.accountBtnInner-3XK70s[aria-label][style*='background-image: url("/assets/316ed923548387f8983e28a3804e6712.svg")'] {
+  --color: #0078ca;
+  --radius: 5px;
+}
+
+.connection-107AGH {
+  transform: translateZ(0);
+  isolation: isolate;
+}
+
+.connectionIcon-3nqZDW[src="/assets/37f15a06d062bdd0fc252d2b35d0b0bb.svg"] + div {
+  --color: #148eff;
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/32045743cb7670855ae726743c949e0c.svg"] + div {
+  --color: #0668e1;
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/6a853b4c87fce386cbfef4a2efbacb09.svg"] + div {
+  --color: #1b1f23;
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/7bab4490382024b0c8c29b5378eeaf8f.svg"] + div {
+  --color: #0070d1;
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/f3224f560c8f5974355596a4f7e9ce19.svg"] + div {
+  --color: #ff4500;
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/eaeac24163b35f7526704a3d9b3c7722.svg"] + div {
+  --color: var(--spotify-color, #1ed760);
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/d897626dfa2016ea3ad0af935acb6070.svg"] + div {
+  --color: #c5c3c0;
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/ca71e0b8818221eea1deebbaf8dc6518.svg"] + div {
+  --color: #9146ff;
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/85cf2b49d2a185c98ec8e383ad5a05d6.svg"] + div {
+  --color: #1d9bf0;
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/1fa6585cbb8c0fe21188e26d19fc6609.svg"] + div {
+  --color: #107c10;
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/57ee9535485efae7eb923ed4893abb57.svg"] + div {
+  --color: #ff0000;
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/94dc6f30a819026fa295d85f1f72b4ab.svg"] + div {
+  --color: #c89b3c;
+  --radius: 8px;
+}
+.connectionIcon-3nqZDW[src="/assets/316ed923548387f8983e28a3804e6712.svg"] + div {
+  --color: #0078ca;
+  --radius: 8px;
+}
+
+[class*=conn] [src="/assets/37f15a06d062bdd0fc252d2b35d0b0bb.svg"], [class*=conn][src="/assets/37f15a06d062bdd0fc252d2b35d0b0bb.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Battle.net.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/37f15a06d062bdd0fc252d2b35d0b0bb.svg")'], [class*=conn][style*='background-image: url("/assets/37f15a06d062bdd0fc252d2b35d0b0bb.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Battle.net.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/32045743cb7670855ae726743c949e0c.svg"], [class*=conn][src="/assets/32045743cb7670855ae726743c949e0c.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Facebook.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/32045743cb7670855ae726743c949e0c.svg")'], [class*=conn][style*='background-image: url("/assets/32045743cb7670855ae726743c949e0c.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Facebook.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/6a853b4c87fce386cbfef4a2efbacb09.svg"], [class*=conn][src="/assets/6a853b4c87fce386cbfef4a2efbacb09.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/GitHub.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/6a853b4c87fce386cbfef4a2efbacb09.svg")'], [class*=conn][style*='background-image: url("/assets/6a853b4c87fce386cbfef4a2efbacb09.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/GitHub.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/7bab4490382024b0c8c29b5378eeaf8f.svg"], [class*=conn][src="/assets/7bab4490382024b0c8c29b5378eeaf8f.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/PlayStation Network.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/7bab4490382024b0c8c29b5378eeaf8f.svg")'], [class*=conn][style*='background-image: url("/assets/7bab4490382024b0c8c29b5378eeaf8f.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/PlayStation Network.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/f3224f560c8f5974355596a4f7e9ce19.svg"], [class*=conn][src="/assets/f3224f560c8f5974355596a4f7e9ce19.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Reddit.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/f3224f560c8f5974355596a4f7e9ce19.svg")'], [class*=conn][style*='background-image: url("/assets/f3224f560c8f5974355596a4f7e9ce19.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Reddit.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/eaeac24163b35f7526704a3d9b3c7722.svg"], [class*=conn][src="/assets/eaeac24163b35f7526704a3d9b3c7722.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Spotify.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/eaeac24163b35f7526704a3d9b3c7722.svg")'], [class*=conn][style*='background-image: url("/assets/eaeac24163b35f7526704a3d9b3c7722.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Spotify.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/d897626dfa2016ea3ad0af935acb6070.svg"], [class*=conn][src="/assets/d897626dfa2016ea3ad0af935acb6070.svg"],
+[class*=conn] [src="/assets/1f07067017f955a0cde4e994e945f417.svg"], [class*=conn][src="/assets/1f07067017f955a0cde4e994e945f417.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Steam.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/d897626dfa2016ea3ad0af935acb6070.svg")'], [class*=conn][style*='background-image: url("/assets/d897626dfa2016ea3ad0af935acb6070.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Steam.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/ca71e0b8818221eea1deebbaf8dc6518.svg"], [class*=conn][src="/assets/ca71e0b8818221eea1deebbaf8dc6518.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Twitch.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/ca71e0b8818221eea1deebbaf8dc6518.svg")'], [class*=conn][style*='background-image: url("/assets/ca71e0b8818221eea1deebbaf8dc6518.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Twitch.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/85cf2b49d2a185c98ec8e383ad5a05d6.svg"], [class*=conn][src="/assets/85cf2b49d2a185c98ec8e383ad5a05d6.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Twitter.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/85cf2b49d2a185c98ec8e383ad5a05d6.svg")'], [class*=conn][style*='background-image: url("/assets/85cf2b49d2a185c98ec8e383ad5a05d6.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Twitter.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/1fa6585cbb8c0fe21188e26d19fc6609.svg"], [class*=conn][src="/assets/1fa6585cbb8c0fe21188e26d19fc6609.svg"],
+[class*=conn] [src="/assets/29b4af8bf13fa73258692008d25b4f0d.png"], [class*=conn][src="/assets/29b4af8bf13fa73258692008d25b4f0d.png"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Xbox Live.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/1fa6585cbb8c0fe21188e26d19fc6609.svg")'], [class*=conn][style*='background-image: url("/assets/1fa6585cbb8c0fe21188e26d19fc6609.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Xbox Live.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/57ee9535485efae7eb923ed4893abb57.svg"], [class*=conn][src="/assets/57ee9535485efae7eb923ed4893abb57.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/YouTube.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/57ee9535485efae7eb923ed4893abb57.svg")'], [class*=conn][style*='background-image: url("/assets/57ee9535485efae7eb923ed4893abb57.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/YouTube.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/94dc6f30a819026fa295d85f1f72b4ab.svg"], [class*=conn][src="/assets/94dc6f30a819026fa295d85f1f72b4ab.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/League of Legends.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/94dc6f30a819026fa295d85f1f72b4ab.svg")'], [class*=conn][style*='background-image: url("/assets/94dc6f30a819026fa295d85f1f72b4ab.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/League of Legends.svg?sanitized=true") !important;
+}
+
+[class*=conn] [src="/assets/316ed923548387f8983e28a3804e6712.svg"], [class*=conn][src="/assets/316ed923548387f8983e28a3804e6712.svg"] {
+  content: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Skype.svg?sanitized=true") !important;
+}
+[class*=conn] [style*='background-image: url("/assets/316ed923548387f8983e28a3804e6712.svg")'], [class*=conn][style*='background-image: url("/assets/316ed923548387f8983e28a3804e6712.svg")'] {
+  background-image: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/better-connections/Skype.svg?sanitized=true") !important;
+}
+
+.menu-1QACrS.styleFlexible-x0_sIC {
+  max-width: calc(320px + var(--context-icon-size));
+}
+.menu-1QACrS .scroller-1bVxF5 {
+  overflow: hidden auto !important;
+  padding: 6px 8px !important;
+}
+.menu-1QACrS .item-1OdjEX {
+  --content: "";
+  color: var(--color, var(--interactive-normal));
+}
+.menu-1QACrS .item-1OdjEX:hover {
+  color: var(--interactive-hover);
+  background-color: var(--background-modifier-hover);
+}
+.menu-1QACrS .item-1OdjEX:active:not(.hideInteraction-2jPGL_), .menu-1QACrS .item-1OdjEX.focused-3qFvc8:not(:hover) {
+  color: var(--interactive-active);
+  background-color: var(--background-modifier-active);
+}
+.menu-1QACrS .item-1OdjEX[role=menuitem]:not([aria-haspopup]):not([id^=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+[id^=status-picker-switch-account--]:not(#status-picker-switch-account--manage-accounts),
+#message-apps + .layer-v9HyYc div) .label-2gNW3x,
+.menu-1QACrS .item-1OdjEX[role=menuitem]:not([aria-haspopup]):not([id^=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+[id^=status-picker-switch-account--]:not(#status-picker-switch-account--manage-accounts),
+#message-apps + .layer-v9HyYc div) .statusItem-2hiCNB[aria-label] {
+  display: grid;
+  grid-template-areas: "main secondary icon" "subtext subtext subtext";
+  grid-template-columns: auto 1fr var(--context-icon-size);
+  column-gap: 8px;
+  align-items: center;
+}
+.menu-1QACrS .item-1OdjEX[role=menuitem]:not([aria-haspopup]):not([id^=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+[id^=status-picker-switch-account--]:not(#status-picker-switch-account--manage-accounts),
+#message-apps + .layer-v9HyYc div) .label-2gNW3x .subtext-2GlkbE,
+.menu-1QACrS .item-1OdjEX[role=menuitem]:not([aria-haspopup]):not([id^=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+[id^=status-picker-switch-account--]:not(#status-picker-switch-account--manage-accounts),
+#message-apps + .layer-v9HyYc div) .statusItem-2hiCNB[aria-label] .subtext-2GlkbE {
+  grid-area: subtext;
+}
+.menu-1QACrS .item-1OdjEX[role=menuitem]:not([aria-haspopup]):not([id^=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+[id^=status-picker-switch-account--]:not(#status-picker-switch-account--manage-accounts),
+#message-apps + .layer-v9HyYc div) .label-2gNW3x .statusItemNoPadding-3ExFcy .status-3TYC5W,
+.menu-1QACrS .item-1OdjEX[role=menuitem]:not([aria-haspopup]):not([id^=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+[id^=status-picker-switch-account--]:not(#status-picker-switch-account--manage-accounts),
+#message-apps + .layer-v9HyYc div) .statusItem-2hiCNB[aria-label] .statusItemNoPadding-3ExFcy .status-3TYC5W {
+  grid-column: 1/-1;
+}
+.menu-1QACrS .item-1OdjEX[role=menuitem]:not([aria-haspopup]):not([id^=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+[id^=status-picker-switch-account--]:not(#status-picker-switch-account--manage-accounts),
+#message-apps + .layer-v9HyYc div) .label-2gNW3x .newBadge-1bHewI,
+.menu-1QACrS .item-1OdjEX[role=menuitem]:not([aria-haspopup]):not([id^=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+[id^=status-picker-switch-account--]:not(#status-picker-switch-account--manage-accounts),
+#message-apps + .layer-v9HyYc div) .statusItem-2hiCNB[aria-label] .newBadge-1bHewI {
+  width: fit-content;
+  margin: 0;
+}
+.menu-1QACrS .item-1OdjEX[role=menuitem]:not([aria-haspopup]):not([id^=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+[id^=status-picker-switch-account--]:not(#status-picker-switch-account--manage-accounts),
+#message-apps + .layer-v9HyYc div) .label-2gNW3x::before,
+.menu-1QACrS .item-1OdjEX[role=menuitem]:not([aria-haspopup]):not([id^=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+[id^=status-picker-switch-account--]:not(#status-picker-switch-account--manage-accounts),
+#message-apps + .layer-v9HyYc div) .statusItem-2hiCNB[aria-label]::before {
+  content: var(--content);
+  grid-area: icon;
+  width: var(--context-icon-size);
+  aspect-ratio: 1;
+  -webkit-mask-image: var(--icon, url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/unknown.svg?sanitized=true"));
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+  mask-image: var(--icon, url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/unknown.svg?sanitized=true"));
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: center;
+  background-color: currentColor;
+}
+.menu-1QACrS .item-1OdjEX .imageContainer-1wSPgI {
+  max-height: unset;
+}
+.menu-1QACrS .item-1OdjEX .imageContainer-1wSPgI,
+.menu-1QACrS .item-1OdjEX .imageContainer-1wSPgI > img {
+  width: var(--context-icon-size);
+  height: var(--context-icon-size);
+}
+.menu-1QACrS .item-1OdjEX:not([aria-checked],
+[id*=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+#message-apps + .layer-2aCOJ3 div) .iconContainer-1-SsTR:not([aria-haspopup] div),
+.menu-1QACrS .item-1OdjEX:not([aria-checked],
+[id*=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+#message-apps + .layer-2aCOJ3 div) .customEmojiPlaceholder-3mRJqA,
+.menu-1QACrS .item-1OdjEX:not([aria-checked],
+[id*=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+#message-apps + .layer-2aCOJ3 div) .optionIcon-1Ft8w0,
+.menu-1QACrS .item-1OdjEX:not([aria-checked],
+[id*=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+#message-apps + .layer-2aCOJ3 div) .switchAccountsIcon-36imMT,
+.menu-1QACrS .item-1OdjEX:not([aria-checked],
+[id*=message-add-reaction--]:not(#message-add-reaction--other-reactions),
+#message-apps + .layer-2aCOJ3 div) .hintContainer-2UwhLP {
+  display: none;
+}
+.menu-1QACrS .item-1OdjEX .statusItem-2hiCNB {
+  min-height: unset;
+}
+.menu-1QACrS .item-1OdjEX .statusItem-2hiCNB.statusItemNoPadding-3ExFcy {
+  display: block;
+}
+.menu-1QACrS .item-1OdjEX .statusItem-2hiCNB.customStatusItem-1TTIxM, .menu-1QACrS .item-1OdjEX .statusItem-2hiCNB.customStatusWithEmoji-8-XZ8I {
+  grid-template-rows: 1fr;
+}
+.menu-1QACrS .item-1OdjEX .optionName-1ebPjH {
+  margin: 0;
+}
+
+#message-add-reaction {
+  --color: var(--interactive-normal);
+}
+#message-add-reaction .label-2gNW3x,
+#message-add-reaction .statusItem-2hiCNB[aria-label] {
+  --content: "";
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/add-reaction.svg?sanitize=true");
+}
+
+#message-pin {
+  --color: var(--interactive-normal);
+}
+#message-pin .label-2gNW3x,
+#message-pin .statusItem-2hiCNB[aria-label] {
+  --content: "";
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/pin.svg?sanitize=true");
+}
+
+#message-reply {
+  --color: var(--interactive-normal);
+}
+#message-reply .label-2gNW3x,
+#message-reply .statusItem-2hiCNB[aria-label] {
+  --content: "";
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/reply.svg?sanitize=true");
+}
+
+#message-mark-unread {
+  --color: red;
+}
+#message-mark-unread .label-2gNW3x,
+#message-mark-unread .statusItem-2hiCNB[aria-label] {
+  --content: "";
+  --icon: url("https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/mark-unread.svg?sanitize=true");
+}
+
+#status-picker > .scroller-1bVxF5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#status-picker #status-picker-online + .separator-1So4YB {
+  display: none;
+}
+#status-picker [id^=status-picker]:not([id$=switch-account], [id$=custom-status]) .statusItem-2hiCNB {
+  display: block;
+  aspect-ratio: 1;
+}
+#status-picker [id^=status-picker]:not([id$=switch-account], [id$=custom-status]) .icon-Lz4Y-_ {
+  width: 100%;
+  height: 100%;
+}
+#status-picker [id^=status-picker]:not([id$=switch-account], [id$=custom-status]) .status-3TYC5W,
+#status-picker [id^=status-picker]:not([id$=switch-account], [id$=custom-status]) .description-3Cwkxk {
+  display: none;
+}
+#status-picker #status-picker-invisible ~ div {
+  grid-column: 1/-1;
+}

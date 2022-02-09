@@ -1,0 +1,29 @@
+@mixin interactive(
+  $focus: false,
+  $focus-class: none
+) {
+  cursor: pointer;
+  color: var(--interactive-normal);
+  &:hover {
+    color: var(--interactive-hover);
+  }
+  &:active
+  #{if($focus, ', &:focus', '')},
+  #{if($focus-class, ', &#{$focus-class}', '')} {
+    color: var(--interactive-active);
+  }
+}
+
+@mixin pseudo(
+  $type: after,
+  $fixed: false,
+  $inset: 0
+) {
+  &::#{$type} {
+    content: '';
+    position: if($fixed, fixed, absolute);
+    pointer-events: none;
+    inset: $inset;
+    @content;
+  }
+}

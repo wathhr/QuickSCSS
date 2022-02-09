@@ -1,0 +1,149 @@
+@use '../../backend/' as *;
+@use './map.scss' as *;
+
+$context-unknown: true;
+$context-unknown: if($context-icon-side=='left', true, false) !default;
+
+.menu-1QACrS {
+  &.styleFlexible-x0_sIC {
+    max-width: calc(320px + var(--context-icon-size));
+  }
+  .scroller-1bVxF5 {
+    overflow: hidden auto !important;
+    padding: 6px 8px !important;
+  }
+  .item-1OdjEX {
+    --content: #{if($context-unknown, inspect(''), unset)};
+    color: var(--color, var(--interactive-normal));
+    &:hover {
+      color: var(--interactive-hover);
+      background-color: var(--background-modifier-hover);
+    }
+    &:active:not(.hideInteraction-2jPGL_),
+    &.focused-3qFvc8:not(:hover) {
+      color: var(--interactive-active);
+      background-color: var(--background-modifier-active);
+    }
+    &#{if($context-icon-side=='left', '', '[role=\'menuitem\']:not([aria-haspopup])')} {
+      &:not(
+        [id^='message-add-reaction--']:not(#message-add-reaction--other-reactions),
+        [id^='status-picker-switch-account--']:not(#status-picker-switch-account--manage-accounts),
+        #message-apps + .layer-v9HyYc div
+      ) {
+        .label-2gNW3x,
+        .statusItem-2hiCNB[aria-label] {
+          display: grid;
+          grid-template-areas: if($context-icon-side=='left', 'icon main secondary', 'main secondary icon')
+                               'subtext subtext subtext';
+          grid-template-columns: if($context-icon-side=='left', var(--context-icon-size) auto 1fr, auto 1fr var(--context-icon-size));
+          column-gap: 8px;
+          align-items: center;
+          .subtext-2GlkbE {
+            grid-area: subtext;
+          }
+          .statusItemNoPadding-3ExFcy .status-3TYC5W {
+            grid-column: 1/-1;
+          }
+          .newBadge-1bHewI {
+            width: fit-content;
+            margin: 0;
+          }
+          &::before {
+            content: var(--content);
+            grid-area: icon;
+            width: var(--context-icon-size);
+            aspect-ratio: 1;
+            -webkit-mask: {
+              image: var(--icon, url('https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/unknown.svg?sanitized=true'));
+              repeat: no-repeat;
+              size: cover;
+              position: center;
+            }
+            mask: {
+              image: var(--icon, url('https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/unknown.svg?sanitized=true'));
+              repeat: no-repeat;
+              size: cover;
+              position: center;
+            }
+            background-color: currentColor;
+          }
+        }
+      }
+    }
+
+    @if ($context-icon-side=='left') {
+      // fix status picker
+      .label-2gNW3x > .statusItem-2hiCNB {
+        &::before {
+          --content: none;
+        }
+      }
+
+      // make reactions actually be alligned properly
+      &[id*='message-add-reaction--'] {
+        flex-direction: row-reverse;
+        column-gap: 8px;
+        > div {
+          margin: 0;
+        }
+      }
+    }
+
+    // make the add reaction emojis be the right size
+    .imageContainer-1wSPgI {
+      max-height: unset;
+      &,
+      > img {
+        width: var(--context-icon-size);
+        height: var(--context-icon-size);
+      }
+    }
+
+    // remove icons
+    &:not(
+      [aria-checked], // checkboxes
+      [id*='message-add-reaction--']:not(#message-add-reaction--other-reactions),
+      #message-apps + .layer-2aCOJ3 div
+    ) {
+      .iconContainer-1-SsTR:not([aria-haspopup] div), // did it like this because of the switch accounts item
+      .customEmojiPlaceholder-3mRJqA, // custom status
+      .optionIcon-1Ft8w0, // attach button
+      .switchAccountsIcon-36imMT,
+      .hintContainer-2UwhLP { // 'Copy'
+        display: none;
+      }
+    }
+
+    // fix custom status picker or something
+    .statusItem-2hiCNB {
+      min-height: unset;
+      &.statusItemNoPadding-3ExFcy {
+        display: block;
+      }
+      &.customStatusItem-1TTIxM,
+      &.customStatusWithEmoji-8-XZ8I {
+        grid-template-rows: 1fr;
+      }
+    }
+
+    // fix attach context menu
+    .optionName-1ebPjH {
+      margin: 0;
+    }
+  }
+}
+
+@each $menu, $items in $context-icons {
+  @each $item, $icon in $items {
+    $color: map-get($icon, color);
+    $color: var(--interactive-normal) !default;
+    ##{$menu}-#{$item} {
+      --color: #{$color};
+      .label-2gNW3x,
+      .statusItem-2hiCNB[aria-label] {
+        --content: '';
+        --icon: url('https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/context-menu-icons/#{map-get($icon, icon)}.svg?sanitize=true');
+      }
+    }
+  }
+}

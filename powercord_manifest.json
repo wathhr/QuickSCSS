@@ -11,7 +11,7 @@
     "https://www.bing.com/images/search?q=troll+face"
   ],
 
-  "theme": "index.scss",
+  "theme": "dist/dist.css",
 
   "license": "GNU GPLv3",
   "consent": ["ext_listing"]

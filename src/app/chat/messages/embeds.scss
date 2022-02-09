@@ -1,0 +1,61 @@
+@use '../../../backend/' as *;
+
+.message-2CShn3 {
+  .container-2sjPya:not(:empty) {
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+    isolation: isolate;
+    gap: 0.25em;
+    > div {
+      margin: 0;
+    }
+
+    .wrapper-1HIH0j, // server invite
+    .embedSpotify-1rDvOE {
+      order: 1;
+    }
+
+    .reactions-1BUEKl,
+    .ephemeralMessage-11q8XZ, // "Only you can see this" on local messages
+    .container-LxpXNv { // "Share with your followers" container on announcement channels
+      flex: 1 0 100%;
+      order: 500;
+    }
+    // threads
+    .spine-2vt3pM + .container-3i3IzO {
+      margin-right: 100%;
+      min-width: auto;
+      order: 550;
+    }
+  }
+  &.compact-2Nkcau {
+    &.hasThread-3h-KJV {
+      .contents-2MsGLg::before {
+        content: none;
+      }
+      .spine-2vt3pM {
+        left: 2.4rem;
+        top: 1.6rem;
+      }
+      .systemMessageSpine-18-bd2 {
+        left: 3rem;
+        top: 1.8rem;
+      }
+    }
+  }
+
+  // make the remove attachment/embed buttons nicer
+  .embedSuppressButton-1rZHq6,
+  .removeAttachmentButton-1iO1qS {
+    top: 2px;
+    right: 2px;
+    padding: 0;
+    z-index: 1;
+    mix-blend-mode: difference;
+    @include interactive();
+    path {
+      d: path('M15 3.999V2H9V3.999H3V5.999H21V3.999H15Z M5 6.99902V18.999C5 20.101 5.897 20.999 7 20.999H17C18.103 20.999 19 20.101 19 18.999V6.99902H5ZM11 17H9V11H11V17ZM15 17H13V11H15V17Z');
+    }
+  }
+}

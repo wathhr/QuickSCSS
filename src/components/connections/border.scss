@@ -1,0 +1,47 @@
+@use '../../backend/' as *;
+@use './map.scss' as *;
+
+%connection-border {
+  @include pseudo(before, true, -1px) {
+    border-radius: var(--radius);
+    border: solid 1px var(--color, var(--background-modifier-accent));
+  };
+}
+
+.connectedAccount-1xKpli {
+  border-color: transparent;
+}
+
+@each $root, $props in $connection-elements {
+  $icon: map-get($props, icon);
+
+  #{$root} {
+    transform: translateZ(0);
+    isolation: isolate;
+  }
+  #{$icon} {
+    @if (map-get($props, sibling)) {
+      + #{map-get($props, sibling)} {
+        @extend %connection-border;
+      }
+    } @else {
+      @extend %connection-border;
+    }
+    @each $platform, $assets in $connections {
+      &#{if(map-get($props, src),
+        '[src=\'#{map-get($assets, asset)}\']',
+        '[style*=\'background-image: url("#{map-get($assets, asset)}")\']'
+      )} {
+        @if (map-get($props, sibling)) {
+          + #{map-get($props, sibling)} {
+            --color: #{map-get($assets, color)};
+            --radius: #{map-get($props, radius)};
+          }
+        } @else {
+          --color: #{map-get($assets, color)};
+          --radius: #{map-get($props, radius)};
+        }
+      }
+    }
+  }
+}

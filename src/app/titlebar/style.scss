@@ -1,0 +1,179 @@
+@use '../../backend/' as *;
+
+// i tried using @extends within a different folder but that didn't work
+// and i want this to be variable based so this is the best i can do
+
+@if ($titlebar-style == osx) {
+  body {
+    --titlebar-height: calc(12px + 10px * 2);
+  }
+  .titleBar-1it3bQ.typeWindows-2-g3UY {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: absolute;
+    width: calc(var(--server-sidebar-width, 72px) - 2px);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    -webkit-app-region: drag;
+    z-index: 3001;
+    .wordmark-2u86JB {
+      display: none;
+    }
+    &:hover {
+      --svg-vis: visible;
+    }
+    .winButton-3UMjdg {
+      all: revert;
+      display: grid;
+      place-items: center;
+      position: relative;
+      height: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: var(--col, var(--background-modifier-accent));
+      &:active {
+        opacity: 0.8;
+      }
+      &::after {
+        content: var(--svg);
+        position: absolute;
+        inset: 0;
+        visibility: var(--svg-vis, hidden);
+      }
+      $titlebar-buttons: (
+        '2': (
+          order: 2,
+          col: #fc615d,
+          svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath stroke='%234c0000' d='M8.5,3.5 L6,6 L3.5,3.5 L6,6 L3.5,8.5 L6,6 L8.5,8.5 L6,6 L8.5,3.5 Z'/%3E%3C/svg%3E"),
+        ),
+        '3': (
+          order: 0,
+          col: #34c749,
+          svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cg fill='%23006500'%3E%3Cpath d='M5,3 C5,3 5,6.1325704 5,6.48601043 C5,6.83945045 5.18485201,7 5.49021559,7 L9,7 L9,6 L8,6 L8,5 L7,5 L7,4 L6,4 L6,3 L5,3 Z' transform='rotate(180 7 5)'/%3E%3Cpath d='M3,5 C3,5 3,8.1325704 3,8.48601043 C3,8.83945045 3.18485201,9 3.49021559,9 L7,9 L7,8 L6,8 L6,7 L5,7 L5,6 L4,6 L4,5 L3,5 Z'/%3E%3C/g%3E%3C/svg%3E"),
+        ),
+        '4': (
+          order: 1,
+          col: #fdbc40,
+          svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Crect fill='%23975500' width='8' height='2' x='2' y='5'/%3E%3C/svg%3E"),
+        ),
+      );
+      @each $nth, $props in $titlebar-buttons {
+        &:nth-child(#{$nth}) {
+          order: map-get($props, order);
+        }
+        .app-focused & {
+          &:nth-child(#{$nth}) {
+            --col: #{map-get($props, col)};
+            --svg: #{map-get($props, svg)};
+          }
+        }
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        --svg-vis: visible;
+      }
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  // misx stuff discord has done, i have no idea what any of these classes are; discord uses them
+  #app-mount {
+    .notice-2HEN-u,
+    .container-ZMc96U,
+    .dragRegion-33J2sb,
+    .dragRegion-33RqQN,
+    .pageHeaderDrag-3HG1-5 {
+      -webkit-app-region: drag;
+    }
+    .guilds-2JjMmN {
+      margin-top: 32px;
+    }
+    .sidebar-1tnWFu {
+      border-radius: 0;
+    }
+  }
+  .wrapper-1f5byN,
+  .splashBackground-6P4u0V {
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 32px;
+      z-index: 1;
+      -webkit-app-region: drag;
+    }
+  }
+} @else if ($titlebar-style == native) {
+  body {
+    --titlebar-height: 36px;
+  }
+  .titleBar-1it3bQ.typeWindows-2-g3UY {
+    position: relative;
+    align-items: center;
+    color: var(--text-normal);
+    &::after {
+      content: '';
+      position: absolute;
+      left: calc(var(--titlebar-height) / 4);
+      height: calc(var(--titlebar-height) / 1.5);
+      aspect-ratio: 1;
+      -webkit-app-region: drag;
+      background-color: currentColor;
+      -webkit-mask: {
+        image: url('/assets/2d20a45d79110dc5bf947137e9d99b66.svg');
+        repeat: no-repeat;
+        size: contain;
+        position: center;
+      }
+      mask: {
+        image: url('/assets/2d20a45d79110dc5bf947137e9d99b66.svg');
+        repeat: no-repeat;
+        size: contain;
+        position: center;
+      }
+    }
+    &::before {
+      content: 'Discord';
+      position: absolute;
+      inset: -4px 0 0;
+      text-indent: calc(var(--titlebar-height) + 4px);
+      line-height: calc(var(--titlebar-height) + 8px);
+      .maximized & {
+        inset: 0;
+      }
+      font: {
+        family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      }
+      background-color: var(--background-floating);
+    }
+    .wordmark-2u86JB {
+      display: none;
+    }
+    .winButton-3UMjdg {
+      display: grid;
+      place-items: center;
+      position: relative;
+      top: -2px;
+      width: unset;
+      height: calc(100% + 2px);
+      aspect-ratio: 1.6/1;
+      -webkit-app-region: no-drag;
+      pointer-events: auto;
+      cursor: pointer;
+      > svg {
+        width: calc(var(--titlebar-height) * 0.45);
+        height: unset;
+        aspect-ratio: 1;
+      }
+    }
+  }
+} @else if ($titlebar-style == topbar) {
+
+}

@@ -1,9 +1,9 @@
-## Building
+# Building
 
-just run the commands below
+Run the following commands
 
 ```powershell
-PS> git clone https://github.com/wathhr/QuickSCSS --recurse-submodules
+PS> git clone https://github.com/wathhr/QuickSCSS --recurse-submodules -b main # Or whichever branch you want
 
 PS> cd QuickSCSS
 
@@ -16,4 +16,4 @@ PS> npm run build:web                           # For a web build
 PS> npm run build:all                           # For all of the above (Default)
 ```
 
-this should output a file in `./dist/`
+If nothing went wrong, this should output a file in [`./dist/`](./dist).

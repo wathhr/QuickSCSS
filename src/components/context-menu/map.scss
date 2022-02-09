@@ -1,0 +1,17 @@
+$context-icons: (
+  message: (
+    'add-reaction': (
+      icon: 'add-reaction',
+    ),
+    'pin': (
+      icon: 'pin',
+    ),
+    'reply': (
+      icon: 'reply',
+    ),
+    'mark-unread': (
+      icon: 'mark-unread',
+      color: red
+    ),
+  ),
+) !default;

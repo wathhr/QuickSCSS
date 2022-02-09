@@ -1,0 +1,19 @@
+@use '.' as *;
+
+:root {
+  //* User variables
+
+  // Main
+  --topbar-height: 48px;
+  --topbar-padding: 8px;
+
+  // Chat
+  --server-sidebar-width: 72px;
+
+  // Settings
+  --settings-sidebar-width: 238px;
+  --settings-icon-size: 24px;
+
+  // Context menu
+  --context-icon-size: #{if($context-icon-side=="left", 24px, 18px)};
+}

@@ -1,0 +1,138 @@
+@use '../../../backend' as *;
+@use '../map.scss' as *;
+
+$topbar-sidebar: if($titlebar-style == osx, false, true) !default;
+
+.contentRegion-3HkfJJ .auto-2K3UW5 {
+  margin-top: calc(var(--topbar-height) - 38px);
+  &::-webkit-scrollbar-track {
+    margin-top: calc(var(--topbar-height) - 8px);
+  }
+  // this is great
+  :is(
+    .customHeader-3mDgmH,
+    :is(main, .content-2a4AW9) > .title-3hptVQ,
+    :is(main, .content-2a4AW9) > div:first-child > :is(h1, h2),
+    :is(main, .content-2a4AW9) > div[style]:not([class]):first-child,
+    :is(main, .content-2a4AW9) > div[style]:not([class]):first-child + div > :is(h1, h2),
+    :is(main, .content-2a4AW9) > div:first-child > div:first-child > :is(h1, h2),
+    :is(main, .content-2a4AW9) > div:first-child > div:first-child > div:first-child > :is(h1, h2),
+    :is(main, .content-2a4AW9) > div:first-child > .emojiUploadContainer-1tS7L7 + div :is(h1, h2)
+  ):first-child {
+    &,
+    + .divider-_0um2u {
+      display: none;
+    }
+  }
+}
+
+.standardSidebarView-E9Pc3j {
+  transform: translateZ(0);
+  @if $topbar-back-button {
+    div.toolsContainer-25FL6V {
+      all: unset;
+      position: fixed;
+      inset: calc(var(--topbar-padding) / 2) auto auto if($topbar-sidebar, var(--topbar-padding), calc(var(--settings-sidebar-width) + var(--topbar-padding)));
+      z-index: 10;
+      width: calc(var(--topbar-height) - var(--topbar-padding));
+      aspect-ratio: 1;
+      @if $titlebar-style == osx {
+        -webkit-app-region: no-drag;
+      }
+      .closeButton-PCZcma {
+        all: revert;
+        width: 100%;
+        aspect-ratio: 1;
+        @include interactive();
+        svg {
+          width: 100%;
+          height: 100%;
+          padding: 4px;
+        }
+        path {
+          d: path('M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21v-2z');
+          fill: currentColor;
+        }
+      }
+      .tools-kIrEGr {
+        position: revert;
+      }
+      .keybind-13vtq8 {
+        display: none;
+      }
+    }
+  }
+  .icon-3CDcPB, // experiments search icon
+  .titleContainer-3fPic2, .header-JUTO-g { // role settings
+    z-index: revert;
+  }
+}
+
+@if $topbar-sidebar {
+  .sidebarRegionScroller-FXiQOh {
+    margin-top: var(--topbar-height);
+  }
+}
+
+.sidebar-nqHbhN {
+  .side-2ur1Qk {
+    .item-3XjbnG[aria-controls]:not([aria-label*="#"]) {
+      $text-attrs: aria-controls, data-item-id, aria-label;
+      @each $attr in $text-attrs {
+        &[#{$attr}] {
+          --text: attr(#{$attr});
+        }
+      }
+      &.selected-g-kMVV {
+        &::after {
+          content: var(--text, '???');
+          position: fixed;
+          inset: 0 0 auto if($topbar-sidebar, 0, var(--settings-sidebar-width));
+          z-index: 10;
+          height: var(--topbar-height);
+          box-sizing: border-box;
+          padding: var(--topbar-padding);
+          line-height: calc(var(--topbar-height) - var(--topbar-padding) * 2);
+          font: {
+            size: calc(
+              ((
+                var(--topbar-height) - var(--topbar-padding)
+              ) * 0.5)
+            );
+            family: var(--font-display);
+            weight: 600;
+          }
+          @if $titlebar-style == osx {
+            -webkit-app-region: drag;
+          }
+          @if $topbar-back-button {
+            text-indent: calc(var(--topbar-height) - var(--topbar-padding) + 4px);
+          }
+          text-transform: none;
+          border-bottom: 4px solid var(--color, var(--brand-experiment));
+          border-image: linear-gradient(
+                          90deg,
+                          var(--color, var(--brand-experiment)) 10%,
+                          transparent
+                        ) 1;
+          background-color: if($titlebar-style == osx, var(--background-secondary), var(--background-tertiary));
+        }
+      }
+    }
+  }
+}
+
+@each $category, $item in $settings {
+  @each $tab, $props in $item {
+    @if map-get($props, text) {
+      #app-mount [aria-label='#{$category}'] .sidebar-nqHbhN {
+        #{if($category=='RTC_DEBUG',
+          '[aria-controls*="#{$tab}"]', // RTC_DEBUG
+          '[aria-controls="#{$tab}-tab"]' // main
+        )} {
+          --text: #{inspect(map-get($props, text))};
+        }
+      }
+    }
+  }
+}

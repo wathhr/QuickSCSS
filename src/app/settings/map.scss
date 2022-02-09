@@ -1,0 +1,264 @@
+$settings: (
+  USER_SETTINGS: (
+    'my-account': (
+      text: 'My Account',
+      icon: 'account',
+    ),
+    'profile-customization': (
+      text: 'Profile Customization',
+      icon: 'profile',
+    ),
+    'privacy-&-safety': (
+      text: 'Privacy & Safety',
+      icon: 'privacy',
+    ),
+    'authorized-apps': (
+      text: 'Authorized Apps',
+      icon: 'apps',
+    ),
+    'connections': (
+      text: 'Connections',
+      icon: 'connections',
+    ),
+    'discord-nitro': (
+      text: 'Scam',
+      icon: 'nitro',
+      color: var(--brand-experiment)
+    ),
+    'nitro-server-boost': (
+      text: 'Server Boost',
+      icon: 'boost',
+      color: var(--qs-col-pink)
+    ),
+    'subscriptions': (
+      text: 'Subscriptions',
+      icon: 'subscriptions',
+      color: var(--qs-col-yellow)
+    ),
+    'library-inventory': (
+      text: 'Gift Inventory',
+      icon: 'gift',
+    ),
+    'billing': (
+      text: '🔒 Billing',
+      icon: 'billing',
+    ),
+    'appearance': (
+      text: 'Appearance',
+      icon: 'appearance',
+    ),
+    'accessibility': (
+      text: 'Accessibility',
+      icon: 'accessibility',
+    ),
+    'voice-&-video': (
+      text: 'Voice & Video',
+      icon: 'voice-and-video',
+    ),
+    'text-&-images': (
+      text: 'Text & Images',
+      icon: 'text-and-images',
+    ),
+    'notifications': (
+      text: 'Notifications',
+      icon: 'notifications',
+    ),
+    'keybinds': (
+      text: 'Keybinds',
+      icon: 'keybinds',
+    ),
+    'language': (
+      text: 'Language',
+      icon: 'language',
+    ),
+    'windows': (
+      text: 'Windows Settings',
+      icon: 'windows-settings',
+    ),
+    'streamer-mode': (
+      text: 'Streamer Mode',
+      icon: 'streamer-mode',
+    ),
+    'advanced': (
+      text: 'Advanced',
+      icon: 'advanced',
+    ),
+    'game-activity': (
+      text: 'Activity Status',
+      icon: 'activity-status',
+    ),
+    'overlay': (
+      text: 'Game Overlay',
+      icon: 'game-overlay',
+    ),
+    'pc-general': (
+      icon: 'settings',
+    ),
+    'pc-modulemanager-plugins': (
+      icon: 'plugins',
+    ),
+    'pc-modulemanager-themes': (
+      icon: 'themes',
+    ),
+    'pc-updater': (
+      icon: 'updater',
+    ),
+    'bdcompat': (
+      icon: 'betterdiscord',
+    ),
+    'discord-tweaks': (
+      icon: 'discord-tweaks',
+    ),
+    'pc-spotify': (
+      icon: 'spotify',
+      color: var(--spotify-color)
+    ),
+    'cumcord_plugins': (
+      icon: 'plugins',
+    ),
+    'changelog': (
+      icon: 'changelog',
+    ),
+    'hypesquad-online': (
+      text: 'Hypesquad',
+      icon: 'hypesquad',
+      color: var(--qs-col-hypesquad-yellow)
+    ),
+    'experiments': (
+      text: 'Experiments',
+      icon: 'experiments',
+      color: var(--qs-col-green)
+    ),
+    'developer-options': (
+      text: 'Developer Options',
+      icon: 'developer-options',
+    ),
+    'hotspot-options': (
+      text: 'Hotspot Options',
+      icon: 'hotspot-options',
+    ),
+    'dismissible-content-options': (
+      text: 'Dismissible Content',
+      icon: 'dismiss',
+    ),
+    'logout': (
+      icon: 'logout',
+      color: var(--qs-col-red)
+    ),
+  ),
+  GUILD_SETTINGS: (
+    'overview': (
+      text: 'Server Overview',
+      icon: 'overview',
+    ),
+    'roles': (
+      text: 'Server Roles',
+      icon: 'roles',
+    ),
+    'emoji': (
+      text: 'Server Emojis',
+      icon: 'emoji',
+    ),
+    'stickers': (
+      text: 'Server Stickers',
+      icon: 'stickers',
+    ),
+    'moderation': (
+      text: 'Moderation',
+      icon: 'moderation',
+    ),
+    'audit_log': (
+      text: 'Audit Log',
+      icon: 'audit-log',
+    ),
+    'integrations': (
+      text: 'Server Integrations',
+      icon: 'integrations',
+    ),
+    'widget': (
+      text: 'Server Widget',
+      icon: 'apps',
+    ),
+    'guild_templates': (
+      text: 'Server Template',
+      icon: 'server-template',
+    ),
+    'community': (
+      text: 'Community Overview',
+      icon: 'community',
+    ),
+    'analytics': (
+      text: 'Community Insights',
+      icon: 'server-insights',
+    ),
+    'partner': (
+      text: 'Community Partner Programme',
+      icon: 'partner',
+    ),
+    'discovery': (
+      text: 'Community Discovery',
+      icon: 'discovery',
+    ),
+    'member_verification': (
+      text: 'Membership Screening',
+      icon: 'membership-screening',
+    ),
+    'community_welcome': (
+      text: 'Welcome Screen',
+      icon: 'welcome-screen',
+    ),
+    'guild_premium': (
+      text: 'Server Boost Status',
+      icon: 'boost',
+      color: var(--qs-col-pink)
+    ),
+    'members': (
+      text: 'Server Members',
+      icon: 'members',
+    ),
+    'instant_invites': (
+      text: 'Server Invites',
+      icon: 'invites',
+      color: var(--brand-experiment-360)
+    ),
+    'bans': (
+      text: 'Server Bans',
+      icon: 'bans',
+    ),
+    'delete': (
+      icon: 'delete',
+      color: var(--qs-col-red)
+    ),
+  ),
+  CHANNEL_SETTINGS: (
+    'overview': (
+      text: 'Channel Overview',
+      icon: 'overview',
+    ),
+    'permissions': (
+      text: 'Channel Permissions',
+      icon: 'roles',
+    ),
+    'instant_invites': (
+      text: 'Channel Invites',
+      icon: 'invites',
+      color: var(--brand-experiment)
+    ),
+    'integrations': (
+      text: 'Channel Integrations',
+      icon: 'integrations',
+    ),
+    'delete': (
+      icon: 'delete',
+      color: var(--qs-col-red)
+    ),
+  ),
+  RTC_DEBUG: (
+    'outbound': (
+      icon: 'outbound',
+    ),
+    'transport': (
+      icon: 'transport',
+    ),
+  ),
+) !default;

@@ -1,0 +1,25 @@
+@use '../../../backend/' as *;
+
+@if ($titlebar-style == osx) {
+  .platform-win {
+    .sidebarRegion-1VBisG {
+      background-color: var(--background-secondary);
+    }
+    .sidebarRegionScroller-FXiQOh {
+      position: relative;
+      top: var(--titlebar-height);
+      height: calc(100% - var(--titlebar-height));
+      background-color: transparent;
+      &::-webkit-scrollbar-track {
+        margin-top: calc(var(--titlebar-height) * -1);
+      }
+    }
+  }
+}
+
+.baseLayer-W6S8cY.stop-animations {
+  * {
+    pointer-events: none;
+    -webkit-app-region: unset;
+  }
+}

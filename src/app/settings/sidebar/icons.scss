@@ -1,0 +1,72 @@
+@use '../map.scss' as *;
+
+.sidebar-nqHbhN {
+  width: calc(218px + var(--settings-icon-size) / 2);
+  .side-2ur1Qk {
+    .item-3XjbnG[aria-controls]:not([aria-label*="#"]) {
+      isolation: isolate;
+      padding-left: calc(8px + var(--settings-icon-size) * 1.15);
+      text-transform: capitalize;
+      white-space: nowrap;
+      color: var(--color, var(--interactive-normal));
+      &:active,
+      &.selected-g-kMVV {
+        color: var(--interactive-active) !important;
+        background-color: var(--background-modifier-active) !important;
+      }
+      &.selected-g-kMVV {
+        background-color: var(--color, var(--brand-experiment)) !important;
+      }
+
+      // remove the default backgrounds
+      .background-3iPORX {
+        z-index: -1;
+      }
+      &[aria-selected="false"] .background-3iPORX {
+        display: none;
+      }
+      .premiumLabel-V52REm {
+        color: unset;
+      }
+
+      // icons
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0 8px;
+        width: var(--settings-icon-size);
+        -webkit-mask: {
+          image: var(--icon, url('https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/unknown.svg?sanitize=true'));
+          position: center;
+          repeat: no-repeat;
+        }
+        mask: {
+          image: var(--icon, url('https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/unknown.svg?sanitize=true'));
+          position: center;
+          repeat: no-repeat;
+        }
+        background-color: currentColor;
+      }
+      .premiumLabel-V52REm svg, // user settings
+      .icon-3FU6Ir { // server settings
+        display: none;
+      }
+    }
+  }
+}
+
+@each $category, $item in $settings {
+  @each $tab, $props in $item {
+    $color: map-get($props, color);
+    $color: var(--color, var(--interactive-normal)) !default;
+    #app-mount [aria-label='#{$category}'] .sidebar-nqHbhN {
+      #{if($category=='RTC_DEBUG',
+        '[aria-controls*="#{$tab}"]', // RTC_DEBUG
+        '[aria-controls="#{$tab}-tab"]' // main
+      )} {
+        --color: #{$color};
+        --icon: url('https://raw.githubusercontent.com/walter-moment/QuickSCSS-assets/main/settings-icons/#{if(map-get($props, icon), map-get($props, icon), unknown)}.svg?sanitize=true');
+      }
+    }
+  }
+}
