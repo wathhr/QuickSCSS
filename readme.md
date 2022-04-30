@@ -1,3 +1,5 @@
+lol i forgor to create a backup before reinstalling windows and lost all progress this theme done gone 💀
+
 # QuickSCSS [![CodeFactor](https://www.codefactor.io/repository/github/wathhr/quickscss/badge/dev?s=5f2850cfa164e62ecf2eaa497b0a075cf28b67cf)](https://www.codefactor.io/repository/github/wathhr/quickscss/overview/dev)
 
 > ⚠ This branch is still a huge work-in-progress, a lot of things might be unfinished and/or broken.
